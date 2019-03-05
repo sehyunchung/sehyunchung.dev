@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `shc-0`,
+    author: `Sehyun Chung`,
+    description: `A starter blog demonstrating what shc can do.`,
+    siteUrl: `https://shc-0.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `cong__vu`,
+      github: `sch-0`,
     },
   },
   plugins: [
@@ -72,6 +73,35 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Gothic A1:400,800`, `Fira Sans:400,800`],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {
+                sh: 'bash',
+                js: 'javascript',
+              },
+              showLineNumbers: true,
+              // numberLines: true,
+              noInlineHighlight: false,
+            },
+          },
+        ],
       },
     },
   ],
