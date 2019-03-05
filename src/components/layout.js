@@ -56,16 +56,14 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          height: `100vh`,
+          height: `100%`,
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer style={{ position: `fixed`, bottom: `20px` }}>
-          © {new Date().getFullYear()} Sehyun Chung
-        </footer>
+        <footer>© {new Date().getFullYear()} shc-0</footer>
       </div>
     )
   }
