@@ -39,10 +39,7 @@ function Bio() {
               }}
             />
             <p>
-              <strong>
-                <a href={`https://github.com/${social.github}`}>me</a>
-              </strong>{' '}
-              도 한 번 해보는 devlog
+              <strong>나</strong>도 한 번 해보는 devlog
             </p>
           </div>
         )
