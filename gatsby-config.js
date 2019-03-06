@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `sehyunchung`,
     author: `Sehyun Chung`,
-    description: `A starter blog demonstrating what shc can do.`,
+    description: `믿을 것은 근육뿐`,
     siteUrl: `https://sehyunchung.github.io/`,
     social: {
-      twitter: `cong__vu`,
+      twitter: `sehyunchung`,
       github: `sehyunchung`,
     },
   },

@@ -39,10 +39,10 @@ function Bio() {
               }}
             />
             <p>
-              나도 한 번 해보자 devlog
+              해보자 개발블로그
               <br />
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>{' '}
-              <a href={`https://github.com/sehyunchung`}>github</a>
+              <a href={`https://github.com/${social.twitter}`}>github</a>
             </p>
           </div>
         )
@@ -65,6 +65,7 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          github
         }
       }
     }
