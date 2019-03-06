@@ -4,13 +4,14 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
+    'Fira Sans',
     'Gothic A1',
     'Segoe UI',
     'Helvetica',
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Gothic A1', 'sans-serif'],
+  bodyFontFamily: ['Fira Sans', 'Gothic A1', 'sans-serif'],
 })
 
 // Hot reload typography in development.
