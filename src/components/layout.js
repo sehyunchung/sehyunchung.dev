@@ -13,7 +13,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1),
             fontWeight: `bold`,
             marginBottom: rhythm(1),
             marginTop: 0,
