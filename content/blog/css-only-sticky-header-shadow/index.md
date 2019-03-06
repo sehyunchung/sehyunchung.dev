@@ -1,7 +1,7 @@
 ---
 title: CSS(만으)로 스티키 헤더에 그림자 넣기
 date: '2019-03-04T23:46:37.121Z'
-description: 'CSS만으로 동적인 무언가를 구현하는 아주 간단한 방법 중 하나'
+description: 'CSS만으로 동적인 뭔가를 구현하는 간단한 방법 중 하나'
 tags: ['css', 'position: sticky']
 ---
 
@@ -68,7 +68,7 @@ _(일단 세로로 스크롤이 되고 있다는 전제 하에)_
 
 ![header.gif](https://images.velog.io/post-images/sxhx/b9b050f0-3dd1-11e9-9d6c-bf6354f57566/header.gif)
 
-복잡한 조건이 필요하지 않은 경우라면 가볍게 쓸만한
-좋은 꼼수였다👨🏻‍💻✨
+복잡한 조건이 필요하지 않은 경우라면 가볍게 쓸만한 꼼수였다✨
 
-[실제로 동작하는 codepen 링크도 남겨봅니다..](https://codepen.io/sxhyxnchxng/pen/Mxydmq?editors=1100)
++
+[codepen 링크](https://codepen.io/sxhyxnchxng/pen/Mxydmq?editors=1100)
