@@ -1,5 +1,5 @@
 ---
-title: CSS(만으)로 스티키 헤더에 그림자 넣기
+title: CSS(만으)로 스크롤시 헤더 밑에 그림자 나타나게 하기
 date: '2019-03-04T23:46:37.121Z'
 description: 'CSS만으로 동적인 뭔가를 구현하는 간단한 방법 중 하나'
 tags: ['css', 'position: sticky']
