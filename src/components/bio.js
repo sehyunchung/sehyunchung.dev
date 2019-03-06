@@ -39,7 +39,7 @@ function Bio() {
               }}
             />
             <p>
-              <strong>나</strong>도 한 번 해보자 devlog
+              나도 한 번 해보자 devlog
               <br />
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>{' '}
               <a href={`https://github.com/sehyunchung`}>github</a>
