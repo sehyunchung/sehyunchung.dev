@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `shc-0`,
+    title: `sehyunchung`,
     author: `Sehyun Chung`,
     description: `A starter blog demonstrating what shc can do.`,
-    siteUrl: `https://shc-0.github.io/`,
+    siteUrl: `https://sehyunchung.github.io/`,
     social: {
       twitter: `cong__vu`,
-      github: `sch-0`,
+      github: `sehyunchung`,
     },
   },
   plugins: [
