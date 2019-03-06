@@ -1,7 +1,7 @@
 ---
 title: document.all은 falsy
 date: '2018-11-06T23:46:37.121Z'
-description: 'document.all이 어째서 false인가 하는 점에 대한 뻘글'
+description: 'document.all이 어째서 falsy인가 하는 점에 대한 뻘글'
 tags: ['javascript', 'document.all', 'sad']
 ---
 
