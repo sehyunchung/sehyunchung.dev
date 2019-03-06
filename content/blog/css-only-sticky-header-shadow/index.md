@@ -29,10 +29,12 @@ _(일단 세로로 스크롤이 되고 있다는 전제 하에)_
   z-index: 1;
   position: sticky;
   top: 0;
-  height: 50px; /* (임의의 값임) */
+
+  height: 50px;
 }
 .shadow {
   position: absolute;
+
   top: 50px; /* .header 높이랑 같은 값 */
   height: 4px; /* 그림자 높이 */
   background-image: linear-gradient(
@@ -44,6 +46,7 @@ _(일단 세로로 스크롤이 되고 있다는 전제 하에)_
 .shadow-cover {
   position: sticky;
   top: 0;
+
   height: 4px; /* 그림자 높이 */
   background: #fff; /* 배경색과 같은 색 */
 }
@@ -68,7 +71,7 @@ _(일단 세로로 스크롤이 되고 있다는 전제 하에)_
 
 ![header.gif](https://images.velog.io/post-images/sxhx/b9b050f0-3dd1-11e9-9d6c-bf6354f57566/header.gif)
 
-복잡한 조건이 필요하지 않은 경우라면 가볍게 쓸만한 꼼수였다✨
+그림자가 끝에서부터 역방향으로 나타나는 어색함이 있지만 복잡한 조건이 필요하지 않은 경우라면 가볍게 쓸만한 꼼수.. 일까..
 
 +
 [codepen 링크](https://codepen.io/sxhyxnchxng/pen/Mxydmq?editors=1100)
