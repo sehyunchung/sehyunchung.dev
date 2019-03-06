@@ -12,8 +12,18 @@ a {
   &:visited {
     color: salmon;
   }
-  &:hover {
-    display: inline-block;
-    transform: rotate(-1deg);
+}
+body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  > a:hover:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 4px);
+    left: -2px;
+    height: -2px;
+    background-color: linen;
+    border-radius: 5px;
+    mix-blend-mode: darken;
+    opacity: 0.6;
   }
 }
