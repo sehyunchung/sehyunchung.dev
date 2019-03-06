@@ -1,0 +1,19 @@
+pre,
+code {
+  font-size: 16px;
+  font-family: 'Fira Code';
+}
+a {
+  position: relative;
+  text-decoration: none;
+  &:link {
+    color: tomato;
+  }
+  &:visited {
+    color: salmon;
+  }
+  &:hover {
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+}
