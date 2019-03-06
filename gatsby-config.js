@@ -76,14 +76,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: [
-            `Gothic A1:400,700:korean`,
-            `Fira Sans:400,700:latin,roman`,
-          ],
-        },
+        fonts: [
+          {
+            family: `Fira Sans`,
+            variants: [`400`, `700`],
+            subsets: [`latin`],
+          },
+          {
+            family: `Gothic A1`,
+            variants: [`400`, `700`],
+            subsets: [`korean`],
+          },
+        ],
       },
     },
     {
