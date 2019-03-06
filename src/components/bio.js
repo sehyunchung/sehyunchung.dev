@@ -39,10 +39,10 @@ function Bio() {
               }}
             />
             <p>
-              걍 blog by{' '}
               <strong>
-                <a href={`https://twitter.com/${social.twitter}`}>{author}</a>
-              </strong>
+                <a href={`https://github.com/${social.github}`}>me</a>
+              </strong>{' '}
+              도 한 번 해보는 devlog
             </p>
           </div>
         )
