@@ -7,7 +7,7 @@ a {
   position: relative;
   text-decoration: none;
   &:link {
-    color: tomato;
+    color: lightsalmon;
   }
   &:visited {
     color: lightsalmon;
@@ -17,10 +17,10 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   > a:hover:after {
     content: '';
     position: absolute;
-    width: calc(100% + 5px);
-    height: calc(100% + 4px);
+    width: calc(100% + 6px);
+    height: 4px;
     left: -2px;
-    height: -2px;
+    bottom: -4px;
     background-color: linen;
     border-radius: 5px;
     mix-blend-mode: darken;
