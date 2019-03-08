@@ -89,6 +89,10 @@ module.exports = {
             variants: [`400`, `700`],
             subsets: [`korean`],
           },
+          {
+            family: `Fira Mono`,
+            variants: [`400`, `700`],
+          },
         ],
       },
     },

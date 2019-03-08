@@ -1,7 +1,7 @@
 pre,
 code {
-  font-size: 16px;
-  font-family: 'Fira Code';
+  font-size: 16px !important;
+  font-family: 'Fira Mono', monospace !important;
 }
 a {
   position: relative;
@@ -11,6 +11,7 @@ a {
   }
   &:visited {
     color: lightsalmon;
+    box-shadow: 0 0 20px lightsalmon;
   }
 }
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
