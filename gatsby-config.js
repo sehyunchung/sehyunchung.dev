@@ -41,8 +41,26 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'public',
+              ignoreFileExtensions: [],
+            },
+          },
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: {
+                sh: 'bash',
+                js: 'javascript',
+              },
+              showLineNumbers: true,
+              numberLines: true,
+              noInlineHighlight: false,
+            },
+          },
         ],
       },
     },
@@ -92,27 +110,6 @@ module.exports = {
           {
             family: `Fira Mono`,
             variants: [`400`, `700`],
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              // classPrefix: 'language-',
-              // inlineCodeMarker: null,
-              aliases: {
-                sh: 'bash',
-                js: 'javascript',
-              },
-              showLineNumbers: true,
-              // numberLines: true,
-              noInlineHighlight: false,
-            },
           },
         ],
       },
