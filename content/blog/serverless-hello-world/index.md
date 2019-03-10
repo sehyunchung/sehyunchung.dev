@@ -132,4 +132,4 @@ Serverless: Stack removal finished...
 ```
 
 깔끔..
-🤘
+🧖‍♂️
