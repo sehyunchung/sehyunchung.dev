@@ -5,7 +5,7 @@ description: 'serverless로 헬로 월드를 한 번 날려보았다.'
 tags: ['aws', 'express', 'javascript', 'node.js', 'serverless']
 ---
 
-serverless로 뭔가 해봐야지 하고 있었는데 딱히 생각나는 프로젝트가 없어서 일단 hello world나 한 번 날려보자 생각하고 방법을 알아보았다. [serverless framework](https://serverless.com/)를 이용하기로 하고 보니 튜토리얼이 있어서 따라해보았다.
+serverless로 뭔가 해봐야지 하고 있었는데 딱히 생각나는 프로젝트가 없어서 일단 hello world나 한 번 날려보자 생각하고 방법을 알아보았다. 편하게 [serverless framework](https://serverless.com/)를 이용하기로 하고,
 
 먼저 serveless framework을 설치한다.
 
@@ -116,7 +116,7 @@ $
 ![안녕 세상아..](serverless-hello-lol.png)
 
 성공...
-별 건 아니지만 역시 서버 없이 호출이 가능하다는 건 좀 신기하다.
+별 건 아니지만 역시 서버 세팅 없이 가능하다는 건 좀 신기하다.
 
 계속 띄워놔도 상관은 없겠지만([달에 백만회](https://aws.amazon.com/lambda/pricing/) 넘게 호출할리도 없고..)
 딱히 용도가 있는 것도 아니니 내려보는 것도 해보자.
@@ -129,6 +129,7 @@ Serverless: Removing Stack...
 Serverless: Checking Stack removal progress...
 ...................
 Serverless: Stack removal finished...
+$
 ```
 
 깔끔..
