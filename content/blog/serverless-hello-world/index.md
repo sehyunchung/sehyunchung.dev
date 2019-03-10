@@ -1,5 +1,5 @@
 ---
-title: serverless 건드려보기
+title: serverless 건드려(만)보기
 date: '2019-03-12T00:00:37.121Z'
 description: 'serverless로 헬로 월드를 한 번 날려보았다.'
 tags: ['aws', 'express', 'javascript', 'node.js', 'serverless']
