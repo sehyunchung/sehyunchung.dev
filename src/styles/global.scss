@@ -14,7 +14,7 @@ a {
     box-shadow: 0 0 20px lightsalmon;
   }
 }
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+body:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(img) {
   > a:hover:after {
     content: '';
     position: absolute;
