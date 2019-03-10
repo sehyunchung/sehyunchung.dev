@@ -113,7 +113,7 @@ $
 ```
 
 오타가 없다면 배포에 성공하고 위와 같이 엔드포인트를 보여준다. 액세스해보면,
-![serverless-hello-lol.png](./serverless-hello-lol.png)
+![안녕 세상아..](serverless-hello-lol.png)
 
 성공...
 별 건 아니지만 역시 서버 없이 호출이 가능하다는 건 좀 신기하다.
