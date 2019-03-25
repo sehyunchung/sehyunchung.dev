@@ -5,7 +5,7 @@ module.exports = {
     description: `믿을 것은 근육뿐`,
     siteUrl: `https://sehyunchung.github.io/`,
     social: {
-      twitter: `sehyunchung`,
+      twitter: `cong__vu`,
       github: `sehyunchung`,
     },
   },
