@@ -38,7 +38,9 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
+            <p style={{
+              marginTop: rhythm(0)
+            }}>
               해보자 개발블로그
               <br />
               <a href={`https://github.com/${social.github}`}>github</a>

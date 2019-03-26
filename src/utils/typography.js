@@ -12,6 +12,11 @@ const typography = new Typography({
     'sans-serif',
   ],
   bodyFontFamily: ['Fira Sans', 'Gothic A1', 'sans-serif'],
+  overrideStyles: ({ rhythm }) => ({
+    p: {
+      marginTop: rhythm(1)
+    }
+  })
 })
 
 // Hot reload typography in development.

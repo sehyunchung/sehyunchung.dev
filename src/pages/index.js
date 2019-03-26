@@ -43,6 +43,9 @@ class BlogIndex extends React.Component {
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
+                style={{
+                  marginTop: rhythm(1/6)
+                }}
               />
             </div>
           )
