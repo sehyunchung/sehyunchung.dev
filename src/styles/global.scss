@@ -7,11 +7,11 @@ a {
   position: relative;
   text-decoration: none;
   &:link {
-    color: lightsalmon;
+    color: #dea584;
   }
   &:visited {
-    color: lightsalmon;
-    box-shadow: 0 0 20px lightsalmon;
+    color: #dea584;
+    box-shadow: 0 0 20px #dea584;
   }
 }
 body:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(img) {
