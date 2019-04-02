@@ -14,7 +14,7 @@ Vue, 정확히는 Vue의 Single File Component에 Functional 옵션이 있다는
 </template>
 ```
 
-`<script>`가 없어도 그냥 동작한다! Vue 쓰면서 좀 귀찮았던 게 컴포넌트 이름을 일일이 알려줘야 하는 것이었는데, 안해도 되는 게 좋다. 좀 더 사용법이 잘 드러나는 예를 들어보면,
+일단 `<script>`가 없어도 그냥 동작한다! Vue 쓰면서 좀 귀찮았던 게 컴포넌트 이름을 일일이 알려줘야 하는 것이었는데, 안해도 되는 게 좋다. 좀 더 사용법이 잘 드러나는 예를 들어보면,
 
 ```html
 <template>
@@ -38,7 +38,7 @@ Vue, 정확히는 Vue의 Single File Component에 Functional 옵션이 있다는
 </script>
 ```
 
-컴포넌트 구조가 위와 같을 때, 자식 컴포넌트를 functional로 작성해보면 아래와 같다. 물론 컴포넌트 파일의 이름은 `child.vue`일 것이다.
+컴포넌트 구조가 위와 같을 때, 자식 컴포넌트를 `functional`로 작성해보면 아래와 같다. 물론 컴포넌트 파일의 이름은 `child.vue`일 것이다.
 
 ```html
 <template functional>
@@ -48,9 +48,9 @@ Vue, 정확히는 Vue의 Single File Component에 Functional 옵션이 있다는
 </template>
 ```
 
-`<template`만 작성하면 되고 따로 `props`에 받는 prop들을 `props: ['text', 'greet']`등으로 등록하지 않아도 부모 컴포넌트가 넘겨주었다면 위와 같이 `props.xxx`로 액세스 할 수 있다. 뭔가 리액트 같고 좋다ㅋ.
+위에서 얘기한대로 `<template`만 작성하면 되고, 따로 `props`에 받는 prop들을 `props: ['text', 'greet']`등으로 등록하지 않아도 부모 컴포넌트가 넘겨주었다면 위와 같이 `props.xxx`로 액세스 할 수 있다. 뭔가 리액트 같고 좋다ㅋ.
 
-재미있는 건 `parent`라는 속성으로 부모 컴포넌트의 속성들을 그대로 액세스 할 수 있다는 점인데, 이를테면 아래와 같이 자식 컴포넌트에 아무것도 넘겨주지 않아도,
+재미있는 건 `parent`라는 속성으로 부모 컴포넌트의 속성들을 그대로 액세스 할 수 있다는 점인데, 아래와 같이 자식 컴포넌트에 아무것도 넘겨주지 않아도,
 
 ```html
 <template>
