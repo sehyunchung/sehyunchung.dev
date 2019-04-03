@@ -48,7 +48,7 @@ Vue, 정확히는 Vue의 Single File Component에 Functional 옵션이 있다는
 </template>
 ```
 
-위에서 얘기한대로 `<template`만 작성하면 되고, 따로 `props`에 받는 prop들을 `props: ['text', 'greet']`등으로 등록하지 않아도 부모 컴포넌트가 넘겨주었다면 위와 같이 `props.xxx`로 액세스 할 수 있다. 뭔가 리액트 같고 좋다ㅋ.
+위에서 얘기한대로 `<template>`만 작성하면 되고, 따로 `props`에 받는 prop들을 `props: ['text', 'greet']`등으로 등록하지 않아도 부모 컴포넌트가 넘겨주었다면 위와 같이 `props.xxx`로 액세스 할 수 있다. 뭔가 리액트 같고 좋다ㅋ.
 
 재미있는 건 `parent`라는 속성으로 부모 컴포넌트의 속성들을 그대로 액세스 할 수 있다는 점인데, 아래와 같이 자식 컴포넌트에 아무것도 넘겨주지 않아도,
 
