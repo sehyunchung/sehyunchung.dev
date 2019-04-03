@@ -96,18 +96,18 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
+          // {
+          //   family: `Fira Sans`,
+          //   variants: [`400`, `700`],
+          //   subsets: [`latin`],
+          // },
+          // {
+          //   family: `Gothic A1`,
+          //   variants: [`400`, `700`],
+          //   subsets: [`korean`],
+          // },
           {
-            family: `Fira Sans`,
-            variants: [`400`, `700`],
-            subsets: [`latin`],
-          },
-          {
-            family: `Gothic A1`,
-            variants: [`400`, `700`],
-            subsets: [`korean`],
-          },
-          {
-            family: `Fira Mono`,
+            family: `Inconsolata`,
             variants: [`400`, `700`],
           },
         ],

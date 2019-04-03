@@ -4,14 +4,20 @@ const typography = new Typography({
   baseFontSize: '16px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Fira Sans',
-    'Gothic A1',
-    'Segoe UI',
-    'Helvetica',
-    'Arial',
-    'sans-serif',
+    // 'Fira Sans',
+    // 'Gothic A1',
+    // 'Segoe UI',
+    // 'Helvetica',
+    // 'Arial',
+    // 'sans-serif',
+    'serif',
   ],
-  bodyFontFamily: ['Fira Sans', 'Gothic A1', 'sans-serif'],
+  bodyFontFamily: [
+    // 'Fira Sans',
+    // 'Gothic A1',
+    // 'sans-serif',
+    'serif',
+  ],
   overrideStyles: ({ rhythm }) => ({
     p: {
       marginTop: rhythm(1),
