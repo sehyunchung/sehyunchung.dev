@@ -5,7 +5,7 @@ description: '이번에도 시작만해봤다'
 tags: ['elixir', 'phoenix']
 ---
 
-엊그제 live view [비디오](https://www.youtube.com/watch?v=8xJzHq8ru0M)와 [포스트](https://dockyard.com/blog/2018/12/12/phoenix-liveview-interactive-real-time-apps-no-need-to-write-javascript)를 읽고 감동을 받은 김에, [Programming Phoenix](https://pragprog.com/book/phoenix14/programming-phoenix-1-4)(Phoenix를 만든 사람이 쓴 책)를 따라가며 [Elixir](https://elixir-lang.org)와 [Phoenix](https://phoenixframework.org)를 익혀보기로 했다.
+엊그제 live view [비디오](https://www.youtube.com/watch?v=8xJzHq8ru0M)와 [포스트](https://dockyard.com/blog/2018/12/12/phoenix-liveview-interactive-real-time-apps-no-need-to-write-javascript)를 읽고 감동을 받은 김에, [Programming Phoenix](https://pragprog.com/book/phoenix14/programming-phoenix-1-4)(Phoenix를 만든 사람이 쓴 책이라 골라봤다..)를 따라가며 [Elixir](https://elixir-lang.org)와 [Phoenix](https://phoenixframework.org)를 익혀보기로 했다.
 
 언어나 프레임워크에 대한 설명은 쉽게 찾아볼 수 있으니 생략하고, 일단 elixir를 설치한다. homebrew를 사용.
 
