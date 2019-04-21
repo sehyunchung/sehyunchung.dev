@@ -36,7 +36,7 @@ Phoenix는 데이터베이스를 다룰 때 [ecto](https://hexdocs.pm/ecto/Ecto.
 $ brew install postgresql
 ```
 
-`postgressql`이 아니고 `postgresql`이다.
+`postgressql`이 아니고 `postgresql`이다(오타 주의).
 
 node도 필요하지만 이미 깔려있으므로 스킵.
 
@@ -77,10 +77,10 @@ $ mix phx.server
 ...
 ```
 
-역시 책엔 `mix phoenix.server` 라고 나와있는데, `phx`로 바꿔야 한다.
+역시 책엔 `mix phoenix.server` 라고 나와있는데, `phx`로 바꿔줘야 한다. 중간의 `mix ecto.create`는 Django의 `./manage.py migrate` 라고 생각하면 되겠다.
 
-위의 주소를 브라우저에서 열어보면, 아래와 같이 웰컴스크린을 띄워준다.
+위의 주소를 브라우저에서 액세스해보면, 아래와 같이 웰컴스크린을 띄워준다.
 
 ![웰컴 투 피닉스](welcome.png)
 
-쨘! 다음 시간엔 기본적인 컨트롤러와 라우터 동작을 알아본다.
+쨘! 성공이다. 다음 시간엔 기본적인 컨트롤러와 라우터 동작을 알아본다.
