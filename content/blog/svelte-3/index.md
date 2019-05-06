@@ -18,13 +18,13 @@ Svelte의 문제의식은 이렇다. 리액트로 대표되는 현재의 선언�
 
 그래서 Svelte가 취한 방식은, 컴파일러가 되는 것이다. 컴포넌트 파일은 선언형으로 작성할 수 있도록 하고, 빌드타임에 (V-DOM을 사용하지 않는) 성능 좋은 명령형 JS 코드로 컴파일해 선언형 프레임워크의 개발자 경험과 명령형 코드의 성능을 동시에 잡겠다는 전략이다.
 
-결과적으로 나온 것은, Vue와 대단히 비슷하지만… 훨씬 쉽고 이상하고 재밌는 API인데..
+발표에 따르면 유명한 [JSConf Iceland 2018에서의 Dan Abramov의 발표](https://www.youtube.com/watch?v=nLF0n9SACd4)의 [Asynchronous React 데모](https://rethinking-reactivity.surge.sh/#slide=24) 보다 [Synchronous Svelte](https://rethinking-reactivity.surge.sh/#slide=25)가 더 가볍게 처리한다고 한다. 아무튼 빠르긴 빠른가봄.
 
 ## 간단한 Todo 앱 만들기
 
 ### Scaffolding
 
-간단한 Todo를 만들어보자. [Svelte 공식 사이트의 퀵스타트 가이드](https://svelte.dev/blog/the-easiest-way-to-get-started#2_Use_degit)를 따라 아래와 같이 [degit](https://github.com/Rich-Harris/degit)(이것도 Rich Harris가 만듦)을 사용해서 프로젝트 scaffolding을 한다.
+그럼 간단한 Todo를 만들어보자. [Svelte 공식 사이트의 퀵스타트 가이드](https://svelte.dev/blog/the-easiest-way-to-get-started#2_Use_degit)를 따라 아래와 같이 [degit](https://github.com/Rich-Harris/degit)(이것도 Rich Harris가 만듬)을 사용해서 프로젝트 scaffolding을 한다.
 
 ```bash
 npx degit sveltejs/template sveltodo
@@ -90,7 +90,7 @@ http://localhost:5000 로 가보면 헬로 월드가 떠있는 것을 볼 수 �
 
 ```html
 <script>
-  export let name;
+  export let name
 </script>
 
 <style>
@@ -121,7 +121,7 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = 'Sveltodo';
+  let appTitle = 'Sveltodo'
 </script>
 
 <h1>{appTitle}</h1>
@@ -131,14 +131,14 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = 'Sveltodo';
+  let appTitle = 'Sveltodo'
 
   function appendEmoji() {
-    appTitle += '😎';
+    appTitle += '😎'
   }
 </script>
 
-<h1 on:click={appendEmoji}>{appTitle}</h1>
+<h1 on:click="{appendEmoji}">{appTitle}</h1>
 ```
 
 `let` 으로 선언 후 재대입하는 함수를 만들어서 `on:click` 으로 연결해주는 것만으로,
@@ -151,14 +151,15 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = "svelTodo";
-  let todoText = "";
+  let appTitle = 'svelTodo'
+  let todoText = ''
 </script>
 
 <h1>{appTitle}</h1>
-<input bind:value={todoText} type="text" placeholder="[여기에 할 일 입력]">
+<input bind:value="{todoText}" type="text" placeholder="[여기에 할 일 입력]" />
 <p>{todoText}</p>
 ```
+
 역시 `<script>`에서 변수 선언 후 `input` 엘리먼트에 `bind:value`로 연결해주는 것만으로, 아래와 같이 잘 동작한다.
 
 ![svletodo-no-todo](sveltodo-no-todo.gif)
@@ -186,21 +187,21 @@ function addTodo() {
 
 ```html
 <script>
-  let appTitle = "svelTodo";
-  let todoText = "";
-  let todos = [];
+  let appTitle = 'svelTodo'
+  let todoText = ''
+  let todos = []
 
   function addTodo() {
-    if (!todoText) return;
-    todos = [...todos, todoText];
-    todoText = "";
+    if (!todoText) return
+    todos = [...todos, todoText]
+    todoText = ''
   }
 </script>
 
 <h1>{appTitle}</h1>
 
-<input bind:value={todoText} type="text" placeholder="[여기에 할 일 입력]">
-<button on:click={addTodo}>입력</button>
+<input bind:value="{todoText}" type="text" placeholder="[여기에 할 일 입력]" />
+<button on:click="{addTodo}">입력</button>
 
 <p>{todos}</p>
 ```
@@ -215,9 +216,9 @@ function addTodo() {
 
 ```js
 function addTodo() {
-  if (!todoText) return;
-  todos = [...todos, { text: todoText, done: false }];
-  todoText = "";
+  if (!todoText) return
+  todos = [...todos, { text: todoText, done: false }]
+  todoText = ''
 }
 ```
 
@@ -226,7 +227,7 @@ todo item의 text만 리스트로 보여줘야 하는데, Svelte에서 리스트
 ```html
 <ul>
   {#each todos as todo}
-    <li>{todo.text}</li>
+  <li>{todo.text}</li>
   {/each}
 </ul>
 ```
@@ -238,7 +239,7 @@ Vue의 `v-for` 디렉티브 보다 Django 등의 웹 프레임워크에서 사�
 ```html
 <ul>
   {#each todos as { text }}
-    <li>{text}</li>
+  <li>{text}</li>
   {/each}
 </ul>
 ```
@@ -280,11 +281,11 @@ html의 리스트 부분은 아래와 같이 클릭 이벤트 연결을 해주�
 function toggleTodo(selected) {
   todos = todos.map((todo, i) =>
     i === selected ? { text: todo.text, done: !todo.done } : todo
-  );
+  )
 }
 
 function deleteTodo(selected) {
-  todos = todos.filter((todo, i) => i !== selected);
+  todos = todos.filter((todo, i) => i !== selected)
 }
 ```
 
@@ -312,13 +313,13 @@ Svelte는 css class 사용도 엄청 편하게 되어있다. 일단 토글시 `l
 Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 ```html
-<li class:done={done}>
+<li class:done="{done}"></li>
 ```
 
 위와 같이 `class:클래스명={조건}`의 형식으로 간편하게 사용할 수 있고, 클래스명과 조건에 사용되는 변수명이 같으면,
 
 ```html
-<li class:done>
+<li class:done></li>
 ```
 
 아예 위와 같이 줄여쓸 수도 있다. 오홍..
@@ -398,10 +399,7 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 필요한 엘리먼트에 아래와 같이 적용한다.
 
 ```html
-<li
-  in:fade
-  out:fly={{ x: -300, duration: 400 }}
->
+<li in:fade out:fly={{ x: -300, duration: 400 }} >
 ```
 
 눈에 보이는대로다. `in` 은 추가시, `out` 은 삭제시 적용되는 애니메이션이고, `:` 옆에 사용할 애니메이션 함수를, `={}` 안에 parameter로 객체를 넘겨주면 세부 조정을 할 수 있고, 아무것도 넘겨주지 않으면 디폴트 설정으로 적용된다. 적용한 애니메이션이 어떻게 동작하는지 보자.
@@ -411,6 +409,7 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 별 거 안했는데 이런 게 그냥 된다!
 
 아래는 실제로 동작하는 codesandbox다.
+
 <iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## 맺으며
