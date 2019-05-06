@@ -96,10 +96,15 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
+          {
+            family: `Roboto`,
+            variants: [`400`, `700`],
+            subsets: [`latin`],
+          },
           // {
-          //   family: `Fira Sans`,
-          //   variants: [`400`, `700`],
-          //   subsets: [`latin`],
+          // family: `Fira Sans`,
+          // variants: [`400`, `700`],
+          // subsets: [`latin`],
           // },
           // {
           //   family: `Gothic A1`,
@@ -107,12 +112,18 @@ module.exports = {
           //   subsets: [`korean`],
           // },
           {
-            family: `Inconsolata`,
+            family: `Noto Sans KR`,
             variants: [`400`, `700`],
+            // subsets: [`korean`],
           },
+          // {
+          //   family: `Inconsolata`,
+          //   variants: [`400`, `700`],
+          // },
         ],
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-remark-responsive-iframe`,
   ],
 }
