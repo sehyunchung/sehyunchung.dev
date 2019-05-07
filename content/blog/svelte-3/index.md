@@ -1,7 +1,7 @@
 ---
-title: Svelte 3에 대해 알아보자
+title: Svelte에 대해 알아보자
 date: '2019-05-05'
-description: '이상하고 쉽고 재밌다'
+description: 'Svelte에 대해 알아보고 간단한 Todo도 만들어본다'
 tags: ['svelte', 'javascript', 'frontend']
 ---
 
@@ -420,4 +420,6 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 svelte의 아주 기본적인 부분들이지만 위에서 다루지 않은 것도 많다(`$:` 라던가). 그런 부분들은 [튜토리얼이 워낙에 잘 되어있으므로](https://svelte.dev/tutorial/basics) 마저 체크해보면 좋을 것이다.
 
-여튼 Svelte가 어떻게 될 지 매우 궁금하고.. 개인적으론 잘됐으면 좋겠다💖 오늘은 일단 여기까지.😎
+여튼 Svelte가 어떻게 될 지 매우 궁금하고.. 개인적으론 잘됐으면 좋겠다💖
+
++ 
