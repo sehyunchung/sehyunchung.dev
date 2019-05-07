@@ -40,7 +40,6 @@ http://localhost:5000 로 가보면 헬로 월드가 떠있는 것을 볼 수 �
 프로젝트 폴더의 구조는 아래와 같다.
 
 ```bash
-.
 ├── public
 │   ├── bundle.css
 │   ├── bundle.css.map
@@ -84,7 +83,7 @@ http://localhost:5000 로 가보면 헬로 월드가 떠있는 것을 볼 수 �
 }
 ```
 
-위에서 설명했다시피 `svelte`는 기본적으로 컴파일러이기 때문에, 런타임에 `svelte` 관련 모듈을 불러와야 한다던가 하는 일이 없기 때문이다. 신선..
+위에서 설명했다시피 `svelte`는 기본적으로 컴파일러이기 때문에, 런타임에 `svelte` 관련 모듈을 불러와야 한다던가 하는 일이 없기 때문이라고. 신선..
 
 `src/App.svelte`를 열어보면, 아래와 같이 생겼다.
 
@@ -408,13 +407,13 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 별 거 안했는데 이런 게 그냥 된다!
 
-아래는 실제로 동작하는 codesandbox다.
+아래는 실제로 동작하는 codesandbox.
 
 <iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## 맺으며
 
-약간 이래도 되나ㅋ 싶은 부분도 있고, 빅3에 비하면 미래가 아직은 불투명하다는 점이 있지만, 어쨌든 굉장히 매력적인 데가 있고, 특히 생산성이 매우 좋을 것 같다. 일단 뭔가 만들고 싶어지고(뭐든 간단하게 되어있으니까) 벌써부터 Vue가 약간 오징어로 보이는..
+빅3에 비하면 미래가 아직은 불투명하다는 점이 있지만, 굉장히 매력적이고, 특히 생산성이 매우 좋을 것 같다. 뭐든 간단하게 되어있으니 손이 쉽게 가는 면도 있고(벌써부터 Vue가 약간 오징어로 보이는..).
 
 더해서, 위에서 언급하진 않았지만 인상적이었던 것은, 발표 후반부에 나왔던 두 가지 케이스인데, 하나는 svelte로 만든 웹앱의 크기가 작고 성능이 좋아서 [다른 프레임워크로는 불가능했던 임베디드 앱을 만들 수 있었다는 것](https://rethinking-reactivity.surge.sh/#slide=28)과, [협업시 비개발자들도 쉽게 건드릴 수 있어서 좋았다는 것](https://rethinking-reactivity.surge.sh/#slide=34)이었다.
 
