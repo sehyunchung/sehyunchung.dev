@@ -5,6 +5,8 @@ description: 'Svelte에 대해 알아보고 간단한 Todo도 만들어본다'
 tags: ['svelte', 'javascript', 'frontend']
 ---
 
+![svelte-logo-360](svelte-logo-360.png)
+
 ## [Svelte?](https://svelte.dev)
 
 Svelte는 Rich Harris(NYT, Graphics Editor)를 주축으로 만들어진 UI 라이브러리/프레임워크다. 나온지는 꽤 되었지만, 얼마전 Ver. 3이 릴리즈 되었고, 관련된 [발표](https://www.youtube.com/watch?v=AdNJ3fydeao)와 함께 화제가 되고 있는 중.
@@ -403,13 +405,13 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 눈에 보이는대로다. `in` 은 추가시, `out` 은 삭제시 적용되는 애니메이션이고, `:` 옆에 사용할 애니메이션 함수를, `={}` 안에 parameter로 객체를 넘겨주면 세부 조정을 할 수 있고, 아무것도 넘겨주지 않으면 디폴트 설정으로 적용된다. 적용한 애니메이션이 어떻게 동작하는지 보자.
 
-![sveltodo-fade-fly](sveltodo-fade-fly.gif)
+<img src="sveltodo-fade-fly.gif" width="420">
 
 별 거 안했는데 이런 게 그냥 된다!
 
 아래는 실제로 동작하는 codesandbox.
 
-<iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:420px; height:420px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## 맺으며
 
