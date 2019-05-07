@@ -382,7 +382,7 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 ![sveltodo-toggle-delete](sveltodo-toggle-delete.gif)
 
-그러나 Svelte의 가장 띠용한 점이 아직 하나 남이 있는데..
+그러나 Svelte의 가장 띠용한 점 중 하나가 아직 하나 남이 있는데..
 
 ## 애니메이션
 
@@ -421,5 +421,3 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 svelte의 아주 기본적인 부분들이지만 위에서 다루지 않은 것도 많다(`$:` 라던가). 그런 부분들은 [튜토리얼이 워낙에 잘 되어있으므로](https://svelte.dev/tutorial/basics) 마저 체크해보면 좋을 것이다.
 
 여튼 Svelte가 어떻게 될 지 매우 궁금하고.. 개인적으론 잘됐으면 좋겠다💖
-
-+ 
