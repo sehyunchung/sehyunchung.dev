@@ -11,7 +11,7 @@ tags: ['svelte', 'javascript', 'frontend']
 
 Svelte는 Rich Harris(NYT, Graphics Editor)를 주축으로 만들어진 UI 라이브러리/프레임워크다. 나온지는 꽤 되었지만, 얼마전 Ver. 3이 릴리즈 되었고, 관련된 [발표](https://www.youtube.com/watch?v=AdNJ3fydeao)와 함께 화제가 되고 있는 중.
 
-어쩌다 보게 된 것인진 모르겠는데(트위터 아니면 유튜브 돌다가 인데 기억이 나지 않는다..) 그 발표를 보게 됐다. 한글 자막은 없는데(auto-generated 옵션을 켜면 나오긴 나오지만 사람에 따라 역효과가 날 것 같다.), 여러모로 재미있는 발표이고, Svelte와 관련 이슈에 대해 현재 가장 잘 설명된 자료이므로, 체크해보면 좋을 것 같다.
+어쩌다 보게 된 것인진 모르겠는데(트위터 아니면 유튜브 돌다가 인데 기억이 나지 않는다..) 그 발표를 보게 됐다. 한글 자막은 없지만 여러모로 재미있는 발표이고, Svelte와 관련 이슈에 대해 현재 가장 잘 설명된 자료이므로, 체크해보면 좋을 것 같다.
 
 - 발표: [Rich Harris - Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao)
 - 슬라이드: [Rethinking reactivity](https://rethinking-reactivity.surge.sh/#slide=1)(Svelte로 만든 슬라이드다.)
@@ -165,7 +165,7 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ![svletodo-no-todo](sveltodo-no-todo.gif)
 
-역시 너무 간단하고.. 하여간 보일러플레이트가 거의 0에 수렴하도록 만들어놨다는 것이 인상적이다(공식 블로그의 포스트 소제목 중엔 ["Death to Boilerplate"](https://svelte.dev/blog/write-less-code#Death_to_boilerplate)가 있기도..).
+역시 너무 간단하고.. 하여간 보일러플레이트가 거의 0에 수렴하도록 만들어놨다는 것이 인상적이다(공식 블로그의 포스트 소제목 중엔 ["Death to Boilerplate"](https://svelte.dev/blog/write-less-code#Death_to_boilerplate)가 있기도).
 
 이제 todo list를 만들어 리스트에 할 일이 입력되도록 해보자. `todos` 배열을 만들어 거기에 `todoText`를 추가하면 될텐데, Vue 같으면
 `methods` 객체 안에 아래와 같이 `Array.prototype.push`를 사용하는 식이겠지만,
