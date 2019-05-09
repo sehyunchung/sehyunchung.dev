@@ -148,6 +148,10 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 위와 같이 잘 동작한다. 약간 이래도 되나 싶은 느낌이고, 이런 점 때문에 [말도 많은 것 같지만](https://twitter.com/youyuxi/status/1057291776724271104) 일단 편한 것은 굳..
 
+### `$:`
+
+Svelte의 핵심 기능이라고 할 수 있을 것인데,
+
 아무튼 Todo를 만들거니까 일단 input을 만들어보자. 이것 역시 충격적으로 간단한데,
 
 ```html
@@ -411,7 +415,7 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 아래는 실제로 동작하는 codesandbox.
 
-<iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:420px; height:420px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:100%;max-width:500px;height:420px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## 맺으며
 
