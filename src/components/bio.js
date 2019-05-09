@@ -46,6 +46,8 @@ function Bio() {
               <a href={`https://github.com/${social.github}`}>github</a>
               {' | '}
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>
+              {' | '}
+              <a href={`https://facebook.com/${social.facebook}`}>facebook</a>
             </p>
           </div>
         )
