@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: sehyunchung/sehyunchung.github.io
   branch: master
 
 media_folder: static/img
