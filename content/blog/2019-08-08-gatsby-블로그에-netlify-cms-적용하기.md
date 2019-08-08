@@ -14,9 +14,9 @@ description: 딱히 뭘 한 것은 없다..
 1. `gatsby-config.js`의 플러그인 설정을 추가한다.
   ```js
   module.exports = {
-    plugins: [
-      `gatsby-plugin-netlify-cms`
-    ]
+      plugins: [
+        `gatsby-plugin-netlify-cms`
+      ]
   }
   ```
 1. `/static` 폴더 안에 `admin/config.yml`을 추가한다. 
