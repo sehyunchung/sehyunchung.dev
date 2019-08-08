@@ -24,11 +24,11 @@ const typography = new Typography({
     // 'serif'
   ],
   overrideStyles: ({ rhythm }) => ({
+    body: {
+      overflow: 'hidden',
+    },
     p: {
       marginTop: rhythm(1),
-    },
-    img: {
-      textAlign: 'center',
     },
   }),
 })
