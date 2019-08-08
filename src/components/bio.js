@@ -38,16 +38,16 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p style={{
-              marginTop: rhythm(0)
-            }}>
+            <p
+              style={{
+                marginTop: rhythm(0),
+              }}
+            >
               해보자 개발블로그
               <br />
               <a href={`https://github.com/${social.github}`}>github</a>
               {' | '}
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a>
-              {' | '}
-              <a href={`https://facebook.com/${social.facebook}`}>facebook</a>
             </p>
           </div>
         )
