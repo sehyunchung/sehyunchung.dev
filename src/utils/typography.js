@@ -1,13 +1,14 @@
 import Typography from 'typography'
 
 const typography = new Typography({
+  bodyGray: 16,
   baseFontSize: '16px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    // 'Fira Sans',
-    'Roboto',
+    'Fira Sans',
+    // 'Roboto',
     // `Noto Sans KR`,
-    // 'Gothic A1',
+    'Gothic A1',
     // 'Segoe UI',
     // 'Helvetica',
     // 'Arial',
@@ -15,16 +16,19 @@ const typography = new Typography({
     // 'serif',
   ],
   bodyFontFamily: [
-    // 'Fira Sans',
-    'Roboto',
+    'Fira Sans',
+    // 'Roboto',
     // `Noto Sans KR`,
-    // 'Gothic A1',
+    'Gothic A1',
     'sans-serif',
     // 'serif'
   ],
   overrideStyles: ({ rhythm }) => ({
     p: {
       marginTop: rhythm(1),
+    },
+    img: {
+      textAlign: 'center',
     },
   }),
 })

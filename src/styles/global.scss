@@ -1,9 +1,11 @@
 @font-face {
   font-family: 'Meslo-LG-L-DZ-Regular';
-  src:url('./fonts/Meslo-LG-L-DZ-Regular.ttf.woff') format('woff'),
-      url('./fonts/Meslo-LG-L-DZ-Regular.ttf.svg#Meslo-LG-L-DZ-Regular') format('svg'),
-      url('./fonts/Meslo-LG-L-DZ-Regular.ttf.eot'),
-      url('./fonts/Meslo-LG-L-DZ-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
+  src: url('./fonts/Meslo-LG-L-DZ-Regular.ttf.woff') format('woff'),
+    url('./fonts/Meslo-LG-L-DZ-Regular.ttf.svg#Meslo-LG-L-DZ-Regular')
+      format('svg'),
+    url('./fonts/Meslo-LG-L-DZ-Regular.ttf.eot'),
+    url('./fonts/Meslo-LG-L-DZ-Regular.ttf.eot?#iefix')
+      format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,4 +40,8 @@ body:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(img) {
     mix-blend-mode: darken;
     opacity: 0.6;
   }
+}
+p > img {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
