@@ -56,5 +56,3 @@ collections:
 3. 이후 `content/` 안에서 이전에 작성해두었던 포스트들의 폴더들을 제거하면 끝이다.
 
 ![Smiling Bob Ross](/img/bob-ross-9464216-1-402.jpg)
-
-참쉽죠..
