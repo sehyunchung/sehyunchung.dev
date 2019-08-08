@@ -8,17 +8,17 @@ description: 딱히 뭘 한 것은 없다..
 아무튼, 과정은 다음과 같았다.
 
 1. 프로젝트에 `netlify-cms-app`과 `gatsby-plugin-netlify-cms`를 설치한다.
-```sh
-npm install --save netlify-cms-app gatsby-plugin-netlify-cms
-```
+  ```sh
+  npm install --save netlify-cms-app gatsby-plugin-netlify-cms
+  ```
 1. `gatsby-config.js`의 플러그인 설정을 추가한다.
-```js
-module.exports = {
-  plugins: [
-    `gatsby-plugin-netlify-cms`
-  ]
-}
-```
+  ```js
+  module.exports = {
+    plugins: [
+      `gatsby-plugin-netlify-cms`
+    ]
+  }
+  ```
 1. `/static` 폴더 안에 `admin/config.yml`을 추가한다. 
   ```
   backend:
