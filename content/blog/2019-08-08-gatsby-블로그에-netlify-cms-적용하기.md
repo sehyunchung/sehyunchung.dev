@@ -20,7 +20,7 @@ module.exports = {
 }
 ```
 1. `/static` 폴더 안에 `admin/config.yml`을 추가한다. 
-```yaml
+```
 backend:
   name: github # github id로 로그인하려고 github이라고 해두었음.
   repo: # [github id]/[repo주소]
