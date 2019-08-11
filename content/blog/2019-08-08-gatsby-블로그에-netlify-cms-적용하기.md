@@ -3,24 +3,27 @@ title: Gatsby 블로그에 Netlify CMS 적용하기
 date: 2019-08-08T09:25:22.424Z
 description: 딱히 뭘 한 것은 없다..
 ---
-매번 마크다운 파일을 작성하고 푸쉬하고 어쩌고 하는 게 좀 귀찮아서 Netlify CMS를 적용해보았다. 'Existing project'에 추가하는 건 왠지 복잡할 것 같아서 미루고 있었는데, 해보니 매우 간단했다. Netlify 무엇..
+매번 마크다운 파일을 작성하고 푸쉬하고 어쩌고 하는 게 좀 귀찮아서 Netlify CMS를 적용해보았다. 'Existing project'에 추가하는 건 왠지 복잡할 것 같아 미루고 있었는데, 해보니 매우 간단했다. 진즉 할 것을..
 
-아무튼, 과정은 다음과 같았다. [공식 가이드 링크](https://www.netlifycms.org/docs/gatsby/)
+아무튼, 과정은 다음과 같았다. [공식 가이드](https://www.netlifycms.org/docs/gatsby/)를 참고해서 진행해봤다.
 
-1. 프로젝트에 `netlify-cms-app`과 `gatsby-plugin-netlify-cms`를 설치한다.
+## 1. 프로젝트에 Netlify CMS 추가하기
+우선 `netlify-cms-app`과 `gatsby-plugin-netlify-cms`를 설치하고 `gatsby-config.js`에 등록해준다.
    ```sh
    npm install --save netlify-cms-app gatsby-plugin-netlify-cms
    ```
-2. `gatsby-config.js`에 플러그인 설정을 추가해준다.
    ```js
+   // gatsby-config.js
    module.exports = {
        plugins: [
          `gatsby-plugin-netlify-cms`
        ]
    }
    ```
-3. `/static` 폴더 안에 `admin/config.yml`을 추가한다. 
+## 2. Config.yml
+Netlify CMS의 admin 페이지와 컨텐트 설정을 위한 config.yml 파일을 추가해주어야 한다. `/static` 폴더 안에 `admin` 폴더를 만들고, 그 안에 `config.yml` 파일을 추가해준다. 확장자 `.yml`인 것에 주의하자. `.yaml`이라고 해봤는데 동작하지 않았다.
    ```yaml
+   # static/admin/config.yml
    backend:
        name: github # github id로 로그인하려고 github이라고 해두었음.
        repo: # [github id]/[repo주소]
