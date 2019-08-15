@@ -127,5 +127,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-remark-responsive-iframe`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify`,
   ],
 }
