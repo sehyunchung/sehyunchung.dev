@@ -6,22 +6,20 @@ const typography = new Typography({
   baseLineHeight: 1.666,
   headerFontFamily: [
     'Fira Sans',
-    // 'Roboto',
-    // `Noto Sans KR`,
     'Gothic A1',
-    // 'Segoe UI',
-    // 'Helvetica',
-    // 'Arial',
+    'Segoe UI',
+    'Helvetica',
+    'Arial',
     'sans-serif',
-    // 'serif',
+    'serif',
   ],
   bodyFontFamily: [
     'Fira Sans',
-    // 'Roboto',
-    // `Noto Sans KR`,
     'Gothic A1',
+    'Helvetica',
+    'Arial',
     'sans-serif',
-    // 'serif'
+    'serif',
   ],
   overrideStyles: ({ rhythm }) => ({
     body: {
