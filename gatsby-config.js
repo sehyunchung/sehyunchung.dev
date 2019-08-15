@@ -97,11 +97,6 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          // {
-          // family: `Roboto`,
-          // variants: [`400`, `700`],
-          // subsets: [`latin`],
-          // },
           {
             family: `Fira Sans`,
             variants: [`400`, `700`],
@@ -112,15 +107,10 @@ module.exports = {
             variants: [`400`, `700`],
             subsets: [`korean`],
           },
-          // {
-          // family: `Noto Sans KR`,
-          // variants: [`400`, `700`],
-          // subsets: [`korean`],
-          // },
-          // {
-          //   family: `Inconsolata`,
-          //   variants: [`400`, `700`],
-          // },
+          {
+            family: `Fira Code`,
+            variants: [`400`, `700`],
+          },
         ],
       },
     },
