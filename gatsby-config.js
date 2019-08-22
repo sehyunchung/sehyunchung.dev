@@ -5,7 +5,7 @@ module.exports = {
     description: `yet another dev log`,
     siteUrl: `https://sehyunchung.github.io/`,
     social: {
-      twitter: `cong__vu`,
+      twitter: `sehyunchung`,
       github: `sehyunchung`,
       facebook: `sxhyxnchxng`,
     },
