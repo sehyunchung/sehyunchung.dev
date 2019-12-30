@@ -49,18 +49,7 @@ module.exports = {
             },
           },
           `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              aliases: {
-                sh: 'bash',
-                js: 'javascript',
-              },
-              showLineNumbers: true,
-              numberLines: true,
-              noInlineHighlight: false,
-            },
-          },
+          `gatsby-remark-vscode`,
         ],
       },
     },
