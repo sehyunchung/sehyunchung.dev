@@ -5,7 +5,7 @@ module.exports = {
     description: `yet another dev log`,
     siteUrl: `https://sehyunchung.github.io/`,
     social: {
-      twitter: `cong__vu`,
+      twitter: `sehyunchung`,
       github: `sehyunchung`,
       facebook: `sxhyxnchxng`,
     },
@@ -76,8 +76,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `sehyunchung.dev`,
+        short_name: `sehyunchung.dev`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

@@ -5,7 +5,8 @@ const typography = new Typography({
   baseFontSize: '16px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Fira Sans',
+    'Verdana',
+//    'Fira Sans',
     'Gothic A1',
     'Segoe UI',
     'Helvetica',
@@ -14,6 +15,7 @@ const typography = new Typography({
     'serif',
   ],
   bodyFontFamily: [
+    'Verdana',
     'Fira Sans',
     'Gothic A1',
     'Helvetica',
