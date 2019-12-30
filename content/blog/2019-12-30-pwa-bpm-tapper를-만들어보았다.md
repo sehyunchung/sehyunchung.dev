@@ -15,8 +15,8 @@ description: PWA가 '앱처럼 동작'하려면 무엇무엇을 추가해줘야 
 - emotion - 안써봐서 써보고 싶었음
 - react-spring - 역시 써보고 싶었음
 
-그리하여 일단 1차 완성된 웹앱 링크 ➡️ [https://bipi.me](https://bipi.me) 뭘 하든 제대로 하는 게 좋으므로 커스텀 도메인도 달았다..  
-코드는 깃헙에 ➡️ [https://github.com/sehyunchung/bipi](https://github.com/sehyunchung/bipi)
+그리하여 일단 1차 완성된 웹앱 링크 ➡️ [`https://bipi.me`](https://bipi.me) 뭘 하든 제대로 하는 게 좋으므로 커스텀 도메인도 달았다..  
+코드는 깃헙에 ➡️ [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
 PWA로 만들면서 중요하게 생각했던 것은,
 - 당연하지만 **오프라인**에서 작동한다.
