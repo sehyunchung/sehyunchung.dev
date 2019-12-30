@@ -30,7 +30,7 @@ PWA로 만들면서 중요하게 생각했던 것은,
 서비스워커다. 이건 뭐 한게 없고 create-react-app 에서 만들어주는 `index.tsx` 맨 마지막 줄을 바꿔주기만 하면 된다.
 ```diff
 --- serviceWorker.unregister()
-++++ serviceWorker.register()
++++ serviceWorker.register()
 ```
 
 ## 앱 아이콘 추가하기
