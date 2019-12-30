@@ -27,15 +27,25 @@ PWA로 만들면서 중요하게 생각했던 것은,
 입니다. 뭐든 예쁜게 좋으니깐..
 
 ## 오프라인에서 동작하게 만들기
-서비스워커다. 이건 뭐 한게 없고 create-react-app 에서 만들어주는 `index.tsx` 맨 마지막 줄을 바꿔주기만 하면 된다.
+서비스워커다. 이건 뭐 한게 없고 create-react-app 에서 만들어주는 `index.tsx` 맨 마지막 줄을 바꿔주기만 하면 됩니다.
 ```diff
+...
 - serviceWorker.unregister()
 + serviceWorker.register()
+...
 ```
 
 ## 앱 아이콘 추가하기
 ## 스탠드얼론 앱으로 실행되게 만들기
+`manifest.json`에 아래 행을 추가한다.
+```diff
++    "display": "standalone",
+```
 ## 상태바 스타일링되게 하기
+`index.html`의 `<head>` 영역에 아래코드를 추가합니다.
+```diff
++    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+```
 ## 추가로 해볼 것들
 - 스플래시 화면
 - Add to Homescreen Call to Action 달아보기
