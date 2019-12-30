@@ -36,16 +36,46 @@ PWA로 만들면서 중요하게 생각했던 것은,
 ```
 
 ## 앱 아이콘 추가하기
-## 스탠드얼론 앱으로 실행되게 만들기
 `manifest.json`에 아래 행을 추가한다.
 ```diff
-+    "display": "standalone",
+{
+...
++    "icons": [{
++            "src": "favicon.ico",
++            "sizes": "64x64 32x32 24x24 16x16",
++            "type": "image/x-icon"
++        },
++        {
++            "src": "logo192.png",
++            "type": "image/png",
++            "sizes": "192x192"
++        },
++        {
++            "src": "logo512.png",
++            "type": "image/png",
++            "sizes": "512x512"
++        }
++    ],
+...
+}
 ```
+
+## 스탠드얼론 앱으로 실행되게 만들기
+역시 `manifest.json`에 아래 행을 추가한다.
+```diff
+{
+...
++    "display": "standalone",
+...
+}
+```
+
 ## 상태바 스타일링되게 하기
 `index.html`의 `<head>` 영역에 아래코드를 추가합니다.
 ```diff
 +    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 ```
+
 ## 추가로 해볼 것들
 - 스플래시 화면
 - Add to Homescreen Call to Action 달아보기
