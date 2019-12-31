@@ -43,7 +43,6 @@ function BlogPostTemplate(props) {
         }}
       />
       <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-      <Bio />
 
       <ul
         style={{

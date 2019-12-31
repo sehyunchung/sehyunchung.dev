@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `sehyunchung`,
+    title: `중얼중얼`,
     author: `Sehyun Chung`,
-    description: `yet another dev log`,
-    siteUrl: `https://sehyunchung.github.io/`,
+    description: `yet another dev blog (in Korean)`,
+    siteUrl: `https://sehyunchung.dev/`,
     social: {
       twitter: `sehyunchung`,
       github: `sehyunchung`,
@@ -61,14 +61,14 @@ module.exports = {
         trackingId: `UA-135916528-1`,
       },
     },
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `sehyunchung.dev`,
         short_name: `sehyunchung.dev`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `hsl(0, 0, 60%)`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
@@ -87,18 +87,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Fira Sans`,
-            variants: [`400`, `700`],
+            family: `IBM Plex Sans`,
+            variants: [`400`, `500`, `600`, `700`],
             subsets: [`latin`],
           },
           {
-            family: `Gothic A1`,
-            variants: [`400`, `700`],
-            subsets: [`korean`],
-          },
-          {
-            family: `Fira Code`,
-            variants: [`400`, `700`],
+            family: `IBM Plex Mono`,
+            variants: [`400`, `500`, `600`, `700`],
+            subsets: [`latin`],
           },
         ],
       },
@@ -107,5 +103,6 @@ module.exports = {
     `gatsby-remark-responsive-iframe`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-typescript`,
   ],
 }
