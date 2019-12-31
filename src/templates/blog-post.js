@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { DiscussionEmbed } from 'disqus-react'
+import Utterances from '../components/utterances'
 
-import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
@@ -13,11 +12,6 @@ function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
-  const disqusShortname = 'sxhyxnchxng'
-  const disqusConfig = {
-    identifier: post.id,
-    title: post.frontmatter.title,
-  }
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -42,7 +36,7 @@ function BlogPostTemplate(props) {
           marginBottom: rhythm(1),
         }}
       />
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      <Utterances />
 
       <ul
         style={{
