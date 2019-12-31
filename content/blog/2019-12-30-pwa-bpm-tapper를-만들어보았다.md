@@ -1,7 +1,7 @@
 ---
 title: PWA BPM Tapper를 만들어보았다
 date: 2019-12-29T09:29:38.867Z
-description: PWA가 '앱처럼 동작'하려면 무엇무엇을 추가해줘야 할 지 알아보자
+description: PWA가 '앱처럼 동작'하려면?
 ---
 ## **BPM Tapper?**  
 > BPM Tapper; 음악에 맞춰 탭하면 BPM(Beats Per Minute)을 표시해주는 무언가
@@ -61,7 +61,7 @@ PWA로 만들면서 중요하게 생각했던 것은,
 ```
 
 ## 스탠드얼론 앱으로 실행되게 만들기
-역시 `manifest.json`에 아래 행을 추가한다.
+역시 `manifest.json`에 아래 행을 추가합니다.
 ```diff
 {
 ...
