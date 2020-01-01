@@ -41,7 +41,6 @@ const typography = new Typography({
     'a:hover, a:active, a:visited': {
       padding: '2px 6px',
       backgroundColor: 'hsla(212, 97%, 43%, 0.06)',
-      // backgroundColor: 'hsla(0, 0%, 0%, 0.06)',
       borderRadius: '4px',
       margin: '-6px',
     },

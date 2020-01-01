@@ -29,6 +29,7 @@ function BlogIndex(props) {
                 style={{
                   boxShadow: `none`,
                   textDecoration: `none`,
+                  color: `hsla(0, 0%, 0%, 0.8)`,
                 }}
                 to={node.fields.slug}
               >
