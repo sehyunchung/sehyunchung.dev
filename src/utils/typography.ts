@@ -2,7 +2,7 @@ import Typography from 'typography'
 import 'typeface-spoqa-han-sans2'
 
 const typography = new Typography({
-  baseFontSize: '20px',
+  baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
     'Spoqa Han Sans',
@@ -34,8 +34,17 @@ const typography = new Typography({
       backgroundColor: 'hsl(0, 0%, 96%)',
       wordBreak: 'keep-all',
     },
-    a: { textDecoration: 'none' },
-    'a:hover, a:active': { color: 'none' },
+    a: {
+      color: 'hsla(212, 97%, 43%, 1)',
+      textDecoration: 'none',
+    },
+    'a:hover, a:active, a:visited': {
+      padding: '2px 6px',
+      backgroundColor: 'hsla(212, 97%, 43%, 0.06)',
+      // backgroundColor: 'hsla(0, 0%, 0%, 0.06)',
+      borderRadius: '4px',
+      margin: '-6px',
+    },
     p: {
       marginTop: rhythm(1),
     },

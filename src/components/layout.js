@@ -57,7 +57,7 @@ function Layout(props) {
         marginLeft: `auto`,
         marginRight: `auto`,
         height: `100%`,
-        maxWidth: rhythm(25),
+        maxWidth: rhythm(28),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
