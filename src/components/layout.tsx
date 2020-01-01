@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
-import Bio from '../components/bio'
+import Bio from './bio'
 
 function Layout(props) {
   const { location, title, children } = props
   const rootPath = `${__PATH_PREFIX__}/`
-  let header
+  let header: JSX.Element
 
   if (location.pathname === rootPath) {
     header = (

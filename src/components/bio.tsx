@@ -29,11 +29,9 @@ function Bio() {
                 marginTop: rhythm(0),
               }}
             >
-              <span alt="about">about</span>
+              <span>about</span>
               {'  |  '}
-              <a alt="github" href={`https://github.com/${social.github}`}>
-                github
-              </a>
+              <a href={`https://github.com/${social.github}`}>github</a>
             </p>
           </div>
         )
