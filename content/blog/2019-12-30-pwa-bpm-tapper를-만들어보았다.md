@@ -10,13 +10,14 @@ description: PWA가 '앱처럼 동작'하려면?
 
 사용한 기술 머시기들은 아래와 같다.
 
-- typescript - 그냥
-- react - 써본지 오래돼서 리프레쉬 삼아
-- emotion - 안써봐서
-- react-spring - 역시 안써봐서
+- `typescript` - 그냥
+- `react` - 써본지 오래돼서 리프레쉬 삼아
+- [`emotion`](https://github.com/emotion-js/emotion) - 안써봐서
+- [`react-spring`](https://github.com/react-spring/react-spring) - 역시 안써봐서
 
-그리하여 일단 1차 완성된 웹앱 링크다. ➡️ [`https://bipi.me`](https://bipi.me)  
-깃헙 링크는 ➡️ [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
+그리하여 일단 1차 완성된
+> 웹앱 링크 [`https://bipi.me`](https://bipi.me)  
+> 깃헙 링크 [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
 PWA로 만들면서 중요하게 생각했던 것은,
 - 당연하지만 **오프라인**에서 작동한다.
