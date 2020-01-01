@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { rhythm } from '../utils/typography'
 
-const utterancesRef = React.createRef()
-
 function Utterances() {
+  const utterancesRef = useRef(null)
+
   useEffect(() => {
-    const utterances = document.createElement('script')
+    const utterances: HTMLElement = document.createElement('script')
     const utterancesConfig = {
       src: 'https://utteranc.es/client.js',
       repo: 'sehyunchung/sehyunchung.github.io',
@@ -18,8 +18,10 @@ function Utterances() {
     Object.keys(utterancesConfig).forEach(configKey => {
       utterances.setAttribute(configKey, utterancesConfig[configKey])
     })
+
     utterancesRef.current.appendChild(utterances)
   }, [])
+
   return (
     <div
       className="utterances"
