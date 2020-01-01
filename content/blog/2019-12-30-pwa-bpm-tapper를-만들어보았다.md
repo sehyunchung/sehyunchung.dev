@@ -8,16 +8,16 @@ description: PWA가 '앱처럼 동작'하려면?
 
 디제잉을 하다보면 종종 모르는 곡의 BPM을 알아내야 할 때가 생기는데(바이닐 쓰시는 분이랑 백투백을 한다던지), 여기저기 찾아봐도 맘에 들게 생긴게 없어서 BPM 태퍼를 만들어 써야겠다는 생각을 해왔고, 이번에 좀 시간이 나서 만들어보았다. 아무래도 오프라인 상황이 종종 있을 것 같고, 최근에 트위터라던가 이런저런 PWA를 설치해서 쓰는 데 좀 맛이 들려서(..) PWA로 만들어보기로.
 
+그리하여 일단 완성된 링크:
+> **웹앱** [`https://bipi.me`](https://bipi.me)  
+> **깃헙** [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
+
 사용한 기술 머시기들은 아래와 같다.
 
 - `typescript` - 그냥
 - `react` - 써본지 오래돼서 리프레쉬 삼아
 - [`emotion`](https://github.com/emotion-js/emotion) - 안써봐서
 - [`react-spring`](https://github.com/react-spring/react-spring) - 역시 안써봐서
-
-그리하여 일단 1차 완성된
-> 웹앱 링크 [`https://bipi.me`](https://bipi.me)  
-> 깃헙 링크 [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
 PWA로 만들면서 중요하게 생각했던 것은,
 - 당연하지만 **오프라인**에서 작동한다.
