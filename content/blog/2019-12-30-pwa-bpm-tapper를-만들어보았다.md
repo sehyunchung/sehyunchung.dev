@@ -107,4 +107,4 @@ PWA로 만들면서 중요하게 생각했던 것,
 
 ## 그런데..
 - 해놓고 보니 스플래쉬 스크린을 빼먹었다.
-- 뭔가 흉내내기 하는 것 같고 답답합이 있어 내친김에 iOS 네이티브앱(SwiftUI를 써서)으로 다시 만들어보았다. [https://github.com/sehyunchung/bipi/tree/ios/Bipi!](https://github.com/sehyunchung/bipi/tree/ios/Bipi!) 어째서 React Native를 쓰지 않은 것인지는 나도 모르겠지만..
+- 뭔가 흉내내기 하는 것 같고 답답합이 있어 내친김에 [iOS 네이티브앱(SwiftUI를 써서)으로 다시 만들어보았다](https://github.com/sehyunchung/bipi/tree/ios/Bipi!). 어째서 React Native를 쓰지 않은 것인지는 나도 모르겠지만.
