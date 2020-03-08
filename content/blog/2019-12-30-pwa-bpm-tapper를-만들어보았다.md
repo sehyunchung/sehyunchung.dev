@@ -1,5 +1,5 @@
 ---
-title: PWA BPM Tapper를 만들어보았다
+title: BPM Tapper를 PWA로 만들어보았다
 date: 2020-03-08T14:29:00.000Z
 description: PWA를 네이티브 앱처럼 보이게 만들기 위해 필요한 설정들
 ---
