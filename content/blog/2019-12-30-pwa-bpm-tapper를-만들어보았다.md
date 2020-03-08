@@ -8,7 +8,7 @@ description: PWA를 네이티브 앱처럼 보이게 만들기 위해 필요한 
 그리하여 일단 완성된 앱은 이렇다:
 
 > **웹앱** [`https://bipi.me`](https://bipi.me)\
-> **깃헙** [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)[^1]
+> **깃헙** [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
 간단한 앱이다. 화면 아무곳을 3번 이상 탭하면 BPM을 계산해서 보여준다. 4초간 입력이 없으면 0으로 리셋.
 
@@ -36,7 +36,7 @@ PWA로 만들면서 중요하게 생각했던 것들은 아래와 같다.
 
 ## 2. 앱 아이콘 추가하기
 
-여기서부턴 `manifest.json`에 설정을 추가하면 된다. `manifest.json`에서 앱아이콘을 설정하는 부분은 `"icons" array다.
+여기서부턴 `manifest.json`에 설정을 추가하면 된다. `manifest.json`에서 앱아이콘을 설정하는 부분은 `"icons"` array다.
 
 ```diff
 {
