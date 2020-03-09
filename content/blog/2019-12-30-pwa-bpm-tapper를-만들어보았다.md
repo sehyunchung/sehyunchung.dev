@@ -10,7 +10,7 @@ description: PWA를 네이티브 앱처럼 보이게 만들기 위해 필요한 
 > **웹앱** [`https://bipi.me`](https://bipi.me)\
 > **깃헙** [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
-간단한 앱이다. 화면 아무곳을 3번 이상 탭하면 BPM을 계산해서 보여준다. 4초간 입력이 없으면 0으로 리셋.
+간단한 앱이다. '홈 화면에 추가'등을 이용해 디바이스에 설치할 수 있고, 화면 아무곳을 2번 이상 탭하면 BPM을 계산해서 보여준다. 4초간 입력이 없으면 0으로 리셋.
 
 ## 해보고 싶었던 것들
 
@@ -73,9 +73,9 @@ PWA로 만들면서 중요하게 생각했던 것들은 아래와 같다.
 }
 ```
 
-설정값들과 설정시 화면 동작을 정리해봤다.
+`display`의 설정값들과 설정시 화면 동작은 아래와 같았다.
 
-| 프로퍼티         | 설치시 화면 동작                                                        |
+| 프로퍼티         | 설정시 화면 동작                                                        |
 | ------------ | ---------------------------------------------------------------- |
 | `browser`    | 디폴트 브라우저 화면                                                      |
 | `fullscreen` | 브라우저인데 ui가 안보이는 브라우저 화면 ..이라고 되어있는데 iOS에선 `browser`랑 차이가 없었다.    |
@@ -92,7 +92,7 @@ PWA로 만들면서 중요하게 생각했던 것들은 아래와 같다.
 +    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 ```
 
-역시 정리해 본 설정값들과 설정시 화면 동작.
+역시 정리해 본 `apple-mobile-web-app-status-bar-style`의 설정값들과 설정시 화면 동작.
 
 | 프로퍼티                | 설정시 화면 동작                     |
 | ------------------- | ----------------------------- |
@@ -100,12 +100,18 @@ PWA로 만들면서 중요하게 생각했던 것들은 아래와 같다.
 | `black`             | 상단에 상태바가 검은색 배경에 흰색 글자로 표시된다. |
 | `black-translucent` | 상태가바 웹앱 배경색 배경에 흰색 텍스트로 표시된다. |
 
-## References
+## 그리하여..
 
-* Add a web app manifest <https://web.dev/add-manifest/>
-* Changing The iOS Status Bar Of Your Progressive Web App <https://medium.com/appscope/changing-the-ios-status-bar-of-your-progressive-web-app-9fc8fbe8e6ab>
+완성된 앱은 아래와 같이 동작한다.
+
+![Bipi! Launch Screen Capture](/img/ezgif-1-d63fe090e544.gif)
 
 ## 그런데..
 
 * 해놓고 보니 스플래쉬 스크린을 빼먹었다.
-* 뭔가 흉내내기 하는 것 같고 답답합이 있어 내친김에 [iOS 네이티브앱(SwiftUI를 써서)으로 다시 만들어보았다](https://github.com/sehyunchung/bipi/tree/ios/Bipi!). 어째서 React Native를 쓰지 않은 것인지는 나도 모르겠지만.
+* 뭔가 흉내내기 하는 것 같고 답답합이 있어 내친김에 [iOS 네이티브앱(SwiftUI를 써서)으로 다시 만들어보았다](https://github.com/sehyunchung/bipi/tree/ios/Bipi!)(관련해선 나중에 써보려고 함). 어째서 React Native를 쓰지 않은 것인지는 나도 모르겠지만.
+
+## References
+
+* Add a web app manifest <https://web.dev/add-manifest/>
+* Changing The iOS Status Bar Of Your Progressive Web App <https://medium.com/appscope/changing-the-ios-status-bar-of-your-progressive-web-app-9fc8fbe8e6ab>
