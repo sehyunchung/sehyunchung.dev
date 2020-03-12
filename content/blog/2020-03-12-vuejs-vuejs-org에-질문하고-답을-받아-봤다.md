@@ -1,9 +1,9 @@
 ---
-title: vuejs/vuejs.org에 질문하고 답을 받아 봤다
+title: Vue 공식 문서는 어째서 method shorthand를 사용하지 않았을까
 date: 2020-03-12T13:49:28.964Z
-description: 대답이 15분 만에 왔다.
+description: 대답이 15분 만에 왔다
 ---
- Vue.js 공식 사이트의 예제들을 보면 `computed`나 `method`등에 method shorthand를 사용하지 않고 있다. 예를 들어 공식 문서에서 `computed`를 설명하는 예제를 보면,
+Vue.js 공식 사이트의 예제들을 보면 `computed`나 `method`등에 method shorthand를 사용하지 않고 있다. 예를 들어 공식 문서에서 `computed`를 설명하는 예제를 보면,
 
 ```js
 computed: {
