@@ -1,5 +1,5 @@
 ---
-title: Vue 공식 문서는 어째서 method shorthand가 없을까
+title: Vue 공식 문서엔 어째서 method shorthand가 없을까
 date: 2020-03-12T13:49:28.964Z
 description: 대답이 15분 만에 왔다
 ---
