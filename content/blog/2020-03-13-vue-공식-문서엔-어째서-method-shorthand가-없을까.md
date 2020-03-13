@@ -20,6 +20,7 @@ computed: {
 
 [https://github.com/vuejs/vuejs.org/issues/2526](https://github.com/vuejs/vuejs.org/issues/2526) 
 
-15분도 안돼서 답변이 달리고 closed 되었는데[^1], 위 링크에서 확인할 수 있듯, Vue 2.x는 공식적으로 IE 11을 지원하고 있고, 예제를 적용하면 어떤 환경에서든 그대로 잘 돌아가길 원했기 때문에, method shorthand를 사용하지 않고 있다는 만족스러운 답변을 얻을 수 있었다.
+15분도 안돼서 답변이 달리고 closed 되었는데[^1], 위 링크에서 확인할 수 있듯, Vue 2.x는 공식적으로 IE 11을 지원하고 있고, 예제를 적용하면 어떤 환경에서든 그대로 잘 돌아가길 원했기 때문에, method shorthand를 사용하지 않고 있다는 만족스러운 답변[^2]을 얻을 수 있었다.
 
 [^1]: 어째서 이런 이중 수동이 더 자연스럽게 느껴지는 것일까?
+[^2]: 더 찾아보니 [화살표 함수도 쓰지 않고 있었다](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property). 
