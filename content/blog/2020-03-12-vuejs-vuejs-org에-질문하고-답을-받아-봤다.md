@@ -15,7 +15,7 @@ computed: {
 }
 ```
 
-위와 같이 `reversedMessage()`가 아니라 `reversedMessage: function()`를 쓰고 있다. 어째서일까? 지금은 2020년인데?
+위와 같이 `reversedMessage()`가 아니라 `reversedMessage: function()`을 쓰고 있다. 어째서일까?
 
 여기저기 검색해봐도 나오는 게 없고, 아무도 만족스러운 답변을 주지 않아서, 궁금해진 김에 공식 문서 사이트 저장소[(vuejs/vuejs.org)](https://github.com/vuejs/vuejs.org)에 질문을 달아보았다.
 
