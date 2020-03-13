@@ -3,7 +3,7 @@ title: Vue 공식 문서엔 어째서 method shorthand가 없을까
 date: 2020-03-12T13:49:28.964Z
 description: 대답이 15분 만에 왔다
 ---
-Vue.js 공식 사이트의 예제들을 보면 `computed`나 `method`등에 method shorthand를 사용하지 않고 있다. 예를 들어 공식 문서에서 `computed`를 설명하는 예제를 보면,
+Vue.js 공식 사이트의 예제들을 보면 `computed`나 `method`등에 method shorthand를 사용하지 않고 있다. 예를 들어 [공식 문서에서 `computed`를 설명하는 예제](https://vuejs.org/v2/guide/computed.html#Basic-Example)를 보면,
 
 ```js
 computed: {
@@ -19,6 +19,6 @@ computed: {
 
 여기저기 검색해봐도 나오는 게 없고, 아무도 만족스러운 답변을 주지 않아서, 궁금해진 김에 공식 문서 사이트 저장소[(vuejs/vuejs.org)](https://github.com/vuejs/vuejs.org)에 질문을 달아보았다.
 
-[https://github.com/vuejs/vuejs.org/issues/2526](https://github.com/vuejs/vuejs.org/issues/2526)
+<https://github.com/vuejs/vuejs.org/issues/2526>
 
 15분도 안돼서 답변이 달리고 closed 당했는데, 위 링크에서 확인할 수 있듯, Vue 2.x는 공식적으로 IE 11을 지원하고 있고, 예제를 적용하면 어디서든 그대로 잘 돌아가길 원했기 때문에 method shorthand를 사용하지 않았다는 만족스러운 답변을 얻을 수 있었다. (끝)
