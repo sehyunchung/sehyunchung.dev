@@ -16,7 +16,7 @@ computed: {
 ```
 
 위와 같이 reversedMessage()가 아니라 reversedMessage: function()을 쓰고 있다. 어째서일까?
-여기저기 검색해봐도 나오는 게 없고 수상한 추측 뿐이어서, 궁금해진 김에 공식 문서 사이트 저장소 [(vuejs/vuejs.org)](https://github.com/vuejs/vuejs.org) 에 질문을 달아보았다.
+여기저기 검색해봐도 나오는 게 없고 수상한 추측 뿐이어서, 내친 김에 [공식 문서 저장소](https://github.com/vuejs/vuejs.org)에 질문을 달아보았다.
 
 [https://github.com/vuejs/vuejs.org/issues/2526](https://github.com/vuejs/vuejs.org/issues/2526) 
 
