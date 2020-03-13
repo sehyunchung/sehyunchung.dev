@@ -21,4 +21,4 @@ computed: {
 
 [https://github.com/vuejs/vuejs.org/issues/2526](https://github.com/vuejs/vuejs.org/issues/2526)
 
-15분도 안돼서 답변이 달리고 closed 당했는데, 위 링크에서 확인할 수 있듯, Vue 2.x는 공식적으로 IE 11을 지원하고 있고, 예제를 적용하면 어디서든 그대로 잘 돌아가길 원했기 때문에 method shorthand를 사용하지 않았다는 시원한 답변을 얻을 수 있었다. (끝)
+15분도 안돼서 답변이 달리고 closed 당했는데, 위 링크에서 확인할 수 있듯, Vue 2.x는 공식적으로 IE 11을 지원하고 있고, 예제를 적용하면 어디서든 그대로 잘 돌아가길 원했기 때문에 method shorthand를 사용하지 않았다는 만족스러운 답변을 얻을 수 있었다. (끝)
