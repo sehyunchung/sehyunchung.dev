@@ -2,6 +2,8 @@
 title: Vue Functional Component
 date: 2019-04-02T14:27:00.078Z
 description: Vue에도 함수형? 컴포넌트가 있다는 걸 뒤늦게 알았넹
+tags:
+  - vue
 ---
 Vue, 정확히는 Vue의 Single File Component에 Functional 옵션이 있다는 걸 몰랐는데, 트위터하다 지나가는 트윗을 보고 알게 되어(...) 적어본다.
 일단 사용법이 뭔가 좋다. 아래와 같이 `<template>`에 `functional`이라고 쓰면 끝이다.
