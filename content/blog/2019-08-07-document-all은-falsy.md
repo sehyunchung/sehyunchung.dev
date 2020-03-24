@@ -2,6 +2,8 @@
 title: document.all은 falsy
 date: 2019-02-03T14:46:27.256Z
 description: document.all이 어째서 falsy인가 하는 점에 대한 뻘글
+tags:
+  - javascript
 ---
 `document.all`은 `HTMLAllCollection`(페이지의 모든 html요소가 들어있는 유사 배열)을 반환하는 속성이다. 콘솔에 쳐보면?
 
