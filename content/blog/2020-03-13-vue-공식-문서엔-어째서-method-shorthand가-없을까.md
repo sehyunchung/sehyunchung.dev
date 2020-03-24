@@ -2,6 +2,10 @@
 title: Vue 공식 문서엔 어째서 method shorthand가 없을까
 date: 2020-03-13T01:25:11.201Z
 description: 공식 문서 저장소에 물어봤다
+tags:
+  - vue
+  - es6
+  - ie11
 ---
 Vue.js 공식 문서의 예제들을 보면 computed나 method등에 method shorthand를 사용하지 않고 있다. 예를 들어 [computed를 설명하는 예제](https://vuejs.org/v2/guide/computed.html#Basic-Example)를 보면,
 
