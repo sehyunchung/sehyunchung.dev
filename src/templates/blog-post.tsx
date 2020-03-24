@@ -1,5 +1,9 @@
+/** @jsx jsx */
+
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { css, jsx } from '@emotion/core'
+import kebabCase from 'lodash/kebabCase'
 import Utterances from '../components/utterances'
 
 import Layout from '../components/layout'
@@ -31,6 +35,24 @@ function BlogPostTemplate(props) {
         {post.frontmatter.date}
       </p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <ul
+        css={css`
+          margin: 0;
+          padding: 10px 0;
+          display: flex;
+        `}
+      >
+        {post.frontmatter.tags.map(tag => (
+          <li
+            key={tag}
+            css={css`
+              padding-right: 6px;
+            `}
+          >
+            <Link to={`tags/${kebabCase(tag)}`}>#{tag}</Link>
+          </li>
+        ))}
+      </ul>
       <hr
         style={{
           marginBottom: rhythm(1),
@@ -84,6 +106,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "LLLL", locale: "ko-kr")
         description
+        tags
       }
     }
   }

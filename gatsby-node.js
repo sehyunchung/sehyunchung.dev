@@ -1,4 +1,6 @@
 const path = require(`path`)
+const _ = require('lodash')
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -39,6 +41,8 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create blog posts pages.
     const posts = result.data.postsRemark.edges
+
+    // Create tags pages.
     const tags = result.data.tagsGroup.group
 
     posts.forEach((post, index) => {
