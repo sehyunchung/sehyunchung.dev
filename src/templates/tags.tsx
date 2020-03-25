@@ -11,7 +11,7 @@ import Layout from '../components/layout'
 
 const Tags = ({ pageContext, location, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   const siteTitle = data.site.siteMetadata.title
   return (
     <Layout location={location} title={siteTitle}>

@@ -14,6 +14,7 @@ import { css, jsx } from '@emotion/core'
 import Layout from '../components/layout'
 
 const TagsPage = ({
+  location,
   data: {
     allMarkdownRemark: { group },
     site: {
