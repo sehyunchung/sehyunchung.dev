@@ -1,3 +1,5 @@
+/** @jsx jsx */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -7,6 +9,9 @@ import kebabCase from 'lodash/kebabCase'
 // Components
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { css, jsx } from '@emotion/core'
+
+import Layout from '../components/layout'
 
 const TagsPage = ({
   data: {
@@ -16,21 +21,45 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
+  <Layout location={location} title={title}>
     <div>
-      <h1>Tags</h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Helmet title={title} />
+      <div>
+        <h1
+          css={css`
+            margin-bottom: 20px;
+          `}
+        >
+          all tags
+        </h1>
+        <ul
+          css={css`
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            list-style-type: none;
+            li {
+              padding: 4px 12px;
+              margin: 0;
+            }
+            li::before {
+              content: '';
+            }
+          `}
+        >
+          {group.map((tag) => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                #{tag.fieldValue}{' '}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-  </div>
+  </Layout>
 )
 TagsPage.propTypes = {
   data: PropTypes.shape({

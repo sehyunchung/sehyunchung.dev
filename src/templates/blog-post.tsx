@@ -10,8 +10,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 
-import 'katex/dist/katex.min.css'
-
 function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
@@ -43,7 +41,7 @@ function BlogPostTemplate(props) {
             display: flex;
           `}
         >
-          {post.frontmatter.tags.map(tag => (
+          {post.frontmatter.tags.map((tag) => (
             <li
               key={tag}
               css={css`

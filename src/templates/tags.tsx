@@ -1,35 +1,53 @@
+/** @jsx jsx */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
 // Components
 import { Link, graphql } from 'gatsby'
+import { css, jsx } from '@emotion/core'
 
-const Tags = ({ pageContext, data }) => {
+import Layout from '../components/layout'
+
+const Tags = ({ pageContext, location, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  const siteTitle = data.site.siteMetadata.title
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
+    <Layout location={location} title={siteTitle}>
+      <div>
+        <h1
+          css={css`
+            color: hsla(212, 97%, 43%, 1);
+            font-weight: normal;
+          `}
+        >
+          {` #${tag}`}
+        </h1>
+        <ul
+          css={css`
+            li::before {
+              content: '-';
+            }
+          `}
+        >
+          {edges.map(({ node }) => {
+            const { slug } = node.fields
+            const { title } = node.frontmatter
+            return (
+              <li key={slug}>
+                <Link to={slug}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+        {/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
-    </div>
+        <Link to="/tags">All tags</Link>
+      </div>
+    </Layout>
   )
 }
 
@@ -60,6 +78,12 @@ export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
