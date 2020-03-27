@@ -24,13 +24,7 @@ const Tags = ({ pageContext, location, data }) => {
         >
           {` #${tag}`}
         </h1>
-        <ul
-          css={css`
-            li::before {
-              content: '-';
-            }
-          `}
-        >
+        <ul>
           {edges.map(({ node }) => {
             const { slug } = node.fields
             const { title } = node.frontmatter
