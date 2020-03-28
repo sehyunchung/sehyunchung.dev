@@ -5,7 +5,6 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 import { css, jsx } from '@emotion/core'
 
 function BlogIndex(props) {
@@ -15,37 +14,53 @@ function BlogIndex(props) {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
+      <SEO title="All posts" keywords={[`blog`, `javascript`, `frontend`]} />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <div key={node.fields.slug}>
+          <div key={node.fields.slug} css={css``}>
+            <small
+              css={css`
+                margin: 0;
+                padding: 2px 0;
+                color: hsla(0, 0%, 0%, 0.5);
+              `}
+            >
+              {node.frontmatter.date}
+            </small>
             <h2
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
+              css={css`
+                margin: 0;
+                padding: 6px 0;
+              `}
             >
               <Link
-                style={{
-                  boxShadow: `none`,
-                  textDecoration: `none`,
-                  color: `hsla(0, 0%, 0%, 0.8)`,
-                }}
+                css={css`
+                  box-shadow: none;
+                  text-decoration: none;
+                  color: hsla(0, 0%, 0%, 0.8);
+                `}
                 to={node.fields.slug}
               >
                 {title}
               </Link>
             </h2>
-            <small>{node.frontmatter.date}</small>
             <p
+              css={css`
+                position: relative;
+                margin: 0;
+                padding: 4px 0 28px 34px;
+                color: hsla(0, 0%, 0%, 0.64);
+                font-size: 18px;
+                &::before {
+                  position: absolute;
+                  content: '⸺';
+                  left: 0;
+                  top: 3px;
+                }
+              `}
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
-              }}
-              style={{
-                marginTop: rhythm(1 / 6),
               }}
             />
           </div>

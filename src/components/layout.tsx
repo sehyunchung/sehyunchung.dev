@@ -1,8 +1,43 @@
+/** @jsx jsx */
+
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { css, jsx, Global } from '@emotion/core'
+
 import { rhythm, scale } from '../utils/typography'
 import Bio from './bio'
+
+const globalStyle = css`
+  body {
+    overflow: hidden;
+    background-color: hsl(0, 0%, 96%);
+    word-break: keep-all;
+  }
+  a {
+    color: hsla(212, 97%, 43%, 1);
+    text-decoration: none;
+  }
+  a:hover,
+  a:active,
+  a:visited {
+    padding: 2px 6px;
+    background-color: hsla(212, 97%, 43%, 0.06);
+    border-radius: 4px;
+    margin: -6px;
+  }
+  p {
+    margin-top: 20px;
+    & > img {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  pre,
+  code {
+    font-family: Menlo, Monaco, Consolas, monospace;
+  }
+`
 
 function Layout(props) {
   const { location, title, children } = props
@@ -61,6 +96,7 @@ function Layout(props) {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
+      <Global styles={globalStyle} />
       <header>{header}</header>
       <main>{children}</main>
       <footer
