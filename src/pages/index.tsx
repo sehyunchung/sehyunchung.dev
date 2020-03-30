@@ -49,12 +49,12 @@ function BlogIndex(props) {
               css={css`
                 position: relative;
                 margin: 0;
-                padding: 4px 0 28px 34px;
-                color: hsla(0, 0%, 0%, 0.64);
-                font-size: 18px;
+                padding: 4px 0 28px 30px;
+                color: hsla(0, 0%, 0%, 0.62);
+                font-size: 17px;
                 &::before {
                   position: absolute;
-                  content: '⸺';
+                  content: '📝';
                   left: 0;
                   top: 3px;
                 }
