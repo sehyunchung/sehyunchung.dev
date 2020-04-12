@@ -12,7 +12,7 @@ tags:
 
 > A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 >
-> 클로저는 어떤 함수와 그를 둘러싼 상태(렉시컬 환경이라고도 하는)의 조합입니다. 다시 말해, 클로저는 내부 함수가 외부 함수의 스코프를 액세스하게 해줍니다. 자바스크립트에선 함수가 생성될 때마다 클로저도 매번 만들어집니다.
+> **클로저**는 어떤 함수와 그를 둘러싼 상태(**렉시컬 환경**이라고도 하는)의 조합입니다. 다시 말해, 클로저는 내부 함수가 외부 함수의 스코프를 액세스하게 해줍니다. 자바스크립트에선 함수가 생성될 때마다 클로저도 매번 만들어집니다.
 
 ## 그래서?
 
@@ -99,7 +99,7 @@ apiServiceB.get(...) // instanceB를 사용
 
 여기서 클로저는? 인자로 넘어온 axios instance와 반환된 오브젝트의 메서드들일 것이다.
 
-### `expect`
+### expect
 
 이것도 뭐 팩토리 함수의 예라고 해도 될 것 같은데 약간 사용하는 형태가 다른 것 같아 따로 빼봤다. 테스트 라이브러리에서 자주 보는 `expect` 함수도 클로저의 좋은 용례다. 아주 간략하게 `expect` 함수를 만들어보면 아래와 같을 것이다.
 
