@@ -12,7 +12,7 @@ tags:
 
 > A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 >
-> 클로저는 어떤 함수와 그를 둘러싼 상태(렉시컬 환경이라고도 하는)의 조합입니다. 다시 말해, 클로저는 내부 함수가 외부 함수의 스코프를 액세스하게 해줍니다. 자바스크립트에선 함수가 생성될 때마다 클로저도 매번 만들어집니다.
+> **클로저**는 어떤 함수와 그를 둘러싼 상태(**렉시컬 환경**이라고도 하는)의 조합입니다. 다시 말해, 클로저는 내부 함수가 외부 함수의 스코프를 액세스하게 해줍니다. 자바스크립트에선 함수가 생성될 때마다 클로저도 매번 만들어집니다.
 
 ## 그래서?
 
