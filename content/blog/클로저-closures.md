@@ -5,12 +5,14 @@ description: 그래서 어디다 쓴다는 것인가?
 tags:
   - closures
   - javascript
+  - fp
 ---
 ## 클로저?
 
 클로저가 뭔지 굳이 여기서 또 설명할 필요는 없을 것 같다. 대신 [MDN의 설명](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)을 인용한다.
 
 > A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+>
 >
 > **클로저**는 어떤 함수와 그를 둘러싼 상태(**렉시컬 환경**이라고도 하는)의 조합입니다. 다시 말해, 클로저는 내부 함수가 외부 함수의 스코프를 액세스하게 해줍니다. 자바스크립트에선 함수가 생성될 때마다 클로저도 매번 만들어집니다.
 
@@ -140,7 +142,7 @@ const useState = initialValue => {
 }
 ```
 
-사용법이 약간 다르지만 써보면 아래처럼 된다.
+아주 단순한 버전이고 사용법도 약간 다르지만(state가 함수의 형태이고) 써보면 아래처럼 된다.
 
 ```js
 const [foo, setFoo] = useState(0)
