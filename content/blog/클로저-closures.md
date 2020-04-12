@@ -124,4 +124,31 @@ expect(10).toBe(10) // SUCCESS!
 
 여기서 클로저는? `expect`에 넘겨준 `actual` 값과 반환된 오브젝트의 메서드 `toBe` 일 것이다.
 
+### Hooks
+
+가장 피부에 와닿는 예일텐데, React의 Hooks도 클로저의 대표적인 용례다. 역시 아주 간단하게 `useState` 비슷한 것을 만들어보면 대충 아래와 같을 것이다. [swxy의 유명한 블로그 글](https://www.swyx.io/writing/getting-closure-on-hooks/)에서 본 코드다.
+
+```js
+const useState = initialValue => {
+    let _state = initialValue
+    const state = () => _state
+    const setState = newVal => {
+      _state = newVal
+    }
+    return [state, setState]
+  }
+}
+```
+
+사용법이 약간 다르지만 써보면 아래처럼 된다.
+
+```js
+const [foo, setFoo] = useState(0)
+console.log(foo()) // 0
+setFoo(1)
+console.log(foo()) // 1
+```
+
+여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState`일 것이다.
+
 (끝)
