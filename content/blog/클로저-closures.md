@@ -51,11 +51,11 @@ const iLoveYou = curriedIXYouY('love')
 iLoveYou(3000) // 'I love you 3000.'
 ```
 
-여기서 클로저는? 처음에 부분적으로 받은 파라미터 `x`, `'love'`와 반환된 함수 `iLoveYou`일 것이다.
+여기서 클로저는? 처음에 부분적으로 받은 파라미터 `x('love')`와 반환된 함수 `iLoveYou`일 것이다.
 
 ### Factory Functions
 
-예를 들어, Axois를 이용해 API service를 만드는 함수를 만드는데 API가 여러 종류인 상황이라고 하자. 매번 세팅을 해주기 보다 Axios Instance를 몇 개 만들어 사용하면 좋을 것 같다. 
+예를 들어, Axios를 이용해 API service를 만드는 함수를 만드는데 API가 여러 종류인 상황이라고 하자. 매번 세팅을 해주기 보다 Axios Instance를 몇 개 만들어 사용하면 좋을 것 같다. 
 
 ```js
 import axios from 'axios'
@@ -73,7 +73,7 @@ const instanceB = axios.create({
 });
 ```
 
-그리고 요 인스턴스를 받아 get, post 등의 메소드를 가진 오브젝트를 반환하는 함수를 만들 수 있을 것이다.
+그리고 요 인스턴스를 받아 `get`, `post` 등의 메서드를 가진 오브젝트를 반환하게 만들 수 있을 것이다.
 
 ```js
 const apiServiceFactory = axiosInstance => ({
