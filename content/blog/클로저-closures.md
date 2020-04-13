@@ -1,7 +1,7 @@
 ---
-title: 클로저 Closures
+title: '클로저, 어디다 쓰나?'
 date: 2020-04-12T12:27:27.173Z
-description: 그래서 어디다 쓴다는 것인가?
+description: '''Real world examples'''
 tags:
   - closures
   - javascript
