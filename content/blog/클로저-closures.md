@@ -132,10 +132,10 @@ expect(10).toBe(10) // SUCCESS!
 
 ```js
 const useState = initialValue => {
-    let _state = initialValue
-    const state = () => _state
+    let _val = initialValue
+    const state = () => _val
     const setState = newVal => {
-      _state = newVal
+      _val = newVal
     }
     return [state, setState]
   }
@@ -151,6 +151,6 @@ setFoo(1)
 console.log(foo()) // 1
 ```
 
-> 여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState`.
+> 여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState` 이겠.
 
 (끝)
