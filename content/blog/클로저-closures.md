@@ -1,7 +1,7 @@
 ---
 title: 클로저 Closures
 date: 2020-04-12T12:27:27.173Z
-description: 그래서 이걸 어디다 쓴다는 건가요
+description: 그래서 이걸 어디다 쓴다는 거요
 tags:
   - closures
   - javascript
