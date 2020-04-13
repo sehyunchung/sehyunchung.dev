@@ -1,7 +1,7 @@
 ---
 title: 클로저 Closures
 date: 2020-04-12T12:27:27.173Z
-description: 그래서 이걸 어디다 쓴다는 건가요
+description: 그래서 이걸 어디다 쓴다는 거요
 tags:
   - closures
   - javascript
@@ -18,7 +18,7 @@ tags:
 
 ## 그래서?
 
-아무튼, 워낙에 관련한 글도 많고, 면접 문제로도 많이 쓰이는 것 같다. 그런데, 대체 이걸 어디다 쓴다는 건지, 이게 나의 개발 인생에 어떤 도움을 준다는 것인지 알려주는 글은 그리 많지 않은 것 같다. 있다 해도 대부분,
+아무튼, 워낙에 관련한 글도 많고, 면접 문제로도 많이 쓰이는데, 대체 이걸 어디다 쓴다는 건지, 이게 나의 개발 인생에 어떤 도움을 준다는 것인지 알려주는 글은 그리 많지 않은 것 같다. 있다 해도 대부분,
 
 * private field 흉내내기
 * for loop 내에서 index 변수를 사용하는 함수를 사용할 경우
@@ -132,10 +132,10 @@ expect(10).toBe(10) // SUCCESS!
 
 ```js
 const useState = initialValue => {
-    let _state = initialValue
-    const state = () => _state
+    let _val = initialValue
+    const state = () => _val
     const setState = newVal => {
-      _state = newVal
+      _val = newVal
     }
     return [state, setState]
   }
@@ -151,6 +151,6 @@ setFoo(1)
 console.log(foo()) // 1
 ```
 
-> 여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState`.
+> 여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState` 이겠.
 
 (끝)
