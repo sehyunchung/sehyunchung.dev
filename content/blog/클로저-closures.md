@@ -37,7 +37,7 @@ tags:
 const curriedIXYouY = x => y => `I ${x} you ${y}.`
 ```
 
-혹은, Ramda 같은 함수 라이브러리를 사용할 수도 있다.
+혹은, [Ramda](https://ramdajs.com/) 같은 함수 라이브러리를 사용할 수도 있다.
 
 ```js
 import * as R from 'ramda'
@@ -53,7 +53,7 @@ const iLoveYou = curriedIXYouY('love')
 iLoveYou(3000) // 'I love you 3000.'
 ```
 
-여기서 클로저는? 처음에 부분적으로 받은 파라미터 `x('love')`와 반환된 함수 `iLoveYou`일 것이다.
+> 여기서 클로저는? 처음에 부분적으로 받은 파라미터 `x('love')`와 그것을 사용하는 반환된 함수 `iLoveYou`.
 
 ### Factory Functions
 
@@ -99,7 +99,7 @@ apiServiceA.get(...) // instanceA를 사용
 apiServiceB.get(...) // instanceB를 사용
 ```
 
-여기서 클로저는? 인자로 넘어온 axios instance와 반환된 오브젝트의 메서드들일 것이다.
+> 여기서 클로저는? 인자로 넘어온 axios instance와 반환된 오브젝트의 메서드들.
 
 ### expect
 
@@ -124,7 +124,7 @@ expect(10).toBe(3) // FAIL! 10 !== 3
 expect(10).toBe(10) // SUCCESS!
 ```
 
-여기서 클로저는? `expect`에 넘겨준 `actual` 값과 반환된 오브젝트의 메서드 `toBe` 일 것이다.
+> 여기서 클로저는? `expect`에 넘겨준 `actual` 값과 반환된 오브젝트의 메서드 `toBe`.
 
 ### Hooks
 
@@ -151,6 +151,6 @@ setFoo(1)
 console.log(foo()) // 1
 ```
 
-여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState`일 것이다.
+> 여기서 클로저는? 처음에 넘겨준 `initialValue`와 그것을 사용하는 `state`와 `setState`.
 
 (끝)
