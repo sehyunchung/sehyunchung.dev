@@ -50,9 +50,6 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
     "styled-components": "^5.0.1",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "typeface-spoqa-han-sans2": "^2.1.2",
     "typography": "^0.16.18",
     "typography-theme-wordpress-2016": "^0.16.18"
   },

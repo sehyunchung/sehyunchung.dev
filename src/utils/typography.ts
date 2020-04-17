@@ -1,11 +1,10 @@
 import Typography from 'typography'
-import 'typeface-spoqa-han-sans2'
 
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Spoqa Han Sans',
+    'Noto Sans KR',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
@@ -17,7 +16,7 @@ const typography = new Typography({
     'sans-serif',
   ],
   bodyFontFamily: [
-    'Spoqa Han Sans',
+    'Noto Sans KR',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',

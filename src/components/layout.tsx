@@ -13,6 +13,7 @@ const globalStyle = css`
     overflow: hidden;
     background-color: hsl(0, 0%, 96%);
     word-break: keep-all;
+    font-family: 'Noto Sans KR';
   }
   a {
     color: hsla(212, 97%, 43%, 1);

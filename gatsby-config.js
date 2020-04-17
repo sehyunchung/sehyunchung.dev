@@ -87,14 +87,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `IBM Plex Sans`,
-            variants: [`400`, `500`, `600`, `700`],
-            subsets: [`latin`],
-          },
-          {
-            family: `IBM Plex Mono`,
-            variants: [`400`, `500`, `600`, `700`],
-            subsets: [`latin`],
+            family: 'Noto Sans KR',
+            variants: ['100', '300', '400', '500', '700', '900'],
           },
         ],
       },
