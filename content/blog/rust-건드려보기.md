@@ -142,7 +142,7 @@ impl Tapper {
 }
 ```
 
-요렇게 하면 된다. 위의 `vec!`은 매크로라고 하는 것인데... 아무튼 빈 vector를 생성하는 기능이라고 생각하면 된다. 역시 self.cue를 변경하므로 `&mut self`를 받도록 했다.
+요렇게 하면 된다. 위의 `vec!`은 [매크로](https://doc.rust-lang.org/1.7.0/book/macros.html)라고 하는 것인데... 아무튼 빈 vector를 생성하는 기능이라고 생각하면 된다. 역시 self.cue를 변경하므로 `&mut self`를 받도록 했다.
 
 ### `get_bpm()`
 
@@ -164,11 +164,17 @@ impl Tapper {
         two_decimal_bpm
     }
 ```
+
 계산 로직은 뭐 거기서 거기고, 문법적으로 JS/TS와 좀 다른 부분들이 보인다.
+
 1. `if` 조건에 괄호를 쓰지 않는다.
-1. `if/else`를 `bpm` 변수에 바인딩 할 수 있다.
-1. `return` 키워드가 없다.
+2. `if/else`를 `bpm` 변수에 바인딩 할 수 있다.
+3. `return` 키워드가 없다.
 
 1은 뭐 swift도 그렇고 최신 유행(...)인 것 같다. 2는 if/else가 statement가 아니고 expression이기 때문인데(statement 처럼 쓸 수도 있지만), 이런저런 함수형 언어들의 영향이 좀 느껴진다. 3도 마찬가지. 코드블록의 마지막줄의 expression이 리턴값이 된다.
 
+## 더 알아보기
 
+일단 여기까지 해봤다. 일단 키워드 형태가 제일 맘에 들고(...) 앞으로도 좀 더 공부해 볼 생각. 일단 [rustlings](https://github.com/rust-lang/rustlings) 와 [exercism의 Rust 트랙](https://exercism.io/tracks/rust)을 풀어보는 중.
+
+(끝)
