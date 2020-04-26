@@ -1,12 +1,12 @@
 ---
 title: rust 건드려보기
 date: 2020-04-26T12:01:20.258Z
-description: 일단 해보자
+description: 일단 도전!
 tags:
   - rust
   - bipi
 ---
-뭐 걍.. 저수준 언어를 해보고 싶기도 하고 wasm 도 좀 만져보고 싶어서 이것저것 건드려보는 중이다. 책도 보고 있긴 한데, 코드를 일단 짜봐야 감이 오는 것이 있으니 일단 최근에 만들었던 bpm tapper의 코어 로직 부분을 rust 로 옮겨보았다.
+뭐 걍.. 저수준 언어를 해보고 싶기도 하고 wasm 도 좀 만져보고 싶어서 이것저것 건드려보는 중이다. 책도 보고 있긴 한데, 코드를 일단 짜봐야 감이 오는 것이 있으니 일단 최근에 만들었던 [bpm tapper](https://github.com/sehyunchung/bipi)의 코어 로직 부분을 rust 로 옮겨보았다.
 
 원래 타입스크립트 코드는 이랬다. bpm 관련 동작/계산을 담당하는 간단한 `Tapper` 클래스를 만들었고, `tap()` ,`reset()` 메소드, 계산된 bpm을 얻는 `bpm()` getter로 이루어져있다.
 
@@ -15,6 +15,10 @@ export class Tapper {
   private static instance: Tapper
   private cue: number[] = []
 
+  /**
+   * ## `Tapper.new()`
+   * Tapper 인스턴스를 생성한다.
+   */
   public static new() {
     if (!Tapper.instance) {
       Tapper.instance = new Tapper()
@@ -22,28 +26,41 @@ export class Tapper {
     return Tapper.instance
   }
 
+  /**
+   * ## `tap()`
+   * `bpm` 계산을 위해 현재 시간의 `timestamp`를 `this.cue`에 `push` 한다.
+   * 바로 전 tap과의 시간차가 2초를 초과하면 `this.reset`을 호출한다.
+   */
   tap() {
     let cur = Date.now()
     let last = this.cue[this.cue.length - 1]
-
     if (cur - last > 2000) {
       this.reset()
     }
-
     this.cue.push(cur)
   }
 
+  /**
+   * ## `reset()`
+   * `bpm`을 리셋하기 위해 `this.cue`를 비운다.
+   */
   reset() {
     this.cue = []
   }
 
+  /**
+   * ## `bpm`
+   * 계산된 `bpm`을 액세스하기 위한 `getter`.
+   * `tap`수를 첫 `tap`과 마지막 `tap` 사이의 시간으로 나눈 값 * 1분을 소숫점 첫째자리까지 계산한 `bpm`을 반환한다.
+   * `this.cue` 의 `length`가 2보다 작으면 0을 반환한다.
+   */
   get bpm() {
     if (this.cue.length < 2) return 0
 
     let beatCount = this.cue.length - 1
-    let duration = this.cue[0] - this.cue[this.cue.length - 1]
-
-    let averageBpm = 60000 * beatCount / duration
+    let first = this.cue[0]
+    let last = this.cue[this.cue.length - 1]
+    let averageBpm = (60000 * beatCount) / (last - first)
 
     return Math.round(averageBpm * 10) / 10
   }
@@ -89,7 +106,6 @@ fn 함수명() -> 리턴 타입 {
 ```
 
 나머지 메소드들도 추가해보자.
-
 
 ```rust
 use chrono::Utc;
