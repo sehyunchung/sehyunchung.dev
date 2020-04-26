@@ -164,7 +164,11 @@ impl Tapper {
         two_decimal_bpm
     }
 ```
-계산 로직은 뭐 거기서 거기고, 문법적으로 JS/TS와 매우 다른 부분이 보인다.
+계산 로직은 뭐 거기서 거기고, 문법적으로 JS/TS와 좀 다른 부분들이 보인다.
 1. `if` 조건에 괄호를 쓰지 않는다.
-1. `if/else`를 `bpm` 변수에 바인딩 할 수 있는데, 그것은 Rust의 if/else는 statement 처럼 쓸 수 있긴 하지만 expression이기 때문이다.
-1. return 키워드가 없으면 코드 블록의 마지막 expression이 리턴값이다.
+1. `if/else`를 `bpm` 변수에 바인딩 할 수 있다.
+1. `return` 키워드가 없다.
+
+1은 뭐 swift도 그렇고 최신 유행(...)인 것 같다. 2는 if/else가 statement가 아니고 expression이기 때문인데(statement 처럼 쓸 수도 있지만), 이런저런 함수형 언어들의 영향이 좀 느껴진다. 3도 마찬가지. 코드블록의 마지막줄의 expression이 리턴값이 된다.
+
+
