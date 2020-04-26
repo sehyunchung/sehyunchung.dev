@@ -6,7 +6,7 @@ tags:
   - rust
   - bipi
 ---
-뭐 걍.. 저수준 언어를 해보고 싶기도 하고 wasm 도 좀 만져보고 싶어서 이것저것 건드려보는 중이다. 책도 보고 있긴 한데, 코드를 일단 짜봐야 감이 오는 것이 있으니 일단 최근에 만들었던 [bpm tapper](https://github.com/sehyunchung/bipi)의 코어 로직 부분을 rust 로 옮겨보았다.
+뭐 걍.. 컴퓨터 공부를 좀 더 깊이 하려면 역시 저수준 언어를 해봐야겠다 싶기도 하고 wasm 도 좀 만져보고 싶어서 이것저것 건드려보는 중이다. 책도 보고 있긴 한데, 코드를 일단 짜봐야 감이 오는 것이 있으니 일단 최근에 만들었던 [bpm tapper](https://github.com/sehyunchung/bipi)의 코어 로직 부분을 rust 로 옮겨보았다.
 
 원래 타입스크립트 코드는 이랬다. bpm 관련 동작/계산을 담당하는 간단한 `Tapper` 클래스를 만들었고, `tap()`,`reset()` 메소드, 계산된 bpm을 얻는 `bpm()` getter로 이루어져있다.
 
