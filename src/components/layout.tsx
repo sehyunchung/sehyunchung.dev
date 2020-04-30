@@ -14,6 +14,7 @@ const globalStyle = css`
     word-break: keep-all;
     font-family: 'Gothic A1';
     line-height: 160%;
+    overflow-x: hidden;
   }
   pre::-webkit-scrollbar {
     display: none;
@@ -35,7 +36,7 @@ const globalStyle = css`
       margin-left: 50%;
       transform: translateX(-50%);
     }
-    code {
+    pre, code {
       font-size: 0.9rem;
     }
   }
@@ -44,6 +45,7 @@ const globalStyle = css`
     padding: 0 30px;
     border: 1px solid #222;
     border-radius: 8px;
+    overflow-x: auto;
   }
   pre,
   code {
@@ -64,6 +66,9 @@ const globalStyle = css`
   h4 {
     margin-top: 4.4rem;
     line-height: initial;
+    pre, code {
+      font-size: inherit;
+    }
   }
   table {
     margin: 2rem 0;
@@ -136,6 +141,7 @@ function Layout(props) {
         height: 100%;
         margin: 0 auto;
         padding: 10px;
+        overflow-x: hidden;
       `}
     >
       <Global styles={globalStyle} />
