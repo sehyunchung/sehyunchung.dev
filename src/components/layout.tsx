@@ -10,11 +10,14 @@ import Bio from './bio'
 const globalStyle = css`
   body {
     background-color: #111111;
-    color: #bbbbbb;
+    color: #ccc;
     word-break: keep-all;
     font-family: 'Gothic A1';
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 160%;
+  }
+  pre::-webkit-scrollbar {
+    display: none;
   }
   a {
     color: hsl(0, 0%, 80%);
@@ -42,27 +45,23 @@ const globalStyle = css`
   }
   :not(h1, h2, h3, h4, h5, h6) > pre,
   code {
-    font-size: 17px;
+    font-size: 1rem;
     font-family: Menlo, Monaco, Consolas, monospace;
   }
   .grvsc-container {
     border: 0.5px solid #333;
     border-radius: none;
-    margin: 3rem 0;
   }
   .utterances {
     max-width: inherit;
   }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    margin-top: 5rem;
-    font-size: 2.5rem;
-  }
+  h2,
   h3 {
-    margin-top: 5rem;
-    font-size: 2rem;
+    pre,
+    code {
+      font-size: 1.5em;
+    }
+    margin-top: 3rem;
   }
 `
 
@@ -115,7 +114,7 @@ function Layout(props) {
   return (
     <div
       css={css`
-        max-width: 1024px;
+        max-width: 640px;
         height: 100%;
         margin: 0 auto;
         padding: 10px;

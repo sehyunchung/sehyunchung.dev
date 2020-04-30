@@ -38,7 +38,6 @@ function BlogIndex(props) {
                 css={css`
                   margin: 0;
                   padding: 6px 0;
-                  font-size: 2rem;
                 `}
               >
                 {title}

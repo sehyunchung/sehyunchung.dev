@@ -3992,6 +3992,10 @@ cross-spawn@^7.0.0:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+crt-themes@krueger71/crt-themes:
+  version "0.5.1"
+  resolved "https://codeload.github.com/krueger71/crt-themes/tar.gz/7f58365a7eb2df8890fcffc342478d9d5a8a3f73"
+
 crypt@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
@@ -11420,6 +11424,10 @@ pkg-up@^3.1.0:
   integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
   dependencies:
     find-up "^3.0.0"
+
+plain@gko/plain:
+  version "0.1.0"
+  resolved "https://codeload.github.com/gko/plain/tar.gz/cf611326fd3fa83eab245425fb7c19817c91584b"
 
 plist@^3.0.1:
   version "3.0.1"

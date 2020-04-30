@@ -51,8 +51,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-vscode',
             options: {
-              theme: 'mono dark',
-              extensions: ['mono'],
+              theme: 'plain-dark',
+              extensions: ['plain'],
             },
           },
           `gatsby-remark-smartypants`,
