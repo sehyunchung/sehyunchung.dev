@@ -67,7 +67,6 @@ module.exports = {
         trackingId: `UA-135916528-1`,
       },
     },
-    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -88,11 +87,8 @@ module.exports = {
         fonts: [
           {
             family: 'Gothic A1',
-            variants: ['100', '300', '400', '500', '700', '900'],
-          },
-          {
-            family: 'Noto Sans KR',
-            variants: ['100', '300', '400', '500', '700', '900'],
+            subsets: ['korean'],
+            variants: ['300', '400', '700'],
           },
         ],
       },

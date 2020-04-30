@@ -21,8 +21,13 @@ function BlogIndex(props) {
           <Link
             css={css`
               color: var(--text-color);
+              font-weight: normal;
               box-shadow: none;
-              text-decoration: none;
+              background:none;
+              border: none;
+              :hover {
+                text-decoration: none !important;
+              }
             `}
             to={node.fields.slug}
           >

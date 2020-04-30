@@ -9,22 +9,42 @@ import Bio from './bio'
 
 const globalStyle = css`
   :root {
-    --text-color: #ccc;
-    --border-color: #333;
+    --text-color: #e9ecef;
+    --background-color: #343a40;
+    --quote-bg-color: #1971c2;
+    --quote-txt-color: #e7f5ff;
+    --quote-border-color: #1864ab;
+    --code-border-color: #495057;
+    --link-color: #339af0;
+    --link-bg-color: #212529;
   }
   body {
-    background-color: #111111;
+    background-color: var(--background-color);
     color: var(--text-color);
     word-break: keep-all;
-    font-family: 'Gothic A1';
+    font-family: 'Gothic A1', arial, sans-serif;
+    font-weight: 400;
     line-height: 160%;
     overflow-x: hidden;
+  }
+  hr {
+    border-top: 0.6px solid var(--text-color);
+    border-bottom: none;
   }
   pre::-webkit-scrollbar {
     display: none;
   }
   a {
-    color: hsl(0, 0%, 50%);
+    color: var(--link-color);
+    /* background-color: var(--link-bg-color); */
+    font-weight: bold;
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+    /* border: 1px solid var(--link-bg-color); */
+    padding: 2px;
+    /* border-radius: 2px; */
   }
   p {
     margin-top: 20px;
@@ -32,24 +52,25 @@ const globalStyle = css`
       margin-left: 50%;
       transform: translateX(-50%);
     }
-    pre,
-    code {
-      font-size: 0.9rem;
-    }
   }
   blockquote {
+    color: var(--quote-txt-color);
+    background-color: var(--quote-bg-color);
     margin: 3rem 2rem;
-    padding: 0 30px;
-    border: 1px solid #222;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--quote-border-color);
     overflow-x: auto;
-    box-shadow: 0.7rem 0.7rem 0px 0px var(--border-color);
+    box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
+    a {
+      color: var(--text-color);
+    }
   }
   pre,
   code {
     font-family: Menlo, Monaco, Consolas, monospace;
   }
   li {
-    padding: 0.6rem 0;
+    padding: 0.4rem 0;
   }
   h1,
   h2,
@@ -66,7 +87,7 @@ const globalStyle = css`
     margin: 2rem 0;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--quote-border-color);
     thead {
       background-color: #222;
     }
@@ -76,21 +97,21 @@ const globalStyle = css`
     th,
     td {
       padding: 8px 12px;
-      border: 1px sold var(--border-color);
+      border: 1px sold var(--code-border-color);
     }
     tr,
     th,
     td {
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--code-border-color);
     }
   }
-  .grvsc-container {
-    border: 1px solid var(--border-color);
+  pre.grvsc-container {
+    border: 1px solid var(--code-border-color);
     margin: 2rem 0;
     border-radius: 0 !important;
   }
-  .grvsc-container,
-  .grvsc-code {
+  pre.grvsc-container,
+  code.grvsc-code {
     font-size: 0.9rem;
   }
   .utterances {
@@ -117,6 +138,11 @@ function Layout(props) {
             box-shadow: none;
             text-decoration: none;
             color: inherit;
+            background: none;
+            border: none;
+            :hover {
+              text-decoration: none !important;
+            }
           `}
           to={`/`}
         >
@@ -136,6 +162,9 @@ function Layout(props) {
             box-shadow: none;
             text-decoration: none;
             color: inherit;
+            :hover {
+              text-decoration: none !important;
+            }
           `}
           to={`/`}
         >
