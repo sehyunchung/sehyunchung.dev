@@ -8,9 +8,13 @@ import { css, jsx, Global } from '@emotion/core'
 import Bio from './bio'
 
 const globalStyle = css`
+  :root {
+    --text-color: #ccc;
+    --border-color: #333;
+  }
   body {
     background-color: #111111;
-    color: #ccc;
+    color: var(--text-color);
     word-break: keep-all;
     font-family: 'Gothic A1';
     line-height: 160%;
@@ -20,15 +24,7 @@ const globalStyle = css`
     display: none;
   }
   a {
-    color: hsl(0, 0%, 80%);
-    text-decoration: underline;
-  }
-  a:hover,
-  a:active,
-  a:visited {
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin: -6px;
+    color: hsl(0, 0%, 50%);
   }
   p {
     margin-top: 20px;
@@ -45,30 +41,21 @@ const globalStyle = css`
     margin: 3rem 2rem;
     padding: 0 30px;
     border: 1px solid #222;
-    border-radius: 8px;
     overflow-x: auto;
+    box-shadow: 0.7rem 0.7rem 0px 0px var(--border-color);
   }
   pre,
   code {
     font-family: Menlo, Monaco, Consolas, monospace;
   }
-  .grvsc-container {
-    border: 0.5px solid #333;
-    margin: 2rem 0;
-    border-radius: none;
-  }
-  .grvsc-container,
-  .grvsc-code {
-    font-size: 0.9rem;
-  }
-  .utterances {
-    max-width: inherit;
+  li {
+    padding: 0.6rem 0;
   }
   h1,
   h2,
   h3,
   h4 {
-    margin-top: 4.4rem;
+    margin-top: 4rem;
     line-height: initial;
     pre,
     code {
@@ -79,7 +66,7 @@ const globalStyle = css`
     margin: 2rem 0;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     thead {
       background-color: #222;
     }
@@ -89,13 +76,25 @@ const globalStyle = css`
     th,
     td {
       padding: 8px 12px;
-      border: 1px sold #333;
+      border: 1px sold var(--border-color);
     }
     tr,
     th,
     td {
-      border: 1px solid #333;
+      border: 1px solid var(--border-color);
     }
+  }
+  .grvsc-container {
+    border: 1px solid var(--border-color);
+    margin: 2rem 0;
+    border-radius: 0 !important;
+  }
+  .grvsc-container,
+  .grvsc-code {
+    font-size: 0.9rem;
+  }
+  .utterances {
+    max-width: inherit;
   }
 `
 

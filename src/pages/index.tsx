@@ -20,6 +20,7 @@ function BlogIndex(props) {
         return (
           <Link
             css={css`
+              color: var(--text-color);
               box-shadow: none;
               text-decoration: none;
             `}
