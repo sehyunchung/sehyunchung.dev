@@ -40,7 +40,7 @@ const globalStyle = css`
     border: 1px solid #222;
     border-radius: 8px;
   }
-  pre,
+  :not(h1, h2, h3, h4, h5, h6) > pre,
   code {
     font-size: 17px;
     font-family: Menlo, Monaco, Consolas, monospace;
