@@ -149,20 +149,20 @@ impl Tapper {
 마지막으로 bpm을 구하는 `get_bpm()` 이다. 소숫점 둘째 자리까지 구해보았고, 그래서 리턴타입은 `f32`(32비트 float)으로 했다. `self`를 액세스는 해야 하지만 `self.cue` 내부 값을 기반으로 계산만 하면 되므로, `&self` 만 받으면 된다.
 
 ```rust
-    fn get_bpm(&self) -> f32 {
-        let cue = &self.cue;
-        let bpm = if cue.len() < 2 {
-            0 as f32
-        } else {
-            let beats = (cue.len() - 1) as f32;
-            let duration = cue[0] - cue[cue.len() - 1];
+fn get_bpm(&self) -> f32 {
+    let cue = &self.cue;
+    let bpm = if cue.len() < 2 {
+        0 as f32
+    } else {
+        let beats = (cue.len() - 1) as f32;
+        let duration = cue[0] - cue[cue.len() - 1];
 
-            60_000 as f32 * beats / duration as f32
-        };
-        let two_decimal_bpm = (bpm * 100.0).round() / 100.0;
+        60_000 as f32 * beats / duration as f32
+    };
+    let two_decimal_bpm = (bpm * 100.0).round() / 100.0;
 
-        two_decimal_bpm
-    }
+    two_decimal_bpm
+}
 ```
 
 계산 로직은 뭐 거기서 거기고, 문법적으로 JS/TS와 좀 다른 부분들이 보인다.
