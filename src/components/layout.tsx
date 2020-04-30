@@ -36,7 +36,8 @@ const globalStyle = css`
       margin-left: 50%;
       transform: translateX(-50%);
     }
-    pre, code {
+    pre,
+    code {
       font-size: 0.9rem;
     }
   }
@@ -52,10 +53,13 @@ const globalStyle = css`
     font-family: Menlo, Monaco, Consolas, monospace;
   }
   .grvsc-container {
-    font-size: 0.9rem;
     border: 0.5px solid #333;
-    border-radius: none;
     margin: 2rem 0;
+    border-radius: none;
+  }
+  .grvsc-container,
+  .grvsc-code {
+    font-size: 0.9rem;
   }
   .utterances {
     max-width: inherit;
@@ -66,7 +70,8 @@ const globalStyle = css`
   h4 {
     margin-top: 4.4rem;
     line-height: initial;
-    pre, code {
+    pre,
+    code {
       font-size: inherit;
     }
   }
@@ -78,11 +83,17 @@ const globalStyle = css`
     thead {
       background-color: #222;
     }
-    thead, tbody, tr, th, td {
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
       padding: 8px 12px;
       border: 1px sold #333;
     }
-    tr, th, td {
+    tr,
+    th,
+    td {
       border: 1px solid #333;
     }
   }
