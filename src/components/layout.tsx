@@ -40,7 +40,7 @@ const globalStyle = css`
     }
   }
   blockquote {
-    margin-top: 3rem;
+    margin: 3rem 2rem;
     padding: 0 30px;
     border: 1px solid #222;
     border-radius: 8px;
@@ -53,9 +53,32 @@ const globalStyle = css`
     font-size: 0.9rem;
     border: 0.5px solid #333;
     border-radius: none;
+    margin: 2rem 0;
   }
   .utterances {
     max-width: inherit;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 4.4rem;
+  }
+  table {
+    margin: 2rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+    thead {
+      background-color: #222;
+    }
+    thead, tbody, tr, th, td {
+      padding: 8px 12px;
+      border: 1px sold #333;
+    }
+    tr, th, td {
+      border: 1px solid #333;
+    }
   }
 `
 
