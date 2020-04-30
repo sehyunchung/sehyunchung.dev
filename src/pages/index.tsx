@@ -47,7 +47,6 @@ function BlogIndex(props) {
                   position: relative;
                   margin: 0;
                   padding: 4px 0 28px;
-                  font-size: 17px;
                 `}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,

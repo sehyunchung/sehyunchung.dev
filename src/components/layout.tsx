@@ -13,7 +13,6 @@ const globalStyle = css`
     color: #ccc;
     word-break: keep-all;
     font-family: 'Gothic A1';
-    /* font-size: 18px; */
     line-height: 160%;
   }
   pre::-webkit-scrollbar {
@@ -36,6 +35,9 @@ const globalStyle = css`
       margin-left: 50%;
       transform: translateX(-50%);
     }
+    code {
+      font-size: 0.9rem;
+    }
   }
   blockquote {
     margin-top: 3rem;
@@ -43,25 +45,17 @@ const globalStyle = css`
     border: 1px solid #222;
     border-radius: 8px;
   }
-  :not(h1, h2, h3, h4, h5, h6) > pre,
+  pre,
   code {
-    font-size: 1rem;
     font-family: Menlo, Monaco, Consolas, monospace;
   }
   .grvsc-container {
+    font-size: 0.9rem;
     border: 0.5px solid #333;
     border-radius: none;
   }
   .utterances {
     max-width: inherit;
-  }
-  h2,
-  h3 {
-    pre,
-    code {
-      font-size: 1.5em;
-    }
-    margin-top: 3rem;
   }
 `
 
