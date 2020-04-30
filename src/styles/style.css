@@ -16,11 +16,7 @@ blockquote p {
 }
 
 div>ul li::before {
-    content: '📎';
+    content: '💢';
     margin-left: -20px;
     margin-right: 10px;
-}
-
-a div {
-    background-color: azure;
 }

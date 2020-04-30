@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `👨🏻‍💻중얼중얼`,
+    title: '💢',
     author: `Sehyun Chung`,
     description: `Yet another dev blog (in Korean).s`,
     siteUrl: `https://sehyunchung.dev/`,
@@ -71,7 +71,7 @@ module.exports = {
         background_color: `hsl(0, 0, 60%)`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        icon: `content/assets/12157-anger-symbol-icon.png`,
       },
     },
     `gatsby-plugin-offline`,

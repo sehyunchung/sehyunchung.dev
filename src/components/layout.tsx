@@ -23,7 +23,6 @@ const globalStyle = css`
   a:active,
   a:visited {
     padding: 2px 6px;
-    background-color: hsla(212, 97%, 43%, 0.06);
     border-radius: 4px;
     margin: -6px;
   }
@@ -48,12 +47,11 @@ function Layout(props) {
   if (location.pathname === rootPath) {
     header = (
       <h1
-        style={{
-          ...scale(1),
-          fontWeight: `bold`,
-          marginBottom: rhythm(1),
-          marginTop: 0,
-        }}
+        css={css`
+          font-size: 4em;
+          font-weight: bold;
+          margin: 0 0 20px;
+        `}
       >
         <Link
           style={{
@@ -70,16 +68,16 @@ function Layout(props) {
   } else {
     header = (
       <h3
-        style={{
-          marginTop: 0,
-        }}
+        css={css`
+          font-size: 3rem;
+        `}
       >
         <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
+          css={css`
+            box-shadow: none;
+            text-decoration: none;
+            color: inherit;
+          `}
           to={`/`}
         >
           {title}
