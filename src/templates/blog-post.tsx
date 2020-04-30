@@ -33,6 +33,7 @@ function BlogPostTemplate(props) {
       {post.frontmatter.tags && (
         <ul
           css={css`
+            list-style-type: none;
             margin: 0;
             padding: 10px 0;
             display: flex;
@@ -45,7 +46,7 @@ function BlogPostTemplate(props) {
                 padding-right: 6px;
               `}
             >
-		    <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
             </li>
           ))}
         </ul>

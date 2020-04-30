@@ -13,7 +13,7 @@ function Utterances() {
       src: 'https://utteranc.es/client.js',
       repo: 'sehyunchung/sehyunchung.github.io',
       'issue-term': 'pathname',
-      theme: 'github-light',
+      theme:"photon-dark",
       crossorigin: 'anonymous',
       async: true,
     }
@@ -30,6 +30,7 @@ function Utterances() {
       className="utterances"
       ref={utterancesRef}
       css={css`
+        max-width: 100vw !important;
         margin-top: 20px;
         margin-bottom: 20px;
       `}

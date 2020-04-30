@@ -22,7 +22,6 @@ function BlogIndex(props) {
             css={css`
               box-shadow: none;
               text-decoration: none;
-              color: hsla(0, 0%, 0%, 0.8);
             `}
             to={node.fields.slug}
           >
@@ -31,7 +30,6 @@ function BlogIndex(props) {
                 css={css`
                   margin: 0;
                   padding: 2px 0;
-                  color: hsla(0, 0%, 0%, 0.5);
                 `}
               >
                 {node.frontmatter.date}
@@ -40,6 +38,7 @@ function BlogIndex(props) {
                 css={css`
                   margin: 0;
                   padding: 6px 0;
+                  font-size: 2rem;
                 `}
               >
                 {title}
@@ -49,7 +48,6 @@ function BlogIndex(props) {
                   position: relative;
                   margin: 0;
                   padding: 4px 0 28px;
-                  color: hsla(0, 0%, 0%, 0.62);
                   font-size: 17px;
                 `}
                 dangerouslySetInnerHTML={{

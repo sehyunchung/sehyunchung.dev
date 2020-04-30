@@ -9,14 +9,16 @@ import Bio from './bio'
 
 const globalStyle = css`
   body {
-    overflow: hidden;
-    background-color: hsl(0, 0%, 96%);
+    background-color: #111111;
+    color: #bbbbbb;
     word-break: keep-all;
     font-family: 'Gothic A1';
+    font-size: 18px;
+    line-height: 160%;
   }
   a {
-    color: hsla(212, 97%, 43%, 1);
-    text-decoration: none;
+    color: hsl(0, 0%, 80%);
+    text-decoration: underline;
   }
   a:hover,
   a:active,
@@ -32,9 +34,35 @@ const globalStyle = css`
       transform: translateX(-50%);
     }
   }
+  blockquote {
+    margin-top: 3rem;
+    padding: 0 30px;
+    border: 1px solid #222;
+    border-radius: 8px;
+  }
   pre,
   code {
+    font-size: 17px;
     font-family: Menlo, Monaco, Consolas, monospace;
+  }
+  .grvsc-container {
+    border: 0.5px solid #333;
+    border-radius: none;
+    margin: 3rem 0;
+  }
+  .utterances {
+    max-width: inherit;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+  }
+  h3 {
+    margin-top: 5rem;
+    font-size: 2rem;
   }
 `
 
@@ -49,7 +77,7 @@ function Layout(props) {
         css={css`
           font-size: 4em;
           font-weight: bold;
-          margin: 0 0 20px;
+          margin: 2rem 0 4rem;
         `}
       >
         <Link
@@ -87,9 +115,9 @@ function Layout(props) {
   return (
     <div
       css={css`
-        height: 100%;
-        margin: 20px auto 0;
         max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
         padding: 10px;
       `}
     >

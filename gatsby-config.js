@@ -48,8 +48,14 @@ module.exports = {
               ignoreFileExtensions: [],
             },
           },
+          {
+            resolve: 'gatsby-remark-vscode',
+            options: {
+              theme: 'mono dark',
+              extensions: ['mono'],
+            },
+          },
           `gatsby-remark-smartypants`,
-          `gatsby-remark-vscode`,
         ],
       },
     },
