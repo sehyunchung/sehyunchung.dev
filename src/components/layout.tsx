@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 
 import { css, jsx, Global } from '@emotion/core'
 
-import { rhythm, scale } from '../utils/typography'
 import Bio from './bio'
 
 const globalStyle = css`
@@ -13,7 +12,7 @@ const globalStyle = css`
     overflow: hidden;
     background-color: hsl(0, 0%, 96%);
     word-break: keep-all;
-    font-family: 'Noto Sans KR';
+    font-family: 'Gothic A1';
   }
   a {
     color: hsla(212, 97%, 43%, 1);
@@ -54,11 +53,11 @@ function Layout(props) {
         `}
       >
         <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
+          css={css`
+            box-shadow: none;
+            text-decoration: none;
+            color: inherit;
+          `}
           to={`/`}
         >
           {title}
@@ -87,26 +86,23 @@ function Layout(props) {
   }
   return (
     <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        height: `100%`,
-        maxWidth: rhythm(28),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
+      css={css`
+        height: 100%;
+        margin: 20px auto 0;
+        max-width: 1024px;
+        padding: 10px;
+      `}
     >
       <Global styles={globalStyle} />
       <header>{header}</header>
       <main>{children}</main>
       <footer
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginTop: rhythm(2),
-          ...scale(-1 / 3),
-          height: rhythm(0.6),
-        }}
+        css={css`
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: 20px;
+        `}
       >
         © {new Date().getFullYear()} Sehyun Chung <Bio />
       </footer>

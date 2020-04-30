@@ -77,15 +77,13 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
+          {
+            family: 'Gothic A1',
+            variants: ['100', '300', '400', '500', '700', '900'],
+          },
           {
             family: 'Noto Sans KR',
             variants: ['100', '300', '400', '500', '700', '900'],

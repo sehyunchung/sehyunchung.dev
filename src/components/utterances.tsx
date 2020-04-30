@@ -1,5 +1,8 @@
+/** @jsx jsx */
+
 import React, { useEffect, useRef } from 'react'
-import { rhythm } from '../utils/typography'
+
+import { css, jsx } from '@emotion/core'
 
 function Utterances() {
   const utterancesRef = useRef(null)
@@ -26,10 +29,10 @@ function Utterances() {
     <div
       className="utterances"
       ref={utterancesRef}
-      style={{
-        marginTop: rhythm(-3 / 4),
-        marginBottom: rhythm(1 / 4),
-      }}
+      css={css`
+        margin-top: 20px;
+        margin-bottom: 20px;
+      `}
     />
   )
 }

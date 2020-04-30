@@ -1,33 +1,27 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
+/** @jsx jsx */
 
 import React from 'react'
+import { css, jsx } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby'
-
-import { rhythm } from '../utils/typography'
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
+      render={(data) => {
         const { social } = data.site.siteMetadata
         return (
           <div
-            style={{
-              display: `flex`,
-              justifyContent: 'flex-end',
-              marginBottom: rhythm(1),
-            }}
+            css={css`
+              display: flex;
+              justify-content: flex-end;
+              margin-bottom: 20px;
+            `}
           >
             <p
-              style={{
-                marginTop: rhythm(0),
-              }}
+              css={css`
+                margin-top: 20px;
+              `}
             >
               <span>about</span>
               {'  |  '}

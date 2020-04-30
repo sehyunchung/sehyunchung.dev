@@ -8,7 +8,6 @@ import Utterances from '../components/utterances'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
 
 function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
@@ -23,12 +22,10 @@ function BlogPostTemplate(props) {
       />
       <h1>{post.frontmatter.title}</h1>
       <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-9 / 10),
-        }}
+        css={css`
+          display: block;
+          margin: 20px 0;
+        `}
       >
         {post.frontmatter.date}
       </p>
@@ -54,20 +51,20 @@ function BlogPostTemplate(props) {
         </ul>
       )}
       <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
+        css={css`
+          margin-bottom: 20px;
+        `}
       />
       <Utterances />
 
       <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          list-style: none;
+          padding: 0;
+        `}
       >
         <li>
           {previous && (
