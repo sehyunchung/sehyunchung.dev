@@ -63,6 +63,7 @@ const globalStyle = css`
   h3,
   h4 {
     margin-top: 4.4rem;
+    line-height: initial;
   }
   table {
     margin: 2rem 0;
