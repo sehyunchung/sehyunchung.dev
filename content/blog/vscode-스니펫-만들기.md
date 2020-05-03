@@ -71,7 +71,7 @@ tags:
     "description": "스트링 편하게 쓸란다.."
   },
   "Weird String": {
-    "prefix": "st",
+    "prefix": "ws",
     "body": "React.string({j|$1|j})",
     "description": "편하게..."
   }
