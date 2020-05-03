@@ -128,6 +128,7 @@ function Layout(props) {
     header = (
       <h1
         css={css`
+          color: var(--quote-bg-color);
           font-size: 4em;
           font-weight: bold;
           margin: 2rem 0 4rem;
@@ -152,9 +153,9 @@ function Layout(props) {
     )
   } else {
     header = (
-      <h3
+      <h1
         css={css`
-          font-size: 3rem;
+          color: var(--quote-bg-color);
         `}
       >
         <Link
@@ -170,7 +171,7 @@ function Layout(props) {
         >
           {title}
         </Link>
-      </h3>
+      </h1>
     )
   }
   return (
@@ -192,9 +193,17 @@ function Layout(props) {
           flex-direction: row;
           justify-content: space-between;
           margin-top: 20px;
+          padding: 20px 0;
         `}
       >
-        © {new Date().getFullYear()} Sehyun Chung <Bio />
+        <p
+          // css={css`
+          //   margin: 20px 0 16px;
+          // `}
+        >
+          © {new Date().getFullYear()} Sehyun Chung
+        </p>
+        <Bio />
       </footer>
     </div>
   )

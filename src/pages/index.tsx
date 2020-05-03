@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { navigate } from '@reach/router'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -18,48 +19,70 @@ function BlogIndex(props) {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <Link
+          <div
             css={css`
-              color: var(--text-color);
-              font-weight: normal;
-              box-shadow: none;
-              background:none;
-              border: none;
-              :hover {
-                text-decoration: none !important;
+              margin-top: 2rem;
+              padding: 1rem 1rem 0;
+              border: 1px solid var(--background-color);
+              cursor: pointer;
+              transition: 0.2s;
+              &:hover,
+              &:active {
+                background-color: var(--quote-bg-color);
+                border: 1px solid var(--quote-border-color);
+                box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
               }
             `}
-            to={node.fields.slug}
+            onClick={() => navigate(node.fields.slug)}
           >
-            <div key={node.fields.slug} css={css``}>
-              <small
+            <small
+              css={css`
+                margin: 0;
+                padding: 2px 0;
+              `}
+            >
+              {node.frontmatter.date}
+            </small>
+            <h2
+              css={css`
+                margin: 0;
+                padding: 6px 0;
+              `}
+            >
+              <span
                 css={css`
-                  margin: 0;
-                  padding: 2px 0;
-                `}
-              >
-                {node.frontmatter.date}
-              </small>
-              <h2
-                css={css`
-                  margin: 0;
-                  padding: 6px 0;
+                  position: relative;
+                  &::after {
+                    transition: 5s;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 2px;
+                    content: '';
+                    height: 1rem;
+                    width: 100%;
+                    background-color: var(--quote-border-color);
+                    z-index: -1;
+                    opacity: 0;
+                  }
+                  &:hover::after {
+                    opacity: 1;
+                  }
                 `}
               >
                 {title}
-              </h2>
-              <p
-                css={css`
-                  position: relative;
-                  margin: 0;
-                  padding: 4px 0 28px;
-                `}
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          </Link>
+              </span>
+            </h2>
+            <p
+              css={css`
+                position: relative;
+                margin: 0;
+                padding: 4px 0 28px;
+              `}
+              dangerouslySetInnerHTML={{
+                __html: node.frontmatter.description || node.excerpt,
+              }}
+            />
+          </div>
         )
       })}
     </Layout>
