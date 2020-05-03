@@ -3,6 +3,7 @@
 import React from 'react'
 import { css, jsx } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby'
+import { make as BioRe } from './Bio.bs'
 
 function Bio() {
   return (
@@ -10,25 +11,7 @@ function Bio() {
       query={bioQuery}
       render={(data) => {
         const { social } = data.site.siteMetadata
-        return (
-          <div
-            css={css`
-              display: flex;
-              justify-content: flex-end;
-              margin-bottom: 20px;
-            `}
-          >
-            <p
-              css={css`
-                margin-top: 20px;
-              `}
-            >
-              <span>about</span>
-              {'  |  '}
-              <a href={`https://github.com/${social.github}`}>github</a>
-            </p>
-          </div>
-        )
+        return <BioRe social={social} />
       }}
     />
   )
