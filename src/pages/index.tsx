@@ -13,6 +13,14 @@ function BlogIndex(props) {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  const handleClick = (slug) => navigate(slug)
+
+  const handleKeyPress = (e, slug) => {
+    if (e.key !== 'Enter') return
+    e.preventDefault()
+    navigate(slug)
+  }
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" keywords={[`blog`, `javascript`, `frontend`]} />
@@ -20,20 +28,27 @@ function BlogIndex(props) {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <div
+            key={title}
             css={css`
               margin-top: 2rem;
-              padding: 1rem 1rem 0;
+              padding-top: 1rem;
               border: 1px solid var(--background-color);
               cursor: pointer;
               transition: 0.2s;
               &:hover,
-              &:active {
+              :active,
+              :focus {
+                padding-left: 1.6rem;
                 background-color: var(--quote-bg-color);
                 border: 1px solid var(--quote-border-color);
                 box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
+                outline: none;
               }
             `}
-            onClick={() => navigate(node.fields.slug)}
+            role="button"
+            tabIndex={0}
+            onClick={() => handleClick(node.fields.slug)}
+            onKeyPress={(e) => handleKeyPress(e, node.fields.slug)}
           >
             <small
               css={css`
