@@ -11,7 +11,7 @@ tags:
 ---
 ## ReasonML!?
 
-어쩌다보니 [ReasonML](https://reasonml.github.io/en/)을 건드려보고 있는데(옆걸음질도 가지가지), 좀 귀찮은 부분들이 있었다.
+연휴 기간 동안 [ReasonML](https://reasonml.github.io/en/)/[ReasonReact](https://reasonml.github.io/reason-react/)를 건드려보고 있는데(옆걸음질도 가지가지... 이지만 솔직히 재밌다.), 좀 귀찮은 부분들이 있었다.
 
 그 중 대놓고 불편한 것들을 좀 꼽아봤더니:
 
