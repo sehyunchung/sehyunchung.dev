@@ -83,6 +83,8 @@ tags:
 
 ![감동실화1](/img/snip.gif "감동실화1")
 
+<span style="margin:0 auto;">감동실화...</span>
+
 ## emmet 설정을 해보자
 
 이건 더 쉬운데, `settings.json`을 열고 아래와 같이 입력하면 된다.
