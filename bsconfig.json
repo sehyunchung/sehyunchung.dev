@@ -1,7 +1,7 @@
 {
-  "name": "...",
-  "reason": {"react-jsx": 2},
-  "bs-dependencies": ["reason-react"],
+  "name": "sehyunchung-blog",
+  "reason": {"react-jsx": 3},
+  "bsc-flags": ["-bs-super-errors"],
   "sources": [
     {
       "dir":"src",
@@ -9,8 +9,12 @@
     }
   ],
   "package-specs": {
-    "module": "commonjs"
+    "module": "es6",
+    "in-source": true
   },
   "suffix": ".bs.js",
-  "refmt": 3
+  "namespace": true,
+  "bs-dependencies": ["reason-react"],
+  "refmt": 3,
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx"]
 }

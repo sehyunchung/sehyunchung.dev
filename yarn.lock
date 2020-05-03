@@ -1006,6 +1006,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@baransu/graphql_ppx_re@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.7.1.tgz#8146a36a94d56e65692d74488e2bd6cbd4eb8dc9"
+  integrity sha512-S9RYUWk8IkFxjE1Xl5eohRgbHJP5nCWOD6J1hMV3hY+D43igDrILq1doAXJatYB82BxcsrBC9V+VeU2LtCxIDw==
+
 "@emotion/babel-utils@^0.6.4":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.10.tgz#83dbf3dfa933fae9fc566e54fbb45f14674c6ccc"
@@ -3036,7 +3041,7 @@ bs-loader@^2.0.7:
     loader-utils "^1.1.0"
     read-bsconfig "^1.0.1"
 
-bs-platform@^7.2.2:
+bs-platform@7.2.2:
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.2.2.tgz#76fdc63e4889458ae3d257a0132107a792f2309c"
   integrity sha512-PWcFfN+jCTtT/rMaHDhKh+W9RUTpaRunmSF9vbLYcrJbpgCNW6aFKAY33u0P3mLxwuhshN3b4FxqGUBPj6exZQ==
@@ -12445,7 +12450,7 @@ react-dnd@^7.3.2:
     invariant "^2.1.0"
     shallowequal "^1.1.0"
 
-"react-dom@>=15.0.0 || >=16.0.0", react-dom@^16.8.3, react-dom@^16.8.4:
+"react-dom@>=15.0.0 || >=16.0.0", react-dom@>=16.8.1, react-dom@^16.8.3, react-dom@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -12747,7 +12752,7 @@ react-window@^1.8.5:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-"react@>=15.0.0 || >=16.0.0", react@^16.8.0, react@^16.8.3, react@^16.8.4:
+"react@>=15.0.0 || >=16.0.0", react@>=16.8.1, react@^16.8.0, react@^16.8.3, react@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -12876,6 +12881,14 @@ readdirp@~3.3.0:
   integrity sha512-zz0pAkSPOXXm1viEwygWIPSPkcBYjW1xU5j/JBh5t9bGCJwa6f9+BJa6VaB2g+b55yVrmXzqkyLf4xaWYM0IkQ==
   dependencies:
     picomatch "^2.0.7"
+
+reason-react@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.7.1.tgz#e6acea88542cd44398cd980093b8a2ab2722744e"
+  integrity sha512-Ssx4jZYohMHW9ZiW893IfbYdZw/muSmPFKigAgL+AORUgyiaphb0PP4yRGlx9A7JAxR3EeBn294XKUaClJQhbA==
+  dependencies:
+    react ">=16.8.1"
+    react-dom ">=16.8.1"
 
 reason-react@^0.5.3:
   version "0.5.3"
