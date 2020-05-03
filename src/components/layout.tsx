@@ -36,21 +36,19 @@ const globalStyle = css`
   }
   a {
     color: var(--link-color);
-    /* background-color: var(--link-bg-color); */
     font-weight: bold;
     text-decoration: none;
     :hover {
       text-decoration: underline;
     }
-    /* border: 1px solid var(--link-bg-color); */
     padding: 2px;
-    /* border-radius: 2px; */
   }
   p {
     margin-top: 20px;
     & > img {
-      margin-left: 50%;
-      transform: translateX(-50%);
+      display: inherit;
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
   blockquote {
@@ -68,6 +66,9 @@ const globalStyle = css`
   pre,
   code {
     font-family: Menlo, Monaco, Consolas, monospace;
+  }
+  iframe {
+    margin: 0 auto;
   }
   li {
     padding: 0.4rem 0;
