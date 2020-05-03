@@ -99,6 +99,7 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-typescript`,
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-sitemap',
+		'gatsby-plugin-sitemap',
+		'gatsby-plugin-reason'
   ],
 }
