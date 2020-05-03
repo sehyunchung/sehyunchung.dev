@@ -17,9 +17,13 @@ function NotFound(Props) {
 
 var make = NotFound;
 
+var $$default = NotFound;
+
 export {
   str ,
   make ,
+  $$default ,
+  $$default as default,
   
 }
 /* react Not a pure module */

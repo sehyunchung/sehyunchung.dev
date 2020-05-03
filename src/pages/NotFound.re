@@ -10,3 +10,5 @@ let make = () => {
     <p> {{j|여긴 아무것도 없답니다...|j} |> str} </p>
   </div>;
 };
+
+let default = make;

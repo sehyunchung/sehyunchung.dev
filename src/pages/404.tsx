@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { make as NotFound } from '../pages/NotFound.bs'
+import NotFound from '../pages/NotFound.bs'
 
 function NotFoundPage(props) {
   const { data } = props
