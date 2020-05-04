@@ -55,7 +55,8 @@ module.exports = {
               extensions: ['night-owl'],
             },
           },
-          `gatsby-remark-smartypants`,
+					`gatsby-remark-smartypants`,
+					'gatsby-remark-autolink-headers'
         ],
       },
     },
