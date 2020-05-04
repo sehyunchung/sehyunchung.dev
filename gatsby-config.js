@@ -101,6 +101,12 @@ module.exports = {
     `gatsby-plugin-typescript`,
     'gatsby-plugin-robots-txt',
 		'gatsby-plugin-sitemap',
-		'gatsby-plugin-reason'
+		'gatsby-plugin-reason',
+		{
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    }
   ],
 }
