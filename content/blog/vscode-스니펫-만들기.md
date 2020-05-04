@@ -101,6 +101,6 @@ tags:
 
 ![감동실화2](/img/emmet.gif "감동실화2")
 
-된다.
+<p align="center">된다.</p>
 
 (끝)
