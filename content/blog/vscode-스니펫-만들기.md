@@ -9,7 +9,7 @@ tags:
   - dx
   - reasonml
 ---
-## ReasonML!?
+## ReasonML(!?)
 
 연휴 기간 동안 [ReasonML](https://reasonml.github.io/en/)/[ReasonReact](https://reasonml.github.io/reason-react/)를 건드려보고 있는데(옆걸음질도 가지가지... 이지만 솔직히 재밌다.), 좀 귀찮은 부분들이 있었다.
 
@@ -67,12 +67,12 @@ tags:
 {
   "Simple String": {
     "prefix": "ss",
-    "body": "React.string(\"$1\")",
+    "body": "{React.string(\"$1\")}",
     "description": "스트링 편하게 쓸란다.."
   },
   "Weird String": {
     "prefix": "ws",
-    "body": "React.string({j|$1|j})",
+    "body": "{React.string({j|$1|j})}",
     "description": "편하게..."
   }
 }
@@ -83,7 +83,7 @@ tags:
 
 ![감동실화1](/img/snip.gif "감동실화1")
 
-<span style="margin:0 auto;">감동실화...</span>
+<p align="center">감동실화...</p>
 
 ## emmet 설정을 해보자
 
