@@ -110,6 +110,9 @@ const globalStyle = css`
     border: 1px solid var(--code-border-color);
     margin: 2rem 0;
     border-radius: 0 !important;
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
   pre.grvsc-container,
   code.grvsc-code {
