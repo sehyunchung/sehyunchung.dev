@@ -9,14 +9,15 @@ import Bio from './bio'
 
 const globalStyle = css`
   :root {
-    --text-color: #e9ecef;
-    --background-color: #343a40;
-    --quote-bg-color: #1971c2;
-    --quote-txt-color: #e7f5ff;
-    --quote-border-color: #1864ab;
-    --code-border-color: #495057;
-    --link-color: #339af0;
-    --link-bg-color: #212529;
+    --text-color: var(--oc-gray-2);
+    --background-color: var(--oc-gray-8);
+    --quote-bg-color: var(--oc-blue-7);
+    --quote-txt-color: var(--oc-blue-1);
+    --quote-border-color: var(--oc-blue-8);
+    --quote-shadow-color: var(--oc-blue-8);
+    --code-border-color: var(--oc-gray-7);
+    --link-color: var(--oc-blue-6);
+    --link-bg-color: var(--oc-blue-6);
   }
   body {
     background-color: var(--background-color);
@@ -58,7 +59,7 @@ const globalStyle = css`
     padding: 0.8rem 2rem;
     border: 1px solid var(--quote-border-color);
     overflow-x: auto;
-    box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
+    box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-shadow-color);
     a {
       color: var(--text-color);
     }
@@ -133,7 +134,7 @@ function Layout(props) {
       <h1
         css={css`
           color: var(--quote-bg-color);
-          font-size: 4em;
+          font-size: 4rem;
           font-weight: bold;
           margin: 2rem 0 4rem;
         `}
@@ -160,6 +161,7 @@ function Layout(props) {
       <h1
         css={css`
           color: var(--quote-bg-color);
+          font-size: 3rem;
         `}
       >
         <Link
@@ -200,13 +202,7 @@ function Layout(props) {
           padding: 20px 0;
         `}
       >
-        <p
-          // css={css`
-          //   margin: 20px 0 16px;
-          // `}
-        >
-          © {new Date().getFullYear()} Sehyun Chung
-        </p>
+        <p>© {new Date().getFullYear()} Sehyun Chung</p>
         <Bio />
       </footer>
     </div>

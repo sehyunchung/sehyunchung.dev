@@ -31,14 +31,14 @@ function BlogIndex(props) {
             key={title}
             css={css`
               margin-top: 2rem;
-              padding-top: 1rem;
+              padding-top: 1.2rem;
               border: 1px solid var(--background-color);
               cursor: pointer;
               transition: 0.2s;
               &:hover,
               :active,
               :focus {
-                padding-left: 1.6rem;
+                padding-left: 1.4rem;
                 background-color: var(--quote-bg-color);
                 border: 1px solid var(--quote-border-color);
                 box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
@@ -64,28 +64,7 @@ function BlogIndex(props) {
                 padding: 6px 0;
               `}
             >
-              <span
-                css={css`
-                  position: relative;
-                  &::after {
-                    transition: 5s;
-                    position: absolute;
-                    bottom: -2px;
-                    left: 2px;
-                    content: '';
-                    height: 1rem;
-                    width: 100%;
-                    background-color: var(--quote-border-color);
-                    z-index: -1;
-                    opacity: 0;
-                  }
-                  &:hover::after {
-                    opacity: 1;
-                  }
-                `}
-              >
-                {title}
-              </span>
+              <span>{title}</span>
             </h2>
             <p
               css={css`
