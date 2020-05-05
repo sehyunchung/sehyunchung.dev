@@ -10,6 +10,7 @@ import Bio from './bio'
 const globalStyle = css`
   :root {
     --text-color: var(--oc-gray-2);
+    --text-secondary-color: var(--oc-gray-5);
     --background-color: var(--oc-gray-8);
     --quote-bg-color: var(--oc-blue-7);
     --quote-txt-color: var(--oc-blue-1);
@@ -127,59 +128,33 @@ const globalStyle = css`
 function Layout(props) {
   const { location, title, children } = props
   const rootPath = `${__PATH_PREFIX__}/`
-  let header: JSX.Element
+  const header = (
+    <h1
+      css={css`
+        color: var(--quote-bg-color);
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 2rem 0 4rem;
+      `}
+    >
+      <Link
+        css={css`
+          box-shadow: none;
+          text-decoration: none;
+          color: inherit;
+          background: none;
+          border: none;
+          :hover {
+            text-decoration: none !important;
+          }
+        `}
+        to={`/`}
+      >
+        {title}
+      </Link>
+    </h1>
+  )
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        css={css`
-          color: var(--quote-bg-color);
-          font-size: 4rem;
-          font-weight: bold;
-          margin: 2rem 0 4rem;
-        `}
-      >
-        <Link
-          css={css`
-            box-shadow: none;
-            text-decoration: none;
-            color: inherit;
-            background: none;
-            border: none;
-            :hover {
-              text-decoration: none !important;
-            }
-          `}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h1
-        css={css`
-          color: var(--quote-bg-color);
-          font-size: 3rem;
-        `}
-      >
-        <Link
-          css={css`
-            box-shadow: none;
-            text-decoration: none;
-            color: inherit;
-            :hover {
-              text-decoration: none !important;
-            }
-          `}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  }
   return (
     <div
       css={css`
@@ -200,6 +175,7 @@ function Layout(props) {
           justify-content: space-between;
           margin-top: 20px;
           padding: 20px 0;
+          color: var(--text-secondary-color);
         `}
       >
         <p>© {new Date().getFullYear()} Sehyun Chung</p>

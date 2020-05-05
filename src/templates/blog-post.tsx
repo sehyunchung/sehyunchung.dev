@@ -20,15 +20,22 @@ function BlogPostTemplate(props) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1>{post.frontmatter.title}</h1>
       <p
         css={css`
           display: block;
-          margin: 20px 0;
+          margin: 0 0 -3.6rem;
+          color: var(--text-secondary-color);
         `}
       >
         {post.frontmatter.date}
       </p>
+      <h1
+        css={css`
+          margin-bottom: 3rem;
+        `}
+      >
+        {post.frontmatter.title}
+      </h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       {post.frontmatter.tags && (
         <ul

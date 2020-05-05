@@ -40,9 +40,13 @@ function BlogIndex(props) {
               :focus {
                 padding-left: 1.4rem;
                 background-color: var(--quote-bg-color);
+                color: var(--text-color);
                 border: 1px solid var(--quote-border-color);
                 box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
                 outline: none;
+                small, p {
+                  color: var(--text-color);
+                }
               }
             `}
             role="button"
@@ -54,6 +58,7 @@ function BlogIndex(props) {
               css={css`
                 margin: 0;
                 padding: 2px 0;
+                color: var(--text-secondary-color);
               `}
             >
               {node.frontmatter.date}
@@ -71,6 +76,7 @@ function BlogIndex(props) {
                 position: relative;
                 margin: 0;
                 padding: 4px 0 28px;
+                color: var(--text-secondary-color);
               `}
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
