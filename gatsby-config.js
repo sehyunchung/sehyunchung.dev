@@ -51,7 +51,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-vscode',
             options: {
-              theme: 'Night Owl',
+              theme: 'Night Owl (No Italics)',
               extensions: ['night-owl'],
             },
           },

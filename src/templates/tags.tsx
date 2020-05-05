@@ -18,7 +18,7 @@ const Tags = ({ pageContext, location, data }) => {
       <div>
         <h1
           css={css`
-            color: hsla(212, 97%, 43%, 1);
+            color: var(--link-color);
             font-weight: normal;
           `}
         >

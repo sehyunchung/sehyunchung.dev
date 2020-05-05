@@ -13,7 +13,7 @@ const globalStyle = css`
     --text-secondary-color: var(--oc-gray-5);
     --background-color: var(--oc-gray-8);
     --quote-bg-color: var(--oc-blue-7);
-    --quote-txt-color: var(--oc-blue-1);
+    --quote-txt-color: var(--oc-gray-3);
     --quote-border-color: var(--oc-blue-8);
     --quote-shadow-color: var(--oc-blue-8);
     --code-border-color: var(--oc-gray-7);
@@ -67,7 +67,7 @@ const globalStyle = css`
   }
   pre,
   code {
-    font-family: Menlo, Monaco, Consolas, monospace;
+    font-family: 'Inconsolata-dz for Powerline', Inconsolata, Monaco, Consolas, monospace;
   }
   iframe {
     margin: 0 auto;
@@ -90,9 +90,9 @@ const globalStyle = css`
     margin: 2rem 0;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid var(--quote-border-color);
+    border: 1px solid var(--oc-gray-6);
     thead {
-      background-color: #222;
+      background-color: var(--oc-gray-7);
     }
     thead,
     tbody,
@@ -100,12 +100,12 @@ const globalStyle = css`
     th,
     td {
       padding: 8px 12px;
-      border: 1px sold var(--code-border-color);
+      border: 1px sold var(--oc-gray-6);
     }
     tr,
     th,
     td {
-      border: 1px solid var(--code-border-color);
+      border: 1px solid var(--oc-gray-7);
     }
   }
   pre.grvsc-container {
@@ -118,7 +118,7 @@ const globalStyle = css`
   }
   pre.grvsc-container,
   code.grvsc-code {
-    font-size: 0.9rem;
+    font-size: 15px;
   }
   .utterances {
     max-width: inherit;
