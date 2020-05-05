@@ -4,10 +4,10 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { css, jsx } from '@emotion/core'
 import kebabCase from 'lodash/kebabCase'
-import Utterances from '../components/utterances'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { make as Utterances } from '../components/Utterances.bs'
 
 function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
