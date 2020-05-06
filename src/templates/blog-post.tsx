@@ -44,6 +44,7 @@ function BlogPostTemplate(props) {
             margin: 0;
             padding: 10px 0;
             display: flex;
+            background-color: inherit;
           `}
         >
           {post.frontmatter.tags.map((tag) => (
@@ -72,6 +73,7 @@ function BlogPostTemplate(props) {
           justify-content: space-between;
           list-style: none;
           padding: 0;
+          background-color: inherit;
         `}
       >
         <li>

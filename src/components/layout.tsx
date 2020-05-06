@@ -33,6 +33,19 @@ const globalStyle = css`
     border-top: 0.6px solid var(--text-color);
     border-bottom: none;
   }
+  ul,
+  ol {
+    padding: 1.4rem;
+    padding-left: 3rem;
+    background-color: var(--oc-gray-7);
+    color: var(--oc-gray-4);
+    li:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+    code {
+      color: var(--oc-orange-5);
+    }
+  }
   pre::-webkit-scrollbar {
     display: none;
   }
@@ -52,6 +65,9 @@ const globalStyle = css`
       max-width: 100%;
       margin: 0 auto;
     }
+    code {
+      color: var(--oc-orange-4);
+    }
   }
   blockquote {
     color: var(--quote-txt-color);
@@ -64,16 +80,17 @@ const globalStyle = css`
     a {
       color: var(--text-color);
     }
+    code {
+      color: var(--oc-gray-4);
+    }
   }
   pre,
   code {
-    font-family: 'Inconsolata-dz for Powerline', Inconsolata, Monaco, Consolas, monospace;
+    font-family: 'Inconsolata-dz for Powerline', Inconsolata, Monaco, Consolas,
+      monospace;
   }
   iframe {
     margin: 0 auto;
-  }
-  li {
-    padding: 0.4rem 0;
   }
   h1,
   h2,
