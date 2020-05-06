@@ -1,7 +1,7 @@
 {
   "name": "sehyunchung-blog",
   "private": true,
-  "description": "A starter for a blog powered by sehyunchung, Gatsby and Markdown",
+  "description": "",
   "version": "0.1.0",
   "author": "Sehyun Chung <sxhyxnchxng@gmail.com>",
   "bugs": {
@@ -58,8 +58,13 @@
   },
   "devDependencies": {
     "@baransu/graphql_ppx_re": "^0.7.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "gh-pages": "^2.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
     "prettier": "^2.0.1",
+    "standard-version": "^7.1.0",
     "typescript": "^3.7.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -82,6 +87,18 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js|ts|tsx|json|re}": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ]
   }
 }

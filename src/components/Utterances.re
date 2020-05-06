@@ -28,7 +28,9 @@ let make = () => {
     |> Js.Nullable.toOption
     |> append(utterances);
 
-    Some(() => ());
+    Some(
+      () => ()
+    );
   });
 
   <div
