@@ -6,6 +6,7 @@ import { Link } from 'gatsby'
 import { css, jsx, Global } from '@emotion/core'
 
 import Bio from './bio'
+import Footer from './Footer.bs'
 
 const globalStyle = css`
   :root {
@@ -81,7 +82,7 @@ const globalStyle = css`
       color: var(--text-color);
     }
     code {
-      color: var(--oc-gray-4);
+      color: var(--oc-gray-2);
     }
   }
   pre,
@@ -185,19 +186,7 @@ function Layout(props) {
       <Global styles={globalStyle} />
       <header>{header}</header>
       <main>{children}</main>
-      <footer
-        css={css`
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          margin-top: 20px;
-          padding: 20px 0;
-          color: var(--text-secondary-color);
-        `}
-      >
-        <p>© {new Date().getFullYear()} Sehyun Chung</p>
-        <Bio />
-      </footer>
+      <Footer><Bio /></Footer>
     </div>
   )
 }
