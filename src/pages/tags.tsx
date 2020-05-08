@@ -41,6 +41,7 @@ const TagsPage = ({
             flex-wrap: wrap;
             justify-content: flex-start;
             list-style-type: none;
+            border: none;
             li {
               padding: 4px 12px;
               margin: 0;

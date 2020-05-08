@@ -18,10 +18,12 @@ const globalStyle = css`
     --quote-border-color: var(--oc-blue-8);
     --quote-shadow-color: var(--oc-blue-8);
     --code-border-color: var(--oc-gray-7);
+    --code-txt-color: var(--oc-gray-5);
     --link-color: var(--oc-blue-6);
     --link-bg-color: var(--oc-blue-6);
   }
   body {
+    max-width: 100vw;
     background-color: var(--background-color);
     color: var(--text-color);
     word-break: keep-all;
@@ -36,15 +38,19 @@ const globalStyle = css`
   }
   ul,
   ol {
-    padding: 1.4rem;
-    padding-left: 3rem;
-    background-color: var(--oc-gray-7);
+    border-left: 5px solid var(--oc-gray-7);
+    overflow-x: auto;
+    padding: 1rem 3rem;
+    /* background-color: var(--oc-gray-7); */
     color: var(--oc-gray-4);
+    &::-webkit-scrollbar {
+      display: none;
+    }
     li:not(:last-child) {
       padding-bottom: 1rem;
     }
     code {
-      color: var(--oc-orange-5);
+      color: var(--oc-gray-5);
     }
   }
   pre::-webkit-scrollbar {
@@ -67,7 +73,7 @@ const globalStyle = css`
       margin: 0 auto;
     }
     code {
-      color: var(--oc-orange-4);
+      color: var(--code-txt-color);
     }
   }
   blockquote {
@@ -82,7 +88,7 @@ const globalStyle = css`
       color: var(--text-color);
     }
     code {
-      color: var(--oc-gray-2);
+      color: var(--code-txt-color);
     }
   }
   pre,
@@ -126,6 +132,13 @@ const globalStyle = css`
       border: 1px solid var(--oc-gray-7);
     }
   }
+  .anchor.before {
+    transform: translate(-100%, -10%);
+    svg {
+      fill: var(--text-color);
+      overflow: auto !important;
+    }
+  }
   pre.grvsc-container {
     border: 1px solid var(--code-border-color);
     margin: 2rem 0;
@@ -136,7 +149,7 @@ const globalStyle = css`
   }
   pre.grvsc-container,
   code.grvsc-code {
-    font-size: 15px;
+    font-size: 14px !important;
   }
   .utterances {
     max-width: inherit;
@@ -180,13 +193,14 @@ function Layout(props) {
         height: 100%;
         margin: 0 auto;
         padding: 10px;
-        overflow-x: hidden;
       `}
     >
       <Global styles={globalStyle} />
       <header>{header}</header>
       <main>{children}</main>
-      <Footer><Bio /></Footer>
+      <Footer>
+        <Bio />
+      </Footer>
     </div>
   )
 }

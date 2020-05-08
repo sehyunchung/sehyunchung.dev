@@ -40,10 +40,12 @@ function BlogPostTemplate(props) {
       {post.frontmatter.tags && (
         <ul
           css={css`
+            border: none;
             list-style-type: none;
             margin: 0;
-            padding: 10px 0;
+            padding: 4px 0;
             display: flex;
+            flex-wrap: wrap;
             background-color: inherit;
           `}
         >
@@ -51,6 +53,7 @@ function BlogPostTemplate(props) {
             <li
               key={tag}
               css={css`
+                padding: none;
                 padding-right: 6px;
               `}
             >
@@ -68,6 +71,7 @@ function BlogPostTemplate(props) {
 
       <ul
         css={css`
+          border: none;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
