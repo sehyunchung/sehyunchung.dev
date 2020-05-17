@@ -9,11 +9,9 @@ tags:
   - hammerspoon
   - lua
 ---
-![]()
+현재 메인 에디터로 vscode에 [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)을 설치해서 사용하고 있다. 터미널 vim에도 [이런저런 세팅](https://github.com/sehyunchung/dotfiles/blob/master/nvim/init.vim)을 해놔서 대충 비슷하게 돌아가고 있긴 하지만 [live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) 등 이런저런 편의성 때문에 왠지 vscode를 더 자주 켜게 되는 것 같다.
 
-현재 메인 에디터로 vscode에 [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)을 설치해서 사용하고 있다. 터미널 vim에도 [이런저런 세팅](https://github.com/sehyunchung/dotfiles/blob/master/nvim/init.vim)을 해놔서 대충 비슷하게 돌아가고 있긴 하지만 live share 등 이런저런 편의성 때문에 왠지 vscode를 더 자주 켜게 되는 것 같다.
-
-아무튼, vim은 처음엔 좀 당황스러울 수 있지만 죽치고 쓰다보면 어느 순간 익숙해져서, 모든 것을 키보드 위에서, 그것도 손 포지션을 바꾸지 않고 해결하고 싶어진다. 크롬에선 vimium등을 설치해서 많은 부분 해결할 수 있지만 다른 부분들에서 vim 키바인딩(최소 방향키만이라도)을 사용하고 싶으면 어떻게 해야 하는지 좀 알아보다가 [karabiner-element](https://karabiner-elements.pqrs.org/)라는 툴을 알게됐다.
+아무튼, vim은 처음엔 좀 당황스러울 수 있지만 죽치고 쓰다보면 어느 순간 익숙해져서, 모든 것을 키보드 위에서, 그것도 손 포지션을 바꾸지 않고 해결하고 싶어진다. 크롬에선 [vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)등을 설치해서 많은 부분 해결할 수 있지만 다른 부분들에서 vim 키바인딩(최소 방향키만이라도)을 사용하고 싶으면 어떻게 해야 하는지 좀 알아보다가 [karabiner-element](https://karabiner-elements.pqrs.org/)라는 툴을 알게됐다.
 
 ## Karabiner Element
 
