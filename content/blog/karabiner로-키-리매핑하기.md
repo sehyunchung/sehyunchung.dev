@@ -66,6 +66,8 @@ Karabiner는 좋은 기능을 제공하는데, [Karabiner 사용자들이 공유
 
 일단 alt랑 k, l을 골랐는데 별 생각은 없었고(...) 이후로 불편하면 바꿀 예정이다.
 
+![일단 잘 댄다...](/img/may-17-2020-21-41-24.gif)
+
 ## Hammerspoon
 
 이만큼 하다가 [이종립님 위키에서 hammerspoon이라는 툴](https://johngrib.github.io/wiki/hammerspoon/)을 알게 됐다. lua 코드로 osx 를 조작할 수 있게 해주는 툴인데, 좀 파악하고 나면 Karabiner 등 보다 훨 강력한 뭔가를 할 수 있을 것 같아 알아보는 중. 일단 [종립님이 만들어두신 스크립트](https://github.com/johngrib/hammerspoon-config/blob/master/modules/inputsource_aurora.lua)를 [약간 바꿔서](https://github.com/sehyunchung/dotfiles/blob/master/hammerspoon/modules/inputsource_pink.lua) 한글입력 상황에선 메뉴바가 핑크핑크하게 되도록 해두었다.
