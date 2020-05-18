@@ -93,7 +93,7 @@ const globalStyle = css`
   }
   pre,
   code {
-    font-family: 'Inconsolata-dz for Powerline', Inconsolata, Monaco, Consolas,
+    font-family: Monaco, Consolas,
       monospace;
   }
   iframe {
