@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const tagTemplate = path.resolve(`./src/templates/tags.tsx`)
+  const about = path.resolve('./src/templates/About.tsx')
 
   return graphql(
     `
@@ -34,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -60,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
         component: tagTemplate,
@@ -68,6 +69,11 @@ exports.createPages = ({ graphql, actions }) => {
           tag: tag.fieldValue,
         },
       })
+    })
+
+    createPage({
+      path: '/about',
+      component: about,
     })
 
     return null

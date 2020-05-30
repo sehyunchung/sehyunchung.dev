@@ -5,7 +5,7 @@ type social = {github: string};
 [@react.component]
 let make = (~social) =>
   <>
-    <span> {"about" |> str} </span>
+    <a href="/about"> {"about" |> str} </a> // TODO: change to gatsby <Link>
     {"  |  " |> str}
     <a href={"https://github.com/" ++ social.github}> {"github" |> str} </a>
   </>;
