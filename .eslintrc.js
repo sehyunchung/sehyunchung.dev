@@ -1,12 +1,12 @@
 module.exports = {
-	globals: {
-		__PATH_PREFIX__: true
-	},
-	extends: [
+  globals: {
+    __PATH_PREFIX__: true
+  },
+  extends: [
     'eslint:recommended',
     'plugin:react/recommended'
   ],
-	rules: {
-		'react/jsx-uses-vars': true
-	}
+  rules: {
+    'react/jsx-uses-vars': true
+  }
 }

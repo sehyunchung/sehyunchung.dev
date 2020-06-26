@@ -209,7 +209,7 @@ function Layout(props) {
           :hover {
             text-decoration: none !important;
           }
-`}
+        `}
         to={`/`}
       >
         {title}
@@ -224,7 +224,7 @@ function Layout(props) {
         height: 100%;
         margin: 0 auto;
         padding: 10px;
-`}
+      `}
     >
       <Global styles={globalStyle} />
       <header>{header}</header>
