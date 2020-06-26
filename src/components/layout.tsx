@@ -12,7 +12,7 @@ const globalStyle = css`
   :root {
     --text-color: var(--oc-gray-2);
     --text-secondary-color: var(--oc-gray-5);
-    --background-color: var(--oc-gray-9);
+    --background-color: var(--oc-gray-8);
     --quote-bg-color: var(--oc-blue-7);
     --quote-txt-color: var(--oc-gray-3);
     --quote-border-color: var(--oc-blue-8);
