@@ -42,10 +42,12 @@ const TagsPage = ({
             justify-content: flex-start;
             list-style-type: none;
             border: none;
+
             li {
               padding: 4px 12px;
               margin: 0;
             }
+
             li::before {
               content: '';
             }

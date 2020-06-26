@@ -35,6 +35,12 @@ function BlogIndex(props) {
               border: 1px solid var(--background-color);
               cursor: pointer;
               transition: 0.2s;
+
+              small,
+              p {
+                color: var(--text-color);
+              }
+
               &:hover,
               :active,
               :focus {
@@ -42,11 +48,8 @@ function BlogIndex(props) {
                 background-color: var(--quote-bg-color);
                 color: var(--text-color);
                 border: 1px solid var(--quote-border-color);
-                box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
+                box-shadow: 0.8rem 0.8rem 0 0 var(--quote-border-color);
                 outline: none;
-                small, p {
-                  color: var(--text-color);
-                }
               }
             `}
             role="button"
