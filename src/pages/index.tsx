@@ -35,6 +35,12 @@ function BlogIndex(props) {
               border: 1px solid var(--background-color);
               cursor: pointer;
               transition: 0.2s;
+
+              small,
+              p {
+                color: var(--text-color);
+              }
+
               &:hover,
               :active,
               :focus {
@@ -42,13 +48,10 @@ function BlogIndex(props) {
                 background-color: var(--quote-bg-color);
                 color: var(--text-color);
                 border: 1px solid var(--quote-border-color);
-                box-shadow: 0.8rem 0.8rem 0px 0px var(--quote-border-color);
+                box-shadow: 0.8rem 0.8rem 0 0 var(--quote-border-color);
                 outline: none;
-                small, p {
-                  color: var(--text-color);
-                }
               }
-            `}
+`}
             role="button"
             tabIndex={0}
             onClick={() => handleClick(node.fields.slug)}
@@ -59,7 +62,7 @@ function BlogIndex(props) {
                 margin: 0;
                 padding: 2px 0;
                 color: var(--text-secondary-color);
-              `}
+`}
             >
               {node.frontmatter.date}
             </small>
@@ -67,7 +70,7 @@ function BlogIndex(props) {
               css={css`
                 margin: 0;
                 padding: 6px 0;
-              `}
+`}
             >
               <span>{title}</span>
             </h2>
@@ -77,7 +80,7 @@ function BlogIndex(props) {
                 margin: 0;
                 padding: 4px 0 28px;
                 color: var(--text-secondary-color);
-              `}
+`}
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
               }}

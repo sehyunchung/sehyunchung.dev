@@ -29,7 +29,7 @@ const TagsPage = ({
         <h1
           css={css`
             margin-bottom: 20px;
-          `}
+`}
         >
           all tags
         </h1>
@@ -42,14 +42,16 @@ const TagsPage = ({
             justify-content: flex-start;
             list-style-type: none;
             border: none;
+
             li {
               padding: 4px 12px;
               margin: 0;
             }
+
             li::before {
               content: '';
             }
-          `}
+`}
         >
           {group.map((tag) => (
             <li key={tag.fieldValue}>
