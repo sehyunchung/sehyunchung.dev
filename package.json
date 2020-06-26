@@ -61,6 +61,7 @@
     "@baransu/graphql_ppx_re": "^0.7.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "eslint-plugin-react": "^7.20.0",
     "gh-pages": "^2.0.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
