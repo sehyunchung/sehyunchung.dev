@@ -15,7 +15,7 @@ let make = () => {
     let utterances = document |> Document.createElement("script");
     [
       ("src", "https://utteranc.es/client.js"),
-      ("repo", "sehyunchung/sehyunchung.github.io"),
+      ("repo", "sehyunchung/sehyunchung.dev"),
       ("issue-term", "pathname"),
       ("theme", "photon-dark"),
       ("crossorigin", "anonymous"),

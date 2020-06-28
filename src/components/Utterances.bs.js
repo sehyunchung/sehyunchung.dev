@@ -28,7 +28,7 @@ function Utterances(Props) {
                 /* :: */[
                   /* tuple */[
                     "repo",
-                    "sehyunchung/sehyunchung.github.io"
+                    "sehyunchung/sehyunchung.dev"
                   ],
                   /* :: */[
                     /* tuple */[
