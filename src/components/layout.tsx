@@ -46,7 +46,6 @@ const globalStyle = css`
 
   ul,
   ol {
-    border-left: 5px solid var(--oc-gray-7);
     overflow-x: auto;
     padding: 1rem 3rem;
 
