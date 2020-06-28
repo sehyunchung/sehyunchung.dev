@@ -1,0 +1,47 @@
+---
+title: vscode에서 swift language server 돌리기
+date: 2020-06-28T10:10:48.960Z
+description: xcode가 손에 안붙어서
+tags:
+  - swift
+  - vscode
+  - sourcekit-lsp
+  - language server protocol
+---
+[PWA](https://sehyunchung.dev/2019-12-30-pwa-bpm-tapper를-만들어보았다/)를 이리저리 해보다 역시 뭔가 기기에 안붙는 느낌이 힘들어서 걍 네이티브 앱으로 만들고 있는데(앱스토어에도 올릴 것임...), 빌드나 프리뷰는 어쩔 수 없이 xcode를 써야겠지만 걍 코드 에디팅하는 데는 vscode가 손에 익어있는 게 있고 폰트나 theme을 기분따라 자주 바꾸는 편인데 xcode는 좀 불편했다.
+
+그래서 혹시 swift 개발을 vscode에서 할 수 없나 알아보았는데, 다행히 애플에서 [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)라고 랭귀지 서버 프로토콜을 구현해놓은 게 있어서 vscode에서 코드 액션을 돌릴 수 있었다.
+
+방법은 아래와 같다.
+
+1. 원하는 위치에 [`sourcekit-lsp`](https://github.com/apple/sourcekit-lsp)를 클론 받는다.
+2. 클론한 폴더의 `Editors/vscode`로 이동한다.
+
+   ```sh
+   $ cd sourcekit-lst/Editors/vscode
+   ```
+3. `.vsix`(익스텐션 파일) 를 생성한다.
+
+   ```sh
+   $ npm run createDevPackage
+   ```
+4. 생성한 익스텐션을 설치한다.
+
+   ```sh
+   $ code --install-extension out/sourcekit-lsp-vscode-dev.vsix
+   ```
+5. 공식 가이드엔 여기까지 하면 된다고 나와있긴 한데, vscode에서 `Starting client failed Launching server using command sourcekit-lsp failed.` 어쩌구 하면서 에러가 발생했다.
+6. `sourcekit-lsp` 가 설치된 경로를 알아내서 복사한다.
+
+   ```sh
+   $ xcrun -f sourcekit-lsp
+   ```
+7. vscode의 `settings.json`에 아래를 추가한다.
+
+   ```json
+     "sourcekit-lsp.serverPath": "<복사한 경로>"
+   ```
+8. vscode를 reload 한다.
+9. 굳
+
+   ![된다된다](/img/screen-shot-2020-06-28-at-14.34.30.png)
