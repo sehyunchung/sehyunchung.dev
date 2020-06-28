@@ -8,9 +8,11 @@ tags:
   - sourcekit-lsp
   - language server protocol
 ---
-[PWA](https://sehyunchung.dev/2019-12-30-pwa-bpm-tapper를-만들어보았다/)를 이리저리 해보다 역시 뭔가 기기에 안붙는 느낌이 힘들어서 걍 네이티브 앱으로 만들고 있는데(앱스토어에도 올릴 것임...), 빌드나 프리뷰는 어쩔 수 없이 xcode를 써야겠지만 걍 코드 에디팅하는 데는 vscode가 손에 익어있는 게 있고 폰트나 theme을 기분따라 자주 바꾸는 편인데 xcode는 좀 불편했다.
+[PWA](https://sehyunchung.dev/2019-12-30-pwa-bpm-tapper를-만들어보았다/)를 이리저리 해보다 역시 뭔가 기기에 안붙는 느낌이 힘들어서 걍 네이티브 앱으로 만들고 있는데... 아 이런 건 애시당초 네이티브앱으로 만들었어야되었다는 생각이다. 일단 손에 붙는 느낌이 너무 다르고 등등...
 
-그래서 혹시 swift 개발을 vscode에서 할 수 없나 알아보았는데, 다행히 애플에서 [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)라고 랭귀지 서버 프로토콜을 구현해놓은 게 있어서 vscode에서 코드 액션을 돌릴 수 있었다.
+그런데 코드 에디팅하는 데는 vscode가 이미 손에 익어있는 게 있고(vim 익스텐션 등등), 폰트나 theme을 기분따라 자주 바꾸는 편인데 그런 부분이 xcode는 좀 불편했다. 빌드나 프리뷰 등등은 어쩔 수 없겠지만 좀 손에 걸리적거리는 부분들이 있었다.
+
+그래서 혹시 vscode에서 javascript 다루는 것 처럼 이것저것 정보를 띄울 수 없나 알아보았는데, 다행히 애플에서 [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)라고 랭귀지 서버 프로토콜을 구현해놓은 게 있어서 vscode에서 코드 액션 등등을 돌릴 수 있었다.
 
 방법은 아래와 같다.
 
