@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: sehyunchung/sehyunchung.github.io
+  repo: sehyunchung/sehyunchung.dev
   branch: dev
 
 media_folder: static/img
