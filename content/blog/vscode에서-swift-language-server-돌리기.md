@@ -42,6 +42,6 @@ tags:
      "sourcekit-lsp.serverPath": "<복사한 경로>"
    ```
 8. vscode를 reload 한다.
-9. 굳
+9. 된다된다 잘된다.
 
    ![된다된다](/img/screen-shot-2020-06-28-at-14.34.30.png)
