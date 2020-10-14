@@ -32,6 +32,7 @@ const globalStyle = css`
     font-weight: 400;
     line-height: 160%;
     overflow-x: hidden;
+    -webkit-text-size-adjust: none;
   }
 
   hr {
