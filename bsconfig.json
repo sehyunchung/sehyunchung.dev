@@ -4,7 +4,11 @@
   "bsc-flags": ["-bs-super-errors"],
   "sources": [
     {
-      "dir": "src",
+      "dir": "./src/",
+      "subdirs": true
+    },
+    {
+      "dir": "./config/",
       "subdirs": true
     }
   ],
@@ -14,7 +18,16 @@
   },
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["bs-webapi", "reason-react"],
+  "bs-dependencies": ["bs-webapi", "reason-react", "reason-gatsby"],
   "refmt": 3,
-  "ppx-flags": ["@baransu/graphql_ppx_re/ppx"]
+  "ppx-flags": [
+    [
+      "@reasonml-community/graphql-ppx/ppx",
+      "-template-tag=graphql",
+      "-fragment-in-query=exclude"
+    ]
+  ],
+  "warnings": {
+    "number": "-30"
+  }
 }

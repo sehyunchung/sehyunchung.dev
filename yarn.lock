@@ -951,7 +951,7 @@
     "@babel/plugin-transform-react-jsx-source" "^7.12.1"
     "@babel/plugin-transform-react-pure-annotations" "^7.12.1"
 
-"@babel/preset-typescript@^7.12.1":
+"@babel/preset-typescript@^7.12.1", "@babel/preset-typescript@^7.8.3":
   version "7.12.7"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.12.7.tgz#fc7df8199d6aae747896f1e6c61fc872056632a3"
   integrity sha512-nOoIqIqBmHBSEgBXWR4Dv/XBehtIFcw9PqZw6rFYuKrzsZmOQm3PR5siLBnKZFEsDb03IegG8nSjU/iXXXYRmw==
@@ -1012,11 +1012,6 @@
     "@babel/helper-validator-identifier" "^7.10.4"
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
-
-"@baransu/graphql_ppx_re@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@baransu/graphql_ppx_re/-/graphql_ppx_re-0.7.1.tgz#8146a36a94d56e65692d74488e2bd6cbd4eb8dc9"
-  integrity sha512-S9RYUWk8IkFxjE1Xl5eohRgbHJP5nCWOD6J1hMV3hY+D43igDrILq1doAXJatYB82BxcsrBC9V+VeU2LtCxIDw==
 
 "@commitlint/cli@^11.0.0":
   version "11.0.0"
@@ -1511,6 +1506,18 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@jfrolich/gatsby-plugin-extract-schema@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jfrolich/gatsby-plugin-extract-schema/-/gatsby-plugin-extract-schema-0.0.4.tgz#d8cc2fbf652293fac762dbf0260e238b7eeaf40e"
+  integrity sha512-3ISGJDcHnvHFG0bUtk6/Oz1CR1QW+/7YKZ5NEfHOWJmSnO6ZawG8xEbsGIGh8Th1KuqSG2VX/IqYDSr4l12Ejg==
+  dependencies:
+    write "^1.0.3"
+
+"@jfrolich/gatsby-plugin-reason@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@jfrolich/gatsby-plugin-reason/-/gatsby-plugin-reason-0.1.4.tgz#9cfc87c3aabbead2babdb210499b870fb7b3a39b"
+  integrity sha512-JiEVOVjngoJZ6L39D9XMjTr+BLVt2FJ6sCtufKLYAyLJDd8cPEyNLnN4H61b72XFzV0f7qGiNVSJ9+arHGeMMA==
+
 "@jimp/bmp@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.14.0.tgz#6df246026554f276f7b354047c6fff9f5b2b5182"
@@ -1876,6 +1883,11 @@
     invariant "^2.2.3"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
+
+"@reasonml-community/graphql-ppx@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@reasonml-community/graphql-ppx/-/graphql-ppx-1.0.1.tgz#aabbaa2d32b290c1576c4d4c53e26ffce4bed98c"
+  integrity sha512-lYPM6J5lth3VWyzOdAIEerStK70xm0jObC86iyhrfl7lm7RFls0W+QyxbOhajpzl8MwFtNGq5gYZAi/E9GL7bw==
 
 "@sideway/address@^4.1.0":
   version "4.1.0"
@@ -15772,6 +15784,13 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
+reason-gatsby@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/reason-gatsby/-/reason-gatsby-0.1.8.tgz#09e067f387bc5425997c569e2a4aa5a8b0a46af3"
+  integrity sha512-tlEUuh4fjuhpiAf2d9GuMXa/vUktIsEd7WBlWXwak7RnZl4kwC23rLFSUxMWUgJhzPck9599Jmt0UZMFOAxbog==
+  dependencies:
+    "@babel/preset-typescript" "^7.8.3"
+
 reason-react@^0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.5.3.tgz#10601809742fd991109ec9d69ad4baf2c3f17540"
@@ -19788,7 +19807,7 @@ write-file-atomic@^3.0.0, write-file-atomic@^3.0.3:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-write@1.0.3:
+write@1.0.3, write@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/write/-/write-1.0.3.tgz#0800e14523b923a387e415123c865616aae0f5c3"
   integrity sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
