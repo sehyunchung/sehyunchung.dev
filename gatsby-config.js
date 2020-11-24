@@ -107,5 +107,6 @@ module.exports = {
         offset: -100,
       },
     },
+    'gatsby-plugin-splitbee',
   ],
 }
