@@ -103,5 +103,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-splitbee',
+    '@jfrolich/gatsby-plugin-reason',
   ],
 }
