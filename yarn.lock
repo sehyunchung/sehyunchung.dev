@@ -7739,6 +7739,11 @@ gatsby-plugin-google-analytics@^2.0.16:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
+gatsby-plugin-google-fonts@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
+  integrity sha512-p1NVkn27GUnDA5qHM+Z4cCcLCJIardzZXMon3640sT4xuL/AZJbsx3HEt2KY/5oZu0UXIkytkxzV2Da4rQeUIg==
+
 gatsby-plugin-manifest@^2.0.21:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.7.0.tgz#44526226e8d0a2f80c2a81e5a5c7e9a03963a890"
@@ -7884,6 +7889,13 @@ gatsby-plugin-sitemap@^2.3.0:
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.13.0"
+
+gatsby-plugin-splitbee@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-splitbee/-/gatsby-plugin-splitbee-0.1.0.tgz#090442f8110cca96a38971c706013d4b27625147"
+  integrity sha512-eycKTRx5yNHeZFuKtiTh28cFl55HA5GXLuJ5p8aDG4bh6zbMThEDmufZED0iXnsLCjMBHbdiJXU3RIAgWk+jXg==
+  dependencies:
+    babel-runtime "^6.26.0"
 
 gatsby-plugin-styled-components@^3.0.6:
   version "3.5.0"

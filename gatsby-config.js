@@ -82,15 +82,10 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          {
-            family: 'Gothic A1',
-            subsets: ['korean'],
-            variants: ['300', '400', '700'],
-          },
-        ],
+        fonts: ['Gothic A1:300,400,700'],
+        display: 'swap',
       },
     },
     'gatsby-plugin-sass',
@@ -107,5 +102,6 @@ module.exports = {
         offset: -100,
       },
     },
+    'gatsby-plugin-splitbee',
   ],
 }
