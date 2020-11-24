@@ -51,12 +51,11 @@ module.exports = {
           {
             resolve: 'gatsby-remark-vscode',
             options: {
-              theme: 'Github Dark',
-              extensions: ['github-vscode-theme'],
+              theme: 'Dark+ (default dark)',
             },
           },
-					'gatsby-remark-smartypants',
-					'gatsby-remark-autolink-headers'
+          'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
@@ -100,13 +99,13 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-typescript',
     'gatsby-plugin-robots-txt',
-		'gatsby-plugin-sitemap',
-		'gatsby-plugin-reason',
-		{
-      resolve: "gatsby-plugin-anchor-links",
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-reason',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
       options: {
-        offset: -100
-      }
-    }
+        offset: -100,
+      },
+    },
   ],
 }
