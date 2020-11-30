@@ -5147,15 +5147,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bsdoc@npm:^6.0.4-alpha":
-  version: 6.0.4-alpha
-  resolution: "bsdoc@npm:6.0.4-alpha"
-  bin:
-    bsdoc: bin/bsdoc
-  checksum: 67b6a39adc87dc0781354c57fcc792fbe82a4fc152de4da7f2b1106f83d62d72215aff3297e72a11c4e5115562a9be800cfafcdf6598298342d3a2a5d772d08c
-  languageName: node
-  linkType: hard
-
 "buffer-alloc-unsafe@npm:^1.1.0":
   version: 1.1.0
   resolution: "buffer-alloc-unsafe@npm:1.1.0"
@@ -21695,7 +21686,6 @@ fsevents@~2.1.2:
     babel-plugin-styled-components: ^1.10.0
     bs-platform: ^8.3.3
     bs-webapi: ^0.19.1
-    bsdoc: ^6.0.4-alpha
     eslint: ^7.14.0
     eslint-plugin-graphql: ^4.0.0
     eslint-plugin-react: ^7.21.5
