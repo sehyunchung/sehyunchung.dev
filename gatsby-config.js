@@ -88,7 +88,6 @@ module.exports = {
         display: 'swap',
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-remark-responsive-iframe',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',

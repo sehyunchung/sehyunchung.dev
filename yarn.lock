@@ -5950,17 +5950,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clone-deep@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "clone-deep@npm:4.0.1"
-  dependencies:
-    is-plain-object: ^2.0.4
-    kind-of: ^6.0.2
-    shallow-clone: ^3.0.0
-  checksum: b0146d66cabc7e609d23d10155dcc88e2f74b03539b3b65f8a05f889500e2a78b6c6265a744445d009d512a1afa16836f62aa5737d462027142984c2d41130c8
-  languageName: node
-  linkType: hard
-
 "clone-regexp@npm:^2.1.0":
   version: 2.2.0
   resolution: "clone-regexp@npm:2.2.0"
@@ -10425,19 +10414,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sass@npm:^2.0.10":
-  version: 2.6.0
-  resolution: "gatsby-plugin-sass@npm:2.6.0"
-  dependencies:
-    "@babel/runtime": ^7.12.5
-    sass-loader: ^7.3.1
-  peerDependencies:
-    gatsby: ^2.0.0
-    node-sass: ^4.9.0
-  checksum: e8fe6e1ed18826f3a5487525760a702dc4d6ad700bbc9115e8217352b6ff79394b19dccf039f20088694a185cef4aa3b6ff965876b814f2029a6d3d770e9a2b0
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-sharp@npm:^2.5.1":
   version: 2.9.0
   resolution: "gatsby-plugin-sharp@npm:2.9.0"
@@ -14812,7 +14788,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.1, loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
+"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
   version: 1.4.0
   resolution: "loader-utils@npm:1.4.0"
   dependencies:
@@ -21904,21 +21880,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^7.3.1":
-  version: 7.3.1
-  resolution: "sass-loader@npm:7.3.1"
-  dependencies:
-    clone-deep: ^4.0.1
-    loader-utils: ^1.0.1
-    neo-async: ^2.5.0
-    pify: ^4.0.1
-    semver: ^6.3.0
-  peerDependencies:
-    webpack: ^3.0.0 || ^4.0.0
-  checksum: 9fbd7ff88a0402a730abd3be090deccf4eea48f9b58547b1cb20fd54b0871af10441969f6f4b46e42b9f86c1bf03bdccd966161c6dceb38a14120485d196af85
-  languageName: node
-  linkType: hard
-
 "sax@npm:>=0.6.0, sax@npm:~1.2.4":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
@@ -22048,7 +22009,6 @@ fsevents@~2.1.2:
     gatsby-plugin-react-helmet: ^3.0.7
     gatsby-plugin-reason: ^2.1.0
     gatsby-plugin-robots-txt: ^1.5.1
-    gatsby-plugin-sass: ^2.0.10
     gatsby-plugin-sharp: ^2.5.1
     gatsby-plugin-sitemap: ^2.3.0
     gatsby-plugin-splitbee: ^0.1.0
@@ -22332,15 +22292,6 @@ fsevents@~2.1.2:
   dependencies:
     graceful-fs: ^4.1.2
   checksum: 0469b6898949f111b6f892ec6a2eeb8f77f6dfeaacdedc66239a71f1d7ba87dcf791319a5f6c43a332fefb8b8ab0fb90e440c9cf8b86b96f090bbbf56d94d4f1
-  languageName: node
-  linkType: hard
-
-"shallow-clone@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "shallow-clone@npm:3.0.1"
-  dependencies:
-    kind-of: ^6.0.2
-  checksum: e329e054c286f0681fd8a9e5c353999519332f12510a99e189ea9cfa0337adb6f1414639d44493418ef6790a693b78c354525269f5db25a9feddd8b4d7891a62
   languageName: node
   linkType: hard
 
