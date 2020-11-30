@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/layout'

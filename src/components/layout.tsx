@@ -3,7 +3,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { css, jsx, Global } from '@emotion/core'
+import { css, jsx, Global } from '@emotion/react'
 
 import Bio from './bio'
 import Footer from './Footer.bs'
@@ -196,7 +196,7 @@ function Layout(props) {
         font-size: 4rem;
         font-weight: bold;
         margin: 2rem 0 4rem;
-`}
+      `}
     >
       <Link
         css={css`
