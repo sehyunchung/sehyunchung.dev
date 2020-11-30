@@ -9,7 +9,7 @@ import kebabCase from 'lodash/kebabCase'
 // Components
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 
 import Layout from '../components/layout'
 

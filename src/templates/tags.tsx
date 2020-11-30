@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 // Components
 import { Link, graphql } from 'gatsby'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 
 import Layout from '../components/layout'
 

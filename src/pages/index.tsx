@@ -6,7 +6,7 @@ import { navigate } from '@reach/router'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 
 function BlogIndex(props) {
   const { data } = props
