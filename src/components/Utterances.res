@@ -28,7 +28,7 @@ let make = () => {
 
   <div
     className="utterances"
-    ref={utterancesRef |> ReactDOMRe.Ref.domRef}
-    style={ReactDOMRe.Style.make(~maxWidth="100%", ~margin="20px 0", ())}
+    ref={utterancesRef |> ReactDOM.Ref.domRef}
+    style={ReactDOM.Style.make(~maxWidth="100%", ~margin="20px 0", ())}
   />
 }

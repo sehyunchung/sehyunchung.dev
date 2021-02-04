@@ -2701,6 +2701,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rescript/react@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "@rescript/react@npm:0.10.1"
+  peerDependencies:
+    bs-platform: ^8.3.0
+    react: ^16.8.1
+    react-dom: ^16.8.1
+  checksum: 0e17fa44b537188329d87a04b385db68919eef52a80ab9683883605253182b9234b62fae00bb38d7fcb8640e1a07cac2ae139284efa0596ae5d3016733808cc1
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.0":
   version: 4.1.0
   resolution: "@sideway/address@npm:4.1.0"
@@ -5117,15 +5128,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bs-platform@npm:^8.3.3":
-  version: 8.3.3
-  resolution: "bs-platform@npm:8.3.3"
+"bs-platform@npm:^8.4.2":
+  version: 8.4.2
+  resolution: "bs-platform@npm:8.4.2"
   bin:
     bsb: bsb
     bsc: bsc
     bsrefmt: bsrefmt
     bstracing: lib/bstracing
-  checksum: af6b4fd55c9e8f8e0f0cf24597b0a7f876267fb3bb8df81307e8f8ef98d9636ac94fa4cef5c4ca97f634bf00c47da73a48f63deebed5b9997383d34cd35d651d
+  checksum: 60f84c4c63809031d2e8609f90ef877174b9461d8ca8e3697c921548648a7187ddc977ce210dd2df91568c5ffc46a8ffe16dcf8836ddb6637d6dcbaaef306a08
   languageName: node
   linkType: hard
 
@@ -20643,17 +20654,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"reason-react@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "reason-react@npm:0.9.1"
-  peerDependencies:
-    bs-platform: ^7.1.1
-    react: ^16.8.1
-    react-dom: ^16.8.1
-  checksum: 05c3cb74f3f85bcf6dc83f60b7b4833c21492f2ca5a601590248be649bb1965217a248e64dfd98e737fe8de25524331ce72219140abd2d84a5043038e75edc79
-  languageName: node
-  linkType: hard
-
 "rechoir@npm:^0.6.2":
   version: 0.6.2
   resolution: "rechoir@npm:0.6.2"
@@ -21681,10 +21681,11 @@ fsevents@~2.1.2:
     "@jfrolich/gatsby-plugin-reason": ^0.1.4
     "@reach/router": ^1.3.4
     "@reasonml-community/graphql-ppx": ^1.0.1
+    "@rescript/react": ^0.10.1
     "@types/react-helmet": ^6.1.0
     babel-eslint: ^10.1.0
     babel-plugin-styled-components: ^1.10.0
-    bs-platform: ^8.3.3
+    bs-platform: ^8.4.2
     bs-webapi: ^0.19.1
     eslint: ^7.14.0
     eslint-plugin-graphql: ^4.0.0
@@ -21730,7 +21731,6 @@ fsevents@~2.1.2:
     react-helmet: ^6.1.0
     react-is: ^17.0.1
     reason-gatsby: ^0.1.8
-    reason-react: ^0.9.1
     standard-version: ^9.0.0
     styled-components: ^5.0.1
     stylelint: ^13.6.1

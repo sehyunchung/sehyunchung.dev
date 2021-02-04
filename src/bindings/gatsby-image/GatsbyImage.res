@@ -28,9 +28,9 @@ external make: (
   ~alt: string=?,
   ~crossOrigin: string=?,
   ~className: string=?,
-  ~style: ReactDOMRe.Style.t=?,
-  ~imgStyle: ReactDOMRe.Style.t=?,
-  ~placeholderStyle: ReactDOMRe.Style.t=?,
+  ~style: ReactDOM.Style.t=?,
+  ~imgStyle: ReactDOM.Style.t=?,
+  ~placeholderStyle: ReactDOM.Style.t=?,
   ~placeholderClassName: string=?,
   ~backgroundColor: string=?,
 ) => React.element = "default"
