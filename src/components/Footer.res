@@ -3,7 +3,7 @@ let currentYear = Js_date.make() |> Js_date.getFullYear |> Js_float.toFixed
 @react.component
 let make = (~children) =>
   <footer
-    style={ReactDOMRe.Style.make(
+    style={ReactDOM.Style.make(
       ~display="flex",
       ~flexDirection="row",
       ~justifyContent="space-between",
