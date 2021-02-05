@@ -2162,6 +2162,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jfrolich/reason-gatsby@npm:^0.1.7":
+  version: 0.1.7
+  resolution: "@jfrolich/reason-gatsby@npm:0.1.7"
+  dependencies:
+    "@babel/preset-typescript": ^7.8.3
+  peerDependencies:
+    gatsby: ^2.0.0
+    reason-react: ^0.8.0
+  checksum: 5de440ed184b129bf553c91a0e394469c76f2f246cb73a98dc6b3a86bc88cca7f817d15347bfe4192cb207f035be3b2c87026c0bcb4c9555dab7e27ea89555a1
+  languageName: node
+  linkType: hard
+
 "@jimp/bmp@npm:^0.14.0":
   version: 0.14.0
   resolution: "@jimp/bmp@npm:0.14.0"
@@ -20632,18 +20644,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"reason-gatsby@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "reason-gatsby@npm:0.1.8"
-  dependencies:
-    "@babel/preset-typescript": ^7.8.3
-  peerDependencies:
-    gatsby: ^2.0.0
-    reason-react: ^0.8.0
-  checksum: aff45257ca5a06b2919c5c24073c5e2f9e7e735fb0a5dd239df18acc76acd9e3b127fec53d1184a71262dfef6a91622d9cf26782b50fcb1b663ca96ae683f667
-  languageName: node
-  linkType: hard
-
 "reason-react@npm:^0.5.3":
   version: 0.5.3
   resolution: "reason-react@npm:0.5.3"
@@ -20651,6 +20651,17 @@ fsevents@~2.1.2:
     react: ">=15.0.0 || >=16.0.0"
     react-dom: ">=15.0.0 || >=16.0.0"
   checksum: f91ad1ed6b26c38943648b53afa53f89931a968bd0d5a5b996cf127703fa3be922fedb3033d4c8dab2b4c6997e346a9b47271357ef93523594bdcd2388dd444e
+  languageName: node
+  linkType: hard
+
+"reason-react@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "reason-react@npm:0.9.1"
+  peerDependencies:
+    bs-platform: ^7.1.1
+    react: ^16.8.1
+    react-dom: ^16.8.1
+  checksum: 05c3cb74f3f85bcf6dc83f60b7b4833c21492f2ca5a601590248be649bb1965217a248e64dfd98e737fe8de25524331ce72219140abd2d84a5043038e75edc79
   languageName: node
   linkType: hard
 
@@ -21679,6 +21690,7 @@ fsevents@~2.1.2:
     "@emotion/react": ^11.1.1
     "@jfrolich/gatsby-plugin-extract-schema": ^0.0.4
     "@jfrolich/gatsby-plugin-reason": ^0.1.4
+    "@jfrolich/reason-gatsby": ^0.1.7
     "@reach/router": ^1.3.4
     "@reasonml-community/graphql-ppx": ^1.0.1
     "@rescript/react": ^0.10.1
@@ -21730,7 +21742,7 @@ fsevents@~2.1.2:
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
     react-is: ^17.0.1
-    reason-gatsby: ^0.1.8
+    reason-react: ^0.9.1
     standard-version: ^9.0.0
     styled-components: ^5.0.1
     stylelint: ^13.6.1
