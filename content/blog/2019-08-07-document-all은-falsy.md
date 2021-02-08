@@ -7,7 +7,7 @@ tags:
 ---
 `document.all`은 `HTMLAllCollection`(페이지의 모든 html요소가 들어있는 유사 배열)을 반환하는 속성이다. 콘솔에 쳐보면?
 
-```shell
+```bash
 > document.all
 > HTMLAllCollection(1588) [html.html__responsive, script, script, script, script, script, script, script, script#zm-extension, head, title, link, link, link, meta, meta, meta, meta, meta, meta, meta, meta, meta, script, script, link, link, link, meta, meta, meta, meta, meta, meta, meta, meta, meta, meta, script, script, noscript#noscript-css, script, script, script, script, script, link, script, link, script, script, link, link, body.question-page.unified-theme, div#notify-container, div#custom-header, header.top-bar.js-top-bar.top-bar__network._fixed, div.-container, div.-main, a.left-sidebar-toggle.p0.ai-center.jc-center.js-left-sidebar-toggle, span.ps-relative, a.-logo.js-gps-track, span.-img._glyph, form#search.searchbar.js-searchbar., div.ps-relative, input.s-input.js-search-field., button.s-btn.s-btn__primary.s-btn__icon.btn-topbar-primary.js-search-submit, svg, path, ol.-secondary.js-secondary-topbar-links.drop-icons-responsively.the-js-is-handling-responsiveness, li.-item.searchbar-trigger.js-searchbar-trigger, a.-link, svg, path, li.-item, a.-link.js-inbox-button, svg, path, span.indicator-badge.js-unread-count._important, li.-item, a.-link.js-achievements-button, svg, path, span.indicator-badge.js-unread-count._positive, li.-item.help-button-item, a.-link.js-help-button, svg, path, li.-item.site-switcher-item, a.-link.js-site-switcher-button.js-gps-track, svg, path, li.-ctas, a.login-link.s-btn.btn-topbar-clear.py8, a.login-link.s-btn.s-btn__primary.py8.btn-topbar-primary, li.-dialog-container.js-topbar-dialog-corral, div.topbar-dialog.siteSwitcher-dialog.dno, div.header, h3, a, …]
 ```
@@ -16,7 +16,7 @@ tags:
 
 그런데, 콘솔에 `!!document.all`을 쳐보면,
 
-```shell
+```bash
 > !!document.all
 > false
 ```
