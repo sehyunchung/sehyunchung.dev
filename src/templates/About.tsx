@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-export default function About() {
+export default function About({ pageContext }) {
   return (
     <Layout title="🚧">
       <h1>About</h1>
-      <p>"under construction..."</p>
+      <MDXRenderer>{pageContext.body}</MDXRenderer>
     </Layout>
   )
 }

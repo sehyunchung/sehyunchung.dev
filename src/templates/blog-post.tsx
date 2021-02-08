@@ -4,13 +4,14 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 import kebabCase from 'lodash/kebabCase'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { make as Utterances } from '../components/Utterances.bs'
 
 function BlogPostTemplate(props) {
-  const post = props.data.markdownRemark
+  const post = props.data.mdx
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
 
@@ -36,7 +37,7 @@ function BlogPostTemplate(props) {
       >
         {post.frontmatter.title}
       </h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <MDXRenderer>{post.body}</MDXRenderer>
       {post.frontmatter.tags && (
         <ul
           css={css`
@@ -109,10 +110,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MM-DD-YYYY")
