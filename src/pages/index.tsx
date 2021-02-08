@@ -11,7 +11,7 @@ import { css, jsx } from '@emotion/react'
 function BlogIndex(props) {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMdx.edges
 
   const handleClick = (slug) => navigate(slug)
 
@@ -101,7 +101,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { glob: "**/content/blog/**" } }
+    ) {
       edges {
         node {
           excerpt
