@@ -8,7 +8,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { make as Utterances } from '../components/Utterances.bs'
+import Utterances from '../components/Utterances'
 
 function BlogPostTemplate(props) {
   const post = props.data.mdx
