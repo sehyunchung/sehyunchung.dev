@@ -3,21 +3,25 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import NotFound from '../pages/NotFound.bs'
+import { styled } from '../../stitches.config'
 
-function NotFoundPage(props) {
+const NotFoundHeader = styled('h2', {
+  margin: 0,
+  fontSize: '6rem',
+})
+
+export default function NotFoundPage(props) {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="404: Not Found" />
-      <NotFound />
+      <NotFoundHeader>{`🏜`}</NotFoundHeader>
+      <p>여긴 아무것도 없답니다...</p>
     </Layout>
   )
 }
-
-export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
