@@ -97,8 +97,6 @@ module.exports = {
       },
     },
     'gatsby-remark-responsive-iframe',
-    'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-typescript',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
