@@ -39,28 +39,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.1.0":
-  version: 7.1.0
-  resolution: "@babel/core@npm:7.1.0"
-  dependencies:
-    "@babel/code-frame": ^7.0.0
-    "@babel/generator": ^7.0.0
-    "@babel/helpers": ^7.1.0
-    "@babel/parser": ^7.1.0
-    "@babel/template": ^7.1.0
-    "@babel/traverse": ^7.1.0
-    "@babel/types": ^7.0.0
-    convert-source-map: ^1.1.0
-    debug: ^3.1.0
-    json5: ^0.5.0
-    lodash: ^4.17.10
-    resolve: ^1.3.2
-    semver: ^5.4.1
-    source-map: ^0.5.0
-  checksum: 4ee1e78f556ef56ae8b72e8e1d26e5b9cb2fd0fae748ab3843fa87f741a2e08891b96187ad1f12bda1ddf64f1b65adf41093589b434852574a492f6a7ee64baa
-  languageName: node
-  linkType: hard
-
 "@babel/core@npm:7.10.5":
   version: 7.10.5
   resolution: "@babel/core@npm:7.10.5"
@@ -133,7 +111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.0.0, @babel/generator@npm:^7.10.5, @babel/generator@npm:^7.12.5":
+"@babel/generator@npm:^7.10.5, @babel/generator@npm:^7.12.5":
   version: 7.12.5
   resolution: "@babel/generator@npm:7.12.5"
   dependencies:
@@ -448,7 +426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^7.1.0, @babel/helpers@npm:^7.10.4, @babel/helpers@npm:^7.12.5":
+"@babel/helpers@npm:^7.10.4, @babel/helpers@npm:^7.12.5":
   version: 7.12.5
   resolution: "@babel/helpers@npm:7.12.5"
   dependencies:
@@ -481,7 +459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.10.5, @babel/parser@npm:^7.12.5, @babel/parser@npm:^7.12.7, @babel/parser@npm:^7.7.0":
+"@babel/parser@npm:^7.10.5, @babel/parser@npm:^7.12.5, @babel/parser@npm:^7.12.7, @babel/parser@npm:^7.7.0":
   version: 7.12.7
   resolution: "@babel/parser@npm:7.12.7"
   bin:
@@ -1015,7 +993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-commonjs@npm:^7.1.0, @babel/plugin-transform-modules-commonjs@npm:^7.12.1":
+"@babel/plugin-transform-modules-commonjs@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/plugin-transform-modules-commonjs@npm:7.12.1"
   dependencies:
@@ -1420,7 +1398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.12.1, @babel/preset-typescript@npm:^7.8.3":
+"@babel/preset-typescript@npm:^7.12.1":
   version: 7.12.7
   resolution: "@babel/preset-typescript@npm:7.12.7"
   dependencies:
@@ -1459,7 +1437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/template@npm:^7.1.0, @babel/template@npm:^7.10.4, @babel/template@npm:^7.12.7":
+"@babel/template@npm:^7.10.4, @babel/template@npm:^7.12.7":
   version: 7.12.7
   resolution: "@babel/template@npm:7.12.7"
   dependencies:
@@ -1481,7 +1459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.1.0, @babel/traverse@npm:^7.10.4, @babel/traverse@npm:^7.10.5, @babel/traverse@npm:^7.12.1, @babel/traverse@npm:^7.12.5, @babel/traverse@npm:^7.12.8, @babel/traverse@npm:^7.4.5, @babel/traverse@npm:^7.7.0":
+"@babel/traverse@npm:^7.10.4, @babel/traverse@npm:^7.10.5, @babel/traverse@npm:^7.12.1, @babel/traverse@npm:^7.12.5, @babel/traverse@npm:^7.12.8, @babel/traverse@npm:^7.4.5, @babel/traverse@npm:^7.7.0":
   version: 7.12.8
   resolution: "@babel/traverse@npm:7.12.8"
   dependencies:
@@ -1515,7 +1493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.0.0-beta.49, @babel/types@npm:^7.10.4, @babel/types@npm:^7.10.5, @babel/types@npm:^7.11.0, @babel/types@npm:^7.12.1, @babel/types@npm:^7.12.5, @babel/types@npm:^7.12.6, @babel/types@npm:^7.12.7, @babel/types@npm:^7.4.4, @babel/types@npm:^7.7.0, @babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.0.0-beta.49, @babel/types@npm:^7.10.4, @babel/types@npm:^7.10.5, @babel/types@npm:^7.11.0, @babel/types@npm:^7.12.1, @babel/types@npm:^7.12.5, @babel/types@npm:^7.12.6, @babel/types@npm:^7.12.7, @babel/types@npm:^7.4.4, @babel/types@npm:^7.7.0, @babel/types@npm:^7.8.3":
   version: 7.12.7
   resolution: "@babel/types@npm:7.12.7"
   dependencies:
@@ -2114,41 +2092,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jfrolich/gatsby-plugin-extract-schema@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@jfrolich/gatsby-plugin-extract-schema@npm:0.0.4"
-  dependencies:
-    write: ^1.0.3
-  peerDependencies:
-    babel-eslint: ">8.0.0"
-    eslint: ">4.0.0"
-    eslint-plugin-graphql: ">2.0.0"
-    gatsby: ^2.0.0
-  checksum: 9d5d5c3197b397abbe875f9bd82c1b4be7852eb479762f0078e125c615abaedb813f12dc1b5395162db8eb9df7d390dfcc83f7500b80646aceef76f159825fe9
-  languageName: node
-  linkType: hard
-
-"@jfrolich/gatsby-plugin-reason@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "@jfrolich/gatsby-plugin-reason@npm:0.1.4"
-  peerDependencies:
-    gatsby: ^2.0.0
-  checksum: e5f70a56e7c5dc865876555daea3bf68ba8a9919e5f14e18a1bc03413439c9369f59c05b586f446cf211eb267cffad42273cea031ee687eb8d496eb09325a086
-  languageName: node
-  linkType: hard
-
-"@jfrolich/reason-gatsby@npm:^0.1.7":
-  version: 0.1.7
-  resolution: "@jfrolich/reason-gatsby@npm:0.1.7"
-  dependencies:
-    "@babel/preset-typescript": ^7.8.3
-  peerDependencies:
-    gatsby: ^2.0.0
-    reason-react: ^0.8.0
-  checksum: 5de440ed184b129bf553c91a0e394469c76f2f246cb73a98dc6b3a86bc88cca7f817d15347bfe4192cb207f035be3b2c87026c0bcb4c9555dab7e27ea89555a1
-  languageName: node
-  linkType: hard
-
 "@jimp/bmp@npm:^0.14.0":
   version: 0.14.0
   resolution: "@jimp/bmp@npm:0.14.0"
@@ -2719,26 +2662,6 @@ __metadata:
     react: 15.x || 16.x || 16.4.0-alpha.0911da3
     react-dom: 15.x || 16.x || 16.4.0-alpha.0911da3
   checksum: 7fedb32b5f589d0de236f83af7a0098bef93327925ac3dc090026ce79f6571005207d872fb01378ef00dfcd6e9ed0f0583755c5817ae9d85f3fd6d5b34b84417
-  languageName: node
-  linkType: hard
-
-"@reasonml-community/graphql-ppx@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@reasonml-community/graphql-ppx@npm:1.0.1"
-  peerDependencies:
-    bs-platform: ^8.1.0
-  checksum: 9326bc73c3a5ef8eb5d8a72a124fb7b75644d0da4d0d4e03f56bd5cf6b8a7cd6e1396c2fa05ac1358600cc7328792fae98f570eb6129fe439eb89cfbaebc6f3d
-  languageName: node
-  linkType: hard
-
-"@rescript/react@npm:^0.10.1":
-  version: 0.10.1
-  resolution: "@rescript/react@npm:0.10.1"
-  peerDependencies:
-    bs-platform: ^8.3.0
-    react: ^16.8.1
-    react-dom: ^16.8.1
-  checksum: 0e17fa44b537188329d87a04b385db68919eef52a80ab9683883605253182b9234b62fae00bb38d7fcb8640e1a07cac2ae139284efa0596ae5d3016733808cc1
   languageName: node
   linkType: hard
 
@@ -5042,19 +4965,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bs-loader@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "bs-loader@npm:2.0.7"
-  dependencies:
-    "@babel/core": 7.1.0
-    "@babel/plugin-transform-modules-commonjs": ^7.1.0
-    bsb-js: ^1.0.0
-    loader-utils: ^1.1.0
-    read-bsconfig: ^1.0.1
-  checksum: b9fac49648b6e3839fa27e750171232dc01b8291b9a2697479363fd93c5a33618ebbf81acd8a6acfb3e8c892d24659bfec509eeb757d076b20d1d2d90287fb4c
-  languageName: node
-  linkType: hard
-
 "bs-platform@npm:^8.4.2":
   version: 8.4.2
   resolution: "bs-platform@npm:8.4.2"
@@ -5075,13 +4985,6 @@ __metadata:
   peerDependencies:
     bsdoc: ^6.0.4-alpha
   checksum: 5c99698d8c60eaf3094bed3afc79fa76aefd2145daf3b1c03b9f8a00c96f104664a3592f8b7967ea8f53f7f845173283a7a9db304a6f16d1f7f37e877960e84e
-  languageName: node
-  linkType: hard
-
-"bsb-js@npm:^1.0.0, bsb-js@npm:^1.1.7":
-  version: 1.1.7
-  resolution: "bsb-js@npm:1.1.7"
-  checksum: e1da61ecb4445fc09e9de046024f635daaed79c164981d14ade184b2d92cd8c603c93f6d55c50f6f27dcef077e69a073c51bfab0078ea9bac22fad4e11b00ae5
   languageName: node
   linkType: hard
 
@@ -6598,7 +6501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"convert-source-map@npm:^1.1.0, convert-source-map@npm:^1.7.0":
+"convert-source-map@npm:^1.7.0":
   version: 1.7.0
   resolution: "convert-source-map@npm:1.7.0"
   dependencies:
@@ -6691,7 +6594,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.6.1, core-js@npm:^3.6.4, core-js@npm:^3.6.5":
+"core-js@npm:^3.6.1, core-js@npm:^3.6.5":
   version: 3.7.0
   resolution: "core-js@npm:3.7.0"
   checksum: 95958cddb786e51d5ba2a0f60a0232270da1ba460e20870604adb03fbc282f83df78b84509b95ad5990ddbe79b990d9fb5a27426bd36a0e6243b50788fae369f
@@ -10153,20 +10056,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-reason@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "gatsby-plugin-reason@npm:2.1.0"
-  dependencies:
-    bs-loader: ^2.0.7
-    bsb-js: ^1.1.7
-    core-js: ^3.6.4
-    reason-react: ^0.5.3
-  peerDependencies:
-    gatsby: ^2.0.0
-  checksum: 6979ed07cb083284f5b6f20ca6fa8501816b817dea13dfcd681611e34b3a20439e54496002f695917c16b3472ac0132af7a539be1f4d706a0ecb4be99a131d79
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-robots-txt@npm:^1.5.1":
   version: 1.5.3
   resolution: "gatsby-plugin-robots-txt@npm:1.5.3"
@@ -13500,15 +13389,6 @@ fsevents@~2.1.2:
   version: 3.3.3
   resolution: "json3@npm:3.3.3"
   checksum: f79831247f3ecdd4e99996534a171ccd20f34502b799dd53b671af8a7d7ac1228a7d806c100948cc16f3437da5ea0b821e2c44f8372a2a4095a0abebf0fb41ef
-  languageName: node
-  linkType: hard
-
-"json5@npm:^0.5.0, json5@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "json5@npm:0.5.1"
-  bin:
-    json5: lib/cli.js
-  checksum: 002ce9e56c4159e5a62fc4891dc2fba1fdc077fba417042e9dd54f8c37da80c0274feb5fa4c0acb3efbc8906d5763b4ff292d512269e1951967d530130bd80b8
   languageName: node
   linkType: hard
 
@@ -18619,7 +18499,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"react-dom@npm:>=15.0.0 || >=16.0.0, react-dom@npm:^17.0.1":
+"react-dom@npm:^17.0.1":
   version: 17.0.1
   resolution: "react-dom@npm:17.0.1"
   dependencies:
@@ -18720,22 +18600,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"react@npm:>=15.0.0 || >=16.0.0, react@npm:^17.0.1":
+"react@npm:^17.0.1":
   version: 17.0.1
   resolution: "react@npm:17.0.1"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: a76d86ec973eb4b25a46071ac7f974adfd66ed89ad1db63043be1d976ec25417520a210e6d724b0ad937422b706afcf9962cedda9e92125992a8c0e8a95f2051
-  languageName: node
-  linkType: hard
-
-"read-bsconfig@npm:^1.0.1":
-  version: 1.0.5
-  resolution: "read-bsconfig@npm:1.0.5"
-  dependencies:
-    json5: ^0.5.1
-  checksum: feeee98a7219d3aabe0388f8bbc17967fff52e74340ac8a2a0bfcc82b2f5c7d2b26de98564aecfeb5e94d53540eb264ff21ac08318998b3b9d7f5c6baaf2cce7
   languageName: node
   linkType: hard
 
@@ -18973,39 +18844,6 @@ fsevents@~2.1.2:
   dependencies:
     picomatch: ^2.2.1
   checksum: a64fe5606937d9655252230003362d95da05dbfd3baecedb4bb8c1bc0df497d051a192f9b75345c944e58a0b362c68349be602d6dbf05d03770e510b35a9f80f
-  languageName: node
-  linkType: hard
-
-"reason-gatsby@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "reason-gatsby@npm:0.1.8"
-  dependencies:
-    "@babel/preset-typescript": ^7.8.3
-  peerDependencies:
-    gatsby: ^2.0.0
-    reason-react: ^0.8.0
-  checksum: aff45257ca5a06b2919c5c24073c5e2f9e7e735fb0a5dd239df18acc76acd9e3b127fec53d1184a71262dfef6a91622d9cf26782b50fcb1b663ca96ae683f667
-  languageName: node
-  linkType: hard
-
-"reason-react@npm:^0.5.3":
-  version: 0.5.3
-  resolution: "reason-react@npm:0.5.3"
-  dependencies:
-    react: ">=15.0.0 || >=16.0.0"
-    react-dom: ">=15.0.0 || >=16.0.0"
-  checksum: f91ad1ed6b26c38943648b53afa53f89931a968bd0d5a5b996cf127703fa3be922fedb3033d4c8dab2b4c6997e346a9b47271357ef93523594bdcd2388dd444e
-  languageName: node
-  linkType: hard
-
-"reason-react@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "reason-react@npm:0.9.1"
-  peerDependencies:
-    bs-platform: ^7.1.1
-    react: ^16.8.1
-    react-dom: ^16.8.1
-  checksum: 05c3cb74f3f85bcf6dc83f60b7b4833c21492f2ca5a601590248be649bb1965217a248e64dfd98e737fe8de25524331ce72219140abd2d84a5043038e75edc79
   languageName: node
   linkType: hard
 
@@ -19975,14 +19813,9 @@ fsevents@~2.1.2:
     "@commitlint/config-conventional": ^11.0.0
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.1.1
-    "@jfrolich/gatsby-plugin-extract-schema": ^0.0.4
-    "@jfrolich/gatsby-plugin-reason": ^0.1.4
-    "@jfrolich/reason-gatsby": ^0.1.7
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
     "@reach/router": ^1.3.4
-    "@reasonml-community/graphql-ppx": ^1.0.1
-    "@rescript/react": ^0.10.1
     "@stitches/react": ^0.0.2
     "@types/react-helmet": ^6.1.0
     babel-eslint: ^10.1.0
@@ -20002,7 +19835,6 @@ fsevents@~2.1.2:
     gatsby-plugin-mdx: ^1.10.0
     gatsby-plugin-offline: ^3.1.0
     gatsby-plugin-react-helmet: ^3.0.7
-    gatsby-plugin-reason: ^2.1.0
     gatsby-plugin-robots-txt: ^1.5.1
     gatsby-plugin-sharp: ^2.5.1
     gatsby-plugin-sitemap: ^2.3.0
@@ -20029,8 +19861,6 @@ fsevents@~2.1.2:
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
     react-is: ^17.0.1
-    reason-gatsby: ^0.1.8
-    reason-react: ^0.9.1
     standard-version: ^9.0.0
     styled-components: ^5.0.1
     stylelint: ^13.6.1
@@ -23872,7 +23702,7 @@ typescript@^4.1.2:
   languageName: node
   linkType: hard
 
-"write@npm:1.0.3, write@npm:^1.0.3":
+"write@npm:1.0.3":
   version: 1.0.3
   resolution: "write@npm:1.0.3"
   dependencies:

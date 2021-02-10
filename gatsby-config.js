@@ -100,7 +100,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-reason',
     {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
@@ -108,6 +107,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-splitbee',
-    '@jfrolich/gatsby-plugin-reason',
   ],
 }
