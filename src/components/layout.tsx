@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import { css, jsx, Global } from '@emotion/react'
 
 import Bio from './bio'
-import Footer from './Footer.bs'
+import Footer from './Footer'
 
 const globalStyle = css`
   :root {

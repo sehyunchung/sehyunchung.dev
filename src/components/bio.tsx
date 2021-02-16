@@ -1,17 +1,20 @@
-/** @jsx jsx */
-
 import React from 'react'
-import { css, jsx } from '@emotion/react'
-import { StaticQuery, graphql } from 'gatsby'
-import { make as BioRe } from './Bio.bs'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
-function Bio() {
+export default function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={(data) => {
         const { social } = data.site.siteMetadata
-        return <BioRe social={social} />
+
+        return (
+          <>
+            <Link to="/about">about</Link>
+            {'  |  '}
+            <a href={`https://github.com/"${social.github}`}>github</a>
+          </>
+        )
       }}
     />
   )
@@ -30,5 +33,3 @@ const bioQuery = graphql`
     }
   }
 `
-
-export default Bio
