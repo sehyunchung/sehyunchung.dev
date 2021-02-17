@@ -2665,6 +2665,70 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sehyunchung/blog@workspace:packages/gatsby-ts":
+  version: 0.0.0-use.local
+  resolution: "@sehyunchung/blog@workspace:packages/gatsby-ts"
+  dependencies:
+    "@commitlint/cli": ^11.0.0
+    "@commitlint/config-conventional": ^11.0.0
+    "@emotion/core": ^11.0.0
+    "@emotion/react": ^11.1.1
+    "@mdx-js/mdx": ^1.6.22
+    "@mdx-js/react": ^1.6.22
+    "@reach/router": ^1.3.4
+    "@stitches/react": ^0.0.2
+    "@types/react-helmet": ^6.1.0
+    babel-eslint: ^10.1.0
+    babel-plugin-styled-components: ^1.10.0
+    bs-platform: ^8.4.2
+    bs-webapi: ^0.19.1
+    eslint: ^7.14.0
+    eslint-plugin-graphql: ^4.0.0
+    eslint-plugin-react: ^7.21.5
+    gatsby: ^2.27.1
+    gatsby-image: ^2.0.31
+    gatsby-plugin-anchor-links: ^1.1.1
+    gatsby-plugin-feed: ^2.0.14
+    gatsby-plugin-google-analytics: ^2.0.16
+    gatsby-plugin-google-fonts: ^1.0.1
+    gatsby-plugin-manifest: ^2.0.21
+    gatsby-plugin-mdx: ^1.10.0
+    gatsby-plugin-offline: ^3.1.0
+    gatsby-plugin-react-helmet: ^3.0.7
+    gatsby-plugin-robots-txt: ^1.5.1
+    gatsby-plugin-sharp: ^2.5.1
+    gatsby-plugin-sitemap: ^2.3.0
+    gatsby-plugin-splitbee: ^0.1.0
+    gatsby-plugin-styled-components: ^3.0.6
+    gatsby-plugin-typescript: ^2.1.23
+    gatsby-remark-autolink-headers: ^2.3.0
+    gatsby-remark-copy-linked-files: ^2.0.9
+    gatsby-remark-images: ^3.2.0
+    gatsby-remark-responsive-iframe: ^2.0.9
+    gatsby-remark-smartypants: ^2.0.8
+    gatsby-remark-vscode: ^3.2.0
+    gatsby-source-filesystem: ^2.0.23
+    gatsby-transformer-sharp: ^2.1.15
+    gh-pages: ^3.1.0
+    graphql: ^15.4.0
+    husky: ^4.2.5
+    lint-staged: ^10.2.2
+    lodash: ^4.17.20
+    open-color: ^1.7.0
+    prettier: ^2.0.1
+    prop-types: ^15.7.2
+    react: ^17.0.1
+    react-dom: ^17.0.1
+    react-helmet: ^6.1.0
+    react-is: ^17.0.1
+    standard-version: ^9.0.0
+    styled-components: ^5.0.1
+    stylelint: ^13.6.1
+    stylelint-config-standard: ^20.0.0
+    typescript: ^4.1.2
+  languageName: unknown
+  linkType: soft
+
 "@sideway/address@npm:^4.1.0":
   version: 4.1.0
   resolution: "@sideway/address@npm:4.1.0"
@@ -9722,7 +9786,7 @@ fsevents@^1.2.7:
 
 "fsevents@patch:fsevents@^1.2.7#builtin<compat/fsevents>":
   version: 1.2.13
-  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#builtin<compat/fsevents>::version=1.2.13&hash=127e8e"
+  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#builtin<compat/fsevents>::version=1.2.13&hash=11e9ea"
   dependencies:
     bindings: ^1.5.0
     nan: ^2.12.1
@@ -9732,7 +9796,7 @@ fsevents@^1.2.7:
 
 "fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
   version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=127e8e"
+  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
   dependencies:
     node-gyp: latest
   checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
@@ -19637,6 +19701,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"root-workspace-0b6124@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root-workspace-0b6124@workspace:."
+  languageName: unknown
+  linkType: soft
+
 "rss@npm:^1.2.2":
   version: 1.2.2
   resolution: "rss@npm:1.2.2"
@@ -19804,70 +19874,6 @@ fsevents@~2.1.2:
   checksum: 9fee1a01cecb1ef00519bf45c2c58a366ff798a0c57e3c6e1f402a050906ed90b49adef25bca8e880bf9b28bbfc071070a2736e38fee153219768ee669d3e426
   languageName: node
   linkType: hard
-
-"sehyunchung-blog@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "sehyunchung-blog@workspace:."
-  dependencies:
-    "@commitlint/cli": ^11.0.0
-    "@commitlint/config-conventional": ^11.0.0
-    "@emotion/core": ^11.0.0
-    "@emotion/react": ^11.1.1
-    "@mdx-js/mdx": ^1.6.22
-    "@mdx-js/react": ^1.6.22
-    "@reach/router": ^1.3.4
-    "@stitches/react": ^0.0.2
-    "@types/react-helmet": ^6.1.0
-    babel-eslint: ^10.1.0
-    babel-plugin-styled-components: ^1.10.0
-    bs-platform: ^8.4.2
-    bs-webapi: ^0.19.1
-    eslint: ^7.14.0
-    eslint-plugin-graphql: ^4.0.0
-    eslint-plugin-react: ^7.21.5
-    gatsby: ^2.27.1
-    gatsby-image: ^2.0.31
-    gatsby-plugin-anchor-links: ^1.1.1
-    gatsby-plugin-feed: ^2.0.14
-    gatsby-plugin-google-analytics: ^2.0.16
-    gatsby-plugin-google-fonts: ^1.0.1
-    gatsby-plugin-manifest: ^2.0.21
-    gatsby-plugin-mdx: ^1.10.0
-    gatsby-plugin-offline: ^3.1.0
-    gatsby-plugin-react-helmet: ^3.0.7
-    gatsby-plugin-robots-txt: ^1.5.1
-    gatsby-plugin-sharp: ^2.5.1
-    gatsby-plugin-sitemap: ^2.3.0
-    gatsby-plugin-splitbee: ^0.1.0
-    gatsby-plugin-styled-components: ^3.0.6
-    gatsby-plugin-typescript: ^2.1.23
-    gatsby-remark-autolink-headers: ^2.3.0
-    gatsby-remark-copy-linked-files: ^2.0.9
-    gatsby-remark-images: ^3.2.0
-    gatsby-remark-responsive-iframe: ^2.0.9
-    gatsby-remark-smartypants: ^2.0.8
-    gatsby-remark-vscode: ^3.2.0
-    gatsby-source-filesystem: ^2.0.23
-    gatsby-transformer-sharp: ^2.1.15
-    gh-pages: ^3.1.0
-    graphql: ^15.4.0
-    husky: ^4.2.5
-    lint-staged: ^10.2.2
-    lodash: ^4.17.20
-    open-color: ^1.7.0
-    prettier: ^2.0.1
-    prop-types: ^15.7.2
-    react: ^17.0.1
-    react-dom: ^17.0.1
-    react-helmet: ^6.1.0
-    react-is: ^17.0.1
-    standard-version: ^9.0.0
-    styled-components: ^5.0.1
-    stylelint: ^13.6.1
-    stylelint-config-standard: ^20.0.0
-    typescript: ^4.1.2
-  languageName: unknown
-  linkType: soft
 
 "select-hose@npm:^2.0.0":
   version: 2.0.0
@@ -22255,11 +22261,11 @@ typescript@^4.1.2:
 
 "typescript@patch:typescript@^4.1.2#builtin<compat/typescript>":
   version: 4.1.2
-  resolution: "typescript@patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=5bf698"
+  resolution: "typescript@patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: acfc7be6a091806432f324ad258c4a7d2a63996106a4c001db1eebb2661608a9fd0d109d0d29249c3e6890e3547a97b8580cbe0833aa64b2fb83f66e4d88a466
+  checksum: 001ab09bb8f597aab1ec43476aedb91b5d547749219273c232bf34cf5a2209d18fa782e64475755115f0907598bb9b503f5e1c0fed06c3651cac584fc88a8172
   languageName: node
   linkType: hard
 
