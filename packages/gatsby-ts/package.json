@@ -3,7 +3,7 @@
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "Sehyun Chung <sxhyxnchxng@gmail.com>",
+  "author": "Sehyun Chung <sehyun.chung@icloud.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -17,11 +17,9 @@
     "@types/react-helmet": "^6.1.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.10.0",
-    "bs-platform": "^8.4.2",
-    "bs-webapi": "^0.19.1",
     "eslint": "^7.14.0",
     "eslint-plugin-graphql": "^4.0.0",
-    "gatsby": "^2.27.1",
+    "gatsby": "^2.32.3",
     "gatsby-image": "^2.0.31",
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-feed": "^2.0.14",
