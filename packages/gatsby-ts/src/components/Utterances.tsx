@@ -11,7 +11,7 @@ function Utterances() {
       ['src', 'https://utteranc.es/client.js'],
       ['repo', 'sehyunchung/sehyunchung.dev'],
       ['issue-term', 'pathname'],
-      ['theme', 'photon-dark'],
+      ['theme', 'github-light'],
       ['crossorigin', 'anonymous'],
       ['async', 'true'],
     ]

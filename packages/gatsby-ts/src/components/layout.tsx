@@ -10,16 +10,31 @@ import Footer from './Footer'
 
 const globalStyle = css`
   :root {
-    --text-color: var(--oc-gray-2);
-    --text-secondary-color: var(--oc-gray-5);
-    --background-color: var(--oc-gray-8);
-    --quote-bg-color: var(--oc-blue-7);
-    --quote-txt-color: var(--oc-gray-3);
-    --quote-border-color: var(--oc-blue-8);
-    --quote-shadow-color: var(--oc-blue-8);
-    --code-border-color: var(--oc-gray-7);
-    --code-txt-color: var(--oc-gray-5);
-    --link-color: var(--oc-blue-6);
+    --cool-blue: #4351b0;
+    --text-color: var(--cool-blue);
+
+    /* --text-secondary-color: var(--oc-gray-5); */
+    --text-secondary-color: var(--cool-blue);
+    --background-color: var(--oc-white);
+
+    /* --quote-bg-color: var(--oc-blue-7); */
+    --quote-bg-color: var(--oc-white);
+
+    /* --quote-txt-color: var(--oc-gray-3); */
+    --quote-txt-color: var(--cool-blue);
+
+    /* --quote-border-color: var(--oc-blue-8); */
+    --quote-border-color: var(--cool-blue);
+
+    /* --quote-shadow-color: var(--oc-blue-8); */
+    --quote-shadow-color: var(--cool-blue);
+
+    /* --code-border-color: var(--oc-gray-7); */
+    --code-border-color: var(--cool-blue);
+    --code-txt-color: var(--cool-blue);
+
+    /* --link-color: var(--oc-blue-6); */
+    --link-color: var(--cool-blue);
     --link-bg-color: var(--oc-blue-6);
   }
 
@@ -50,19 +65,12 @@ const globalStyle = css`
     overflow-x: auto;
     padding: 1rem 3rem;
 
-    /* background-color: var(--oc-gray-7); */
-    color: var(--oc-gray-4);
-
     &::-webkit-scrollbar {
       display: none;
     }
 
     li:not(:last-child) {
       padding-bottom: 1rem;
-    }
-
-    code {
-      color: var(--oc-gray-5);
     }
   }
 
@@ -200,11 +208,13 @@ function Layout(props) {
     >
       <Link
         css={css`
-          box-shadow: none;
+          /* box-shadow: 10px 10px var(--cool-blue); */
           text-decoration: none;
           color: inherit;
-          background: none;
-          border: none;
+          background-color: none;
+          border: 1px dashed var(--cool-blue);
+          border-radius: 99%;
+          padding: 0.3em 0.3em 0.2em;
 
           :hover {
             text-decoration: none !important;
