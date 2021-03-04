@@ -12,28 +12,21 @@ const globalStyle = css`
   :root {
     --cool-blue: #4351b0;
     --text-color: var(--cool-blue);
-
-    /* --text-secondary-color: var(--oc-gray-5); */
     --text-secondary-color: var(--cool-blue);
+
     --background-color: var(--oc-white);
 
-    /* --quote-bg-color: var(--oc-blue-7); */
     --quote-bg-color: var(--oc-white);
 
-    /* --quote-txt-color: var(--oc-gray-3); */
     --quote-txt-color: var(--cool-blue);
 
-    /* --quote-border-color: var(--oc-blue-8); */
     --quote-border-color: var(--cool-blue);
 
-    /* --quote-shadow-color: var(--oc-blue-8); */
     --quote-shadow-color: var(--cool-blue);
 
-    /* --code-border-color: var(--oc-gray-7); */
     --code-border-color: var(--cool-blue);
     --code-txt-color: var(--cool-blue);
 
-    /* --link-color: var(--oc-blue-6); */
     --link-color: var(--cool-blue);
     --link-bg-color: var(--oc-blue-6);
   }
@@ -43,7 +36,7 @@ const globalStyle = css`
     background-color: var(--background-color);
     color: var(--text-color);
     word-break: keep-all;
-    font-family: 'Gothic A1', arial, sans-serif;
+    font-family: 'Tex Gyre Heroes CN', sans-serif;
     font-weight: 400;
     line-height: 160%;
     overflow-x: hidden;
