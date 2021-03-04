@@ -51,6 +51,7 @@ const globalStyle = css`
   pre,
   code {
     font-family: Monaco, Consolas, monospace;
+    font-size: 14px;
   }
 
   ul,
@@ -189,13 +190,13 @@ const globalStyle = css`
 
 function Layout(props) {
   const { location, title, children } = props
-  const rootPath = `${__PATH_PREFIX__}/`
   const header = (
     <h1
       css={css`
         color: var(--quote-bg-color);
         font-size: 4rem;
         font-weight: bold;
+        font-family: sans-serif;
         margin: 2rem 0 4rem;
       `}
     >
