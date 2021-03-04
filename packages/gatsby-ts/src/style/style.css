@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Tex Gyre Heroes CN';
+  src: url('./fonts/texgyreheroscn-regular.otf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Tex Gyre Heroes CN';
+  src: url('./fonts/texgyreheroscn-bold.otf');
+  font-weight: bold;
+}

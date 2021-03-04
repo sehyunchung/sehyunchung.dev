@@ -2750,7 +2750,6 @@ __metadata:
     gatsby-plugin-anchor-links: ^1.2.1
     gatsby-plugin-feed: ^3.0.0
     gatsby-plugin-google-analytics: ^3.0.0
-    gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-manifest: ^3.0.0
     gatsby-plugin-mdx: ^2.0.0
     gatsby-plugin-offline: ^4.0.0
@@ -9867,13 +9866,6 @@ fsevents@~2.3.1:
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
   checksum: 6cde2faa5a11194b8721aba23b5b6cfe6e766c813e731f63840311d28f5236991166e7d1e62c584335243abf9b5101c68a8e3fa560fa28930979ae81165a600a
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-google-fonts@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
-  checksum: c4ffa36b74f896ab0da7d3b25d613025d15e24fb51564e0afcec02114bf1d0c9e92426de137cf5dd14f00ee7c408736b7edb470f34896970a734cbc843c8a12a
   languageName: node
   linkType: hard
 
