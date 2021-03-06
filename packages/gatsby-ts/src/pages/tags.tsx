@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
-import kebabCase from 'lodash/kebabCase'
+import { kebabCase, snakeCase } from 'lodash'
 
 // Components
 import { Helmet } from 'react-helmet'
@@ -57,7 +57,7 @@ const TagsPage = ({
           {group.map((tag) => (
             <li key={tag.fieldValue}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                #{tag.fieldValue}{' '}
+                #{snakeCase(tag.fieldValue)}{' '}
               </Link>
             </li>
           ))}
