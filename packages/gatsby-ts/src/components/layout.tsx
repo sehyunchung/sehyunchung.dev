@@ -11,30 +11,23 @@ import Footer from './Footer'
 const globalStyle = css`
   :root {
     --cool-blue: #4351b0;
-    --text-color: var(--cool-blue);
-    --text-secondary-color: var(--cool-blue);
-
-    --background-color: var(--oc-white);
-
-    --quote-bg-color: var(--oc-white);
-
-    --quote-txt-color: var(--cool-blue);
-
-    --quote-border-color: var(--cool-blue);
-
-    --quote-shadow-color: var(--cool-blue);
-
-    --code-border-color: var(--cool-blue);
-    --code-txt-color: var(--cool-blue);
-
-    --link-color: var(--cool-blue);
-    --link-bg-color: var(--oc-blue-6);
+    --color-txt: var(--cool-blue);
+    --color-txt-secondary: var(--cool-blue);
+    --color-bg: var(--oc-white);
+    --color-quote-bg: var(--color-bg);
+    --color-quote-txt: var(--color-txt);
+    --color-quote-border: var(--color-txt);
+    --color-quote-shadow: var(--color-txt);
+    --color-code-border: var(--color-txt-secondary);
+    --color-code-txt: var(--color-txt-secondary);
+    --color-link: var(--color-txt);
+    --color-link-bg: var(--color-bg);
   }
 
   body {
     max-width: 100vw;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--color-bg);
+    color: var(--color-txt);
     word-break: keep-all;
     font-family: 'Tex Gyre Heroes CN', sans-serif;
     font-weight: 400;
@@ -44,7 +37,7 @@ const globalStyle = css`
   }
 
   hr {
-    border-top: 0.6px solid var(--text-color);
+    border-top: 0.6px solid var(--color-txt);
     border-bottom: none;
   }
 
@@ -73,7 +66,7 @@ const globalStyle = css`
   }
 
   a {
-    color: var(--link-color);
+    color: var(--color-link);
     font-weight: bold;
     text-decoration: none;
 
@@ -94,25 +87,25 @@ const globalStyle = css`
     }
 
     code {
-      color: var(--code-txt-color);
+      color: var(--color-code-txt);
     }
   }
 
   blockquote {
-    color: var(--quote-txt-color);
-    background-color: var(--quote-bg-color);
+    color: var(--color-quote-txt);
+    background-color: var(--color-quote-bg);
     margin: 3rem 2rem;
     padding: 0.8rem 2rem;
-    border: 1px solid var(--quote-border-color);
+    border: 1px solid var(--color-quote-border);
     overflow-x: auto;
-    box-shadow: 0.8rem 0.8rem 0 0 var(--quote-shadow-color);
+    box-shadow: 0.8rem 0.8rem 0 0 var(--color-quote-shadow);
 
     a {
-      color: var(--text-color);
+      color: var(--color-txt);
     }
 
     code {
-      color: var(--code-txt-color);
+      color: var(--color-code-txt);
     }
   }
 
@@ -163,13 +156,13 @@ const globalStyle = css`
     transform: translate(-100%, -10%);
 
     svg {
-      fill: var(--text-color);
+      fill: var(--color-txt);
       overflow: auto !important;
     }
   }
 
   pre.grvsc-container {
-    border: 1px solid var(--code-border-color);
+    border: 1px solid var(--color-code-border);
     margin: 2rem 0;
     border-radius: 0 !important;
 
@@ -193,7 +186,7 @@ function Layout(props) {
   const header = (
     <h1
       css={css`
-        color: var(--quote-bg-color);
+        color: var(--color-quote-bg);
         font-size: 4rem;
         font-weight: bold;
         font-family: sans-serif;
