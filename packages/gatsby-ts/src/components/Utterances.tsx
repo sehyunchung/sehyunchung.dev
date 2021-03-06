@@ -1,7 +1,8 @@
+/** @jsx jsx */
 import * as React from 'react'
-import { styled } from '../../stitches.config'
+import { css, jsx } from '@emotion/react'
 
-function Utterances() {
+export default function Utterances() {
   const utterancesRef = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
@@ -24,10 +25,13 @@ function Utterances() {
     }
   }, [])
 
-  return <div ref={utterancesRef} />
+  return (
+    <div
+      css={css`
+        max-width: 100%;
+        margin: 20px 0;
+      `}
+      ref={utterancesRef}
+    />
+  )
 }
-
-export default styled(Utterances, {
-  maxWidth: '100%',
-  margin: '20px 0',
-})

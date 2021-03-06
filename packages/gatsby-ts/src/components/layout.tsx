@@ -67,7 +67,6 @@ const globalStyle = css`
 
   a {
     color: var(--color-link);
-    font-weight: bold;
     text-decoration: none;
 
     :hover {
@@ -184,34 +183,52 @@ const globalStyle = css`
 function Layout(props) {
   const { location, title, children } = props
   const header = (
-    <h1
+    <header
       css={css`
-        color: var(--color-quote-bg);
-        font-size: 4rem;
-        font-weight: bold;
-        font-family: sans-serif;
-        margin: 2rem 0 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: stretch;
       `}
     >
-      <Link
+      <h1
         css={css`
-          /* box-shadow: 10px 10px var(--cool-blue); */
-          text-decoration: none;
-          color: inherit;
-          background-color: none;
-          border: 1px dashed var(--cool-blue);
-          border-radius: 99%;
-          padding: 0.3em 0.3em 0.2em;
-
-          :hover {
-            text-decoration: none !important;
-          }
+          flex: 2;
+          color: var(--color-quote-bg);
+          font-size: 4rem;
+          font-weight: bold;
+          font-family: sans-serif;
+          margin: 2rem 0;
         `}
-        to={`/`}
       >
-        {title}
-      </Link>
-    </h1>
+        <Link
+          css={css`
+            text-decoration: none;
+            color: inherit;
+            background-color: none;
+            border: 1px dashed var(--cool-blue);
+            border-radius: 99%;
+            padding: 0.3em 0.3em 0.2em;
+
+            :hover {
+              text-decoration: none !important;
+            }
+          `}
+          to={`/`}
+        >
+          {title}
+        </Link>
+      </h1>
+      <Bio
+        css={css`
+          flex: 1;
+          font-size: 1.2rem;
+          font-weight: normal;
+          display: flex;
+          justify-content: flex-end;
+        `}
+      />
+    </header>
   )
 
   return (
@@ -226,9 +243,7 @@ function Layout(props) {
       <Global styles={globalStyle} />
       <header>{header}</header>
       <main>{children}</main>
-      <Footer>
-        <Bio />
-      </Footer>
+      <Footer />
     </div>
   )
 }
