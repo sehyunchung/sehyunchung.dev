@@ -12,7 +12,7 @@ const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
   return (
     <header
       css={css`
-        padding: 1rem 1.4rem 0.6rem;
+        padding: 1rem 1.4rem;
         background-color: var(--color-bg);
         position: sticky;
         top: 0;
@@ -22,7 +22,8 @@ const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
         z-index: 99;
         height: calc(30 * var(--px));
         justify-content: space-between;
-        box-shadow: -6px -11px 20px 0px;
+        box-shadow: 0px -10px 20px 0px rgba(67, 81, 176, 0.4);
+
         h1 {
           display: inline-flex;
           color: var(--color-quote-bg);
