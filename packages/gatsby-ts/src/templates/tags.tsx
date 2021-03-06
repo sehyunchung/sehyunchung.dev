@@ -3,6 +3,7 @@
 // Components
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
+import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
 
@@ -19,7 +20,7 @@ const Tags = ({ pageContext, location, data }) => {
             font-weight: normal;
           `}
         >
-          {` #${tag}`}
+          {` #${snakeCase(tag)}`}
         </h1>
         <ul
           css={css`

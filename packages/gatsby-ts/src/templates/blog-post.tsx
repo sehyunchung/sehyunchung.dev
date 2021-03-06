@@ -3,7 +3,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
-import kebabCase from 'lodash/kebabCase'
+import { snakeCase, kebabCase } from 'lodash'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
@@ -24,29 +24,45 @@ function BlogPostTemplate(props) {
       <p
         css={css`
           display: block;
-          margin: 0 0 -3.6rem;
           color: var(--text-secondary-color);
         `}
       >
         {post.frontmatter.date}
       </p>
-      <h1
+      <h1>{post.frontmatter.title}</h1>
+      <div
         css={css`
-          margin-bottom: 3rem;
+          h2,
+          h3,
+          h4 {
+            a.anchor {
+              fill: var(--color-code-txt);
+              position: absolute;
+              left: -20px;
+              opacity: 0;
+              transition: opacity 300ms;
+            }
+            &:hover {
+              a.anchor {
+                opacity: 1;
+              }
+            }
+          }
         `}
       >
-        {post.frontmatter.title}
-      </h1>
-      <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </div>
       {post.frontmatter.tags && (
         <ul
           css={css`
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(3ch, max-content));
+            grid-template-rows: 1fr;
+            grid-gap: 8px;
             border: none;
             list-style-type: none;
             margin: 0;
             padding: 4px 0;
-            display: flex;
-            flex-wrap: wrap;
             background-color: inherit;
           `}
         >
@@ -54,11 +70,10 @@ function BlogPostTemplate(props) {
             <li
               key={tag}
               css={css`
-                padding: none;
-                padding-right: 6px;
+                font-family: var(--font-code);
               `}
             >
-              <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
             </li>
           ))}
         </ul>

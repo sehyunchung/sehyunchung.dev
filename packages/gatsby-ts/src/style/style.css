@@ -1,10 +1,49 @@
 @font-face {
-  font-family: 'Tex Gyre Heroes CN';
-  src: url('./fonts/texgyreheroscn-regular.otf');
-  font-weight: normal;
+  font-family: Font;
+  src: url('./fonts/JetBrainsMono-Regular.ttf');
 }
-@font-face {
-  font-family: 'Tex Gyre Heroes CN';
-  src: url('./fonts/texgyreheroscn-bold.otf');
-  font-weight: bold;
+
+:root {
+  --cool-blue: #4351b0;
+  --color-txt: var(--cool-blue);
+  --color-txt-secondary: var(--cool-blue);
+  --color-bg: var(--oc-white);
+  --color-quote-bg: var(--color-bg);
+  --color-quote-txt: var(--color-txt);
+  --color-quote-border: var(--color-txt);
+  --color-quote-shadow: var(--color-txt);
+  --color-code-border: var(--color-txt-secondary);
+  --color-code-txt: var(--color-txt-secondary);
+  --color-link: var(--color-txt);
+  --color-link-bg: var(--color-bg);
+  --font-code: Font, monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+  word-break: keep-all;
+  font-family: var(--font-code);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  color: var(--color-txt);
+  text-decoration: none;
+}
+
+p img {
+  max-width: 100%;
+}
+
+.utterances {
+  max-width: inherit;
+}
+
+code,
+pre {
+  font-family: var(--font-code);
 }

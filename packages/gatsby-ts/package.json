@@ -99,5 +99,9 @@
   },
   "resolutions": {
     "sehyunchung-blog": "portal:/Users/sxhx/Personal/shc-0.github.io"
-  }
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
 }
