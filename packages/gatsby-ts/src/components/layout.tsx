@@ -41,7 +41,7 @@ function Layout(props) {
           `}
           to={`/`}
         >
-          {title}
+          {'🤔'}
         </Link>
       </h1>
       <Bio />
