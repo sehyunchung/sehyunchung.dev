@@ -42,6 +42,7 @@ const TagsPage = ({
             justify-content: flex-start;
             list-style-type: none;
             border: none;
+            font-family: var(--font-code);
 
             li {
               padding: 4px 12px;

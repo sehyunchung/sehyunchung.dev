@@ -65,7 +65,6 @@ function Layout(props) {
         padding: 10px;
       `}
     >
-      {/* <Global styles={globalStyle} /> */}
       {header}
       <main>
         <TrailUp>{children}</TrailUp>
