@@ -58,7 +58,7 @@ function BlogPostTemplate(props) {
                 padding-right: 6px;
               `}
             >
-              Link to={`/tags/${kebabCase(tag)}`}>#{tag}Link>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
             </li>
           ))}
         </ul>
