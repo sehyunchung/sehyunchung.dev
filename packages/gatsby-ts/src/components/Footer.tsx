@@ -1,21 +1,22 @@
+/** @jsx jsx */
 import * as React from 'react'
-import { css } from '../../stitches.config'
+import { css, jsx } from '@emotion/react'
 
 let currentYear = new Date().getFullYear()
 
-const footerCss = css({
-  display: 'flex',
-  justifyContent: 'space-between',
-  marginTop: 20,
-  padding: '20px 0',
-  color: 'var(--txt-secondary-color)',
-})
-
-export default function Footer({ children }) {
+export default function Footer({ children = null }) {
   return (
-    <footer className={footerCss}>
+    <footer
+      css={css`
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20;
+        padding: 20px 0;
+        color: var(--txt-secondary-color);
+      `}
+    >
       <p>{currentYear} Sehyun Chung</p>
-      <p>{children}</p>
+      {children && <p>{children}</p>}
     </footer>
   )
 }
