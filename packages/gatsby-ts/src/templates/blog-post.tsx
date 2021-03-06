@@ -3,7 +3,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
-import kebabCase from 'lodash/kebabCase'
+import { snakeCase, kebabCase } from 'lodash'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
@@ -73,7 +73,7 @@ function BlogPostTemplate(props) {
                 font-family: var(--font-code);
               `}
             >
-              <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
             </li>
           ))}
         </ul>
