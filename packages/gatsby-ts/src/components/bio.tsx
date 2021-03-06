@@ -1,35 +1,40 @@
-import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+/** @jsx jsx */
 
-export default function Bio() {
-  return (
-    <StaticQuery
-      query={bioQuery}
-      render={(data) => {
-        const { social } = data.site.siteMetadata
+import React, { FC, HtmlHTMLAttributes } from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { css, jsx } from '@emotion/react'
 
-        return (
-          <>
-            <Link to="/about">about</Link>
-            {'  |  '}
-            <a href={`https://github.com/"${social.github}`}>github</a>
-          </>
-        )
-      }}
-    />
-  )
-}
-
-const bioQuery = graphql`
-  query BioQuery {
-    site {
-      siteMetadata {
-        author
-        social {
-          twitter
-          github
+export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
+  const data = useStaticQuery(graphql`
+    query BioQuery {
+      site {
+        siteMetadata {
+          author
+          social {
+            twitter
+            github
+          }
         }
       }
     }
-  }
-`
+  `)
+
+  const { social } = data.site.siteMetadata
+
+  return (
+    <div
+      css={css`
+        a {
+          padding: 0 0.5em;
+        }
+      `}
+      {...props}
+    >
+      <Link to="/about">about</Link>
+      {'  /  '}
+      <a href={`https://github.com/${social.github}`}>github</a>
+    </div>
+  )
+}
+
+export default Bio

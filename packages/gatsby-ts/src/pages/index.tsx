@@ -32,23 +32,23 @@ function BlogIndex(props) {
             css={css`
               margin-top: 2rem;
               padding-top: 1.2rem;
-              border: 1px solid var(--background-color);
+              border: 1px solid var(--color-background);
               cursor: pointer;
               transition: 0.2s;
 
               small,
               p {
-                color: var(--text-color);
+                color: var(--color-txt);
               }
 
               &:hover,
               :active,
               :focus {
                 padding-left: 1.4rem;
-                background-color: var(--quote-bg-color);
-                color: var(--text-color);
-                border: 1px solid var(--quote-border-color);
-                box-shadow: 0.8rem 0.8rem 0 0 var(--quote-border-color);
+                background-color: var(--color-quote-bg);
+                color: var(--color-txt);
+                border: 1px solid var(--color-quote-border);
+                box-shadow: 0.5rem 0.5rem 0 0 var(--color-quote-border);
                 outline: none;
               }
             `}
@@ -61,7 +61,7 @@ function BlogIndex(props) {
               css={css`
                 margin: 0;
                 padding: 2px 0;
-                color: var(--text-secondary-color);
+                color: var(--color-txt-secondary);
               `}
             >
               {node.frontmatter.date}
@@ -79,7 +79,7 @@ function BlogIndex(props) {
                 position: relative;
                 margin: 0;
                 padding: 4px 0 28px;
-                color: var(--text-secondary-color);
+                color: var(--color-txt-secondary);
               `}
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
