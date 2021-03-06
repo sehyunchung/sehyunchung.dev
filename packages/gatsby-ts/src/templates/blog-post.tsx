@@ -55,9 +55,10 @@ function BlogPostTemplate(props) {
       {post.frontmatter.tags && (
         <ul
           css={css`
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(3ch, max-content));
+            grid-template-rows: 1fr;
+            grid-gap: 8px;
             border: none;
             list-style-type: none;
             margin: 0;
