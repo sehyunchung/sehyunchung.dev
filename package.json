@@ -4,6 +4,6 @@
     "packages/*"
   ],
   "scripts": {
-    "@blog": "yarn workspace @sehyunchung/blog"
+    "bb": "yarn workspace @sehyunchung/blog"
   }
 }
