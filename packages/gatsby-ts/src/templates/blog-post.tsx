@@ -48,6 +48,14 @@ function BlogPostTemplate(props) {
               }
             }
           }
+          a {
+            text-decoration: underline;
+          }
+          li {
+            a {
+              word-break: break-all;
+            }
+          }
         `}
       >
         <MDXRenderer>{post.body}</MDXRenderer>
@@ -55,10 +63,8 @@ function BlogPostTemplate(props) {
       {post.frontmatter.tags && (
         <ul
           css={css`
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(3ch, max-content));
-            grid-template-rows: 1fr;
-            grid-gap: 8px;
+            display: flex;
+            flex-wrap: wrap;
             border: none;
             list-style-type: none;
             margin: 0;
@@ -94,6 +100,10 @@ function BlogPostTemplate(props) {
           list-style: none;
           padding: 0;
           background-color: inherit;
+
+          li {
+            min-height: 3em;
+          }
         `}
       >
         <li>
@@ -103,7 +113,11 @@ function BlogPostTemplate(props) {
             </Link>
           )}
         </li>
-        <li>
+        <li
+          css={css`
+            margin-left: auto;
+          `}
+        >
           {next && (
             <Link to={next.fields.slug} rel="next">
               {next.frontmatter.title} →

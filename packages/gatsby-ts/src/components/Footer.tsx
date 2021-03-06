@@ -4,19 +4,22 @@ import { css, jsx } from '@emotion/react'
 
 let currentYear = new Date().getFullYear()
 
-export default function Footer({ children = null }) {
+const Footer: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ({
+  children = null,
+}) => {
   return (
     <footer
       css={css`
+        grid-column: 2;
         display: flex;
         justify-content: space-between;
-        margin-top: 20;
-        padding: 20px 0;
         color: var(--txt-secondary-color);
+        padding: 2rem 2rem 1rem;
       `}
     >
-      <p>{currentYear} Sehyun Chung</p>
+      <p>©{currentYear} Sehyun Chung</p>
       {children && <p>{children}</p>}
     </footer>
   )
 }
+export default Footer

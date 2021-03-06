@@ -24,7 +24,7 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
   return (
     <div
       css={css`
-        display: grid;
+        display: inline-grid;
         grid-template-columns: auto auto;
         column-gap: 1em;
         font-size: 1rem;

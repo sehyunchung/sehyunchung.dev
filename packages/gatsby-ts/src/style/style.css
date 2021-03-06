@@ -4,6 +4,7 @@
 }
 
 :root {
+  --px: calc(0.8px + 0.05335vmin);
   --cool-blue: #4351b0;
   --color-txt: var(--cool-blue);
   --color-txt-secondary: var(--cool-blue);
@@ -16,7 +17,11 @@
   --color-code-txt: var(--color-txt-secondary);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
-  --font-code: Font, monospace;
+  --font-code: Font, -apple-system, monospace;
+}
+
+* {
+  line-height: 1.7;
 }
 
 body {
@@ -24,10 +29,14 @@ body {
   background-color: var(--color-bg);
   color: var(--color-txt);
   word-break: keep-all;
+  font-size: calc(14 * var(--px));
   font-family: var(--font-code);
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: none;
+  font-smooth: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 a {

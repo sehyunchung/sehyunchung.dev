@@ -1,64 +1,35 @@
 /** @jsx jsx */
-import { Link } from 'gatsby'
+import { FC } from 'react'
 import { css, jsx } from '@emotion/react'
 
-import Bio from './bio'
 import Footer from './Footer'
+import Header from './Header'
 import { TrailUp } from '../animations'
 
-function Layout(props) {
-  const { location, title, children } = props
-  const header = (
-    <header
-      css={css`
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        justify-items: stretch;
-      `}
-    >
-      <h1
-        css={css`
-          flex: 2;
-          color: var(--color-quote-bg);
-          font-size: 4rem;
-          font-weight: bold;
-          font-family: sans-serif;
-          margin: 2rem 0;
-        `}
-      >
-        <Link
-          css={css`
-            color: inherit;
-            background-color: none;
-            border: 1px dashed var(--cool-blue);
-            border-radius: 99%;
-            padding: 0.3em 0.3em 0.2em;
-
-            :hover {
-              text-decoration: none !important;
-            }
-          `}
-          to={`/`}
-        >
-          {'🤔'}
-        </Link>
-      </h1>
-      <Bio />
-    </header>
-  )
-
+const Layout: FC<{ title?: string; location?: string }> = ({
+  title,
+  children,
+}) => {
   return (
     <div
       css={css`
-        max-width: 640px;
-        height: 100%;
-        margin: 0 auto;
-        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr min(65ch, 100%) 1fr;
+        justify-content: stretch;
       `}
     >
-      {header}
-      <main>
+      <Header
+        css={css`
+          grid-column: 1/4;
+        `}
+        title={title}
+      />
+      <main
+        css={css`
+          grid-column: 2;
+          padding: 2rem;
+        `}
+      >
         <TrailUp>{children}</TrailUp>
       </main>
       <Footer />

@@ -26,7 +26,7 @@ function BlogIndex(props) {
             grid-template-columns: 4fr max-content;
             grid-template-rows: repeat(min-content, 2);
             grid-template-areas: 'title date' 'desc desc';
-            row-gap: 4px;
+            grid-gap: calc(4 * var(--px));
             align-items: center;
 
             a {
@@ -37,11 +37,12 @@ function BlogIndex(props) {
             }
 
             span {
-              &::nth-of-type(1) {
+              &:nth-of-type(1) {
                 grid-area: date;
                 place-self: center;
+                font-size: calc(12 * var(--px));
               }
-              &::nth-of-type(2) {
+              &:nth-of-type(2) {
                 grid-area: desc;
               }
             }
