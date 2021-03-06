@@ -1,6 +1,5 @@
 /** @jsx jsx */
 
-import React from 'react'
 import { Link } from 'gatsby'
 
 import { css, jsx, Global } from '@emotion/react'
@@ -241,7 +240,7 @@ function Layout(props) {
       `}
     >
       <Global styles={globalStyle} />
-      <header>{header}</header>
+      {header}
       <main>{children}</main>
       <Footer />
     </div>

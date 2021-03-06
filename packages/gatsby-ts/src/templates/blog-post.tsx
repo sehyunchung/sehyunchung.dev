@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
