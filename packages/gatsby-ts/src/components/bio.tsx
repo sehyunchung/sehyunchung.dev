@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { FC, HtmlHTMLAttributes } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 
 export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {

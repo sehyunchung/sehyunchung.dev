@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -58,7 +58,7 @@ function BlogPostTemplate(props) {
                 padding-right: 6px;
               `}
             >
-              <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
+              Link to={`/tags/${kebabCase(tag)}`}>#{tag}Link>
             </li>
           ))}
         </ul>

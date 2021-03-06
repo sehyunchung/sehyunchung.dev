@@ -1,10 +1,7 @@
 /** @jsx jsx */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-
 // Components
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 
 import Layout from '../components/layout'
@@ -39,37 +36,10 @@ const Tags = ({ pageContext, location, data }) => {
             )
           })}
         </ul>
-        {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
         <Link to="/tags">All tags</Link>
       </div>
     </Layout>
   )
-}
-
-Tags.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMdx: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
 }
 
 export default Tags
