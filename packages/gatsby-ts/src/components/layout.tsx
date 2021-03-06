@@ -6,6 +6,7 @@ import { css, jsx, Global } from '@emotion/react'
 
 import Bio from './bio'
 import Footer from './Footer'
+import { TrailUp } from '../animations'
 
 const globalStyle = css`
   :root {
@@ -241,7 +242,9 @@ function Layout(props) {
     >
       <Global styles={globalStyle} />
       {header}
-      <main>{children}</main>
+      <main>
+        <TrailUp>{children}</TrailUp>
+      </main>
       <Footer />
     </div>
   )
