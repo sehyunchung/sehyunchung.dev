@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '🏚',
+    title: '🤔',
     author: 'Sehyun Chung',
     description: 'Yet another dev blog (in Korean).',
     siteUrl: 'https://sehyunchung.dev/',
