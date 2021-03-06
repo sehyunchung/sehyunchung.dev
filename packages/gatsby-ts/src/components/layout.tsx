@@ -44,15 +44,7 @@ function Layout(props) {
           {title}
         </Link>
       </h1>
-      <Bio
-        css={css`
-          flex: 1;
-          font-size: 1.2rem;
-          font-weight: normal;
-          display: flex;
-          justify-content: flex-end;
-        `}
-      />
+      <Bio />
     </header>
   )
 

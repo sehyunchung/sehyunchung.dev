@@ -24,14 +24,14 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
   return (
     <div
       css={css`
-        a {
-          padding: 0 0.5em;
-        }
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1em;
+        font-size: 1rem;
       `}
       {...props}
     >
       <Link to="/about">about</Link>
-      {'  /  '}
       <a href={`https://github.com/${social.github}`}>github</a>
     </div>
   )
