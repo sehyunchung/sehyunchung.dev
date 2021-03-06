@@ -93,12 +93,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-anchor-links',
-      options: {
-        offset: -100,
-      },
-    },
     'gatsby-plugin-splitbee',
   ],
 }
