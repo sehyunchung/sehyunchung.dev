@@ -63,6 +63,7 @@ function BlogPostTemplate(props) {
 
             a {
               text-decoration: underline;
+              word-wrap: break-word;
             }
 
             li {
