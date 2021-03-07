@@ -52,8 +52,8 @@ export const TrailUp: FC = ({ children }) => {
     transform: inView ? 'translate(0px, 0px)' : 'translate(0px, 4px)',
     config: {
       mass: 1,
-      tension: 200,
-      friction: 30,
+      tension: 400,
+      friction: 40,
     },
   })
 
