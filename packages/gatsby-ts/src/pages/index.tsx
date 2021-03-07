@@ -25,7 +25,7 @@ function BlogIndex(props) {
             grid-template-columns: 4fr max-content;
             grid-template-rows: repeat(min-content, 2);
             grid-template-areas: 'title date' 'desc desc';
-            grid-gap: 0 1.5em;
+            column-gap: 1em;
             align-items: center;
 
             a {
