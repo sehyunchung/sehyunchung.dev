@@ -115,6 +115,10 @@ function BlogPostTemplate(props) {
               background-color: var(--color-code-bg);
               padding: 0.5em 2em 1em;
             }
+
+            code:not(.grvsc-code) {
+              background-color: var(--color-code-bg);
+            }
           `}
         >
           <MDXRenderer>{post.body}</MDXRenderer>
