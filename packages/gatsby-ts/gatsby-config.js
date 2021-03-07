@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'sehyunchung.dev',
@@ -98,5 +100,34 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-splitbee',
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GITHUB_ACCESS_TOKEN,
+
+        graphQLQuery: `
+        query {
+          repository(name: "til", owner: "sehyunchung") {
+            id
+            issues(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+              edges {
+                node {
+                  body
+                  id
+                  createdAt
+                  title
+                  labels(last: 100) {
+                    nodes {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        `,
+      },
+    },
   ],
 }
