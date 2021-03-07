@@ -1,7 +1,7 @@
 @font-face {
   font-family: Font;
   src: url('./fonts/JetBrainsMono-Regular.ttf');
-  font-weight: normal;
+  font-weight: bold;
 }
 
 :root {
