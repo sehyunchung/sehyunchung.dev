@@ -15,7 +15,8 @@ const Layout: FC<{ title?: string; location?: string }> = ({
       css={css`
         display: grid;
         grid-template-columns: 1fr min(65ch, 100%) 1fr;
-        justify-content: stretch;
+        justify-items: stretch;
+        height: 100%;
       `}
     >
       <Header

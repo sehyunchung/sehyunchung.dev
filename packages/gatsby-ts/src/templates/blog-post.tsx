@@ -9,6 +9,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Utterances from '../components/Utterances'
+import { TrailUp } from '../animations'
 
 function BlogPostTemplate(props) {
   const post = props.data.mdx
@@ -21,110 +22,119 @@ function BlogPostTemplate(props) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <p
-        css={css`
-          display: block;
-          color: var(--text-secondary-color);
-        `}
-      >
-        {post.frontmatter.date}
-      </p>
-      <h1>{post.frontmatter.title}</h1>
-      <div
-        css={css`
-          h2,
-          h3,
-          h4 {
-            a.anchor {
-              fill: var(--color-code-txt);
-              position: absolute;
-              left: -20px;
-              opacity: 0;
-              transition: opacity 300ms;
-            }
-            &:hover {
+      <TrailUp>
+        <p
+          css={css`
+            display: block;
+            color: var(--text-secondary-color);
+          `}
+        >
+          {post.frontmatter.date}
+        </p>
+        <h1
+          css={css`
+            line-height: 1.5;
+          `}
+        >
+          {post.frontmatter.title}
+        </h1>
+        <div
+          css={css`
+            h1,
+            h2,
+            h3,
+            h4 {
               a.anchor {
-                opacity: 1;
+                fill: var(--color-code-txt);
+                position: absolute;
+                left: -20px;
+                opacity: 0;
+                transition: opacity 300ms;
+              }
+              &:hover {
+                a.anchor {
+                  opacity: 1;
+                }
               }
             }
-          }
-          a {
-            text-decoration: underline;
-          }
-          li {
             a {
-              word-break: break-all;
+              text-decoration: underline;
             }
-          }
-        `}
-      >
-        <MDXRenderer>{post.body}</MDXRenderer>
-      </div>
-      {post.frontmatter.tags && (
+            li {
+              a {
+                word-break: break-all;
+              }
+            }
+          `}
+        >
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </div>
+        {post.frontmatter.tags && (
+          <ul
+            css={css`
+              display: flex;
+              flex-wrap: wrap;
+              border: none;
+              list-style-type: none;
+              margin: 0;
+              padding: 4px 0;
+              background-color: inherit;
+            `}
+          >
+            {post.frontmatter.tags.map((tag) => (
+              <li
+                key={tag}
+                css={css`
+                  font-family: var(--font-code);
+                `}
+              >
+                <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
+              </li>
+            ))}
+          </ul>
+        )}
+        <hr
+          css={css`
+            margin-bottom: 20px;
+          `}
+        />
+        <Utterances />
+
         <ul
           css={css`
+            border: none;
             display: flex;
             flex-wrap: wrap;
-            border: none;
-            list-style-type: none;
-            margin: 0;
-            padding: 4px 0;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
             background-color: inherit;
+
+            li {
+              min-height: 3em;
+            }
           `}
         >
-          {post.frontmatter.tags.map((tag) => (
-            <li
-              key={tag}
-              css={css`
-                font-family: var(--font-code);
-              `}
-            >
-              <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
-            </li>
-          ))}
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li
+            css={css`
+              margin-left: auto;
+            `}
+          >
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
         </ul>
-      )}
-      <hr
-        css={css`
-          margin-bottom: 20px;
-        `}
-      />
-      <Utterances />
-
-      <ul
-        css={css`
-          border: none;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          list-style: none;
-          padding: 0;
-          background-color: inherit;
-
-          li {
-            min-height: 3em;
-          }
-        `}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li
-          css={css`
-            margin-left: auto;
-          `}
-        >
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+      </TrailUp>
     </Layout>
   )
 }

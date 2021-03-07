@@ -36,7 +36,8 @@ const TagsPage = ({
         <ul
           css={css`
             margin: 0;
-            width: 100%;
+            max-width: 100%;
+            padding-inline-start: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -45,8 +46,8 @@ const TagsPage = ({
             font-family: var(--font-code);
 
             li {
-              padding: 4px 12px;
-              margin: 0;
+              padding: 0.5em;
+              margin: none;
             }
 
             li::before {

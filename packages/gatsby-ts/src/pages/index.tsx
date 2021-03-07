@@ -26,13 +26,14 @@ function BlogIndex(props) {
             grid-template-columns: 4fr max-content;
             grid-template-rows: repeat(min-content, 2);
             grid-template-areas: 'title date' 'desc desc';
-            grid-gap: calc(4 * var(--px));
+            grid-gap: 0.7em 1em;
             align-items: center;
 
             a {
               grid-area: title;
               h2 {
                 margin: 0;
+                line-height: 1.3;
               }
             }
 
@@ -53,15 +54,13 @@ function BlogIndex(props) {
           const title = node.frontmatter.title || node.fields.slug
 
           return (
-            <Fragment key={node.id}>
-              <li>
-                <Link to={node.fields.slug}>
-                  <h2>{title}</h2>
-                </Link>
-                <span>{node.frontmatter.date}</span>
-                <span>{node.frontmatter.description}</span>
-              </li>
-            </Fragment>
+            <li key={node.id}>
+              <Link to={node.fields.slug}>
+                <h2>{title}</h2>
+              </Link>
+              <span>{node.frontmatter.date}</span>
+              <span>{node.frontmatter.description}</span>
+            </li>
           )
         })}
       </ul>
