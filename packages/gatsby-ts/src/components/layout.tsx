@@ -14,7 +14,7 @@ const Layout: FC<{ title?: string; location?: string }> = ({
     <div
       css={css`
         display: grid;
-        grid-template-columns: 1fr min(65ch, 100%) 1fr;
+        grid-template-columns: 1fr min(65ch, calc(100% - 3em)) 1fr;
         justify-items: stretch;
         height: 100%;
       `}
@@ -28,7 +28,7 @@ const Layout: FC<{ title?: string; location?: string }> = ({
       <main
         css={css`
           grid-column: 2;
-          padding: 2em 2em 1em;
+          padding: calc(14 * var(--px)) 0;
         `}
       >
         <TrailUp>{children}</TrailUp>

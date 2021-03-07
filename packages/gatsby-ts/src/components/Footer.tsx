@@ -14,7 +14,7 @@ const Footer: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ({
         display: flex;
         justify-content: space-between;
         color: var(--txt-secondary-color);
-        padding: 2rem;
+        padding: 2rem 0;
       `}
     >
       <p>©{currentYear} Sehyun Chung</p>
