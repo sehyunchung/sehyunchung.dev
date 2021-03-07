@@ -24,6 +24,7 @@
 
 * {
   line-height: 1.7;
+  margin: 0;
 }
 
 body {
@@ -39,6 +40,24 @@ body {
   font-smooth: auto;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0.8em 0 0.5em;
 }
 
 a {

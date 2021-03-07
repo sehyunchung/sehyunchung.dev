@@ -26,16 +26,9 @@ const TagsPage = ({
     <div>
       <Helmet title={title} />
       <div>
-        <h1
-          css={css`
-            margin-bottom: 20px;
-          `}
-        >
-          all tags
-        </h1>
+        <h1>all tags</h1>
         <ul
           css={css`
-            margin: 0;
             max-width: 100%;
             padding-inline-start: 0;
             display: flex;
@@ -47,7 +40,6 @@ const TagsPage = ({
 
             li {
               padding: 0.5em;
-              margin: none;
             }
 
             li::before {

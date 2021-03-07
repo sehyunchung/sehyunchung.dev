@@ -18,7 +18,7 @@ export const RouteFadeIn = ({ children, props }) => {
         position: relative;
         height: 100%;
         width: 100%;
-        margin: 0 auto;
+        /* margin: 0 auto; */
       `}
     >
       {transitions.map(({ item: page, key, props }) => (
@@ -51,6 +51,11 @@ export const TrailUp: FC = ({ children }) => {
     },
     opacity: inView ? 1 : 0,
     transform: inView ? 'translate(0px, 0px)' : 'translate(0px, 4px)',
+    config: {
+      mass: 1,
+      tension: 200,
+      friction: 30,
+    },
   })
 
   return (
@@ -60,7 +65,7 @@ export const TrailUp: FC = ({ children }) => {
         position: relative;
         height: 100%;
         width: 100%;
-        margin: 0 auto;
+        /* margin: 0 auto; */
       `}
     >
       {trail.map((props: any, key: number) => (

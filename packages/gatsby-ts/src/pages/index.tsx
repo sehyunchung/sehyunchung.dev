@@ -17,7 +17,7 @@ function BlogIndex(props) {
       <ul
         css={css`
           display: grid;
-          grid-gap: 3em;
+          grid-gap: 1.6em;
           list-style-type: none;
           padding-inline-start: 0;
 
@@ -26,13 +26,13 @@ function BlogIndex(props) {
             grid-template-columns: 4fr max-content;
             grid-template-rows: repeat(min-content, 2);
             grid-template-areas: 'title date' 'desc desc';
-            grid-gap: 0.7em 1em;
+            grid-gap: 0 0.5em;
             align-items: center;
 
             a {
               grid-area: title;
+
               h2 {
-                margin: 0;
                 line-height: 1.3;
               }
             }

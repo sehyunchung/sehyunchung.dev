@@ -34,6 +34,7 @@ function BlogPostTemplate(props) {
         <h1
           css={css`
             line-height: 1.5;
+            padding: 0.5em 0;
           `}
         >
           {post.frontmatter.title}
@@ -44,6 +45,8 @@ function BlogPostTemplate(props) {
             h2,
             h3,
             h4 {
+              padding: 0.8em 0 0.2em;
+
               a.anchor {
                 fill: var(--color-code-txt);
                 position: absolute;
@@ -57,12 +60,28 @@ function BlogPostTemplate(props) {
                 }
               }
             }
+
             a {
               text-decoration: underline;
             }
+
             li {
               a {
                 word-break: break-all;
+              }
+            }
+
+            p {
+              padding: 1em 0 0.5em;
+            }
+
+            ol,
+            ul {
+              padding: 1em 0;
+              padding-inline-start: 2em;
+
+              li {
+                padding: 0.5em 0;
               }
             }
           `}
@@ -76,8 +95,7 @@ function BlogPostTemplate(props) {
               flex-wrap: wrap;
               border: none;
               list-style-type: none;
-              margin: 0;
-              padding: 4px 0;
+              padding: 0 0 calc(20 * var(--px));
               background-color: inherit;
             `}
           >
@@ -95,7 +113,9 @@ function BlogPostTemplate(props) {
         )}
         <hr
           css={css`
-            margin-bottom: 20px;
+            border-width: 0 0 calc(1 * var(--px)) 0;
+            border-bottom-color: var(--color-txt);
+            /* padding-bottom: calc(20 * var(--px)); */
           `}
         />
         <Utterances />

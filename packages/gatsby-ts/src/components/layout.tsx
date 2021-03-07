@@ -28,7 +28,7 @@ const Layout: FC<{ title?: string; location?: string }> = ({
       <main
         css={css`
           grid-column: 2;
-          padding: 2rem;
+          padding: 1em 2em;
         `}
       >
         <TrailUp>{children}</TrailUp>

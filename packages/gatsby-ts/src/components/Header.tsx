@@ -12,7 +12,7 @@ const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
   return (
     <header
       css={css`
-        padding: 1rem 1.4rem;
+        padding: 1.2em 1.4em 1em;
         background-color: var(--color-bg);
         position: sticky;
         top: 0;
@@ -29,7 +29,7 @@ const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
           color: var(--color-quote-bg);
           font-weight: bold;
           font-family: sans-serif;
-          margin: 0;
+          padding: 0;
 
           a {
             display: inline-flex;
