@@ -17,7 +17,7 @@ function BlogIndex(props) {
       <ul
         css={css`
           display: grid;
-          grid-gap: 1.6em;
+          grid-gap: 2em;
           list-style-type: none;
           padding-inline-start: 0;
 

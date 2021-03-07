@@ -25,6 +25,8 @@ const Tags = ({ pageContext, location, data }) => {
         <ul
           css={css`
             border: none;
+            padding-top: 1em;
+            padding-bottom: 2em;
           `}
         >
           {edges.map(({ node }) => {

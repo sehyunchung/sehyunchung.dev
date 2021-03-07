@@ -135,6 +135,7 @@ function BlogPostTemplate(props) {
                 key={tag}
                 css={css`
                   font-family: var(--font-code);
+                  padding-right: 1em;
                 `}
               >
                 <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
@@ -146,7 +147,6 @@ function BlogPostTemplate(props) {
           css={css`
             border-width: 0 0 calc(1 * var(--px)) 0;
             border-bottom-color: var(--color-txt);
-            /* padding-bottom: calc(20 * var(--px)); */
           `}
         />
         <Utterances />
