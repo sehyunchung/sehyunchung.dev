@@ -5,7 +5,8 @@
 
 :root {
   --px: calc(0.8px + 0.05335vmin);
-  --cool-blue: #4351b0;
+  --cool-blue-rgb: 67, 81, 176;
+  --cool-blue: rgba(var(--cool-blue-rgb), 1);
   --color-txt: var(--cool-blue);
   --color-txt-secondary: var(--cool-blue);
   --color-bg: var(--oc-white);
@@ -15,6 +16,7 @@
   --color-quote-shadow: var(--color-txt);
   --color-code-border: var(--color-txt-secondary);
   --color-code-txt: var(--color-txt-secondary);
+  --color-code-bg: rgba(var(--cool-blue-rgb), 0.05);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
   --font-code: Font, -apple-system, monospace;
@@ -55,4 +57,11 @@ p img {
 code,
 pre {
   font-family: var(--font-code);
+}
+
+.grvsc-container.light-default-light {
+  background-color: var(--color-code-bg);
+  color: var(--color-code-txt);
+  border-radius: 0;
+  font-size: calc(12 * var(--px));
 }

@@ -60,6 +60,10 @@ module.exports = {
             resolve: 'gatsby-remark-vscode',
             options: {
               theme: 'Light+ (Default Light)',
+              replaceColor: (oldColor) =>
+                ({
+                  '#000000': 'var(--color-code-txt)',
+                }[oldColor.toLowerCase()] || oldColor),
             },
           },
           'gatsby-remark-smartypants',
