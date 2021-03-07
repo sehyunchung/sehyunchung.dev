@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
 import { Children, FC, useRef } from 'react'
-import { config, animated, useTrail, useTransition } from 'react-spring'
+import { animated, useTrail, useTransition } from 'react-spring'
 import { useIntersectionObserver } from '../hooks'
 
 export const RouteFadeIn = ({ children, props }) => {
@@ -18,7 +18,6 @@ export const RouteFadeIn = ({ children, props }) => {
         position: relative;
         height: 100%;
         width: 100%;
-        /* margin: 0 auto; */
       `}
     >
       {transitions.map(({ item: page, key, props }) => (
@@ -65,7 +64,6 @@ export const TrailUp: FC = ({ children }) => {
         position: relative;
         height: 100%;
         width: 100%;
-        /* margin: 0 auto; */
       `}
     >
       {trail.map((props: any, key: number) => (
