@@ -110,6 +110,11 @@ function BlogPostTemplate(props) {
                 padding: 0.5em 1em;
               }
             }
+
+            blockquote {
+              background-color: var(--color-code-bg);
+              padding: 0.5em 2em 1em;
+            }
           `}
         >
           <MDXRenderer>{post.body}</MDXRenderer>
