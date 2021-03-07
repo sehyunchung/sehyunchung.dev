@@ -29,7 +29,7 @@ export default function Utterances() {
     <div
       css={css`
         max-width: 100%;
-        margin: 20px 0;
+        padding: 0 0 calc(20 * var(--px));
       `}
       ref={utterancesRef}
     />

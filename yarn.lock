@@ -2756,7 +2756,6 @@ __metadata:
     eslint-plugin-react: ^7.21.5
     gatsby: ^3.0.1
     gatsby-image: ^3.0.0
-    gatsby-plugin-anchor-links: ^1.2.1
     gatsby-plugin-feed: ^3.0.0
     gatsby-plugin-google-analytics: ^3.0.0
     gatsby-plugin-manifest: ^3.0.0
@@ -9834,15 +9833,6 @@ fsevents@~2.3.1:
     lodash: ^4.17.20
     micromatch: ^4.0.2
   checksum: defe1e962b2a1b5a67ca577a7eebecc9638cd390b345917f2f9368e061878ef8ea80de4a7f6beec4691f74f110ddf3d5e4f964a4b87323faad196207877200f1
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-anchor-links@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "gatsby-plugin-anchor-links@npm:1.2.1"
-  dependencies:
-    scroll-to-element: ^2.0.3
-  checksum: 2f3042804c4861a1a0c65fc6b60b9783cb0213687eb1a98be3e459c3990449cc1cb7a5a38137cb5a885d642ec23dfc2bb5adaf8a3b1fc008880ea33c0869ec77
   languageName: node
   linkType: hard
 
@@ -18043,15 +18033,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"raf@npm:^3.4.0":
-  version: 3.4.1
-  resolution: "raf@npm:3.4.1"
-  dependencies:
-    performance-now: ^2.1.0
-  checksum: 567b0160be46ed20b124a05ace6e653f4ad3c047c48d02ac76161e9ac624488c0fdf622b2f4fb9c35c0c828a13dfa549044ad1db89c7af075cb0f99403b88c4b
-  languageName: node
-  linkType: hard
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -19373,15 +19354,6 @@ fsevents@~2.3.1:
     ajv: ^6.12.5
     ajv-keywords: ^3.5.2
   checksum: a084f593f222560c412a4d8f40c92386c01c1c709f27c0672c2f02927a4d4d475f57f8b8e91198d0defb452add160476a03f07a05b26200a64b5124fa874e158
-  languageName: node
-  linkType: hard
-
-"scroll-to-element@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "scroll-to-element@npm:2.0.3"
-  dependencies:
-    raf: ^3.4.0
-  checksum: 6e133beaf1f31517b0b38451b2de26303c01cbcb12e1269bb6569307019ed82ca69db4f2b86824c906f57aa426ab1e707d81bbd6b55cb02c186aebdeb217a65a
   languageName: node
   linkType: hard
 

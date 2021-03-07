@@ -4,7 +4,9 @@
 }
 
 :root {
-  --cool-blue: #4351b0;
+  --px: calc(0.8px + 0.05335vmin);
+  --cool-blue-rgb: 67, 81, 176;
+  --cool-blue: rgba(var(--cool-blue-rgb), 1);
   --color-txt: var(--cool-blue);
   --color-txt-secondary: var(--cool-blue);
   --color-bg: var(--oc-white);
@@ -14,9 +16,15 @@
   --color-quote-shadow: var(--color-txt);
   --color-code-border: var(--color-txt-secondary);
   --color-code-txt: var(--color-txt-secondary);
+  --color-code-bg: rgba(var(--cool-blue-rgb), 0.05);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
-  --font-code: Font, monospace;
+  --font-code: Font, -apple-system, monospace;
+}
+
+* {
+  line-height: 1.7;
+  margin: 0;
 }
 
 body {
@@ -24,10 +32,32 @@ body {
   background-color: var(--color-bg);
   color: var(--color-txt);
   word-break: keep-all;
+  font-size: calc(14 * var(--px));
   font-family: var(--font-code);
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: none;
+  font-smooth: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0.8em 0 0.5em;
 }
 
 a {
@@ -46,4 +76,11 @@ p img {
 code,
 pre {
   font-family: var(--font-code);
+}
+
+.grvsc-container.light-default-light {
+  background-color: var(--color-code-bg);
+  color: var(--color-code-txt);
+  border-radius: 0;
+  font-size: calc(12 * var(--px));
 }

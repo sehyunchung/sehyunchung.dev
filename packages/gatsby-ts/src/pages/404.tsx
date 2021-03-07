@@ -6,7 +6,6 @@ import SEO from '../components/seo'
 import { styled } from '../../stitches.config'
 
 const NotFoundHeader = styled('h2', {
-  margin: 0,
   fontSize: '6rem',
 })
 

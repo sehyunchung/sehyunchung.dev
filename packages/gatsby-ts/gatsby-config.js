@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '🤔',
+    title: 'sehyunchung.dev',
     author: 'Sehyun Chung',
     description: 'Yet another dev blog (in Korean).',
     siteUrl: 'https://sehyunchung.dev/',
@@ -59,7 +59,11 @@ module.exports = {
           {
             resolve: 'gatsby-remark-vscode',
             options: {
-              theme: 'Light+ (default light)',
+              theme: 'Light+ (Default Light)',
+              replaceColor: (oldColor) =>
+                ({
+                  '#000000': 'var(--color-code-txt)',
+                }[oldColor.toLowerCase()] || oldColor),
             },
           },
           'gatsby-remark-smartypants',
@@ -81,10 +85,10 @@ module.exports = {
         name: 'sehyunchung.dev',
         short_name: 'sehyunchung.dev',
         start_url: '/',
-        background_color: 'hsl(0, 0, 60%)',
+        background_color: '#4351b0',
         theme_color: '#4351b0',
         display: 'minimal-ui',
-        icon: 'content/assets/12157-anger-symbol-icon.png',
+        icon: './static/img/thinking-face.png',
       },
     },
     'gatsby-plugin-offline',
@@ -93,12 +97,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-anchor-links',
-      options: {
-        offset: -100,
-      },
-    },
     'gatsby-plugin-splitbee',
   ],
 }

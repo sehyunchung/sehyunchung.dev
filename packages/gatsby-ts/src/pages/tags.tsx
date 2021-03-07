@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
-import kebabCase from 'lodash/kebabCase'
+import { kebabCase, snakeCase } from 'lodash'
 
 // Components
 import { Helmet } from 'react-helmet'
@@ -26,17 +26,11 @@ const TagsPage = ({
     <div>
       <Helmet title={title} />
       <div>
-        <h1
-          css={css`
-            margin-bottom: 20px;
-          `}
-        >
-          all tags
-        </h1>
+        <h1>all tags</h1>
         <ul
           css={css`
-            margin: 0;
-            width: 100%;
+            max-width: 100%;
+            padding-inline-start: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -45,8 +39,7 @@ const TagsPage = ({
             font-family: var(--font-code);
 
             li {
-              padding: 4px 12px;
-              margin: 0;
+              padding: 0.5em;
             }
 
             li::before {
@@ -57,7 +50,7 @@ const TagsPage = ({
           {group.map((tag) => (
             <li key={tag.fieldValue}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                #{tag.fieldValue}{' '}
+                #{snakeCase(tag.fieldValue)}{' '}
               </Link>
             </li>
           ))}
