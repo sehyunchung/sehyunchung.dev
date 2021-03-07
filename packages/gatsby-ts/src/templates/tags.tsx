@@ -1,6 +1,4 @@
 /** @jsx jsx */
-
-// Components
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 import snakeCase from 'lodash/snakeCase'

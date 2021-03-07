@@ -43,9 +43,6 @@ const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
           css={css`
             color: inherit;
             background-color: none;
-            /* border: 1px dashed var(--cool-blue); */
-            /* border-radius: 99%; */
-            /* padding: 0.3em 0.3em 0.2em; */
 
             :hover {
               text-decoration: none !important;

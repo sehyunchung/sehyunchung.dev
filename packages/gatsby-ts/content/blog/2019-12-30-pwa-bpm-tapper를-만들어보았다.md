@@ -3,6 +3,7 @@ title: BPM Tapper를 PWA로 만들어보았다
 date: 2020-03-08T14:29:00.000Z
 description: PWA를 네이티브 앱처럼 보이게 만들기 위해 필요한 설정들
 tags:
+  - bipi
   - pwa
   - manifest.json
 ---
@@ -10,7 +11,7 @@ tags:
 
 그리하여 일단 완성된 앱은 이렇다:
 
-> **웹앱** [`https://bipi.me`](https://bipi.me)\
+> **웹앱** [`https://bipi.me`](https://bipi.me)  
 > **깃헙** [`https://github.com/sehyunchung/bipi`](https://github.com/sehyunchung/bipi)
 
 간단한 앱이다. '홈 화면에 추가'등을 이용해 디바이스에 설치할 수 있고, 화면 아무곳을 2번 이상 탭하면 BPM을 계산해서 보여준다. 4초간 입력이 없으면 0으로 리셋.
