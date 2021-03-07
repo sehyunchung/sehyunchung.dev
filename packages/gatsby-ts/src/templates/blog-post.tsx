@@ -84,6 +84,32 @@ function BlogPostTemplate(props) {
                 padding: 0.5em 0;
               }
             }
+
+            table {
+              border-collapse: collapse;
+              margin: 1em 0;
+
+              thead {
+                background-color: rgba(var(--cool-blue-rgb), 0.1);
+                color: var(--color-txt);
+                border-top: var(--px) solid var(--color-txt);
+              }
+
+              tr {
+                border-bottom: var(--px) solid var(--color-txt);
+              }
+
+              tr,
+              th,
+              td {
+                border-color: var(--color-txt);
+              }
+
+              th,
+              td {
+                padding: 0.5em 1em;
+              }
+            }
           `}
         >
           <MDXRenderer>{post.body}</MDXRenderer>
