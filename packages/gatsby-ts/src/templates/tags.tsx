@@ -16,6 +16,7 @@ const Tags = ({ pageContext, location, data }) => {
           color: var(--link-color);
           font-weight: normal;
           word-wrap: break-word;
+          word-break: break-all;
         `}
       >
         {` #${snakeCase(tag)}`}
