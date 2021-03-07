@@ -7,7 +7,9 @@ tags:
   - vscode
   - sourcekit-lsp
   - language server protocol
+  - dx
 ---
+
 [PWA](https://sehyunchung.dev/2019-12-30-pwa-bpm-tapper를-만들어보았다/)를 이리저리 해보다 역시 뭔가 기기에 안붙는 느낌이 힘들어서 걍 네이티브 앱으로 만들고 있는데... 아 이런 건 애시당초 네이티브앱으로 만들었어야되었다는 생각이다. 일단 손에 붙는 느낌이 너무 다르고 등등...
 
 그런데 코드 에디팅하는 데는 vscode가 이미 손에 익어있는 게 있고(vim 익스텐션 등등), 폰트나 theme을 기분따라 자주 바꾸는 편인데 그런 부분이 xcode는 좀 불편했다. 빌드나 프리뷰 등등은 어쩔 수 없겠지만 좀 손에 걸리적거리는 부분들이 있었다.
@@ -22,27 +24,32 @@ tags:
    ```sh
    $ cd sourcekit-lst/Editors/vscode
    ```
+
 3. `.vsix`(익스텐션 파일) 를 생성한다.
 
    ```sh
    $ npm run createDevPackage
    ```
+
 4. 생성한 익스텐션을 설치한다.
 
    ```sh
    $ code --install-extension out/sourcekit-lsp-vscode-dev.vsix
    ```
+
 5. 공식 가이드엔 여기까지 하면 된다고 나와있긴 한데, vscode에서 `Starting client failed Launching server using command sourcekit-lsp failed.` 어쩌구 하면서 에러가 발생했다.
 6. `sourcekit-lsp` 가 설치된 경로를 알아내서 복사한다.
 
    ```sh
    $ xcrun -f sourcekit-lsp
    ```
+
 7. vscode의 `settings.json`에 아래를 추가한다.
 
    ```json
      "sourcekit-lsp.serverPath": "<복사한 경로>"
    ```
+
 8. vscode를 reload 한다.
 9. 된다된다 잘된다.
 
