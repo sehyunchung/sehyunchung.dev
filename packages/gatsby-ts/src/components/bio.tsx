@@ -32,7 +32,7 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
       {...props}
     >
       <Link to="/about">about</Link>
-      <Link to="/til">til[wip]</Link>
+      <Link to="/til">til</Link>
       <a href={`https://github.com/${social.github}`}>github</a>
     </div>
   )

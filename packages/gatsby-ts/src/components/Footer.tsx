@@ -12,7 +12,7 @@ const Footer: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ({
       css={css`
         grid-column: 2;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         color: var(--txt-secondary-color);
         padding: 2rem 0;
       `}

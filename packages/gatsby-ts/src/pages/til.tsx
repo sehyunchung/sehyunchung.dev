@@ -37,12 +37,18 @@ const TilIndex: FC = () => {
   }))
 
   return (
-    <Layout>
-      <h1>til[wip]</h1>
+    <Layout full>
+      <h1
+        css={css`
+          padding-top: 0.5rem;
+        `}
+      >
+        til[wip]
+      </h1>
       <ul
         css={css`
           display: grid;
-          grid-template-columns: repeat(auto-fill, max(40ch, calc(50% - 2em)));
+          grid-template-columns: repeat(auto-fit, min(50ch, calc(50% - 2em)));
           grid-template-rows: auto;
           grid-gap: 2em;
           padding-inline-start: 0;
