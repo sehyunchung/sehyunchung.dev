@@ -6,9 +6,10 @@ import Footer from './Footer'
 import Header from './Header'
 import { TrailUp } from '../animations'
 
-const Layout: FC<{ title?: string; location?: string }> = ({
+const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
   title,
   children,
+  full,
 }) => {
   return (
     <div
@@ -26,10 +27,10 @@ const Layout: FC<{ title?: string; location?: string }> = ({
         title={title}
       />
       <main
-        css={css`
-          grid-column: 2;
-          padding: calc(14 * var(--px)) 0;
-        `}
+        css={{
+          gridColumn: full ? '1/4' : '2',
+          padding: full ? '1em' : 'calc(14 * var(--px)) 0',
+        }}
       >
         <TrailUp>{children}</TrailUp>
       </main>
