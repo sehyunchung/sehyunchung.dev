@@ -8,22 +8,17 @@ import Layout from '../components/layout'
 const TilPage: FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      allGithubData {
-        nodes {
-          data {
-            repository {
-              id
-              issues {
-                edges {
-                  node {
-                    createdAt(formatString: "MM-DD-yyyy")
-                    id
-                    labels {
-                      nodes {
-                        name
-                      }
-                    }
-                    title
+      githubData {
+        data {
+          repository {
+            issues {
+              nodes {
+                updatedAt(formatString: "MM-DD-yyyy")
+                id
+                title
+                labels {
+                  nodes {
+                    name
                   }
                 }
               }
@@ -34,12 +29,10 @@ const TilPage: FC = () => {
     }
   `)
 
-  const issues = data.allGithubData.nodes[0].data.repository.issues.edges
-    .map((edge) => edge.node)
-    .map((issue) => ({
-      ...issue,
-      labels: issue.labels.nodes.map((node) => node.name),
-    }))
+  const issues = data.githubData.data.repository.issues.nodes.map((issue) => ({
+    ...issue,
+    labels: issue.labels.nodes.map((node) => node.name),
+  }))
 
   return (
     <Layout>
@@ -101,7 +94,7 @@ const TilPage: FC = () => {
                 align-items: center;
               `}
             >
-              {issue.createdAt}
+              {issue.updatedAt}
             </span>
           </li>
         ))}

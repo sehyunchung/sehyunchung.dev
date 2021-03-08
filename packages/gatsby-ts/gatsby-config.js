@@ -108,18 +108,17 @@ module.exports = {
         graphQLQuery: `
         query {
           repository(name: "til", owner: "sehyunchung") {
-            id
-            issues(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
-              edges {
-                node {
-                  body
-                  id
-                  createdAt
-                  title
-                  labels(last: 100) {
-                    nodes {
-                      name
-                    }
+            issues(orderBy: {field: UPDATED_AT, direction: DESC}, last: 100) {
+              nodes {
+                id
+                createdAt
+                updatedAt
+                title
+                body
+                bodyHTML
+                labels(last: 100) {
+                  nodes {
+                    name
                   }
                 }
               }
