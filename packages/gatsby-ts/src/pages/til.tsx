@@ -6,7 +6,7 @@ import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
 
-const TilPage: FC = () => {
+const TilIndex: FC = () => {
   const data = useStaticQuery(graphql`
     query {
       githubData {
@@ -55,6 +55,7 @@ const TilPage: FC = () => {
               display: grid;
               grid-template-columns: 3fr 1fr;
               grid-template-rows: 1fr;
+              column-gap: 1em;
 
               h2 {
                 font-size: 1.5rem;
@@ -64,6 +65,7 @@ const TilPage: FC = () => {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                line-height: 1.5;
               }
             `}
           >
@@ -76,7 +78,9 @@ const TilPage: FC = () => {
                   display: flex;
                   align-items: center;
                   padding-inline-start: 0;
-
+                  li {
+                    line-height: 2;
+                  }
                   li:not(:last-of-type) {
                     padding-right: 1em;
                   }
@@ -104,4 +108,4 @@ const TilPage: FC = () => {
   )
 }
 
-export default TilPage
+export default TilIndex
