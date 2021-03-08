@@ -41,7 +41,7 @@
     "gatsby-remark-smartypants": "^3.0.0",
     "gatsby-remark-vscode": "^3.2.0",
     "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-source-github-api": "patch:gatsby-source-github-api@^0.2.1#./gatsby-source-github-api.diff",
+    "gatsby-source-github-api": "patch:gatsby-source-github-api@0.2.1#./gatsby-source-github-api.diff",
     "gatsby-transformer-sharp": "^3.0.0",
     "graphql": "^15.4.0",
     "lodash": "^4.17.20",
