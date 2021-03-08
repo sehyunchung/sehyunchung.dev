@@ -2,6 +2,7 @@
 import { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { css, jsx } from '@emotion/react'
+import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
 
@@ -82,7 +83,7 @@ const TilPage: FC = () => {
                 `}
               >
                 {issue.labels.map((label) => (
-                  <li key={label}>#{label}</li>
+                  <li key={label}>#{snakeCase(label)}</li>
                 ))}
               </ul>
             </h2>
