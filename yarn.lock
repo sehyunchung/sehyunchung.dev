@@ -5,6 +5,17 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"101@npm:^1.0.0, 101@npm:^1.5.0":
+  version: 1.6.3
+  resolution: "101@npm:1.6.3"
+  dependencies:
+    clone: ^1.0.2
+    deep-eql: ^0.1.3
+    keypather: ^1.10.2
+  checksum: d37a8d728a5bfd2732b9d3630e1e69c160b817ebd86d011d362f546e7bf6da7432dd50357be111fa8d74141332106e8362a3efa598c71e176280bd990f3364de
+  languageName: node
+  linkType: hard
+
 "@ardatan/aggregate-error@npm:0.0.6":
   version: 0.0.6
   resolution: "@ardatan/aggregate-error@npm:0.0.6"
@@ -2751,6 +2762,7 @@ __metadata:
     "@types/react-helmet": ^6.1.0
     babel-eslint: ^10.1.0
     babel-plugin-styled-components: ^1.10.0
+    dotenv: ^8.2.0
     eslint: ^7.14.0
     eslint-plugin-graphql: ^4.0.0
     eslint-plugin-react: ^7.21.5
@@ -2775,6 +2787,7 @@ __metadata:
     gatsby-remark-smartypants: ^3.0.0
     gatsby-remark-vscode: ^3.2.0
     gatsby-source-filesystem: ^3.0.0
+    gatsby-source-github-api: "patch:gatsby-source-github-api@0.2.1#./gatsby-source-github-api.diff"
     gatsby-transformer-sharp: ^3.0.0
     gh-pages: ^3.1.0
     graphql: ^15.4.0
@@ -7266,6 +7279,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deep-eql@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "deep-eql@npm:0.1.3"
+  dependencies:
+    type-detect: 0.1.1
+  checksum: 1a9e6cac3acc6b40204b80f516731fcb88c53adabbdaf68520d8b5531370aa01c38e17612e9a49ede18daec166aeca3286c501e9fc743f789f4e8d44234685dc
+  languageName: node
+  linkType: hard
+
 "deep-equal@npm:^1.0.1":
   version: 1.1.1
   resolution: "deep-equal@npm:1.1.1"
@@ -10298,6 +10320,26 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+gatsby-source-github-api@0.2.1:
+  version: 0.2.1
+  resolution: "gatsby-source-github-api@npm:0.2.1"
+  dependencies:
+    graphql-fetch: ^1.0.1
+    uuid: ^3.1.0
+  checksum: abf6ebbfea40d7707c44f2ee56c478fdc96646c7c38ddad2c6bf523c6587f2553129bd884fed1ae7e74be0dba15b6698bce91e4213142ab8079e4b43f62f0a23
+  languageName: node
+  linkType: hard
+
+"gatsby-source-github-api@patch:gatsby-source-github-api@0.2.1#./gatsby-source-github-api.diff::locator=%40sehyunchung%2Fblog%40workspace%3Apackages%2Fgatsby-ts":
+  version: 0.2.1
+  resolution: "gatsby-source-github-api@patch:gatsby-source-github-api@npm%3A0.2.1#./gatsby-source-github-api.diff::version=0.2.1&hash=9d28ab&locator=%40sehyunchung%2Fblog%40workspace%3Apackages%2Fgatsby-ts"
+  dependencies:
+    graphql-fetch: ^1.0.1
+    uuid: ^3.1.0
+  checksum: 3333e92e48eeb64b4c4c3b3273ab4639867b9a9789301a7ab08dde7a425b2325bee0ad91e8e3518a91b408fc63127adb0bb0900e54269e79f0497593eec09e40
+  languageName: node
+  linkType: hard
+
 "gatsby-telemetry@npm:^2.0.0":
   version: 2.0.0
   resolution: "gatsby-telemetry@npm:2.0.0"
@@ -11137,6 +11179,16 @@ fsevents@~2.3.1:
   peerDependencies:
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
   checksum: c8269eff20f8ff7000941107e67829336d06c2fa8fca24c3b525a0a1c0f890c77d42ccc50a762b6e97e8180443ff82544862d8bc8e7776f336ca0e704695278d
+  languageName: node
+  linkType: hard
+
+"graphql-fetch@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "graphql-fetch@npm:1.0.1"
+  dependencies:
+    101: ^1.5.0
+    isomorphic-fetch: ^2.2.1
+  checksum: ce153612643016699339e01254a66dfca8fc7f6a62b03dd9061de3230168c512cbb199151a22cc12cd1f89085b606b4fd2520f4549f98b40daad3f5cebb3254a
   languageName: node
   linkType: hard
 
@@ -12801,7 +12853,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-stream@npm:^1.0.0, is-stream@npm:^1.1.0":
+"is-stream@npm:^1.0.0, is-stream@npm:^1.0.1, is-stream@npm:^1.1.0":
   version: 1.1.0
   resolution: "is-stream@npm:1.1.0"
   checksum: 39843ee9ff68ebda05237199f18831eb6e0e28db7799ee9ddaac5573b0681f18b4dc427afdb7b7ad906db545e4648999c42a1810b277acc8451593ff59da00fa
@@ -12975,6 +13027,16 @@ fsevents@~2.3.1:
   version: 3.0.1
   resolution: "isobject@npm:3.0.1"
   checksum: b537a9ccdd8d40ec552fe7ff5db3731f1deb77581adf9beb8ae812f8d08acfa0e74b193159ac50fb01084d7ade06d114077f984e21b8340531241bf85be9a0ab
+  languageName: node
+  linkType: hard
+
+"isomorphic-fetch@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "isomorphic-fetch@npm:2.2.1"
+  dependencies:
+    node-fetch: ^1.0.1
+    whatwg-fetch: ">=0.10.0"
+  checksum: a4174e332ae98fc93269162f1d8a3ee1f7255257d4eaeea5145d4068f64ac2dbff7e7f681889097238e1e009f7a74ba1a23ffd8ed967402777a32cca96204508
   languageName: node
   linkType: hard
 
@@ -13287,6 +13349,15 @@ fsevents@~2.3.1:
   version: 3.1.0
   resolution: "junk@npm:3.1.0"
   checksum: fedb1a2eab7f90e3c833211fecf1e1659cf995594981fb657b4215bae86883e7ec39074215a3a92cb0657fa46b0da87db121c6f12b125cc19c7911119db9c452
+  languageName: node
+  linkType: hard
+
+"keypather@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "keypather@npm:1.10.2"
+  dependencies:
+    101: ^1.0.0
+  checksum: b7b8c0d94b2c44a4d84d77c4409603b82487972d6698576b6547cbf0915b69fb72df41afabb2d7ff73bd62c06b0c8ffc7f50280666d6dae0e6f0b3076a4e4304
   languageName: node
   linkType: hard
 
@@ -15322,6 +15393,16 @@ fsevents@~2.3.1:
   version: 2.6.1
   resolution: "node-fetch@npm:2.6.1"
   checksum: cbb171635e538162b977eac5dfe7a1e07a9a02e991924377a6435502291e2f823d306b95aabc455caebf4a118ccf836868462bc70ccc3095af02bb9da61fda37
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:^1.0.1":
+  version: 1.7.3
+  resolution: "node-fetch@npm:1.7.3"
+  dependencies:
+    encoding: ^0.1.11
+    is-stream: ^1.0.1
+  checksum: d04afb2e328ffb974a5ac4800fe5714d7419243d72f089a6a2383d3b93368c61ae88954a4866c476c0d7f95d7af414c1b9a885e051971061efe4054d526e23ed
   languageName: node
   linkType: hard
 
@@ -21570,6 +21651,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"type-detect@npm:0.1.1":
+  version: 0.1.1
+  resolution: "type-detect@npm:0.1.1"
+  checksum: 97de17504729a909c095c825db14953c75f8648ca75689e01fe0cb5acd467d06e1e9a993e8fe7d1206db5aaaa75e6b2962852d32091564c477f21bcccaf801f2
+  languageName: node
+  linkType: hard
+
 "type-fest@npm:0.20.2, type-fest@npm:^0.20.2":
   version: 0.20.2
   resolution: "type-fest@npm:0.20.2"
@@ -22372,7 +22460,7 @@ typescript@^4.1.2:
   languageName: node
   linkType: hard
 
-"uuid@npm:3.4.0, uuid@npm:^3.0.0, uuid@npm:^3.0.1, uuid@npm:^3.3.2, uuid@npm:^3.3.3, uuid@npm:^3.4.0":
+"uuid@npm:3.4.0, uuid@npm:^3.0.0, uuid@npm:^3.0.1, uuid@npm:^3.1.0, uuid@npm:^3.3.2, uuid@npm:^3.3.3, uuid@npm:^3.4.0":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:
@@ -22777,6 +22865,13 @@ typescript@^4.1.2:
     utf-8-validate: ^5.0.2
     yaeti: ^0.0.6
   checksum: 9b74a8dbc46ff8f0551dc55ee631c2a0be3e0775d0dae6e92b03a406890147729cb9ea6f1ffbc8ce3f91fa459d86c599a3dc3b32ce9f4225b68fc53c084ea8fb
+  languageName: node
+  linkType: hard
+
+"whatwg-fetch@npm:>=0.10.0":
+  version: 3.6.2
+  resolution: "whatwg-fetch@npm:3.6.2"
+  checksum: eaa370015f81fbf7fc69d5410a13c2200d3342fa783397e9a7e64215498276459993c05e826ed736d28a8abe4e7cc3f97e9b2ffadbc58129a55f443abdfea494
   languageName: node
   linkType: hard
 

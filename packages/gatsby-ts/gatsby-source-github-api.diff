@@ -1,0 +1,36 @@
+diff --git a/gatsby-node.js b/gatsby-node.js
+index 108ed0d3219f6da1e321f4e8a86c52077cf54018..271f7fb636dff3b60abbb79b62bc43707a2931b5 100644
+--- a/gatsby-node.js
++++ b/gatsby-node.js
+@@ -3,17 +3,17 @@ const crypto = require("crypto");
+ const uuid = require("uuid/v1");
+ 
+ exports.sourceNodes = (
+-  { boundActionCreators },
++  { actions },
+   { token, variables, graphQLQuery, url }
+ ) => {
+-  const { createNode } = boundActionCreators;
++  const { createNode } = actions;
+   return new Promise((resolve, reject) => {
+     // we need a token to use this plugin
+     if (token === undefined) {
+       reject("token is undefined");
+       return;
+     }
+-    fetchFromGithub(url, token, graphQLQuery, variables).then(result => {
++    fetchFromGithub(url, token, graphQLQuery, variables).then((result) => {
+       createNode({
+         data: result.data,
+         id: result.id || uuid(),
+@@ -31,8 +31,8 @@ exports.sourceNodes = (
+           // see https://github.com/ldd/gatsby-source-github-api/issues/10
+           // our node should have an 'application/json' MIME type, but we wish
+           // transformers to ignore it, so we set its mediaType to text/plain for now
+-          mediaType: "text/plain"
+-        }
++          mediaType: "text/plain",
++        },
+       });
+       resolve();
+     });

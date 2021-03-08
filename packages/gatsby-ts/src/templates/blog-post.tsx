@@ -1,6 +1,4 @@
 /** @jsx jsx */
-
-import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 import { snakeCase, kebabCase } from 'lodash'
@@ -9,7 +7,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Utterances from '../components/Utterances'
-import { TrailUp } from '../animations'
 
 function BlogPostTemplate(props) {
   const post = props.data.mdx

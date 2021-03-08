@@ -40,7 +40,6 @@ function BlogIndex(props) {
               &:nth-of-type(1) {
                 grid-area: date;
                 place-self: center;
-                font-size: calc(12 * var(--px));
               }
               &:nth-of-type(2) {
                 grid-area: desc;
