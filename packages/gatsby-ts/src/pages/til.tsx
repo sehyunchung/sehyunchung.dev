@@ -119,6 +119,9 @@ const TilIndex: FC = () => {
                   line-break: anywhere;
                   white-space: pre-wrap;
                 }
+                a {
+                  text-decoration: underline;
+                }
                 code,
                 pre {
                   background-color: var(--color-code-bg);
