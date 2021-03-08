@@ -17,6 +17,7 @@ const TilIndex: FC = () => {
                 updatedAt(formatString: "MM-DD-yyyy")
                 id
                 title
+                bodyHTML
                 labels {
                   nodes {
                     name
@@ -40,25 +41,29 @@ const TilIndex: FC = () => {
       <h1>til[wip]</h1>
       <ul
         css={css`
-          max-width: 100%;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, max(40ch, calc(50% - 2em)));
+          grid-template-rows: auto;
+          grid-gap: 2em;
           padding-inline-start: 0;
           list-style-type: none;
           text-align: center;
           display: grid;
           row-gap: 2em;
+          font-size: 0.5rem;
         `}
       >
         {issues.map((issue) => (
           <li
-            key={issue.id}
             css={css`
-              display: grid;
-              grid-template-columns: 3fr 1fr;
-              grid-template-rows: 1fr;
-              column-gap: 1em;
-
-              h2 {
-                font-size: 1.5rem;
+              display: flex;
+              flex-direction: column;
+            `}
+            key={issue.id}
+          >
+            <h2
+              css={css`
+                font-size: 1rem;
                 padding: 0;
                 word-break: break-all;
                 text-align: left;
@@ -66,41 +71,64 @@ const TilIndex: FC = () => {
                 flex-direction: column;
                 align-items: flex-start;
                 line-height: 1.5;
-              }
-            `}
-          >
-            <h2>
+              `}
+            >
               {issue.title}
-              <ul
-                css={css`
-                  list-style-type: none;
-                  font-size: 1rem;
-                  display: flex;
-                  align-items: center;
-                  padding-inline-start: 0;
-                  li {
-                    line-height: 2;
-                  }
-                  li:not(:last-of-type) {
-                    padding-right: 1em;
-                  }
-                `}
-              >
-                {issue.labels.map((label) => (
-                  <li key={label}>#{snakeCase(label)}</li>
-                ))}
-              </ul>
             </h2>
+            <ul
+              css={css`
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                padding-inline-start: 0;
+                font-size: 0.6rem;
+
+                li:not(:last-of-type) {
+                  padding-right: 1em;
+                }
+              `}
+            >
+              {issue.labels.map((label) => (
+                <li key={label}>#{snakeCase(label)}</li>
+              ))}
+            </ul>
             <span
               css={css`
-                font-size: 1rem;
-                display: inline-flex;
+                font-size: 0.6rem;
+                line-height: 3;
+                display: flex;
                 justify-content: flex-end;
                 align-items: center;
               `}
             >
               {issue.updatedAt}
             </span>
+            <div
+              css={css`
+                max-width: 100%;
+                overflow-x: auto;
+                overflow-wrap: anywhere;
+                text-align: left;
+                word-wrap: break-word;
+                word-break: break-all;
+                white-space: pre-wrap;
+                & * {
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  overflow-wrap: anywhere;
+                  line-break: anywhere;
+                  white-space: pre-wrap;
+                }
+                code,
+                pre {
+                  background-color: var(--color-code-bg);
+                }
+                pre {
+                  padding: 0.4em 1em;
+                }
+              `}
+              dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}
+            />
           </li>
         ))}
       </ul>
