@@ -5,6 +5,7 @@ import { css, jsx } from '@emotion/react'
 import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const TilIndex: FC = () => {
   const data = useStaticQuery(graphql`
@@ -38,6 +39,7 @@ const TilIndex: FC = () => {
 
   return (
     <Layout full>
+      <SEO title="til[wip]" />
       <h1
         css={css`
           padding-top: 0.5rem;
