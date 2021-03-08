@@ -111,6 +111,7 @@ module.exports = {
             issues(orderBy: {field: UPDATED_AT, direction: DESC}, last: 100) {
               nodes {
                 id
+                url
                 createdAt
                 updatedAt
                 title

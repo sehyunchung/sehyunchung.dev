@@ -16,6 +16,7 @@ const TilIndex: FC = () => {
               nodes {
                 updatedAt(formatString: "MM-DD-yyyy")
                 id
+                url
                 title
                 bodyHTML
                 labels {
@@ -73,7 +74,7 @@ const TilIndex: FC = () => {
                 line-height: 1.5;
               `}
             >
-              {issue.title}
+              <a href={issue.url}>{issue.title}</a>
             </h2>
             <ul
               css={css`
