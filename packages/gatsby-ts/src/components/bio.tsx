@@ -22,7 +22,7 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
   const { social } = data.site.siteMetadata
 
   return (
-    <div
+    <nav
       css={css`
         display: inline-flex;
         a {
@@ -34,7 +34,7 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
       <Link to="/about">about</Link>
       <Link to="/til">til</Link>
       <a href={`https://github.com/${social.github}`}>github</a>
-    </div>
+    </nav>
   )
 }
 
