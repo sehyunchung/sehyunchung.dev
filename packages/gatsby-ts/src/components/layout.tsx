@@ -4,13 +4,16 @@ import { css, jsx } from '@emotion/react'
 
 import Footer from './Footer'
 import Header from './Header'
+import SEO from './seo'
 import { TrailUp } from '../animations'
 
-const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
-  title,
-  children,
-  full,
-}) => {
+const Layout: FC<{
+  noHeader?: boolean
+  noFooter?: boolean
+  title?: string
+  location?: string
+  full?: boolean
+}> = ({ noHeader = false, noFooter = false, title, children, full }) => {
   return (
     <div
       css={css`
@@ -18,14 +21,36 @@ const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
         grid-template-columns: 1fr min(65ch, calc(100% - 3em)) 1fr;
         justify-items: stretch;
         height: 100%;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          a.anchor {
+            fill: var(--color-code-txt);
+            position: absolute;
+            left: -20px;
+            opacity: 0;
+            transition: opacity 300ms;
+            width: 1em;
+          }
+          &:hover {
+            a.anchor {
+              opacity: 1;
+            }
+          }
+        }
       `}
     >
-      <Header
-        css={css`
-          grid-column: 1/4;
-        `}
-        title={title}
-      />
+      <SEO title={title} />
+      {!noHeader && (
+        <Header
+          css={css`
+            grid-column: 1/4;
+          `}
+        />
+      )}
       <main
         css={{
           gridColumn: full ? '1/4' : '2',
@@ -34,7 +59,13 @@ const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
       >
         <TrailUp>{children}</TrailUp>
       </main>
-      <Footer />
+      {!noFooter && (
+        <Footer
+          css={css`
+            grid-column: 1/4;
+          `}
+        />
+      )}
     </div>
   )
 }

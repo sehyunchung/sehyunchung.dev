@@ -33,9 +33,6 @@ exports.createPages = ({ graphql, actions }) => {
             fieldValue
           }
         }
-        about: mdx(fileAbsolutePath: { glob: "**/pages/about.*" }) {
-          body
-        }
       }
     `
   ).then((result) => {
@@ -48,8 +45,6 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create tags pages.
     const tags = result.data.tagsGroup.group
-
-    const about = result.data.about
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -74,14 +69,6 @@ exports.createPages = ({ graphql, actions }) => {
           tag: tag.fieldValue,
         },
       })
-    })
-
-    createPage({
-      path: '/about/',
-      component: About,
-      context: {
-        body: about.body,
-      },
     })
 
     return null

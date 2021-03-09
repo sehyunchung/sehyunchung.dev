@@ -7,7 +7,6 @@ import Masonry from 'react-masonry-css'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { TrailUp } from '../animations'
 
 const TilIndex: FC = () => {
   const data = useStaticQuery(graphql`

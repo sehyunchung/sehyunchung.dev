@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HtmlHTMLAttributes } from 'react'
+import { FC, HtmlHTMLAttributes } from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 
@@ -31,7 +31,7 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
       `}
       {...props}
     >
-      <Link to="/about">about</Link>
+      <Link to="/whoami">whoami</Link>
       <Link to="/blog">posts</Link>
       <Link to="/til">til</Link>
       <a href={`https://github.com/${social.github}`}>github</a>
