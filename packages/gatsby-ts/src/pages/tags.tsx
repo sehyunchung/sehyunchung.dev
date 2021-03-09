@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { kebabCase, snakeCase } from 'lodash'
-import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const TagsPage = ({
   location,
@@ -17,9 +17,9 @@ const TagsPage = ({
 }) => (
   <Layout location={location} title={title}>
     <div>
-      <Helmet title={title} />
+      <SEO title="All Tags" />
       <div>
-        <h1>all tags</h1>
+        <h1>All Tags</h1>
         <ul
           css={css`
             max-width: 100%;

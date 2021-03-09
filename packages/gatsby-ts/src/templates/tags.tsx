@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/react'
 import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Tags = ({ pageContext, location, data }) => {
   const { tag } = pageContext
@@ -11,6 +12,7 @@ const Tags = ({ pageContext, location, data }) => {
   const siteTitle = data.site.siteMetadata.title
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO title={`#${snakeCase(tag)}`} />
       <h1
         css={css`
           color: var(--link-color);
