@@ -14,6 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         postsMdx: allMdx(
+          filter: { fileAbsolutePath: { glob: "**/content/blog/**/*" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
