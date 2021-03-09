@@ -87,10 +87,12 @@ const TilIndex: FC = () => {
                 flex: 50ch;
                 display: flex;
                 flex-direction: column;
-                padding: 1em 1em 3em;
+                padding: 1em 1em 2em;
                 border-radius: 1em;
-                transition: box-shadow 300ms;
+                transition: all 200ms;
+                background-color: #fff;
                 &:hover {
+                  transform: scale(1.06);
                   box-shadow: 0 0 1em rgba(var(--cool-blue-rgb), 0.3);
                 }
               `}
