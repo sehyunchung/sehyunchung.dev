@@ -7,6 +7,7 @@ import Masonry from 'react-masonry-css'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { TrailUp } from '../animations'
 
 const TilIndex: FC = () => {
   const data = useStaticQuery(graphql`
@@ -72,7 +73,7 @@ const TilIndex: FC = () => {
           breakpointCols={{
             default: 6,
             1920: 5,
-            1440: 4,
+            1280: 4,
             1024: 3,
             854: 2,
             640: 1,
@@ -86,7 +87,12 @@ const TilIndex: FC = () => {
                 flex: 50ch;
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 3em;
+                padding: 1em 1em 3em;
+                border-radius: 1em;
+                transition: box-shadow 300ms;
+                &:hover {
+                  box-shadow: 0 0 1em rgba(var(--cool-blue-rgb), 0.3);
+                }
               `}
               key={issue.id}
             >
