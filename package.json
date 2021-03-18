@@ -6,7 +6,8 @@
   "scripts": {
     "bb": "yarn workspace @sehyunchung/blog",
     "tb": "yarn bb gatsby build && yarn bb gatsby serve",
-    "bn": "yarn workspace @sehyunchung/blog-next"
+    "bn": "yarn workspace @sehyunchung/blog-next",
+    "br": "yarn workspace @sehyunchung/blog-remix"
   },
   "name": "sehyunchung.dev"
 }
