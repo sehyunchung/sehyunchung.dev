@@ -63,19 +63,6 @@ public
 
 # Yarn
 yarn-error.log
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
 
 # Yarn Integrity file
 .yarn-integrity
-
-# Rescript
-lib
-.merlin
-.bsb.lock
-/lib/bs/
-.graphql_ppx_cache
