@@ -46,6 +46,8 @@
     "graphql": "^15.4.0",
     "lodash": "^4.17.20",
     "open-color": "^1.7.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
