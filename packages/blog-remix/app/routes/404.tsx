@@ -1,15 +1,13 @@
-import type { MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "remix";
 
 export let meta: MetaFunction = () => {
-  return { title: "404: Not Found" };
+  return { title: "Ain't nothing here" };
 };
 
 export default function FourOhFour() {
   return (
-    <>
-      <h1 className="text-8xl">404: Not Found</h1>
-      <h2>{`🏜`}</h2>
-      <p>여긴 아무것도 없답니다...</p>
-    </>
+    <div>
+      <h1>404</h1>
+    </div>
   );
 }

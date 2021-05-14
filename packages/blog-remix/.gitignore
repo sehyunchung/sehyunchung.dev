@@ -1,8 +1,7 @@
-node_modules/
-package-lock.json
+node_modules
 
 /.cache
-/build
+/server/build
 /public/build
 
-.DS_Store
+.vercel

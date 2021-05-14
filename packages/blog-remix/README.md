@@ -1,54 +1,79 @@
-# Remix Starter for Express
+# Welcome to Remix!
 
-Welcome to Remix!
+- [Remix Docs](https://docs.remix.run)
+- [Customer Dashboard](https://remix.run/dashboard)
 
-This is a starter repo for using [Remix](https://remix.run) with [Express](http://expressjs.com/).
+## Vercel Setup
+
+First you'll need the [Vercel CLI](https://vercel.com/docs/cli):
+
+```sh
+npm i -g vercel
+```
+
+Before you can run the app in development, you need link this project to a new Vercel project on your account.
+
+**It is important that you use a new project. If you try to link this project to an existing project (like a Next.js site) you will have problems.**
+
+```sh
+$ vercel link
+```
+
+Follow the prompts, and when its done you should be able to get started.
 
 ## Development
 
-After cloning the repo, rename `.npmrc.example` to `.npmrc` and insert the license key you get from [logging in to your dashboard at remix.run](https://remix.run). 
+You will be running two processes during development when using Vercel as your server.
 
-> Note: if this is a public repo, you'll probably want to move the line with your key into `~/.npmrc` to keep it private.
-
-Then, install all dependencies using `npm`:
-
-```sh
-$ npm install
-```
-
-Your `@remix-run/*` dependencies will come from the Remix package registry.
-
-Once everything is installed, start the app in development mode with the following command:
+- Your Vercel server in one
+- The Remix development server in another
 
 ```sh
+# in one tab
+$ vercel dev
+
+# in another
 $ npm run dev
 ```
 
-This will run a few processes concurrently that will dynamically rebuild as your source files change. To see your changes, refresh the browser.
+Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
-> Note: Hot module reloading is coming soon, which will allow you to see your changes without refreshing.
+If you'd rather run everything in a single tab, you can look at [concurrently](https://npm.im/concurrently) or similar tools to run both processes in one tab.
 
-## Production
+## Deploying
 
-To run the app in production mode, you'll need to build it first.
+You will need to add your npmrc with your Remix token to your server's environment:
+
+When you ran `npm init remix`, we probably created an npmrc in your home directory. Go take a look, it should look something like this:
+
+```
+//npm.remix.run/:_authToken={your-token}
+@remix-run:registry=https://npm.remix.run
+```
+
+If it looks something like that, then you can run these commands to add your npmrc from the command line:
+
+```bash
+$ vercel env add plain NPM_RC development < ~/.npmrc
+$ vercel env add plain NPM_RC preview < ~/.npmrc
+$ vercel env add plain NPM_RC production < ~/.npmrc
+```
+
+You can also add this environment variable in your vercel project dashboard.
+
+Once that's done you can deploy!
 
 ```sh
 $ npm run build
-$ npm start
+# preview deployment
+$ vercel
+
+# production deployment
+$ vercel --prod
 ```
 
-This will start a single HTTP server process that will serve the app from the files generated in the build step.
+### GitHub Automatic Deployments
 
-## Documentation
+For some reason the GitHub integration doesn't deploy the public folder. We're working with Vercel to figure this out.
 
-Detailed documentation for Remix [is available at remix.run](https://remix.run/dashboard/docs).
-
-## Project Structure
-
-All application source code is found in the `app` directory. This includes your application entry points for both server rendering (see `app/entry.server.tsx`) and the browser (see `app/entry.client.tsx`), as well as your root component and routes (see `app/root.tsx` and `app/routes`).
-
-Everything in the `public` directory is served by `express.static`.
-
-## Don't want TypeScript?
-
-The [`no-typescript` branch](https://github.com/remix-run/starter-express/tree/no-typescript) is a version of this same starter template that uses plain JavaScript instead of TypeScript for all code in `app`.
+For now, [you can set up a GitHub action with this config](https://gist.github.com/mcansh/91f8effda798b41bb373351fad217070) from our friend @mcansh.

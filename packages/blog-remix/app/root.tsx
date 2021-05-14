@@ -1,60 +1,57 @@
-import type { LinksFunction, LoaderFunction } from "@remix-run/react";
-import { Meta, Links, Scripts, useRouteData } from "@remix-run/react";
+import type { LinksFunction, LoaderFunction } from "remix";
+import { Meta, Links, Scripts, useRouteData, LiveReload } from "remix";
 import { Outlet } from "react-router-dom";
 
-import tailwind from "css:./styles/tailwind.css";
-import global from "css:./styles/global.css";
+import stylesUrl from "./styles/global.css";
 
 export let links: LinksFunction = () => {
-  return [
-    { rel: "stylesheet", href: tailwind },
-    { rel: "stylesheet", href: global },
-  ];
+  return [{ rel: "stylesheet", href: stylesUrl }];
 };
 
 export let loader: LoaderFunction = async () => {
-  return {};
+  return { date: new Date() };
 };
 
-export default function App() {
-  let data = useRouteData();
-
+function Document({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
+        {children}
 
-        <footer className="text-6xl">Footer</footer>
         <Scripts />
+        {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );
 }
 
+export default function App() {
+  let data = useRouteData();
+  return (
+    <Document>
+      <Outlet />
+      <footer>
+        <p>This page was rendered at {data.date.toLocaleString()}</p>
+      </footer>
+    </Document>
+  );
+}
+
 export function ErrorBoundary({ error }: { error: Error }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <title>Oops!</title>
-      </head>
-      <body>
-        <div>
-          <h1>App Error</h1>
-          <pre>{error.message}</pre>
-          <p>
-            Replace this UI with what you want users to see when your app throws
-            uncaught errors. The file is at <code>app/App.tsx</code>.
-          </p>
-        </div>
-
-        <Scripts />
-      </body>
-    </html>
+    <Document>
+      <h1>App Error</h1>
+      <pre>{error.message}</pre>
+      <p>
+        Replace this UI with what you want users to see when your app throws
+        uncaught errors.
+      </p>
+    </Document>
   );
 }
