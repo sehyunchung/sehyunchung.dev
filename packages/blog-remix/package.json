@@ -1,34 +1,30 @@
 {
   "private": true,
-  "name": "@sehyunchung/blog-remix",
+  "name": "@sehyunchung/remix",
   "version": "0.0.1",
+  "description": "",
+  "license": "",
   "scripts": {
-    "postinstall": "remix build",
     "build": "remix build",
-    "build@": "remix build",
-    "dev": "pm2-dev pm2.config.js",
-    "start": "node server.js"
+    "dev": "remix dev",
+    "start": "vercel dev"
   },
   "dependencies": {
-    "@remix-run/data": "^0.14.0",
-    "@remix-run/express": "^0.14.0",
-    "@remix-run/react": "^0.14.0",
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
+    "@remix-run/react": "0.17.0",
+    "@remix-run/vercel": "0.17.0",
+    "@vercel/node": "^1.8.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router": "^6.0.0-beta.0",
-    "react-router-dom": "^6.0.0-beta.0"
+    "react-router-dom": "^6.0.0-beta.0",
+    "remix": "0.17.0",
+    "vercel": "^22.0.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^0.14.0",
+    "@remix-run/dev": "0.17.0",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
-    "autoprefixer": "^10.2.5",
-    "pm2": "^4.5.4",
-    "postcss": "^8.2.8",
-    "tailwindcss": "^2.0.4",
-    "typescript": "^4.1.2"
-  }
+    "typescript": "^4.1.2",
+    "vercel": "^21.2.2"
+  },
+  "sideEffects": false
 }
