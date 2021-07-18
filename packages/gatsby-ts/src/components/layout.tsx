@@ -4,7 +4,6 @@ import { css, jsx } from '@emotion/react'
 
 import Footer from './Footer'
 import Header from './Header'
-import { TrailUp } from '../animations'
 
 const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
   title,
@@ -32,7 +31,7 @@ const Layout: FC<{ title?: string; location?: string; full?: boolean }> = ({
           padding: full ? '1em' : 'calc(14 * var(--px)) 0',
         }}
       >
-        <TrailUp>{children}</TrailUp>
+        {children}
       </main>
       <Footer />
     </div>
