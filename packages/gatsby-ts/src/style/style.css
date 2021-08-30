@@ -97,6 +97,7 @@ p img {
 code,
 pre {
   font-family: var(--font-code);
+  font-size: 0.8em;
 }
 
 .grvsc-container.light-default-light {
@@ -104,5 +105,5 @@ pre {
   background-color: var(--color-code-bg);
   color: var(--color-code-txt);
   border-radius: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
