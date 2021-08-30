@@ -134,7 +134,8 @@ function BlogPostTemplate(props) {
             <li
               key={tag}
               css={css`
-                font-family: var(--font-text);
+                font-family: var(--font-code);
+                font-size: 0.8rem;
                 padding-right: 1em;
               `}
             >
