@@ -1,12 +1,23 @@
 @font-face {
-  font-family: JetBrainsMono;
-  src: url('./fonts/JetBrainsMono-Regular.ttf');
+  font-family: Hack;
+  src: url('./fonts/Hack-Regular.ttf');
 }
 
 @font-face {
-  font-family: Pretendard;
-  src: url('./fonts/PretendardVariable.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: MapoGoldenPier;
+  src: url('./fonts/MapoGoldenPier.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Chirp;
+  src: url('./fonts/ChirpRegular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Chirp;
+  src: url('./fonts/ChirpBold.ttf') format('truetype');
+  font-weight: bold;
 }
 
 :root {
@@ -25,8 +36,8 @@
   --color-code-bg: rgba(var(--cool-blue-rgb), 0.05);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
-  --font-text: 'Pretendard', -apple-system, sans-serif;
-  --font-code: 'JetBrainsMono', -apple-system, monospace;
+  --font-text: Chirp, MapoGoldenPier, -apple-system, sans-serif;
+  --font-code: Hack, -apple-system, monospace;
 }
 
 * {
