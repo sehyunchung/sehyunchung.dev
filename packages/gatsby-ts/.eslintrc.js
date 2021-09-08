@@ -6,4 +6,6 @@ module.exports = {
   rules: {
     'react/jsx-uses-vars': 1,
   },
+  parser: 'babel-eslint',
+  env: { node: true },
 }

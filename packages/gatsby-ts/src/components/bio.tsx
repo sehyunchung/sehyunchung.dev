@@ -1,10 +1,18 @@
-/** @jsx jsx */
+import React, { ComponentProps, FC } from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
-import React, { FC, HtmlHTMLAttributes } from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import { css, jsx } from '@emotion/react'
+import { styled } from '../stitches.config';
 
-export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
+const Nav = styled('nav', {
+  display: 'inline-flex',
+
+  a: {
+    paddingLeft: '0.5em',
+    paddingRight: '0.5em',
+  },
+});
+
+export const Bio: FC<ComponentProps<typeof Nav>> = (props) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -17,25 +25,17 @@ export const Bio: FC<HtmlHTMLAttributes<HTMLDivElement>> = (props) => {
         }
       }
     }
-  `)
+  `);
 
-  const { social } = data.site.siteMetadata
+  const { social } = data.site.siteMetadata;
 
   return (
-    <nav
-      css={css`
-        display: inline-flex;
-        a {
-          padding-left: 1em;
-        }
-      `}
-      {...props}
-    >
+    <Nav {...props}>
       <Link to="/about">about</Link>
       <Link to="/til">til</Link>
       <a href={`https://github.com/${social.github}`}>github</a>
-    </nav>
-  )
-}
+    </Nav>
+  );
+};
 
-export default Bio
+export default Bio;
