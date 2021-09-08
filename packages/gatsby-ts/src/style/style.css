@@ -36,8 +36,8 @@
   --color-code-bg: rgba(var(--cool-blue-rgb), 0.05);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
-  --font-text: Chirp, MapoGoldenPier, -apple-system, sans-serif;
-  --font-code: Hack, -apple-system, monospace;
+  --font-text: hack, mapogoldenpier, -apple-system, sans-serif;
+  --font-code: hack, -apple-system, monospace;
 }
 
 * {
@@ -64,12 +64,15 @@ body {
 h1 {
   font-size: 2.2em;
 }
+
 h2 {
   font-size: 1.8em;
 }
+
 h3 {
   font-size: 1.4em;
 }
+
 h1,
 h2,
 h3,
