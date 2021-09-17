@@ -137,5 +137,14 @@ module.exports = {
         `,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Chirp', 'Cinema', 'Hack'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
   ],
 }
