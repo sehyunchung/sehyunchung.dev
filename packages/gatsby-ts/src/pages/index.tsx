@@ -26,6 +26,7 @@ function BlogIndex(props) {
             gridTemplateRows: 'repeat(min-content, 2)',
             gridTemplateAreas: "'title date' 'desc desc'",
             columnGap: '1em',
+            rowGap: '0.6em',
             alignItems: 'center',
 
             a: {
