@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { kebabCase, snakeCase } from 'lodash'
 import { graphql, Link } from 'gatsby'

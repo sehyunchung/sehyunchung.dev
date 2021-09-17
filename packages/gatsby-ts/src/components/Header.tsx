@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { FC, HtmlHTMLAttributes } from 'react'
 import { Link } from 'gatsby'

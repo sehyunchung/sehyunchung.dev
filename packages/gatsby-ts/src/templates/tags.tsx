@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { graphql, Link } from 'gatsby'
 import { css, jsx } from '@emotion/react'

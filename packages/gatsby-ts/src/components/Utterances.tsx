@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/react'
