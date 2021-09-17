@@ -1,62 +1,44 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { FC, HtmlHTMLAttributes } from 'react'
 import { Link } from 'gatsby'
-import { css, jsx } from '@emotion/react'
 
 import Bio from './bio'
+import { styled } from '../stitches.config'
+import { ComponentProps } from 'react'
 
-const Header: FC<HtmlHTMLAttributes<HTMLHeadElement> & { title?: string }> = ({
-  title,
-  ...props
-}) => {
+const HeaderBase = styled('header', {
+  padding: '1.2em 1.4em 1em',
+  backgroundColor: 'var(--color-bg)',
+  position: 'sticky',
+  top: '0',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 'calc(8 * var(--px))',
+  zIndex: '99',
+  height: 'calc(30 * var(--px))',
+  justifyContent: 'space-between',
+  boxShadow: '0 -10px 20px 0 rgba(67, 81, 176, 0.4)',
+
+  h1: {
+    display: 'inline-flex',
+    color: 'var(--color-quote-bg)',
+    fontWeight: 'bold',
+    fontFamily: 'sans-serif',
+    padding: '0',
+
+    a: {
+      display: 'inline-flex',
+    },
+  },
+})
+
+export default function Header(props: ComponentProps<typeof HeaderBase>) {
   return (
-    <header
-      css={css`
-        padding: 1.2em 1.4em 1em;
-        background-color: var(--color-bg);
-        position: sticky;
-        top: 0;
-        display: flex;
-        align-items: center;
-        gap: calc(8 * var(--px));
-        z-index: 99;
-        height: calc(30 * var(--px));
-        justify-content: space-between;
-        box-shadow: 0px -10px 20px 0px rgba(67, 81, 176, 0.4);
-
-        h1 {
-          display: inline-flex;
-          color: var(--color-quote-bg);
-          font-weight: bold;
-          font-family: sans-serif;
-          padding: 0;
-
-          a {
-            display: inline-flex;
-          }
-        }
-      `}
-      {...props}
-    >
+    <HeaderBase {...props}>
       <h1>
-        <Link
-          css={css`
-            color: inherit;
-            background-color: none;
-
-            :hover {
-              text-decoration: none !important;
-            }
-          `}
-          to={`/`}
-        >
+        <Link to={`/`}>
           <span aria-describedby="Thinking Face Emoji">{'🤔'}</span>
         </Link>
       </h1>
       <Bio />
-    </header>
+    </HeaderBase>
   )
 }
-
-export default Header

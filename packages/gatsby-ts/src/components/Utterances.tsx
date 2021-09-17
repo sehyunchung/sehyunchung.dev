@@ -1,12 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import * as React from 'react'
-import { css, jsx } from '@emotion/react'
+import { useEffect, useRef } from 'react'
+import { css } from '../stitches.config'
 
 export default function Utterances() {
-  const utterancesRef = React.useRef<HTMLDivElement>(null)
+  const utterancesRef = useRef<HTMLDivElement>(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const utterances = document.createElement('script')
 
     const attrs = [
@@ -22,16 +20,16 @@ export default function Utterances() {
     })
 
     if (utterancesRef) {
-      utterancesRef.current.append(utterances)
+      utterancesRef?.current?.append(utterances)
     }
   }, [])
 
   return (
     <div
-      css={css`
-        max-width: 100%;
-        padding: 0 0 calc(20 * var(--px));
-      `}
+      className={css({
+        maxWidth: '100%',
+        padding: '0 0 calc(20 * var(--px))',
+      })()}
       ref={utterancesRef}
     />
   )

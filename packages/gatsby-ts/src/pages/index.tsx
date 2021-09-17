@@ -1,10 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { css, jsx } from '@emotion/react'
+
+import { css } from '../stitches.config'
 
 function BlogIndex(props) {
   const { data } = props
@@ -15,39 +14,40 @@ function BlogIndex(props) {
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" keywords={['blog', 'javascript', 'frontend']} />
       <ul
-        css={css`
-          display: grid;
-          grid-gap: 2em;
-          list-style-type: none;
-          padding-inline-start: 0;
+        className={css({
+          display: 'grid',
+          gridGap: '2em',
+          listStyleType: 'none',
+          paddingInlineStart: '0',
 
-          li {
-            display: grid;
-            grid-template-columns: 4fr max-content;
-            grid-template-rows: repeat(min-content, 2);
-            grid-template-areas: 'title date' 'desc desc';
-            column-gap: 1em;
-            align-items: center;
+          li: {
+            display: 'grid',
+            gridTemplateColumns: '4fr max-content',
+            gridTemplateRows: 'repeat(min-content, 2)',
+            gridTemplateAreas: "'title date' 'desc desc'",
+            columnGap: '1em',
+            alignItems: 'center',
 
-            a {
-              grid-area: title;
+            a: {
+              gridArea: 'title',
 
-              h2 {
-                line-height: 1.3;
-              }
-            }
+              h2: {
+                lineHeight: '1.3',
+              },
+            },
 
-            span {
-              &:nth-of-type(1) {
-                grid-area: date;
-                place-self: center;
-              }
-              &:nth-of-type(2) {
-                grid-area: desc;
-              }
-            }
-          }
-        `}
+            span: {
+              '&:nth-of-type(1)': {
+                gridArea: 'date',
+                placeSelf: 'center',
+              },
+
+              '&:nth-of-type(2)': {
+                gridArea: 'desc',
+              },
+            },
+          },
+        })()}
       >
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

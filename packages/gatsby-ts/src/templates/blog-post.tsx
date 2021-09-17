@@ -1,13 +1,12 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import { graphql, Link } from 'gatsby'
-import { css, jsx } from '@emotion/react'
-import { snakeCase, kebabCase } from 'lodash'
+import { snakeCase, kebabCase, castArray } from 'lodash'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Utterances from '../components/Utterances'
+
+import { css } from '../stitches.config'
 
 function BlogPostTemplate(props) {
   const post = props.data.mdx
@@ -20,125 +19,119 @@ function BlogPostTemplate(props) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <p
-        css={css`
-          padding-top: 1em;
-        `}
-      >
-        {post.frontmatter.date}
-      </p>
       <h1
-        css={css`
-          line-height: 1.5;
-          padding: 0.5em 0;
-        `}
+        className={css({
+          lineHeight: '1.5',
+          padding: '0.5em 0',
+        })()}
       >
         {post.frontmatter.title}
       </h1>
+      <p
+        className={css({
+          paddingBottom: '1em',
+        })()}
+      >
+        {post.frontmatter.date}
+      </p>
       <div
-        css={css`
-          h1,
-          h2,
-          h3,
-          h4 {
-            padding: 0.8em 0 0.2em;
+        className={css({
+          'h1,h2,h3,h4': {
+            padding: '0.8em 0 0.2em',
 
-            a.anchor {
-              fill: var(--color-code-txt);
-              position: absolute;
-              left: -20px;
-              opacity: 0;
-              transition: opacity 300ms;
-            }
-            &:hover {
-              a.anchor {
-                opacity: 1;
-              }
-            }
-          }
+            'a.anchor': {
+              fill: 'var(--color-code-txt)',
+              position: 'absolute',
+              left: '-20px',
+              opacity: '0',
+              transition: 'opacity 300ms',
+            },
 
-          a {
-            text-decoration: underline;
-            word-wrap: break-word;
-          }
+            '&:hover': {
+              'a.anchor': {
+                opacity: 1,
+              },
+            },
+          },
 
-          li {
-            a {
-              word-break: break-all;
-            }
-          }
+          a: {
+            textDecoration: 'underline',
+            wordWrap: 'break-word',
+          },
 
-          p {
-            padding: 1em 0 0.5em;
-          }
+          li: {
+            a: {
+              wordBreak: 'break-all',
+            },
+          },
 
-          ol,
-          ul {
-            padding: 1em 0;
-            padding-inline-start: 2em;
+          p: {
+            padding: '1em 0 0.5em',
+          },
 
-            li {
-              padding: 0.5em 0;
-            }
-          }
+          'ol,ul': {
+            padding: '1em 0',
+            paddingInlineStart: '2em',
 
-          table {
-            border-collapse: collapse;
-            margin: 1em 0;
+            li: {
+              padding: '0.5em 0',
+            },
+          },
 
-            thead {
-              background-color: rgba(var(--cool-blue-rgb), 0.1);
-              color: var(--color-txt);
-              border-top: var(--px) solid var(--color-txt);
-            }
+          table: {
+            borderCollapse: 'collapse',
+            margin: '1em 0',
 
-            tr {
-              border-bottom: var(--px) solid var(--color-txt);
-            }
+            thead: {
+              backgroundColor: 'rgba(var(--cool-blue-rgb), 0.1)',
+              color: 'var(--color-txt)',
+              borderTop: 'var(--px) solid var(--color-txt)',
+            },
 
-            tr,
-            th,
-            td {
-              border-color: var(--color-txt);
-            }
+            tr: {
+              borderBottom: 'var(--px) solid var(--color-txt)',
+            },
 
-            th,
-            td {
-              padding: 0.5em 1em;
-            }
-          }
+            'tr,th,td': {
+              borderColor: 'var(--color-txt)',
+            },
 
-          blockquote {
-            background-color: var(--color-code-bg);
-            padding: 0.5em 2em 1em;
-          }
+            'th,td': {
+              padding: '0.5em 1em',
+            },
+          },
 
-          code:not(.grvsc-code) {
-            background-color: var(--color-code-bg);
-          }
-        `}
+          blockquote: {
+            backgroundColor: 'var(--color-code-bg)',
+            padding: '0.5em 2em 1em',
+          },
+
+          'code:not(.grvsc-code)': {
+            backgroundColor: 'var(--color-code-bg)',
+          },
+        })()}
       >
         <MDXRenderer>{post.body}</MDXRenderer>
       </div>
       {post.frontmatter.tags && (
         <ul
-          css={css`
-            display: flex;
-            flex-wrap: wrap;
-            border: none;
-            list-style-type: none;
-            padding: 1em 0;
-            background-color: inherit;
-          `}
+          className={css({
+            display: 'flex',
+            flexWrap: 'wrap',
+            border: 'none',
+            listStyleType: 'none',
+            padding: '1em 0',
+            backgroundColor: 'inherit',
+          })()}
         >
           {post.frontmatter.tags.map((tag) => (
             <li
               key={tag}
-              css={css`
-                font-family: var(--font-code);
-                font-size: 0.8rem;
-                padding-right: 1em;
-              `}
+              className={css({
+                fontFamily: 'var(--font-code)',
+                fontSize: '0.8rem',
+                paddingRight: '1em',
+              })()}
             >
               <Link to={`/tags/${kebabCase(tag)}`}>#{snakeCase(tag)}</Link>
             </li>
@@ -146,31 +139,31 @@ function BlogPostTemplate(props) {
         </ul>
       )}
       <hr
-        css={css`
-          border-width: 0 0 calc(1 * var(--px)) 0;
-          border-bottom-color: var(--color-txt);
-        `}
+        className={css({
+          borderWidth: '0 0 calc(1 * var(--px)) 0',
+          borderBottomColor: 'var(--color-txt)',
+        })()}
       />
       <Utterances />
 
       <ul
-        css={css`
-          border: none;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          list-style: none;
-          padding: 0;
-          background-color: inherit;
+        className={css({
+          border: 'none',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          listStyle: 'none',
+          padding: '0',
+          backgroundColor: 'inherit',
 
-          li {
-            min-height: 3em;
+          li: {
+            minHeight: '3em',
 
-            &:last-of-type {
-              text-align: right;
-            }
-          }
-        `}
+            '&:last-of-type': {
+              textAlign: 'right',
+            },
+          },
+        })()}
       >
         <li>
           {previous && (
@@ -180,9 +173,9 @@ function BlogPostTemplate(props) {
           )}
         </li>
         <li
-          css={css`
-            margin-left: auto;
-          `}
+          className={css({
+            marginLeft: 'auto',
+          })()}
         >
           {next && (
             <Link to={next.fields.slug} rel="next">

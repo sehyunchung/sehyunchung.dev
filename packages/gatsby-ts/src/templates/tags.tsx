@@ -1,35 +1,34 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import { graphql, Link } from 'gatsby'
-import { css, jsx } from '@emotion/react'
 import snakeCase from 'lodash/snakeCase'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { css } from '../stitches.config'
 
 const Tags = ({ pageContext, location, data }) => {
   const { tag } = pageContext
   const { edges } = data.allMdx
   const siteTitle = data.site.siteMetadata.title
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={`#${snakeCase(tag)}`} />
       <h1
-        css={css`
-          color: var(--link-color);
-          font-weight: normal;
-          word-wrap: break-word;
-          word-break: break-all;
-        `}
+        className={css({
+          color: 'var(--link-color)',
+          fontWeight: 'normal',
+          wordWrap: 'break-word',
+          wordBreak: 'break-all',
+        })()}
       >
         {` #${snakeCase(tag)}`}
       </h1>
       <ul
-        css={css`
-          border: none;
-          padding-top: 1em;
-          padding-bottom: 2em;
-        `}
+        className={css({
+          border: 'none',
+          paddingTop: '1em',
+          paddingBottom: '2em',
+        })()}
       >
         {edges.map(({ node }) => {
           const { slug } = node.fields
@@ -49,7 +48,7 @@ const Tags = ({ pageContext, location, data }) => {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     site {
       siteMetadata {
         title

@@ -15,19 +15,19 @@ export const RouteFadeIn = ({ children, props }) => {
 
   return (
     <div
-      css={css`
+      css={{
         position: relative;
         height: 100%;
         width: 100%;
-      `}
+      }}
     >
       {transitions.map(({ item: page, key, props }) => (
         <animated.div
-          css={css`
+          css={{
             position: absolute;
             width: 100%;
             height: 100%;
-          `}
+          }}
           key={key}
           style={props}
         >
@@ -62,11 +62,11 @@ export const TrailUp: FC = ({ children }) => {
     <div
       className="trail-up"
       ref={elementRef}
-      css={css`
+      css={{
         position: relative;
         height: 100%;
         max-width: 100%;
-      `}
+      }}
     >
       {trail.map((props: any, key: number) => (
         <animated.div key={key} style={props}>

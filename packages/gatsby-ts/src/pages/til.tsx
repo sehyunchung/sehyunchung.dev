@@ -2,13 +2,13 @@
 /** @jsx jsx */
 import { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { css, jsx } from '@emotion/react'
 import snakeCase from 'lodash/snakeCase'
 import Masonry from 'react-masonry-css'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { TrailUp } from '../animations'
+
+import { css } from '../stitches.config'
 
 const TilIndex: FC = () => {
   const data = useStaticQuery(graphql`
@@ -45,30 +45,30 @@ const TilIndex: FC = () => {
     <Layout full>
       <SEO title="til[wip]" />
       <h1
-        css={css`
-          padding-top: 0.5rem;
-        `}
+        className={css({
+          paddingTop: '0.5rem',
+        })()}
       >
         til[wip]
       </h1>
       <ul
-        css={css`
-          padding-inline-start: 0;
-          list-style-type: none;
-          text-align: center;
-          font-size: 0.5rem;
+        className={css({
+          paddingInlineStart: '0',
+          listStyleType: 'none',
+          textAlign: 'center',
+          fontSize: 'calc(var(--px) * 10)',
 
-          .til-masonry-grid {
-            display: flex;
-            margin-left: -2em; /* gutter size offset */
-            width: auto;
-          }
+          '.til-masonry-grid': {
+            display: 'flex',
+            marginLeft: '-2em',
+            width: 'auto',
+          },
 
-          .til-masonry-grid-column {
-            padding-left: 2em; /* gutter size */
-            background-clip: padding-box;
-          }
-        `}
+          '.til-masonry-grid-column': {
+            paddingLeft: '2em /* gutter size */',
+            backgroundClip: 'padding-box',
+          },
+        })()}
       >
         <Masonry
           breakpointCols={{
@@ -84,90 +84,98 @@ const TilIndex: FC = () => {
         >
           {issues.map((issue) => (
             <li
-              css={css`
-                flex: 50ch;
-                display: flex;
-                flex-direction: column;
-                padding: 1em 1em 2em;
-                border-radius: 1em;
-                transition: all 200ms;
-                background-color: #fff;
-                &:hover {
-                  transform: scale(1.06);
-                  box-shadow: 0 0 1em rgba(var(--cool-blue-rgb), 0.3);
-                }
-              `}
+              className={css({
+                flex: '50ch',
+                display: 'flex',
+                flexDirection: 'column',
+                padding: '1em 1em 2em',
+                borderRadius: '1em',
+                transition: 'all 200ms',
+                backgroundColor: 'var(--color-bg)',
+                border: 'calc(var(--px) * 12) solid',
+                borderColor: 'var(--colors-gray7)',
+                marginBottom: '2em',
+
+                '&:hover': {
+                  transform: 'scale(1.03)',
+                  boxShadow: '0 0 1em rgba(var(--cool-blue-rgb), 0.3)',
+                },
+              })()}
               key={issue.id}
             >
               <h2
-                css={css`
-                  font-size: 1rem;
-                  padding: 0;
-                  word-break: break-all;
-                  text-align: left;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  line-height: 1.5;
-                `}
+                className={css({
+                  fontSize: 'calc(var(--px) * 12)',
+                  padding: '0',
+                  wordBreak: 'break-all',
+                  textAlign: 'left',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  lineHeight: '1.5',
+                })()}
               >
                 <a href={issue.url}>{issue.title}</a>
               </h2>
               <ul
-                css={css`
-                  list-style-type: none;
-                  display: flex;
-                  align-items: center;
-                  padding-inline-start: 0;
-                  font-size: 0.6rem;
+                className={css({
+                  listStyleType: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  paddingInlineStart: '0',
+                  fontSize: 'calc(var(--px))',
 
-                  li:not(:last-of-type) {
-                    padding-right: 1em;
-                  }
-                `}
+                  'li:not(:last-of-type)': {
+                    paddingRight: '1em',
+                  },
+                })()}
               >
                 {issue.labels.map((label) => (
                   <li key={label}>#{snakeCase(label)}</li>
                 ))}
               </ul>
               <span
-                css={css`
-                  font-size: 0.6rem;
-                  line-height: 3;
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: center;
-                `}
+                className={css({
+                  fontSize: '0.8rem',
+                  lineHeight: '3',
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
+                })()}
               >
                 {issue.updatedAt}
               </span>
               <div
-                css={css`
-                  max-width: 100%;
-                  overflow-x: auto;
-                  overflow-wrap: anywhere;
-                  text-align: left;
-                  word-wrap: break-word;
-                  word-break: break-all;
-                  white-space: pre-wrap;
-                  & * {
-                    word-wrap: break-word;
-                    word-break: break-all;
-                    overflow-wrap: anywhere;
-                    line-break: anywhere;
-                    white-space: pre-wrap;
-                  }
-                  a {
-                    text-decoration: underline;
-                  }
-                  code,
-                  pre {
-                    background-color: var(--color-code-bg);
-                  }
-                  pre {
-                    padding: 0.4em 1em;
-                  }
-                `}
+                className={css({
+                  maxWidth: '100%',
+                  overflowX: 'auto',
+                  overflowWrap: 'anywhere',
+                  textAlign: 'left',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-all',
+                  whiteSpace: 'pre-wrap',
+
+                  '& *': {
+                    wordWrap: 'break-word',
+                    wordBreak: 'break-all',
+                    overflowWrap: 'anywhere',
+                    lineBreak: 'anywhere',
+                    whiteSpace: 'pre-wrap',
+                  },
+
+                  a: {
+                    textDecoration: 'underline',
+                  },
+
+                  code: {
+                    backgroundColor: 'var(--color-code-bg)',
+                  },
+
+                  pre: {
+                    padding: '0.4em 1em',
+                    backgroundColor: 'var(--color-code-bg)',
+                  },
+                })()}
                 dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}
               />
             </li>

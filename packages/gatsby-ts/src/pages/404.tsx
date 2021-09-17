@@ -9,8 +9,7 @@ const NotFoundHeader = styled('h2', {
   fontSize: '6rem',
 })
 
-export default function NotFoundPage(props) {
-  const { data } = props
+export default function NotFoundPage({ data }) {
   const siteTitle = data.site.siteMetadata.title
 
   return (
