@@ -1,30 +1,35 @@
 @font-face {
   font-family: Hack;
   src: url('./fonts/Hack-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Cinema;
   src: url('./fonts/CinemaL.ttf') format('truetype');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Cinema;
   src: url('./fonts/CinemaB.ttf') format('truetype');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Chirp;
   src: url('./fonts/ChirpRegular.ttf') format('truetype');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Chirp;
   src: url('./fonts/ChirpBold.ttf') format('truetype');
   font-weight: bold;
+  font-display: swap;
 }
 
 :root {
