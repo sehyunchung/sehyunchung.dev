@@ -1,6 +1,7 @@
 @font-face {
   font-family: Hack;
   src: url('Hack-Regular.ttf');
+  font-weight: normal;
   font-display: swap;
 }
 
