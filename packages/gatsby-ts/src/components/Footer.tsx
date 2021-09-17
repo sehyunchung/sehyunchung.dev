@@ -1,25 +1,23 @@
-/** @jsx jsx */
-import * as React from 'react'
-import { css, jsx } from '@emotion/react'
+import type { ReactChild, ReactElement } from 'react'
 
-let currentYear = new Date().getFullYear()
+import { styled } from '../stitches.config'
 
-const Footer: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ({
-  children = null,
-}) => {
+const FooterBase = styled('footer', {
+  gridColumn: 2,
+  display: 'flex',
+  justifyContent: 'center',
+  padding: '2rem 0',
+})
+
+export default function Footer({
+  children,
+}: {
+  children?: ReactChild
+}): ReactElement {
   return (
-    <footer
-      css={css`
-        grid-column: 2;
-        display: flex;
-        justify-content: center;
-        color: var(--txt-secondary-color);
-        padding: 2rem 0;
-      `}
-    >
-      <p>©{currentYear} Sehyun Chung</p>
+    <FooterBase>
+      <p>©{new Date().getFullYear()} Sehyun Chung</p>
       {children && <p>{children}</p>}
-    </footer>
+    </FooterBase>
   )
 }
-export default Footer
