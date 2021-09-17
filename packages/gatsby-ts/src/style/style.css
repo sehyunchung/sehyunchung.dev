@@ -4,8 +4,15 @@
 }
 
 @font-face {
-  font-family: MapoGoldenPier;
-  src: url('./fonts/MapoGoldenPier.otf') format('opentype');
+  font-family: Cinema;
+  src: url('./fonts/CinemaL.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Cinema;
+  src: url('./fonts/CinemaB.ttf') format('truetype');
+  font-weight: bold;
 }
 
 @font-face {
@@ -36,8 +43,8 @@
   --color-code-bg: rgba(var(--cool-blue-rgb), 0.05);
   --color-link: var(--color-txt);
   --color-link-bg: var(--color-bg);
-  --font-text: hack, mapogoldenpier, -apple-system, sans-serif;
-  --font-code: hack, -apple-system, monospace;
+  --font-text: chirp, cinema, -apple-system, sans-serif;
+  --font-code: monaco, hack, monospace;
 }
 
 * {
