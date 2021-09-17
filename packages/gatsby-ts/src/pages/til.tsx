@@ -1,5 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import snakeCase from 'lodash/snakeCase'
