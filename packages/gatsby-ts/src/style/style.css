@@ -31,7 +31,7 @@
   --px: calc(0.8px + 0.05335vmin);
   --black-rgb: 50, 50, 60;
   --black: rgba(var(--black-rgb), 1);
-  --white: var(--colors-gray2);
+  --white: var(--colors-gray4);
   --color-txt: var(--white);
   --color-txt-secondary: var(--colors-gray-4);
   --color-bg: var(--black);
