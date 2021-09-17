@@ -1,10 +1,10 @@
-/** @jsx jsx */
 import { kebabCase, snakeCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
-import { css, jsx } from '@emotion/react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+import { css } from '../stitches.config'
 
 const TagsPage = ({
   location,
@@ -21,24 +21,24 @@ const TagsPage = ({
       <div>
         <h1>All Tags</h1>
         <ul
-          css={css`
-            max-width: 100%;
-            padding-inline-start: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            list-style-type: none;
-            border: none;
-            font-family: var(--font-code);
+          className={css({
+            maxWidth: '100%',
+            paddingInlineStart: '0',
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-start',
+            listStyleType: 'none',
+            border: 'none',
+            fontFamily: 'var(--font-code)',
 
-            li {
-              padding: 0.5em;
-            }
+            li: {
+              padding: '0.5em',
+            },
 
-            li::before {
-              content: '';
-            }
-          `}
+            'li::before': {
+              content: '""',
+            },
+          })()}
         >
           {group.map((tag) => (
             <li key={tag.fieldValue}>

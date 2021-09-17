@@ -61,7 +61,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-vscode',
             options: {
-              theme: 'Light+ (Default Light)',
+              theme: 'Dark+ (Default Dark)',
               replaceColor: (oldColor) =>
                 ({
                   '#000000': 'var(--color-code-txt)',
@@ -87,8 +87,8 @@ module.exports = {
         name: 'sehyunchung.dev',
         short_name: 'sehyunchung.dev',
         start_url: '/',
-        background_color: '#4351b0',
-        theme_color: '#4351b0',
+        background_color: 'rgb(50, 50, 60)',
+        theme_color: 'rgb(50, 50, 60)',
         display: 'minimal-ui',
         icon: './static/img/thinking-face.png',
       },
@@ -96,7 +96,15 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-responsive-iframe',
-    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        jsxPragma: 'jsx',
+        allExtensions: true,
+      },
+    },
+
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-splitbee',
@@ -127,6 +135,15 @@ module.exports = {
           }
         }
         `,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Chirp', 'Cinema', 'Hack'],
+          urls: ['/fonts/fonts.css'],
+        },
       },
     },
   ],
