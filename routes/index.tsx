@@ -13,8 +13,8 @@ const ME = [
 
 export default function Home() {
   return (
-    <div>
-      <h1 class={tw`p-4 max-w-screen-md font-mono text-2xl`}>
+    <div class={tw`font-mono`}>
+      <h1 class={tw`p-4 max-w-screen-md text-2xl`}>
         Hi, my name is in url. And I'm...
       </h1>
       <main>
