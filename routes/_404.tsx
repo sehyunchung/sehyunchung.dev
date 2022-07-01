@@ -4,7 +4,6 @@ import { UnknownPageProps } from "$fresh/server.ts";
 import { tw } from "@twind";
 
 export default function NotFoundPage({ url }: UnknownPageProps) {
-  console.log({ url });
   return (
     <body
       class={tw`p-4 font-sans bg-white text-black dark:(bg-gray-800 text-white)`}
