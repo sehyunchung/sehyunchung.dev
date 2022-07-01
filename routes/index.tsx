@@ -13,22 +13,13 @@ const ME = [
 
 export default function Home() {
   return (
-    <div class={tw`font-mono`}>
-      <h1 class={tw`p-4 max-w-screen-md text-2xl`}>
-        Hi, my name is in url. And I'm...
-      </h1>
+    <div class={tw`font-serif`}>
+      <h1 class={tw`p-4 max-w-screen-md`}>Hi, my name is in url. And I'm...</h1>
       <main>
-        <ul class={tw`flex flex-col gap-2 p-4 text-sky-500 list-disc`}>
+        <ul class={tw`flex flex-col gap-2 p-4`}>
           {ME.map((item, index) => (
             <li class={tw`flex items-center gap-1`} key={index}>
-              {item.text}{" "}
-              <a
-                class={tw`text-sm text-blue-600)`}
-                href={item.link}
-                target="_blank"
-              >
-                [link]
-              </a>
+              {item.text}
             </li>
           ))}
         </ul>
