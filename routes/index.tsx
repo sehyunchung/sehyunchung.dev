@@ -3,7 +3,7 @@
 import { h, Fragment } from "preact";
 import { tw } from "@twind";
 import { Head } from "$fresh/runtime.ts";
-import { PageProps } from "$fresh/server.ts";
+import { PageProps, Handlers } from "$fresh/server.ts";
 
 const TITLE = `"Home Page"`;
 const DESCRIPTION = `"Home Page"`;
@@ -13,6 +13,14 @@ const ME = [
   "a frontend developer",
   "a DJ",
 ];
+
+export const handler: Handlers = {
+  async GET(req, ctx) {
+    const resp = await ctx.render();
+    resp.headers.set("Cache-Control", "public, max-age=31536000");
+    return resp;
+  },
+};
 
 export default function Home(props: PageProps) {
   return (
