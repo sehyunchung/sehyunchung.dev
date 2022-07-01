@@ -10,7 +10,9 @@ const ME = [
 
 export default function Home() {
   return (
-    <div class={tw`p-4 font-sans`}>
+    <body
+      class={tw`p-4 font-sans bg-white text-black dark:(bg-gray-800 text-white)`}
+    >
       <h1 class={tw`max-w-screen-md`}>Hi, my name is in url. And I'm...</h1>
       <div class={tw`h-8`} />
       <main>
@@ -22,6 +24,6 @@ export default function Home() {
           ))}
         </ul>
       </main>
-    </div>
+    </body>
   );
 }
