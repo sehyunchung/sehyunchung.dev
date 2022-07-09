@@ -5,6 +5,8 @@ import { tw } from "@twind";
 import { Head } from "$fresh/runtime.ts";
 import { PageProps, Handlers } from "$fresh/server.ts";
 
+import { MetaTags } from "@components";
+
 const TITLE = `"Home Page"`;
 const DESCRIPTION = `"Home Page"`;
 
@@ -25,14 +27,7 @@ export const handler: Handlers = {
 export default function Home(props: PageProps) {
   return (
     <>
-      <Head>
-        <title>{TITLE}</title>
-        <meta name="description" content={DESCRIPTION} />
-        <meta property="og:title" content={TITLE} />
-        <meta property="og:description" content={DESCRIPTION} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={props.url.href} />
-      </Head>
+      <MetaTags title={TITLE} description={DESCRIPTION} url={props.url.href} />
       <body
         class={tw`p-4 font-sans bg-white text-black dark:(bg-gray-800 text-white)`}
       >
