@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="h-screen p-4 md:p-6 lg:p-8 font-sans bg-white text-black dark:bg-gray-800 dark:text-white">
         <main>
-          <h1 className="text-2xl">"sehyunchung.dev"</h1>
+          <h1 className="text-xl">"sehyunchung.dev"</h1>
           <div className="h-8" />
           <article>
             <h2 className="text-lg">Hello, I'm...:</h2>
