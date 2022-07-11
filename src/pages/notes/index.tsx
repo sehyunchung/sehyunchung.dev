@@ -8,9 +8,14 @@ export default function NotesIndexPage({
   notes,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main>
-      <article className="h-screen p-4 md:p-6 lg:p-8 dark:bg-gray-800 dark:text-white">
-        <h1 className="p-8 text-2xl">Notes</h1>
+    <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
+      <article>
+        <Link href="/">
+          <a className="text-5xl">🡠</a>
+        </Link>
+        <div className="h-4" />
+        <h1 className="text-4xl">Notes</h1>
+        <div className="h-8" />
         <ul className="flex flex-col gap-4">
           {notes.map((note) => (
             <li key={note.content}>
@@ -19,7 +24,7 @@ export default function NotesIndexPage({
           ))}
         </ul>
       </article>
-    </main>
+    </div>
   );
 }
 
