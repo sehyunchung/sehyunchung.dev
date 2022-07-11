@@ -18,7 +18,7 @@ const Home: NextPage = () => {
               window.history.back();
             }}
           >
-            🡠
+            🡸🡠🡨
           </button>
           <div className="h-8" />
           <h1 className="text-4xl">sehyunchung.dev</h1>
