@@ -1,10 +1,11 @@
 ---
 title: Svelte 3에 대해 알아보자
 date: 2019-05-05T15:03:58.520Z
-description: 'Svelte, 정확히는 Svelte 3에 대해 알아보고 간단한 Todo도 만들어보았다.'
+description: "Svelte, 정확히는 Svelte 3에 대해 알아보고 간단한 Todo도 만들어보았다."
 tags:
   - svelte
 ---
+
 ![svelte logo](/img/svelte-logo-360.png "Svelte")
 
 ## [Svelte?](https://svelte.dev)
@@ -13,8 +14,8 @@ Svelte는 Rich Harris(NYT, Graphics Editor)를 주축으로 만들어진 UI 라�
 
 어쩌다 보게 된 것인진 모르겠는데(트위터 아니면 유튜브 돌다가 인데 기억이 나지 않는다..) 그 발표를 보게 됐다. 한글 자막은 없지만 여러모로 재미있는 발표이고, Svelte와 관련 이슈에 대해 현재 가장 잘 설명된 자료이므로, 체크해보면 좋을 것 같다.
 
-* 발표: [Rich Harris - Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao)
-* 슬라이드: [Rethinking reactivity](https://rethinking-reactivity.surge.sh/#slide=1)(Svelte로 만든 슬라이드다.)
+- 발표: [Rich Harris - Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao)
+- 슬라이드: [Rethinking reactivity](https://rethinking-reactivity.surge.sh/#slide=1)(Svelte로 만든 슬라이드다.)
 
 Svelte의 문제의식은 이렇다. 리액트로 대표되는 현재의 선언형 웹 프론트엔드 UI 라이브러리/프레임워크는 Virtual-DOM을 사용한다. JS 영역에서 가상 DOM tree를 만들어 런타임에 이벤트가 발생할 때 마다 tree 를 매번 순회하면서 이전과 달라진 부분을 DOM에 반영하는 식인데, 일단 순회/비교(diffing) 자체가 성능에 영향을 미치거니와, 컴포넌트 내 함수 선언등도 매번 재실행 되므로, 불합리하다는 것이다.
 
@@ -91,7 +92,7 @@ http://localhost:5000 로 가보면 헬로 월드가 떠있는 것을 볼 수 �
 
 ```html
 <script>
-  export let name
+  export let name;
 </script>
 
 <style>
@@ -122,7 +123,7 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = 'Sveltodo'
+  let appTitle = "Sveltodo";
 </script>
 
 <h1>{appTitle}</h1>
@@ -132,10 +133,10 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = 'Sveltodo'
+  let appTitle = "Sveltodo";
 
   function appendEmoji() {
-    appTitle += '😎'
+    appTitle += "😎";
   }
 </script>
 
@@ -150,8 +151,8 @@ Vue와 많은 부분 비슷한데, `.svelte`는 `html` 기반이라는 점이 �
 
 ```html
 <script>
-  let appTitle = 'svelTodo'
-  let todoText = ''
+  let appTitle = "svelTodo";
+  let todoText = "";
 </script>
 
 <h1>{appTitle}</h1>
@@ -178,7 +179,7 @@ Svelte에선 상태 변경이 재대입을 통해 이뤄지므로, 새 배열을
 
 ```js
 function addTodo() {
-  todos = [...todos, todoText]
+  todos = [...todos, todoText];
 }
 ```
 
@@ -186,14 +187,14 @@ function addTodo() {
 
 ```html
 <script>
-  let appTitle = 'svelTodo'
-  let todoText = ''
-  let todos = []
+  let appTitle = "svelTodo";
+  let todoText = "";
+  let todos = [];
 
   function addTodo() {
-    if (!todoText) return
-    todos = [...todos, todoText]
-    todoText = ''
+    if (!todoText) return;
+    todos = [...todos, todoText];
+    todoText = "";
   }
 </script>
 
@@ -215,9 +216,9 @@ function addTodo() {
 
 ```js
 function addTodo() {
-  if (!todoText) return
-  todos = [...todos, { text: todoText, done: false }]
-  todoText = ''
+  if (!todoText) return;
+  todos = [...todos, { text: todoText, done: false }];
+  todoText = "";
 }
 ```
 
@@ -280,11 +281,11 @@ html의 리스트 부분은 아래와 같이 클릭 이벤트 연결을 해주�
 function toggleTodo(selected) {
   todos = todos.map((todo, i) =>
     i === selected ? { text: todo.text, done: !todo.done } : todo
-  )
+  );
 }
 
 function deleteTodo(selected) {
-  todos = todos.filter((todo, i) => i !== selected)
+  todos = todos.filter((todo, i) => i !== selected);
 }
 ```
 
@@ -391,7 +392,7 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 
 ```html
 <script>
-  import { fade, fly } from 'svelte/transition'
+  import { fade, fly } from "svelte/transition";
 </script>
 ```
 
@@ -406,10 +407,6 @@ Svelte에서는 클래스명 관련 편의 문법을 제공한다.
 ![sveltodo-fade-fly](/img/sveltodo-fade-fly.gif)
 
 별 거 안했는데 이런 게 그냥 된다!
-
-아래는 실제로 동작하는 codesandbox.
-
-<iframe src="https://codesandbox.io/embed/l94n0n7wr7?autoresize=1&fontsize=14&module=%2FApp.svelte&view=preview" title="l94n0n7wr7" style="width:100%;max-width:500px;height:420px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## 맺으며
 
