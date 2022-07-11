@@ -14,18 +14,25 @@ export default function NotePage(
       <Link href="/notes">
         <a className="text-5xl">🡠</a>
       </Link>
-      <div className="h-4" />
+      <div className="h-8" />
       <main className="text-md w-[60ch] ">
         <h1 className="text-4xl">{props.data.title}</h1>
-        <div className="h-8" />
-        <ul className="flex align-middle rounded gap-3">
-          {props.data.tags.map((tag) => (
-            <li key={tag}>#{tag}</li>
-          ))}
-        </ul>
+        <div className="h-5" />
+        <p>
+          {new Date(props.data.date).getFullYear()}.
+          {new Date(props.data.date).getMonth()}
+        </p>
+        <div className="h-10" />
         <div className="h-8" />
         <MDXRemote {...props.source} />
       </main>
+      <div className="h-8" />
+      <ul className="flex align-middle rounded gap-3">
+        {props.data.tags.map((tag) => (
+          <li key={tag}>#{tag}</li>
+        ))}
+      </ul>
+      <div className="h-8" />
     </div>
   );
 }
