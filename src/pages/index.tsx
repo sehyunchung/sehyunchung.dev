@@ -10,10 +10,19 @@ const Home: NextPage = () => {
         <meta name="description" content="sehyunchung.dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen p-4 md:p-6 lg:p-8 font-sans bg-white text-black dark:bg-gray-800 dark:text-white">
+      <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
         <main>
-          <h1 className="text-xl">"sehyunchung.dev"</h1>
+          <button
+            className="text-5xl"
+            onClick={() => {
+              window.history.back();
+            }}
+          >
+            🡠
+          </button>
           <div className="h-8" />
+          <h1 className="text-4xl">sehyunchung.dev</h1>
+          <div className="h-10" />
           <article>
             <h2 className="text-lg">Hello, I'm...:</h2>
             <div className="h-4" />
