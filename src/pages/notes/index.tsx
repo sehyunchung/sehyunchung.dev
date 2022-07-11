@@ -13,7 +13,7 @@ export default function NotesIndexPage({
         <Link href="/">
           <a className="text-5xl">🡠</a>
         </Link>
-        <div className="h-4" />
+        <div className="h-8" />
         <h1 className="text-4xl">Notes</h1>
         <div className="h-8" />
         <ul className="flex flex-col gap-4">

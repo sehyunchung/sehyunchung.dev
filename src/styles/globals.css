@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  word-break: keep-all;
+}
 code {
   white-space: pre-wrap;
 }
