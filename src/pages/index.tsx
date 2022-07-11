@@ -13,12 +13,12 @@ const Home: NextPage = () => {
       <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
         <main>
           <button
-            className="text-5xl"
+            className="text-4xl"
             onClick={() => {
               window.history.back();
             }}
           >
-            🡸🡠🡨
+            &#8592;
           </button>
           <div className="h-8" />
           <h1 className="text-4xl">sehyunchung.dev</h1>

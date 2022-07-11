@@ -12,7 +12,7 @@ export default function NotePage(
   return (
     <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
       <Link href="/notes">
-        <a className="text-5xl">🡸🡠🡨</a>
+        <a className="text-4xl">&#8592;</a>
       </Link>
       <div className="h-8" />
       <main className="text-md w-[60ch] ">
