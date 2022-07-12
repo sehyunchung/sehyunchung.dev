@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <meta name="description" content="sehyunchung.dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
+      <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
         <main>
           <button
             className="text-4xl"
