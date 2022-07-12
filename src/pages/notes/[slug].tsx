@@ -3,17 +3,16 @@ import matter from "gray-matter";
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Link from "next/link";
 import path from "path";
+
+import TheGreatBack from "../../../components/TheGreatBackButton";
 
 export default function NotePage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   return (
     <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
-      <Link href="/notes">
-        <a className="text-4xl">&#8592;</a>
-      </Link>
+      <TheGreatBack />
       <div className="h-8" />
       <main className="text-md max-w-[60ch] ">
         <h1 className="text-4xl">{props.data.title}</h1>
