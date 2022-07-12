@@ -4,37 +4,35 @@ import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-
-import TheGreatBack from "../../../components/TheGreatBackButton";
+import BaseLayout from "../../components/BaseLayout";
 
 export default function NotePage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   return (
-    <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
-      <TheGreatBack />
+    <BaseLayout>
       <div className="h-8" />
-      <main className="text-md max-w-[60ch] ">
+      <main className="flex-auto text-base ">
         <h1 className="text-4xl">{props.data.title}</h1>
-        <div className="h-5" />
+        <div className="h-4" />
         <p>
           {new Date(props.data.date).getFullYear()}.
           {new Date(props.data.date).getMonth()}
         </p>
         <div className="h-10" />
         <div className="h-8" />
-        <article className="article">
+        <article className="text-base leading-relaxed">
           <MDXRemote {...props.source} />
         </article>
       </main>
       <div className="h-8" />
-      <ul className="flex align-middle rounded gap-3">
+      {/* <ul className="flex align-middle rounded gap-3">
         {props.data.tags.map((tag) => (
           <li key={tag}>#{tag}</li>
         ))}
-      </ul>
+      </ul> */}
       <div className="h-8" />
-    </div>
+    </BaseLayout>
   );
 }
 
