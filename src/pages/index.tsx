@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import Head from "next/head";
+import TheGreatBack from "../../components/TheGreatBackButton";
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
         <main>
-          <button
-            className="text-4xl"
-            onClick={() => {
-              window.history.back();
-            }}
-          >
-            &#8592;
-          </button>
+          <TheGreatBack />
           <div className="h-8" />
           <h1 className="text-4xl">sehyunchung.dev</h1>
           <div className="h-10" />

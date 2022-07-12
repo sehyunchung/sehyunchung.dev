@@ -4,15 +4,15 @@ import type { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import path from "path";
 
+import TheGreatBack from "../../../components/TheGreatBackButton";
+
 export default function NotesIndexPage({
   notes,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
       <article>
-        <Link href="/">
-          <a className="text-4xl">&#8592;</a>
-        </Link>
+        <TheGreatBack />
         <div className="h-8" />
         <h1 className="text-4xl">Notes</h1>
         <div className="h-8" />
