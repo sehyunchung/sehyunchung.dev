@@ -10,12 +10,12 @@ export default function NotePage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   return (
-    <div className="container w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
+    <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
       <Link href="/notes">
         <a className="text-4xl">&#8592;</a>
       </Link>
       <div className="h-8" />
-      <main className="text-md w-[60ch] ">
+      <main className="text-md max-w-[60ch] ">
         <h1 className="text-4xl">{props.data.title}</h1>
         <div className="h-5" />
         <p>
