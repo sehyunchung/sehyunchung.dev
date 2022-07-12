@@ -3,28 +3,28 @@ import matter from "gray-matter";
 import type { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import path from "path";
-
-import TheGreatBack from "../../../components/TheGreatBackButton";
+import BaseLayout from "../../components/BaseLayout";
 
 export default function NotesIndexPage({
   notes,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="container max-w-[60ch] p-4 md:p-6 lg:p-8  dark:bg-gray-800 dark:text-slate-100 leading-loose whitespace-pre-wrap">
-      <article>
-        <TheGreatBack />
-        <div className="h-8" />
-        <h1 className="text-4xl">Notes</h1>
-        <div className="h-8" />
-        <ul className="flex flex-col gap-4">
-          {notes.map((note) => (
-            <li key={note.content}>
-              <Link href={"notes/" + note.slug}>{note.data.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </article>
-    </div>
+    <BaseLayout>
+      <div className="h-full">
+        <div className="h-10" />
+        <h1 className="text-5xl">Notes</h1>
+        <div className="h-11" />
+        <article className="text-base">
+          <ul className="flex flex-col gap-7">
+            {notes.map((note) => (
+              <li key={note.content}>
+                <Link href={"notes/" + note.slug}>{note.data.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </BaseLayout>
   );
 }
 
