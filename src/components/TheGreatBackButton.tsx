@@ -1,10 +1,8 @@
 export default function TheGreatBack() {
   return (
-    <div>
+    <div className="text-5xl font-light">
       <button
-        className="text-4xl"
         onClick={(e) => {
-          e.preventDefault();
           window.history.back();
         }}
       >
