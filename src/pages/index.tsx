@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import BaseLayout from "../components/BaseLayout";
 import TheGreatBackButton from "../components/TheGreatBackButton";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  console.log({ router });
   return (
     <>
       <Head>
