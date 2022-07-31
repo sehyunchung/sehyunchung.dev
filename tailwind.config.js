@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Menlo", "monospace"],
+        mono: ["Jetbrains Mono", "Hack", "Menlo", "Consolas", "monospace"],
+        serif: ["Garamond", "Times New Roman", "Eulyoo1945-Regular"],
       },
     },
   },
