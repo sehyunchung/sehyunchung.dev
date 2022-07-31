@@ -20,6 +20,7 @@ export default function BaseLayout({
       leading-loose
       whitespace-pre-wrap
       break-words
+      font-serif
       "
     >
       <div className="h-8" />
