@@ -1,3 +1,5 @@
+"use client";
+
 export default function TheGreatBack() {
   return (
     <div className="text-5xl font-light">
