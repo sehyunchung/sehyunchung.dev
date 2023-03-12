@@ -1,7 +1,16 @@
-import TheGreatBackButton from "~/components/TheGreatBackButton";
+import localfont from "@next/font/local";
+
 import "./globals.css";
 import "@fontsource/gothic-a1/korean-400.css";
 import "@fontsource/inter/latin.css";
+
+import TheGreatBackButton from "~/components/TheGreatBackButton";
+
+const Suit = localfont({
+  src: "./SUIT-Variable.woff2",
+  display: "swap",
+  variable: "--font-suit",
+});
 
 export const metadata = {
   title: "sehyunchung.dev",
@@ -14,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={`${Suit.className}`}>
       <body>
         <main
           className="

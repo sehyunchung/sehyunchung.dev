@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          "var(--font-suit)",
           "Inter",
           "Gothic A1",
           "Noto Sans KR",
