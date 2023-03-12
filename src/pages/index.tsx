@@ -7,7 +7,7 @@ import TheGreatBackButton from "../components/TheGreatBackButton";
 
 const Home: NextPage = () => {
   const router = useRouter();
-  console.log({ router });
+
   return (
     <>
       <Head>
