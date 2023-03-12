@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/gothic-a1': ^4.5.9
+  '@fontsource/inter': ^4.5.15
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -15,6 +17,8 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
+  '@fontsource/gothic-a1': 4.5.9
+  '@fontsource/inter': 4.5.15
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -74,6 +78,14 @@ packages:
   /@eslint/js/8.36.0:
     resolution: {integrity: sha512-lxJ9R5ygVm8ZWgYdUweoq5ownDlJ4upvoWmO4eLxBYHdMo+vZ/Rx0EN6MbKWDJOSUGrqJy2Gt+Dyv/VKml0fjg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource/gothic-a1/4.5.9:
+    resolution: {integrity: sha512-neKXQGNKOxY8AjHe1MGTNWerP3mjBypy1vKWqG9WFOCSJ+kZGtp77eWd2McZKVsiiikObxgRjjs7cHKWfb6o0g==}
+    dev: false
+
+  /@fontsource/inter/4.5.15:
+    resolution: {integrity: sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
