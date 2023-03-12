@@ -1,6 +1,6 @@
 "use client";
 
-export default function TheGreatBack() {
+export function TheGreatBackButton() {
   return (
     <div className="text-5xl font-light">
       <button
