@@ -1,15 +1,12 @@
-import localfont from "@next/font/local";
+import { EB_Garamond } from "next/font/google";
 
 import "./globals.css";
-import "@fontsource/gothic-a1/korean-400.css";
-import "@fontsource/inter/latin.css";
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 
-import TheGreatBackButton from "~/components/TheGreatBackButton";
-
-const Suit = localfont({
-  src: "./SUIT-Variable.woff2",
+const EBGaramond = EB_Garamond({
   display: "swap",
-  variable: "--font-suit",
+  subsets: ["latin"],
+  variable: "--font-garamond",
 });
 
 export const metadata = {
@@ -23,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${Suit.className}`}>
+    <html lang="ko" className={`${EBGaramond.variable}`}>
       <body>
         <main
           className="
@@ -32,17 +29,16 @@ export default function RootLayout({
               flex-col
               px-[1.8em]
               pb-[4em]
-              text-slate-800
-              bg-slate-50
-              dark:bg-gray-800
-              dark:text-slate-100
+              text-gray-900
+              bg-gray-50
+              dark:bg-[#111010]
+              dark:text-gray-100
               leading-loose
               whitespace-pre-wrap
               break-words
+              antialiased
               "
         >
-          <div className="h-8" />
-          <TheGreatBackButton />
           {children}
         </main>
       </body>

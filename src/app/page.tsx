@@ -1,45 +1,44 @@
+import Link from "next/link";
+
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+
 export default function Home() {
   return (
-    <main>
+    <main className="font-sans">
       <div className="h-8" />
-      <h1 className="text-4xl">sehyunchung.dev</h1>
-      <div className="h-12" />
-      <article className="text-base">
-        <h2 className="text-xl">Hello, I&apos;m...</h2>
-        <div className="h-7" />
-        <ul className="flex flex-col gap-3 list-disc pl-4">
-          <li>
-            the father of the most 😍 dog in the universe{" "}
-            <a
-              className="text-blue-500 underline"
+      <h1 className="text-5xl font-serif">Sehyun Chung</h1>
+      <div className="h-4" />
+      <article>
+        <ul className="flex gap-3 leading-tight">
+          <li className="flex items-center">
+            초초의 아버지
+            <Link
+              className="flex ml-0.5"
               href="https://instagram.com/chocho_paju"
               target="_blank"
-              rel="noreferrer"
             >
-              [link]
-            </a>
+              <ExternalLinkIcon />
+            </Link>
           </li>
-          <li>
-            a frontend developer{" "}
-            <a
-              className="text-blue-500 underline"
+          <li className="flex items-center">
+            UI 엔지니어
+            <Link
+              className="flex ml-0.5"
               href="https://github.com/sehyunchung"
               target="_blank"
-              rel="noreferrer"
             >
-              [link]
-            </a>
+              <ExternalLinkIcon />
+            </Link>
           </li>
-          <li>
-            a DJ/Producer/etc.{" "}
-            <a
-              className="text-blue-500 underline"
+          <li className="flex items-center">
+            DJ/Producer/etc.
+            <Link
+              className="flex ml-0.5"
               href="https://soundcloud.com/cong_vu"
               target="_blank"
-              rel="noreferrer"
             >
-              [link]
-            </a>
+              <ExternalLinkIcon />
+            </Link>
           </li>
         </ul>
       </article>
