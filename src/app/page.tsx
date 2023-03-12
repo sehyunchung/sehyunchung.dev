@@ -4,12 +4,12 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
-    <main className="font-sans">
+    <main className="font-sans break-keep">
       <div className="h-8" />
       <h1 className="text-5xl font-serif">Sehyun Chung</h1>
       <div className="h-4" />
       <article>
-        <ul className="flex gap-3 leading-tight">
+        <ul className="flex flex-wrap gap-3 leading-tight">
           <li className="flex items-center">
             초초의 아버지
             <Link
