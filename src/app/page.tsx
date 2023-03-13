@@ -10,33 +10,33 @@ export default function Home() {
       <div className="h-4" />
       <article>
         <ul className="flex flex-wrap gap-3 leading-tight">
-          <li className="flex items-center">
-            초초의 아버지
+          <li className="flex">
             <Link
-              className="flex ml-0.5"
+              className="flex items-center ml-0.5 hover:underline"
               href="https://instagram.com/chocho_paju"
               target="_blank"
             >
+              초초의 아버지
               <ExternalLinkIcon />
             </Link>
           </li>
-          <li className="flex items-center">
-            UI 엔지니어
+          <li className="flex">
             <Link
-              className="flex ml-0.5"
+              className="flex items-center ml-0.5 hover:underline"
               href="https://github.com/sehyunchung"
               target="_blank"
             >
+              UI 엔지니어
               <ExternalLinkIcon />
             </Link>
           </li>
-          <li className="flex items-center">
-            DJ/Producer/etc.
+          <li className="flex">
             <Link
-              className="flex ml-0.5"
+              className="flex items-center ml-0.5 hover:underline"
               href="https://soundcloud.com/cong_vu"
               target="_blank"
             >
+              DJ/Producer/etc.
               <ExternalLinkIcon />
             </Link>
           </li>
