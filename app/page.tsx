@@ -1,5 +1,5 @@
-import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
+import { allPosts } from "@/.contentlayer/generated";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,9 +9,8 @@ export default function Home() {
           <Link href={post.slug}>
             <h2>{post.title}</h2>
           </Link>
-          {post.description && <p>{post.description}</p>}
         </article>
       ))}
     </div>
-  )
+  );
 }
