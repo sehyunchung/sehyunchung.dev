@@ -21,9 +21,6 @@ export const Page = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    description: {
-      type: "string",
-    },
   },
   computedFields,
 }));
@@ -50,5 +47,5 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post],
+  documentTypes: [Post, Page],
 });
