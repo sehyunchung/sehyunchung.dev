@@ -1,13 +1,20 @@
 import Link from "next/link";
 import "./globals.css";
-import { Gothic_A1 } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@/components/analytics";
 import { ModeToggle } from "@/components/mode-toggle";
+import localFont from "next/font/local";
 
-const gothicA1 = Gothic_A1({
-  subsets: ["latin"], // ?
-  weight: ["400", "500", "700"],
+const pretendard = localFont({
+  variable: "--font-pretendard",
+  src: "./PretendardStdVariable.woff2",
+  display: "swap",
+});
+
+const monaSans = localFont({
+  variable: "--font-mona-sans",
+  src: "./Mona-Sans.woff2",
+  display: "swap",
 });
 
 export const metadata = {
@@ -21,9 +28,9 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={`${pretendard.variable} ${monaSans.variable}`}>
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep ${gothicA1.className}`}
+        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 container px-4">
