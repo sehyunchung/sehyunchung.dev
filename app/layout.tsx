@@ -1,11 +1,14 @@
-import Link from "next/link"
-import "./globals.css"
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Analytics } from "@/components/analytics"
-import { ModeToggle } from "@/components/mode-toggle"
+import Link from "next/link";
+import "./globals.css";
+import { Gothic_A1 } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@/components/analytics";
+import { ModeToggle } from "@/components/mode-toggle";
 
-const inter = Inter({ subsets: ["latin"] })
+const gothicA1 = Gothic_A1({
+  subsets: ["latin"], // ?
+  weight: ["400", "500", "700"],
+});
 
 export const metadata = {
   title: "Create Next App",
