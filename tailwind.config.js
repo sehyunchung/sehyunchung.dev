@@ -1,21 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./content/**/*.{md,mdx}",
+  ],
+  darkMode: ["class"],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: [
-          "Noto Sans KR",
-          "Noto Sans",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
-        mono: ["Jetbrains Mono", "monospace"],
-        serif: ["var(--font-garamond)", "serif"],
-      },
-    },
+    extend: {},
   },
-  plugins: [],
-};
+  plugins: [require("@tailwindcss/typography")],
+}
