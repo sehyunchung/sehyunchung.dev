@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-mona-sans)", "var(--font-pretendard)"],
+        sans: ["var(--font-pretendard)"],
       },
     },
   },
