@@ -1,5 +1,5 @@
-import { allPosts } from "@/.contentlayer/generated";
-import Link from "next/link";
+import Link from "next/link"
+import { allPosts } from "@/.contentlayer/generated"
 
 export default function Home() {
   return (
@@ -15,5 +15,5 @@ export default function Home() {
           </article>
         ))}
     </div>
-  );
+  )
 }
