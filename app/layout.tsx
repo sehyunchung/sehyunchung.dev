@@ -1,29 +1,31 @@
-import Link from "next/link";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@/components/analytics";
-import { ModeToggle } from "@/components/mode-toggle";
-import localFont from "next/font/local";
+import Link from "next/link"
+
+import "./globals.css"
+import localFont from "next/font/local"
+
+import { Analytics } from "@/components/analytics"
+import { ModeToggle } from "@/components/mode-toggle"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const pretendard = localFont({
   variable: "--font-pretendard",
   src: "./PretendardStdVariable.woff2",
   display: "swap",
-});
+})
 
 const monaSans = localFont({
   variable: "--font-mona-sans",
   src: "./Mona-Sans.woff2",
   display: "swap",
-});
+})
 
 export const metadata = {
   title: "Sehyun Chung",
   description: "...",
-};
+}
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -49,5 +51,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
