@@ -10,8 +10,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-pretendard)"],
+        times: ["Times New Roman"],
       },
     },
   },
   plugins: [require("@tailwindcss/typography")],
-};
+}
