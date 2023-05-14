@@ -9,13 +9,11 @@ export default function Home() {
         .map((post) => (
           <article key={post._id}>
             <Link href={post.slug} className="no-underline">
-              <h2 className="flex justify-between items-center">
+              <h2 className="flex flex-col justify-between">
+                <pre className="m-0 p-0 mb-2 text-xs bg-transparent text-slate-700 dark:text-slate-200">
+                  {new Date(post.date).toLocaleDateString("ko")}
+                </pre>
                 {post.title}
-                {post.date && (
-                  <pre className="m-0 p-0 bg-transparent text-xs text-slate-700 dark:text-slate-200">
-                    {new Date(post.date).toLocaleDateString("ko")}
-                  </pre>
-                )}
               </h2>
               {post.description && (
                 <p className="font-normal">{post.description}</p>
