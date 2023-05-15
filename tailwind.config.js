@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-pretendard)"],
         times: ["Times New Roman"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
     },
   },
