@@ -1,8 +1,11 @@
 import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
+import { AboutCard } from "./about-card"
+
 const components = {
   Image,
+  AboutCard,
 }
 
 interface MdxProps {
