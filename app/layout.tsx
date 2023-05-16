@@ -31,7 +31,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="ko" className={`${jbMono.variable} ${pretendard.variable}`}>
+    <html
+      lang="ko"
+      className={`${jbMono.variable} ${pretendard.variable}`}
+      suppressHydrationWarning
+    >
       <body
         className={`antialiased font-elice min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
       >

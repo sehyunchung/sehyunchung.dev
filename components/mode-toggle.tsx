@@ -1,13 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
-export function ModeToggle() {
-  const [mounted, setMounted] = useState(false)
-  const { setTheme, resolvedTheme } = useTheme()
+import { useMounted } from "@/lib/client-hooks"
 
-  useEffect(() => setMounted(true), [])
+export function ModeToggle() {
+  const mounted = useMounted()
+  const { setTheme, resolvedTheme } = useTheme()
 
   if (!mounted) return null
 

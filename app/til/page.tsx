@@ -40,7 +40,7 @@ export default async function TILListPage() {
   const tils = await getTil()
 
   return (
-    <article suppressHydrationWarning className="w-[100%] whitespace-pre-wrap">
+    <article className="w-[100%] whitespace-pre-wrap">
       <h1>til</h1>
       <TilAlert />
       {tils.map((til: any) => (
@@ -49,17 +49,17 @@ export default async function TILListPage() {
             {new Date(til.createdAt)?.toLocaleDateString("ko")}
           </div>
           <h2 className="m-0 font-mono text-md">{til.title}</h2>
-          <p
+          <div
             dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
             className="whitespace-pre-line break-words max-[100%]"
           />
-          <section className="flex gap-2 mb-2">
+          <div className="flex gap-2 mb-2">
             {til.labels.nodes.map((label: any) => (
               <TilTag variant="outline" key={label.id}>
                 {label.name}
               </TilTag>
             ))}
-          </section>
+          </div>
         </div>
       ))}
     </article>

@@ -54,9 +54,9 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article className="py-6 prose dark:prose-invert">
-      <pre className="m-0 p-1 bg-transparent text-slate-700 dark:text-slate-200">
+      <div className="m-0 p-1 bg-transparent text-slate-700 dark:text-slate-200">
         {new Date(post.date).toLocaleDateString("ko")}
-      </pre>
+      </div>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
