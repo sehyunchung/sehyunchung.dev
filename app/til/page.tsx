@@ -1,6 +1,3 @@
-import { remark } from "remark"
-import html from "remark-html"
-
 async function getTil() {
   return await fetch("https://api.github.com/graphql", {
     method: "POST",
