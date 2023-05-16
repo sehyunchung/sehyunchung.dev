@@ -1,3 +1,6 @@
+import { TilAlert } from "@/components/til-alert"
+import { TilTag } from "@/components/til-tag"
+
 async function getTil() {
   return await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -38,6 +41,8 @@ export default async function TILListPage() {
 
   return (
     <article suppressHydrationWarning className="w-[100%] whitespace-pre-wrap">
+      <h1>til</h1>
+      <TilAlert />
       {tils.map((til: any) => (
         <div key={til.id} className="border-b border-b-gray-200 py-4">
           <div className="pt-4 pb-2 text-sm">
@@ -50,7 +55,9 @@ export default async function TILListPage() {
           />
           <section className="flex gap-2 mb-2">
             {til.labels.nodes.map((label: any) => (
-              <span key={label.id}>#{label.name}</span>
+              <TilTag variant="outline" key={label.id}>
+                {label.name}
+              </TilTag>
             ))}
           </section>
         </div>
