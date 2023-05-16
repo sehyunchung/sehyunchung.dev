@@ -9,7 +9,7 @@ export function TilTag({
     <Badge
       variant="outline"
       onClick={() => {
-        alert("Not implemented yet...😅")
+        alert("그러니까 이런 것이라던지...😅")
       }}
     >
       {children}
