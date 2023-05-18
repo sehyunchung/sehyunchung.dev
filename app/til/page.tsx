@@ -1,4 +1,4 @@
-import { TilAlert } from "@/components/til-alert"
+import { TilPageAlert } from "@/components/til-alert"
 import { TilTag } from "@/components/til-tag"
 
 async function getTil() {
@@ -43,7 +43,7 @@ export default async function TILListPage() {
   return (
     <article className="w-[100%] whitespace-pre-wrap">
       <h1>til</h1>
-      <TilAlert />
+      <TilPageAlert />
       {tils.map((til: any) => (
         <div key={til.id} className="border-b border-b-gray-200 py-4">
           <div className="pt-4 pb-2 text-sm">
