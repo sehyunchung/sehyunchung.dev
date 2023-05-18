@@ -31,6 +31,7 @@ async function getTil() {
           }
         `,
     }),
+    next: { revalidate: 60 },
   })
     .then((res) => res.json())
     .then((res) => res.data.repository.issues.nodes)
