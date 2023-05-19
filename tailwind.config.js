@@ -10,8 +10,8 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     fontFamily: {
-      sans: ["var(--font-pretendard)"],
-      mono: ["var(--font-jetbrains-mono)", "monospace"],
+      sans: ["comic sans ms", "var(--font-pretendard)"],
+      mono: ["comic mono", "var(--font-jetbrains-mono)", "monospace"],
     },
     container: {
       center: true,
