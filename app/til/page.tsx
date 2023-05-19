@@ -1,9 +1,9 @@
 import { Suspense } from "react"
 import Link from "next/link"
 
-import { getTILs } from "@/lib/utils"
+import { cn, getTILs } from "@/lib/utils"
+import { badgeVariants } from "@/components/ui/badge"
 import { TilPageAlert } from "@/components/til-alert"
-import { TilTag } from "@/components/til-tag"
 
 export function TilList({ tils }: { tils: any }) {
   return (
@@ -20,10 +20,17 @@ export function TilList({ tils }: { tils: any }) {
           />
           <div className="flex gap-2 mb-2">
             {til.labels.nodes.map((label: any) => (
-              <Link href={`/til/${label.name}`} key={label.id}>
-                <TilTag className="font-mono" variant="outline" key={label.id}>
-                  {label.name}
-                </TilTag>
+              <Link
+                className={cn(
+                  badgeVariants({
+                    variant: "outline",
+                  }),
+                  "no-underline"
+                )}
+                href={`/til/${label.name}`}
+                key={label.id}
+              >
+                {label.name}
               </Link>
             ))}
           </div>
