@@ -9,16 +9,21 @@ export function TilList({ tils }: { tils: any }) {
   return (
     <>
       {tils?.map((til: any) => (
-        <div key={til.id} className="border-b border-b-gray-200 pb-4">
-          <div className="pt-4 pb-2 text-sm">
-            {new Date(til.createdAt)?.toLocaleDateString("ko")}
-          </div>
-          <h2 className="m-0 font-mono text-md">{til.title}</h2>
+        <div
+          key={til.id}
+          className="break-words border-b border-b-gray-200 pt-4 pb-6"
+        >
+          <h2 className="font-mono text-md">
+            <div className="font-normal pb-4 text-sm text-gray-700">
+              {new Date(til.createdAt)?.toLocaleDateString("ko")}
+            </div>
+            {til.title}
+          </h2>
           <div
+            className="prose-headings:underline"
             dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
-            className="whitespace-pre-line break-words max-[100%]"
           />
-          <div className="flex gap-2 mb-2">
+          <div className="flex gap-2 pt-4 mb-2">
             {til.labels.nodes.map((label: any) => (
               <Link
                 className={cn(
