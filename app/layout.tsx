@@ -32,7 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <ModeToggle />
                 <nav className="ml-auto text-sm font-medium space-x-6">
                   <Link href="/">Home</Link>
-                  <Link href="/posts">Blog</Link>
+                  <Link href="/posts">Posts</Link>
                   <Link href="/til">TIL</Link>
                   <Link href="/about">About</Link>
                 </nav>
