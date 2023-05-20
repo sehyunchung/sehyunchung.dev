@@ -13,10 +13,15 @@ module.exports = {
       sans: [
         "Comic Sans MS",
         "Comic Sans",
-        "cursive",
-        // "var(--font-pretendard)",
+        "var(--font-comic-neue)",
+        "var(--font-gothic-a1)",
+        "Comic Sans MS",
+        "Comic Sans",
+        "Verdana",
+        "system-ui",
+        "sans-serif",
       ],
-      mono: ["comic mono", "var(--font-jetbrains-mono)", "monospace"],
+      mono: ["var(--font-comic-mono)", "Monaco", "consolas", "monospace"],
     },
     container: {
       center: true,
