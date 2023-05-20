@@ -20,7 +20,7 @@ export function TilList({ tils }: { tils: any }) {
             {til.title}
           </h2>
           <div
-            className="prose-headings:underline"
+            className="prose-headings:underline prose-pre:py-5"
             dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
           />
           <div className="flex gap-2 pt-4 mb-2">
