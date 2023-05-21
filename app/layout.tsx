@@ -25,6 +25,7 @@ export const metadata = {
     creator: "@sehyun_chung",
     images: ["https://sehyunchung.dev/api/og"],
   },
+  icons: ["https://sehunchung.dev/icon"],
 }
 
 interface RootLayoutProps {
