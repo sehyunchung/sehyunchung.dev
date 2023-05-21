@@ -28,7 +28,7 @@ export async function GET(request: Request) {
       <div
         tw="w-full h-full flex flex-col"
         style={{
-          backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
+          background: "white",
         }}
       >
         <div tw="font-bold flex-auto flex flex-col pb-10 justify-center items-center text-8xl capitalize">

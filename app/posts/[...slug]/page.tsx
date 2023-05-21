@@ -33,7 +33,7 @@ export async function generateMetadata({
     return {}
   }
 
-  const ogImage = `https://sehyunchung.dev/api/og?title=${post.title}&description=${post.description}}`
+  const ogImage = `https://sehyunchung.dev/api/og?title=${post.title}&description=${post.description}`
 
   return {
     title: post.title,
