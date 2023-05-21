@@ -9,7 +9,7 @@ export default async function PostsPage() {
         .map((post) => (
           <article key={post._id}>
             <Link href={post.slug} className="no-underline">
-              <h2 className="flex flex-col justify-between">
+              <h2 className="flex flex-col justify-between mb-2">
                 <div className="m-0 p-0 mb-2 text-xs bg-transparent text-slate-700 dark:text-slate-200">
                   {new Date(post.date).toLocaleDateString("ko")}
                 </div>
