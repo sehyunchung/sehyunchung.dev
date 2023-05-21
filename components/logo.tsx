@@ -1,15 +1,3 @@
-"use client"
-
-import { usePathname } from "next/navigation"
-
-export function LogoNav(props: React.SVGProps<SVGSVGElement>) {
-  const path = usePathname()
-
-  if (path === "/") return null
-
-  return <Logo {...props} />
-}
-
 export function Logo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

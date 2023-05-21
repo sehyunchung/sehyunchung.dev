@@ -3,7 +3,7 @@ import Link from "next/link"
 import "./globals.css"
 import { comicMono, comicNeue, gothicA1, jbMono, pretendard } from "@/lib/fonts"
 import { Analytics } from "@/components/analytics"
-import { Logo, LogoNav } from "@/components/logo"
+import { LogoNav } from "@/components/logo-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
