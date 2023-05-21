@@ -13,12 +13,14 @@ export function TilList({ tils }: { tils: any }) {
           key={til.id}
           className="break-words border-b border-b-gray-200 pt-4 pb-6"
         >
-          <h2 className="font-mono text-md">
-            <div className="font-normal pb-4 text-sm text-gray-700">
-              {new Date(til.createdAt)?.toLocaleDateString("ko")}
-            </div>
-            {til.title}
-          </h2>
+          <Link className="no-underline" href={`/til#${til.id}`}>
+            <h2 id={til.id} className="text-md font-mono">
+              <div className="pb-4 text-sm font-normal text-gray-700">
+                {new Date(til.createdAt)?.toLocaleDateString("ko")}
+              </div>
+              {til.title}
+            </h2>
+          </Link>
           <div
             className="prose-headings:underline prose-pre:py-5"
             dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
