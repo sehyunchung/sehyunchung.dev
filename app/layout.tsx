@@ -9,6 +9,21 @@ import { ThemeProvider } from "@/components/theme-provider"
 export const metadata = {
   title: "sehyunchung.dev",
   description: "sehyunchung.dev",
+  openGraph: {
+    url: "https://sehyunchung.dev",
+    title: "sehyunchung.dev",
+    description: "A personal website",
+    siteName: "sehyunchung.dev",
+    type: "website",
+    images: ["https://sehyunchung.dev/api/og"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "sehyunchung.dev",
+    description: "sehyunchung.dev",
+    creator: "@sehyun_chung",
+    images: ["https://sehyunchung.dev/api/og"],
+  },
 }
 
 interface RootLayoutProps {
