@@ -11,7 +11,7 @@ export function TilList({ tils }: { tils: any }) {
       {tils?.map((til: any) => (
         <div
           key={til.id}
-          className="break-words border-b border-b-gray-200 pt-4 pb-6"
+          className="break-words border-b border-b-gray-200 pb-6 pt-4"
         >
           <Link className="no-underline" href={`/til#${til.id}`}>
             <h2 id={til.id} className="text-md font-mono">
@@ -25,7 +25,7 @@ export function TilList({ tils }: { tils: any }) {
             className="prose-headings:underline prose-pre:py-5"
             dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
           />
-          <div className="flex gap-2 pt-4 mb-2">
+          <div className="mb-2 flex gap-2 pt-4">
             {til.labels.nodes.map((label: any) => (
               <Link
                 className={cn(
