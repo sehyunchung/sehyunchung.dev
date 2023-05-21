@@ -4,7 +4,9 @@ const { withContentlayer } = require("next-contentlayer")
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: { runtime: "edge" },
+  experimental: {
+    typedRoutes: true,
+  },
 }
 
 module.exports = withContentlayer(nextConfig)
