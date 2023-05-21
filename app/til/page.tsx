@@ -15,7 +15,7 @@ export function TilList({ tils }: { tils: any }) {
         >
           <Link className="no-underline" href={`/til#${til.id}`}>
             <h2 id={til.id} className="text-md font-mono">
-              <div className="pb-4 text-sm font-normal text-gray-700">
+              <div className="pb-4 text-sm font-normal">
                 {new Date(til.createdAt)?.toLocaleDateString("ko")}
               </div>
               {til.title}
@@ -56,7 +56,7 @@ export async function AllTILList() {
 export default function TILListPage() {
   return (
     <article className="w-[100%] whitespace-pre-wrap">
-      <h1>til</h1>
+      <h1 className="uppercase">til</h1>
       <TilPageAlert />
       <Suspense fallback={<div className="pt-4">Loading...</div>}>
         {/* @ts-ignore */}
