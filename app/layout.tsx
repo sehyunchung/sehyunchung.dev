@@ -3,6 +3,7 @@ import Link from "next/link"
 import "./globals.css"
 import { comicMono, comicNeue, gothicA1, jbMono, pretendard } from "@/lib/fonts"
 import { Analytics } from "@/components/analytics"
+import { Logo, LogoNav } from "@/components/logo"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -45,11 +46,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header>
               <div className="flex items-center justify-between">
                 <ModeToggle />
-                <nav className="ml-auto text-sm font-medium space-x-6">
+                <nav className="h-12 ml-auto space-x-6 flex items-center">
                   <Link href="/">Home</Link>
                   <Link href="/posts">Posts</Link>
                   <Link href="/til">TIL</Link>
-                  <Link href="/about">About</Link>
+                  <Link href="/about" passHref>
+                    <LogoNav className="h-12 pt-1" />
+                  </Link>
                 </nav>
               </div>
             </header>
