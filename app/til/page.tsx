@@ -1,9 +1,33 @@
 import { Suspense } from "react"
+import { Metadata, ResolvingMetadata } from "next"
 import Link from "next/link"
 
 import { cn, getTILs } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
 import { TilPageAlert } from "@/components/til-alert"
+
+export const metadata = {
+  title: "TIL",
+  openGraph: {
+    images: ["https://sehyunchung.dev/api/og?title=TIL"],
+  },
+  twitter: {
+    images: ["https://sehyunchung.dev/api/og?title=TIL"],
+  },
+}
+
+export default function TILListPage() {
+  return (
+    <article className="w-[100%] whitespace-pre-wrap">
+      <h1 className="uppercase">til</h1>
+      <TilPageAlert />
+      <Suspense fallback={<div className="pt-4">Loading...</div>}>
+        {/* @ts-ignore */}
+        <AllTILList />
+      </Suspense>
+    </article>
+  )
+}
 
 export function TilList({ tils }: { tils: any }) {
   return (
@@ -51,17 +75,4 @@ export async function AllTILList() {
   const tils = await getTILs()
 
   return <TilList tils={tils} />
-}
-
-export default function TILListPage() {
-  return (
-    <article className="w-[100%] whitespace-pre-wrap">
-      <h1 className="uppercase">til</h1>
-      <TilPageAlert />
-      <Suspense fallback={<div className="pt-4">Loading...</div>}>
-        {/* @ts-ignore */}
-        <AllTILList />
-      </Suspense>
-    </article>
-  )
 }

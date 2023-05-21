@@ -33,9 +33,26 @@ export async function generateMetadata({
     return {}
   }
 
+  const ogImage = `https://sehyunchung.dev/api/og?title=${post.title}&description=${post.description}}`
+
   return {
     title: post.title,
     description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [ogImage],
+    },
   }
 }
 
