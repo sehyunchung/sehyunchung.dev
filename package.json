@@ -12,6 +12,7 @@
   "dependencies": {
     "@cloudflare/next-on-pages": "^0.10.1",
     "@vercel/analytics": "^1.0.1",
+    "@vercel/og": "^0.5.4",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.2",
