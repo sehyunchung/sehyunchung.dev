@@ -43,7 +43,7 @@ export function ModeToggle() {
   const mounted = useMounted()
   const { setTheme, resolvedTheme } = useTheme()
 
-  let icon: ReactNode = "・"
+  let icon: ReactNode = moonIcon
   if (mounted) {
     icon = resolvedTheme === "light" ? moonIcon : sunIcon
   }
