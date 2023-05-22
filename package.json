@@ -40,6 +40,8 @@
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "remark-gfm": "^3.0.1",
+    "swc-plugin-tagged-md": "^0.3.0",
+    "tagged-md": "^0.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   }

@@ -7,13 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 type TilQueryArgs =
   | {
-      labels?: string[]
-      first?: number
-      orderBy?: {
-        field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
-        direction: "ASC" | "DESC"
-      }
+    labels?: string[]
+    first?: number
+    orderBy?: {
+      field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
+      direction: "ASC" | "DESC"
     }
+  }
   | undefined
 
 export async function getTILs(
@@ -28,8 +28,8 @@ export async function getTILs(
   const variables = {
     filterBy: labels
       ? {
-          labels,
-        }
+        labels,
+      }
       : undefined,
     first,
     orderBy,
@@ -50,7 +50,7 @@ export async function getTILs(
             nodes {
               id
               createdAt
-              bodyHTML
+              body
               title
               labels(last: 10) {
                 nodes {

@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     typedRoutes: true,
+    swcPlugins: ["swc-plugin-tagged-md"],
   },
 }
 

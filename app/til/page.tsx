@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import { Metadata, ResolvingMetadata } from "next"
 import Link from "next/link"
+import { md } from "tagged-md"
 
 import { cn, getTILs } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
@@ -47,7 +48,7 @@ export function TilList({ tils }: { tils: any }) {
           </Link>
           <div
             className="prose-headings:underline prose-pre:py-5"
-            dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
+            dangerouslySetInnerHTML={{ __html: md({ gfm: true })`til.body` }}
           />
           <div className="mb-2 flex gap-2 pt-4">
             {til.labels.nodes.map((label: any) => (
