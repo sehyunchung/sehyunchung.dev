@@ -87,12 +87,6 @@ devDependencies:
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
-  swc-plugin-tagged-md:
-    specifier: ^0.3.0
-    version: 0.3.0
-  tagged-md:
-    specifier: ^0.2.0
-    version: 0.2.0
   tailwindcss:
     specifier: 3.3.2
     version: 3.3.2
@@ -5428,20 +5422,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /swc-plugin-tagged-md@0.3.0:
-    resolution: {integrity: sha512-MJQOUOoS0vlUitXCo3W+AMUYRHPJWCXnOVvpIeTGeatafxe1KRSDGWjJFSTHtLnrOHbggmQIJfEynI4b/oi/Mw==}
-    dev: true
-
   /synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.4.0
       tslib: 2.5.0
-    dev: true
-
-  /tagged-md@0.2.0:
-    resolution: {integrity: sha512-JtrUylqVHsgaGt4h2+NmqeKrINa5dL4Mg6vMfhnaGrVzXB4rWCEoXWyEWE9PDXb98LtHzUjx6UIVKby1811IBw==}
     dev: true
 
   /tailwind-merge@1.12.0:
