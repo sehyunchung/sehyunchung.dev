@@ -11,7 +11,7 @@ const comicNeueB = fetch(
 ).then((res) => res.arrayBuffer())
 
 const gothicA1R = fetch(
-  new URL("./GothicA1-Regular.woff", import.meta.url)
+  new URL("./GothicA1-Medium.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const gothicA1B = fetch(new URL("./GothicA1-Bold.woff", import.meta.url)).then(
