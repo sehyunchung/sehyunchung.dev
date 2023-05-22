@@ -10,13 +10,9 @@ const comicNeueB = fetch(
   new URL("./ComicNeue-Bold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const gothicA1R = fetch(
-  new URL("./GothicA1-Medium.woff", import.meta.url)
+const gothicA1 = fetch(
+  new URL("./GothicA1-SemiBold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
-
-const gothicA1B = fetch(new URL("./GothicA1-Bold.woff", import.meta.url)).then(
-  (res) => res.arrayBuffer()
-)
 
 export async function GET(request: Request) {
   const url = new URL(request.url)
@@ -28,8 +24,7 @@ export async function GET(request: Request) {
 
   const comicNeueRegular = await comicNeueR
   const comicNeueBold = await comicNeueB
-  const gothicA1Regular = await gothicA1R
-  const gothicA1Bold = await gothicA1B
+  const gothicA1Regular = await gothicA1
 
   return new ImageResponse(
     (
@@ -116,13 +111,6 @@ export async function GET(request: Request) {
           name: "Gothic A1",
           weight: 400,
           data: gothicA1Regular,
-          style: "normal",
-          lang: "ko-KR",
-        },
-        {
-          name: "Gothic A1",
-          weight: 700,
-          data: gothicA1Bold,
           style: "normal",
           lang: "ko-KR",
         },
