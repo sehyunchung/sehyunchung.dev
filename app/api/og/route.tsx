@@ -10,8 +10,8 @@ const comicNeueB = fetch(
   new URL("./ComicNeue-Bold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const gothicA1 = fetch(
-  new URL("./GothicA1-SemiBold.woff", import.meta.url)
+const pretendardSB = fetch(
+  new URL("./Pretendard-SemiBold.subset.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export async function GET(request: Request) {
@@ -24,7 +24,7 @@ export async function GET(request: Request) {
 
   const comicNeueRegular = await comicNeueR
   const comicNeueBold = await comicNeueB
-  const gothicA1Regular = await gothicA1
+  const pretendardSemiBold = await pretendardSB
 
   return new ImageResponse(
     (
@@ -35,7 +35,7 @@ export async function GET(request: Request) {
         }}
       >
         <div
-          tw="flex font-bold flex-auto px-[60px] py-[120px] items-center"
+          tw="flex font-extrabold flex-auto px-[60px] py-[120px] items-center"
           style={{ wordBreak: "keep-all" }}
         >
           <div tw="flex items-center w-[360px]">
@@ -49,7 +49,10 @@ export async function GET(request: Request) {
               <div tw="text-[32px] opacity-50">sehyunchung.dev</div>
             ) : null}
             {title ? (
-              <div tw="flex flex-wrap items-center text-[48px]">
+              <div
+                style={{ fontFamily: "sans-serif", fontWeight: 700 }}
+                tw="flex flex-wrap font-bold items-center text-[48px]"
+              >
                 {title
                   .split("")
                   .map((c, i) =>
@@ -67,7 +70,7 @@ export async function GET(request: Request) {
               <div tw="text-8xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex flex-wrap font-normal items-center text-[26px] leading-9 opacity-60">
+              <div tw="flex flex-wrap items-center text-[26px] leading-9 opacity-60">
                 {description
                   .split("")
                   .map((c, i) =>
@@ -108,11 +111,10 @@ export async function GET(request: Request) {
           style: "normal",
         },
         {
-          name: "Gothic A1",
+          name: "Pretendard",
           weight: 400,
-          data: gothicA1Regular,
+          data: pretendardSemiBold,
           style: "normal",
-          lang: "ko-KR",
         },
       ],
       // debug: true,
