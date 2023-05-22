@@ -3,18 +3,18 @@ import { ImageResponse } from "@vercel/og"
 export const runtime = "edge"
 
 const comicNeueR = fetch(
-  new URL("./ComicNeue-Regular.ttf", import.meta.url)
+  new URL("./ComicNeue-Regular.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const comicNeueB = fetch(new URL("./ComicNeue-Bold.ttf", import.meta.url)).then(
-  (res) => res.arrayBuffer()
-)
+const comicNeueB = fetch(
+  new URL("./ComicNeue-Bold.woff", import.meta.url)
+).then((res) => res.arrayBuffer())
 
 const gothicA1R = fetch(
   new URL("./GothicA1-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const gothicA1B = fetch(new URL("./GothicA1-Bold.ttf", import.meta.url)).then(
+const gothicA1B = fetch(new URL("./GothicA1-Bold.woff", import.meta.url)).then(
   (res) => res.arrayBuffer()
 )
 
@@ -43,22 +43,53 @@ export async function GET(request: Request) {
           tw="flex font-bold flex-auto px-[60px] py-[120px] items-center"
           style={{ wordBreak: "keep-all" }}
         >
-          <div tw="flex w-[360px]">
+          <div tw="flex items-center w-[360px]">
             <MeltedFaceSvg width="360" height="360" />
           </div>
-          <div tw="flex flex-col ml-[30px] max-w-[690px] max-h-[280px]">
+          <div
+            style={{ gap: "26px" }}
+            tw="flex flex-col ml-[30px] max-w-[680px]"
+          >
             {title ? (
-              <div tw="flex text-[32px] opacity-50 mb-[20px]">
-                sehyunchung.dev
-              </div>
+              <div tw="text-[32px] opacity-50">sehyunchung.dev</div>
             ) : null}
             {title ? (
-              <div tw="flex text-[48px] mb-[20px] leading-[48px]">{title}</div>
+              <div tw="flex flex-wrap items-center text-[48px]">
+                {title
+                  .split("")
+                  .map((c, i) =>
+                    c === " " ? (
+                      <span key={`space-${i}`} style={{ width: "0.2em" }} />
+                    ) : (
+                      c
+                    )
+                  )
+                  .map((char, i) =>
+                    i < 32 ? <span key={i}>{char}</span> : i < 33 ? "..." : null
+                  )}
+              </div>
             ) : (
-              <div tw="flex text-8xl">sehyunchung.dev</div>
+              <div tw="text-8xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex items-center text-[28px]">{description}</div>
+              <div tw="flex flex-wrap font-normal items-center text-[26px] leading-9 opacity-60">
+                {description
+                  .split("")
+                  .map((c, i) =>
+                    c === " " ? (
+                      <span key={`space-${i}`} style={{ width: "0.2em" }} />
+                    ) : (
+                      c
+                    )
+                  )
+                  .map((char, i) => {
+                    return i < 107 ? (
+                      <span key={i}>{char}</span>
+                    ) : i < 108 ? (
+                      "..."
+                    ) : null
+                  })}
+              </div>
             ) : null}
           </div>
         </div>
@@ -96,6 +127,7 @@ export async function GET(request: Request) {
           lang: "ko-KR",
         },
       ],
+      // debug: true,
     }
   )
 }
