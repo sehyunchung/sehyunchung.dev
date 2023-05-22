@@ -6,10 +6,6 @@ const comicNeueB = fetch(
   new URL("./ComicNeue-Bold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const pretendardSB = fetch(
-  new URL("./Pretendard-SemiBold.subset.woff", import.meta.url)
-).then((res) => res.arrayBuffer())
-
 export async function GET(request: Request) {
   const url = new URL(request.url)
   const searchParams = url.searchParams
@@ -19,7 +15,6 @@ export async function GET(request: Request) {
     : ""
 
   const comicNeueBold = await comicNeueB
-  const pretendardSemiBold = await pretendardSB
 
   return new ImageResponse(
     (
@@ -46,7 +41,7 @@ export async function GET(request: Request) {
             {title ? (
               <div
                 style={{ fontFamily: "sans-serif", fontWeight: 700 }}
-                tw="flex flex-wrap font-bold items-center text-[48px]"
+                tw="flex flex-wrap items-center leading-[46px] text-[48px]"
               >
                 {title
                   .split("")
@@ -65,7 +60,7 @@ export async function GET(request: Request) {
               <div tw="text-8xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex flex-wrap items-center text-[26px] leading-9 opacity-60">
+              <div tw="flex flex-wrap items-center text-[26px] leading-7 opacity-60">
                 {description
                   .split("")
                   .map((c, i) =>
@@ -90,7 +85,7 @@ export async function GET(request: Request) {
     ),
     {
       width: 1200,
-      height: 600,
+      height: 630,
       emoji: "openmoji",
       fonts: [
         {
@@ -99,14 +94,7 @@ export async function GET(request: Request) {
           data: comicNeueBold,
           style: "normal",
         },
-        {
-          name: "Pretendard",
-          weight: 400,
-          data: pretendardSemiBold,
-          style: "normal",
-        },
       ],
-      // debug: true,
     }
   )
 }
