@@ -11,7 +11,7 @@ export default async function TilTagPage({
 }: {
   params: { label: string }
 }) {
-  const label = params.label
+  const label = decodeURIComponent(params.label)
 
   const tils = await getTILs({
     labels: [label],
