@@ -2,10 +2,6 @@ import { ImageResponse } from "@vercel/og"
 
 export const runtime = "edge"
 
-const comicNeueR = fetch(
-  new URL("./ComicNeue-Regular.woff", import.meta.url)
-).then((res) => res.arrayBuffer())
-
 const comicNeueB = fetch(
   new URL("./ComicNeue-Bold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
@@ -22,7 +18,6 @@ export async function GET(request: Request) {
     ? searchParams.get("description")
     : ""
 
-  const comicNeueRegular = await comicNeueR
   const comicNeueBold = await comicNeueB
   const pretendardSemiBold = await pretendardSB
 
@@ -98,12 +93,6 @@ export async function GET(request: Request) {
       height: 600,
       emoji: "openmoji",
       fonts: [
-        {
-          name: "Comic Neue",
-          weight: 400,
-          data: comicNeueRegular,
-          style: "normal",
-        },
         {
           name: "Comic Neue",
           weight: 700,
