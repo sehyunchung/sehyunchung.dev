@@ -8,7 +8,10 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-  title: "sehyunchung.dev",
+  title: {
+    template: "%s | sehyunchung.dev",
+    default: "sehyunchung.dev",
+  },
   description: "sehyunchung.dev",
   openGraph: {
     url: "https://sehyunchung.dev",
