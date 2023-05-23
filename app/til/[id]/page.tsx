@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next"
+import { Metadata } from "next"
 import Link from "next/link"
 
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
@@ -10,13 +10,14 @@ export async function generateStaticParams() {
   return ids
 }
 
-export async function generateMetadata(
-  { params }: { params: { id: string } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string }
+}): Promise<Metadata> {
   let tils = await getAllTILs()
 
-  let id = params.id
+  let id = decodeURIComponent(params.id)
 
   let til = tils.find((til: any) => {
     let tilId = til.id.replace(/=/g, "")
