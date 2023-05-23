@@ -35,13 +35,11 @@ export async function GET(request: Request) {
             style={{ gap: "26px" }}
             tw="flex flex-col ml-[30px] max-w-[680px]"
           >
-            {title ? (
-              <div tw="text-[32px] opacity-50">sehyunchung.dev</div>
-            ) : null}
+            {title ? <div tw="text-5xl opacity-50">sehyunchung.dev</div> : null}
             {title ? (
               <div
                 style={{ fontFamily: "sans-serif", fontWeight: 700 }}
-                tw="flex flex-wrap items-center leading-[46px] text-[48px]"
+                tw="flex flex-wrap items-center leading-[64px] text-7xl"
               >
                 {title
                   .split("")
@@ -57,10 +55,10 @@ export async function GET(request: Request) {
                   )}
               </div>
             ) : (
-              <div tw="text-8xl">sehyunchung.dev</div>
+              <div tw="text-7xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex flex-wrap items-center text-[26px] leading-7 opacity-60">
+              <div tw="flex flex-wrap items-center text-5xl leading-9 opacity-60">
                 {description
                   .split("")
                   .map((c, i) =>
