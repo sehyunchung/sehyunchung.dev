@@ -2,6 +2,21 @@ import type { Route } from "next"
 import Link from "next/link"
 import { allPosts } from "@/.contentlayer/generated"
 
+export async function generateMetadata() {
+  return {
+    title: "Posts",
+    openGraph: {
+      title: "Posts",
+      images: ["/api/og?title=Posts"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Posts",
+      images: ["/api/og?title=Posts"],
+    },
+  }
+}
+
 export default async function PostsPage() {
   return (
     <div className="prose flex-auto dark:prose-invert">
