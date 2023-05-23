@@ -1,19 +1,27 @@
 import { Suspense } from "react"
-import { Metadata, ResolvingMetadata } from "next"
-import Link from "next/link"
+import { Metadata } from "next"
 
-import { cn, getTILs } from "@/lib/utils"
-import { badgeVariants } from "@/components/ui/badge"
+import { getAllTILs } from "@/lib/github-api"
 import { TilPageAlert } from "@/components/til-alert"
 
-export const metadata = {
-  title: "TIL",
-  openGraph: {
-    images: ["https://sehyunchung.dev/api/og?title=TIL"],
-  },
-  twitter: {
-    images: ["https://sehyunchung.dev/api/og?title=TIL"],
-  },
+import { TILItem } from "./[id]/page"
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "TIL",
+    description: "Today I Learned",
+    openGraph: {
+      images: ["/api/og?title=TIL"],
+      title: "TIL",
+      description: "Today I Learned",
+    },
+    twitter: {
+      images: ["/api/og?title=TIL"],
+      title: "TIL",
+      description: "Today I Learned",
+      card: "summary_large_image",
+    },
+  }
 }
 
 export default function TILListPage() {
@@ -33,46 +41,18 @@ export function TilList({ tils }: { tils: any }) {
   return (
     <>
       {tils?.map((til: any) => (
-        <div
+        <TILItem
           key={til.id}
           className="break-words border-b border-b-gray-200 pb-6 pt-4"
-        >
-          <Link className="no-underline" href={`/til#${til.id}`}>
-            <h2 id={til.id} className="text-md font-mono">
-              <div className="pb-4 text-sm font-normal">
-                {new Date(til.createdAt)?.toLocaleDateString("ko")}
-              </div>
-              {til.title}
-            </h2>
-          </Link>
-          <div
-            className="prose-headings:underline prose-pre:py-5"
-            dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
-          />
-          <div className="mb-2 flex gap-2 pt-4">
-            {til.labels.nodes.map((label: any) => (
-              <Link
-                className={cn(
-                  badgeVariants({
-                    variant: "outline",
-                  }),
-                  "no-underline"
-                )}
-                href={`/til/${label.name}`}
-                key={label.id}
-              >
-                {label.name}
-              </Link>
-            ))}
-          </div>
-        </div>
+          til={til}
+        />
       ))}
     </>
   )
 }
 
 export async function AllTILList() {
-  const tils = await getTILs()
+  const tils = await getAllTILs()
 
   return <TilList tils={tils} />
 }
