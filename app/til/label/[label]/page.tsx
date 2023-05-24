@@ -13,17 +13,18 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const label = decodeURIComponent(params.label)
+  const ogImg = encodeURIComponent(`/api/og?title=TIL`)
 
   return {
     title: `#${label}`,
     description: "Today I Learned - " + label,
     openGraph: {
-      images: ["/api/og?title=TIL"],
+      images: [ogImg],
       title: "TIL",
       description: "Today I Learned",
     },
     twitter: {
-      images: ["/api/og?title=TIL"],
+      images: [ogImg],
       title: "TIL",
       description: "Today I Learned",
       card: "summary_large_image",

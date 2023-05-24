@@ -7,16 +7,17 @@ import { TilPageAlert } from "@/components/til-alert"
 import { TILItem } from "./[id]/page"
 
 export async function generateMetadata(): Promise<Metadata> {
+  let ogImg = encodeURIComponent(`/api/og?title=TIL`)
   return {
     title: "TIL",
     description: "Today I Learned",
     openGraph: {
-      images: ["/api/og?title=TIL"],
+      images: [ogImg],
       title: "TIL",
       description: "Today I Learned",
     },
     twitter: {
-      images: ["/api/og?title=TIL"],
+      images: [ogImg],
       title: "TIL",
       description: "Today I Learned",
       card: "summary_large_image",

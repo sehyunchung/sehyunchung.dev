@@ -30,16 +30,18 @@ export async function generateMetadata({
 
   let title = til?.title
 
+  let ogImg = encodeURIComponent(`/api/og?title=TIL&description=${title}`)
+
   return {
     title: "TIL",
     description: title,
     openGraph: {
-      images: [`/api/og?title=TIL&description=${title}`],
+      images: [ogImg],
       title: "TIL",
       description: title,
     },
     twitter: {
-      images: [`/api/og?title=TIL&description=${title}`],
+      images: [ogImg],
       title: "TIL",
       description: title,
       card: "summary_large_image",

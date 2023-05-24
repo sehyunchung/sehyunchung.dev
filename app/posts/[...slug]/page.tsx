@@ -33,7 +33,9 @@ export async function generateMetadata({
     return {}
   }
 
-  const ogImage = `/api/og?title=${post.title}&description=${post.description}`
+  const ogImg = encodeURIComponent(
+    `/api/og?title=${post.title}&description=${post.description}`
+  )
 
   return {
     title: post.title,
@@ -43,7 +45,7 @@ export async function generateMetadata({
       description: post.description,
       images: [
         {
-          url: ogImage,
+          url: ogImg,
         },
       ],
     },
@@ -51,7 +53,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: [ogImage],
+      images: [ogImg],
     },
   }
 }
