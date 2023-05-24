@@ -52,8 +52,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <ModeToggle />
                 <nav className="h-12 ml-auto space-x-6 flex items-center">
                   <Link href="/">Home</Link>
-                  <Link href="/posts">Posts</Link>
                   <Link href="/til">TIL</Link>
+                  <Link href="/posts">Posts</Link>
                   <Link href="/about" passHref>
                     <LogoNav className="h-12 pt-1" />
                   </Link>
