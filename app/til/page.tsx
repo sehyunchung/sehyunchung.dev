@@ -2,12 +2,15 @@ import { Suspense } from "react"
 import { Metadata } from "next"
 
 import { getAllTILs } from "@/lib/github-api"
+import { getOgImgUrl } from "@/lib/utils"
 import { TilPageAlert } from "@/components/til-alert"
 
 import { TILItem } from "./[id]/page"
 
 export async function generateMetadata(): Promise<Metadata> {
-  let ogImg = encodeURI(`/api/og?title=TIL`)
+  let ogImg = getOgImgUrl()
+  ogImg.searchParams.set("title", "TIL")
+
   return {
     title: "TIL",
     description: "Today I Learned",

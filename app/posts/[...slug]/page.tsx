@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { allPosts } from "contentlayer/generated"
 
+import { getOgImgUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 
 interface PostProps {
@@ -33,9 +34,11 @@ export async function generateMetadata({
     return {}
   }
 
-  const ogImg = encodeURI(
-    `/api/og?title=${post.title}&description=${post.description}`
-  )
+  const ogImg = getOgImgUrl()
+  ogImg.searchParams.set("title", post.title)
+  if (post.description) {
+    ogImg.searchParams.set("description", post?.description ?? "")
+  }
 
   return {
     title: post.title,

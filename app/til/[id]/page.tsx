@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
-import { cn } from "@/lib/utils"
+import { cn, getOgImgUrl } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
 
 export async function generateStaticParams() {
@@ -30,7 +30,9 @@ export async function generateMetadata({
 
   let title = til?.title
 
-  let ogImg = encodeURI(`/api/og?title=TIL&description=${title}`)
+  let ogImg = getOgImgUrl()
+  ogImg.searchParams.set("title", "TIL")
+  ogImg.searchParams.set("description", title)
 
   return {
     title: "TIL",

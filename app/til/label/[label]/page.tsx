@@ -1,6 +1,7 @@
 import { Metadata, ResolvingMetadata } from "next"
 
 import { getAllTILLabels, getAllTILs } from "@/lib/github-api"
+import { getOgImgUrl } from "@/lib/utils"
 
 import { TilList } from "../../page"
 
@@ -13,7 +14,8 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const label = decodeURIComponent(params.label)
-  const ogImg = encodeURI(`/api/og?title=TIL`)
+  const ogImg = getOgImgUrl()
+  ogImg.searchParams.set("title", "TIL")
 
   return {
     title: `#${label}`,

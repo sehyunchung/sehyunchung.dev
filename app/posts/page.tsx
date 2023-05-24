@@ -2,8 +2,12 @@ import type { Route } from "next"
 import Link from "next/link"
 import { allPosts } from "@/.contentlayer/generated"
 
+import { getOgImgUrl } from "@/lib/utils"
+
 export async function generateMetadata() {
-  let ogImg = encodeURI(`/api/og?title=Posts`)
+  let ogImg = getOgImgUrl()
+  ogImg.searchParams.set("title", "Posts")
+
   return {
     title: "Posts",
     openGraph: {
