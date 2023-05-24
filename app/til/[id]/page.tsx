@@ -30,7 +30,7 @@ export async function generateMetadata({
 
   let title = til?.title
 
-  let ogImg = encodeURIComponent(`/api/og?title=TIL&description=${title}`)
+  let ogImg = encodeURI(`/api/og?title=TIL&description=${title}`)
 
   return {
     title: "TIL",

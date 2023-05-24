@@ -14,7 +14,7 @@ async function getPostFromParams(params: PostProps["params"]) {
   const slug = params?.slug?.join("/")
 
   const post = allPosts.find((post) => {
-    return encodeURIComponent(post.slugAsParams) === slug
+    return encodeURI(post.slugAsParams) === slug
   })
 
   if (!post) {
@@ -33,7 +33,7 @@ export async function generateMetadata({
     return {}
   }
 
-  const ogImg = encodeURIComponent(
+  const ogImg = encodeURI(
     `/api/og?title=${post.title}&description=${post.description}`
   )
 

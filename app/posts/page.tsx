@@ -3,7 +3,7 @@ import Link from "next/link"
 import { allPosts } from "@/.contentlayer/generated"
 
 export async function generateMetadata() {
-  let ogImg = encodeURIComponent(`/api/og?title=Posts`)
+  let ogImg = encodeURI(`/api/og?title=Posts`)
   return {
     title: "Posts",
     openGraph: {

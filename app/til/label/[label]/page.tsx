@@ -13,7 +13,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const label = decodeURIComponent(params.label)
-  const ogImg = encodeURIComponent(`/api/og?title=TIL`)
+  const ogImg = encodeURI(`/api/og?title=TIL`)
 
   return {
     title: `#${label}`,
