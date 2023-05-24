@@ -1,9 +1,12 @@
+import { Suspense } from "react"
 import { Metadata } from "next"
 import Link from "next/link"
+import { MDXRemote } from "next-mdx-remote/rsc"
 
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
 import { cn, getOgImgUrl } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
+import { MdxForTil } from "@/components/mdx-components"
 
 export async function generateStaticParams() {
   let ids = getAllTILIds()
@@ -74,6 +77,7 @@ export function TILItem({
   til: {
     id: string
     title: string
+    body: string
     bodyHTML: string
     createdAt: string
     labels: { nodes: { name: string }[] }
@@ -93,10 +97,10 @@ export function TILItem({
           {til.title}
         </h2>
       </Link>
-      <div
-        className="prose-headings:underline prose-pre:py-5"
-        dangerouslySetInnerHTML={{ __html: til.bodyHTML }}
-      />
+      <Suspense>
+        {/* @ts-expect-error */}
+        <MdxForTil source={til.body} />
+      </Suspense>
       <div className="mb-2 flex gap-2 pt-4">
         {til.labels.nodes.map((label: any) => (
           <Link
