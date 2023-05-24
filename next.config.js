@@ -7,6 +7,9 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    domains: ["user-images.githubusercontent.com", "github.com"],
+  },
 }
 
 module.exports = withContentlayer(nextConfig)
