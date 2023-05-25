@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
+        "Chalkboard",
         "Comic Sans MS",
         "Comic Sans",
         "var(--font-comic-neue)",

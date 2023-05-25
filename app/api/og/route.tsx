@@ -2,8 +2,12 @@ import { ImageResponse } from "@vercel/og"
 
 export const runtime = "edge"
 
-const comicNeueB = fetch(
-  new URL("./ComicNeue-Bold.woff", import.meta.url)
+const chalkboardR = fetch(
+  new URL("./Chalkboard-Regular.woff", import.meta.url)
+).then((res) => res.arrayBuffer())
+
+const chalkboardB = fetch(
+  new URL("./Chalkboard-Bold.woff", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export async function GET(request: Request) {
@@ -14,7 +18,8 @@ export async function GET(request: Request) {
     ? searchParams.get("description")
     : ""
 
-  const comicNeueBold = await comicNeueB
+  const chalkboardRegular = await chalkboardR
+  const chalkboardBold = await chalkboardB
 
   return new ImageResponse(
     (
@@ -22,6 +27,7 @@ export async function GET(request: Request) {
         tw="w-full h-full flex flex-col"
         style={{
           background: "white",
+          fontFamily: "Chalkboard",
         }}
       >
         <div
@@ -35,7 +41,9 @@ export async function GET(request: Request) {
             style={{ gap: "26px" }}
             tw="flex flex-col ml-[30px] max-w-[680px]"
           >
-            {title ? <div tw="text-5xl opacity-50">sehyunchung.dev</div> : null}
+            {title ? (
+              <div tw="text-5xl font-normal opacity-50">sehyunchung.dev</div>
+            ) : null}
             {title ? (
               <div
                 style={{ fontFamily: "sans-serif", fontWeight: 700 }}
@@ -92,9 +100,15 @@ export async function GET(request: Request) {
       emoji: "openmoji",
       fonts: [
         {
-          name: "Comic Neue",
+          name: "Chalkboard",
+          weight: 400,
+          data: chalkboardRegular,
+          style: "normal",
+        },
+        {
+          name: "Chalkboard",
           weight: 700,
-          data: comicNeueBold,
+          data: chalkboardBold,
           style: "normal",
         },
       ],
