@@ -23,8 +23,10 @@
     "next-themes": "^0.2.1",
     "openai": "^3.2.1",
     "postcss": "8.4.23",
+    "probe-image-size": "^7.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-tweet": "^2.0.1",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5"
   },
@@ -32,6 +34,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.2.3",
+    "@types/probe-image-size": "^7.2.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
