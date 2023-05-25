@@ -6,7 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc"
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
 import { cn, getOgImgUrl } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
-import { MdxForTil } from "@/components/mdx-components"
+import { MDXTIL } from "@/components/mdx-components"
 
 export async function generateStaticParams() {
   let ids = getAllTILIds()
@@ -99,7 +99,7 @@ export function TILItem({
       </Link>
       <Suspense>
         {/* @ts-expect-error */}
-        <MdxForTil source={til.body} />
+        <MDXTIL source={til.body} />
       </Suspense>
       <div className="mb-2 flex gap-2 pt-4">
         {til.labels.nodes.map((label: any) => (
