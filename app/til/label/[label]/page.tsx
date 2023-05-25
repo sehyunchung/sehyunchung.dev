@@ -52,7 +52,7 @@ export default async function TilTagPage({
 
   return (
     <>
-      <h1 className="font-mono">#{label}</h1>
+      <h2 className="font-mono">#{label}</h2>
       <TilList tils={tils} />
     </>
   )
