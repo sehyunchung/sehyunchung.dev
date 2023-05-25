@@ -9,6 +9,7 @@ const nextConfig = {
   },
   images: {
     domains: ["user-images.githubusercontent.com", "github.com"],
+    formats: ["image/avif", "image/webp"],
   },
 }
 
