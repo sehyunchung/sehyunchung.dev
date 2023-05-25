@@ -3,7 +3,7 @@ import { Metadata, ResolvingMetadata } from "next"
 import { getAllTILLabels, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TilList } from "../../page"
+import { TilList } from "../../components"
 
 export async function generateStaticParams() {
   return await getAllTILLabels()
@@ -52,7 +52,7 @@ export default async function TilTagPage({
 
   return (
     <>
-      <h2 className="font-mono">#{label}</h2>
+      <h2 className="font-mono text-3xl mb-0">#{label}</h2>
       <TilList tils={tils} />
     </>
   )

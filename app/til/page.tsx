@@ -1,10 +1,9 @@
-import { Suspense } from "react"
 import { Metadata } from "next"
 
 import { getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TILItem } from "./[id]/page"
+import { TilList } from "./components"
 
 export async function generateMetadata(): Promise<Metadata> {
   let ogImg = getOgImgUrl()
@@ -27,33 +26,12 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function TILListPage() {
+export default async function TILListPage() {
+  const tils = await getAllTILs()
   return (
-    <article className="w-[100%] whitespace-pre-wrap">
-      <Suspense fallback={<div className="pt-4">Loading...</div>}>
-        {/* @ts-ignore */}
-        <AllTILList />
-      </Suspense>
+    <article className="w-[100%]">
+      {/* @ts-ignore */}
+      <TilList tils={tils} />
     </article>
   )
-}
-
-export function TilList({ tils }: { tils: any }) {
-  return (
-    <>
-      {tils?.map((til: any) => (
-        <TILItem
-          key={til.id}
-          className="break-words border-b border-b-gray-200 pb-6 pt-4"
-          til={til}
-        />
-      ))}
-    </>
-  )
-}
-
-export async function AllTILList() {
-  const tils = await getAllTILs()
-
-  return <TilList tils={tils} />
 }

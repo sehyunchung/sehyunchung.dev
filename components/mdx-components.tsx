@@ -27,7 +27,6 @@ export function Mdx({ code }: MdxProps) {
 export async function MDXTIL({ source }: { source: string }) {
   const components: MDXRemoteProps["components"] = {
     Tweet,
-    p: ({ children }) => <div>{children}</div>,
     a: ({ href, ...props }) => {
       if (href?.startsWith("/")) {
         return (
