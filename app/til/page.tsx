@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import { getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TILItem } from "./[id]/page"
+import { TilList } from "./components"
 
 export async function generateMetadata(): Promise<Metadata> {
   let ogImg = getOgImgUrl()
@@ -29,26 +29,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function TILListPage() {
   return (
-    <article className="w-[100%] whitespace-pre-wrap">
+    <article className="w-[100%]">
       <Suspense fallback={<div className="pt-4">Loading...</div>}>
         {/* @ts-ignore */}
         <AllTILList />
       </Suspense>
     </article>
-  )
-}
-
-export function TilList({ tils }: { tils: any }) {
-  return (
-    <>
-      {tils?.map((til: any) => (
-        <TILItem
-          key={til.id}
-          className="break-words border-b border-b-gray-200 pb-6 pt-4"
-          til={til}
-        />
-      ))}
-    </>
   )
 }
 

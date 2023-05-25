@@ -3,7 +3,7 @@ import { Metadata, ResolvingMetadata } from "next"
 import { getAllTILLabels, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TilList } from "../../page"
+import { TilList } from "../../components"
 
 export async function generateStaticParams() {
   return await getAllTILLabels()
