@@ -4,6 +4,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
+import remarkGfm from "remark-gfm"
 
 import { AboutCard } from "./about-card"
 
@@ -51,6 +52,16 @@ export async function MDXTIL({ source }: { source: string }) {
       )
     },
   }
-  // @ts-expect-error
-  return <MDXRemote source={source} components={components} />
+  return (
+    // @ts-expect-error
+    <MDXRemote
+      source={source}
+      components={components}
+      options={{
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
+      }}
+    />
+  )
 }
