@@ -39,7 +39,7 @@ export async function GET(request: Request) {
             {title ? (
               <div
                 style={{ fontFamily: "sans-serif", fontWeight: 700 }}
-                tw="flex flex-wrap items-center leading-[64px] text-7xl"
+                tw="flex flex-wrap items-center leading-[64px] text-7xl pb-0.5"
               >
                 {title
                   .split("")
@@ -58,7 +58,12 @@ export async function GET(request: Request) {
               <div tw="text-7xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex flex-wrap items-center text-5xl leading-[3.2rem] opacity-60">
+              <div
+                tw="flex flex-wrap items-center text-5xl opacity-60"
+                style={{
+                  lineHeight: 1,
+                }}
+              >
                 {description
                   .split("")
                   .map((c, i) =>
