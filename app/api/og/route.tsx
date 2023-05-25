@@ -58,7 +58,7 @@ export async function GET(request: Request) {
               <div tw="text-7xl">sehyunchung.dev</div>
             )}
             {description ? (
-              <div tw="flex flex-wrap items-center text-5xl leading-9 opacity-60">
+              <div tw="flex flex-wrap items-center text-5xl leading-[3.2rem] opacity-60">
                 {description
                   .split("")
                   .map((c, i) =>
