@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { Metadata } from "next"
 
 import { getAllTILs } from "@/lib/github-api"
@@ -27,19 +26,12 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function TILListPage() {
+export default async function TILListPage() {
+  const tils = await getAllTILs()
   return (
     <article className="w-[100%]">
-      <Suspense fallback={<div className="pt-4">Loading...</div>}>
-        {/* @ts-ignore */}
-        <AllTILList />
-      </Suspense>
+      {/* @ts-ignore */}
+      <TilList tils={tils} />
     </article>
   )
-}
-
-export async function AllTILList() {
-  const tils = await getAllTILs()
-
-  return <TilList tils={tils} />
 }
