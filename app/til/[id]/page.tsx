@@ -86,7 +86,7 @@ export function TILItem({
   return (
     <div
       key={til.id}
-      className="break-words border-b border-b-gray-200 pb-6 pt-4"
+      className="break-words border-b border-b-gray-200 pb-6"
       {...props}
     >
       <Link className="no-underline" href={`/til/${til.id}`}>
@@ -101,7 +101,7 @@ export function TILItem({
         {/* @ts-expect-error */}
         <MDXTIL source={til.body} />
       </Suspense>
-      <div className="mb-2 flex gap-2 pt-4">
+      <div className="mb-2 flex gap-2 pt-5">
         {til.labels.nodes.map((label: any) => (
           <Link
             className={cn(

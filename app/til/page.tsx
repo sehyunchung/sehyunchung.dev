@@ -3,7 +3,6 @@ import { Metadata } from "next"
 
 import { getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
-import { TilPageAlert } from "@/components/til-alert"
 
 import { TILItem } from "./[id]/page"
 
@@ -31,8 +30,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function TILListPage() {
   return (
     <article className="w-[100%] whitespace-pre-wrap">
-      <h1 className="uppercase">til</h1>
-      <TilPageAlert />
       <Suspense fallback={<div className="pt-4">Loading...</div>}>
         {/* @ts-ignore */}
         <AllTILList />
