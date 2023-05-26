@@ -4,7 +4,6 @@ import "./globals.css"
 import Script from "next/script"
 
 import { comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
-import { Analytics } from "@/components/analytics"
 import { LogoNav } from "@/components/logo-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -63,7 +62,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="prose prose-neutral prose-md sm:prose-base dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
+          <div className="prose prose-neutral prose-lg dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
             <header>
               <div className="flex items-center justify-between">
                 <ModeToggle />
