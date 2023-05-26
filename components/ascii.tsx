@@ -2,7 +2,7 @@ const Box = ({
   text,
   width,
   ...props
-}: { text: string; width?: number } & React.ComponentProps<"pre">) => {
+}: { text: string; width?: number } & React.ComponentProps<"span">) => {
   const height = 3
   const w = width ? width : text.length + 2
 
@@ -29,32 +29,36 @@ const Box = ({
   })
 
   return (
-    <pre role="none" className="relative flex flex-col text-xs " {...props}>
-      <pre className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <span
+      role="none"
+      className="relative flex flex-col text-xs leading-tight"
+      {...props}
+    >
+      <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {text}
-      </pre>
-      <pre className="flex">
+      </span>
+      <span className="flex">
         {top.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={`top-${i}`}>
+          <span className="flex-1 flex justify-center" key={`top-${i}`}>
             {t}
-          </code>
+          </span>
         ))}
-      </pre>
-      <pre className="flex">
+      </span>
+      <span className="flex">
         {middle.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={`middle-${i}`}>
+          <span className="flex-1 flex justify-center" key={`middle-${i}`}>
             {t}
-          </code>
+          </span>
         ))}
-      </pre>
-      <pre className="flex">
+      </span>
+      <span className="flex">
         {bottom.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={`bottom-${i}`}>
+          <span className="flex-1 flex justify-center" key={`bottom-${i}`}>
             {t}
-          </code>
+          </span>
         ))}
-      </pre>
-    </pre>
+      </span>
+    </span>
   )
 }
 
