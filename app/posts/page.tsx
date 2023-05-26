@@ -24,7 +24,7 @@ export async function generateMetadata() {
 
 export default async function PostsPage() {
   return (
-    <div className="prose dark:prose-invert flex-auto">
+    <div className="flex-auto">
       {allPosts
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
         .map((post) => (
