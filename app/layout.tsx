@@ -73,7 +73,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </header>
             <main className="flex flex-col">{children}</main>
           </div>
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
