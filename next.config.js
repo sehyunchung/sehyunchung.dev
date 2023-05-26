@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     typedRoutes: true,
+    nextScriptWorkers: true,
   },
   images: {
     domains: ["user-images.githubusercontent.com", "github.com"],
