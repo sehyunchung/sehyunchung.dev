@@ -1,17 +1,5 @@
-import { Comic_Neue, Gothic_A1, JetBrains_Mono } from "next/font/google"
+import { Comic_Neue, Gothic_A1 } from "next/font/google"
 import localFont from "next/font/local"
-
-export const jbMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-  subsets: ["latin"],
-})
-
-export const pretendard = localFont({
-  variable: "--font-pretendard",
-  src: "./PretendardStdVariable.woff2",
-  display: "swap",
-})
 
 export const comicMono = localFont({
   variable: "--font-comic-mono",

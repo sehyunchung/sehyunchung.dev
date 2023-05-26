@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import "./globals.css"
-import { comicMono, comicNeue, gothicA1, jbMono, pretendard } from "@/lib/fonts"
+import { comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
 import { Analytics } from "@/components/analytics"
 import { LogoNav } from "@/components/logo-nav"
 import { ModeToggle } from "@/components/mode-toggle"
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="ko"
-      className={`${jbMono.variable} ${pretendard.variable} ${comicMono.variable} ${comicNeue.variable} ${gothicA1.variable}`}
+      className={`${comicMono.variable} ${comicNeue.variable} ${gothicA1.variable}`}
       suppressHydrationWarning
     >
       <body
