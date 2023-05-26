@@ -9,20 +9,23 @@ const Box = ({
   const dimension = Array.from({ length: height }, () =>
     Array.from({ length: w }, () => " ")
   )
+
   const top = dimension[0].map((_, i) => {
     if (i === 0) return "┌"
     if (i === w - 1) return "┐"
     return "─"
   })
-  const bottome = dimension[2].map((_, i) => {
-    if (i === 0) return "└"
-    if (i === w - 1) return "┘"
-    return "─"
-  })
+
   const middle = dimension[1].map((_, i) => {
     if (i === 0) return "│"
     if (i === w - 1) return "│"
     return " "
+  })
+
+  const bottom = dimension[2].map((_, i) => {
+    if (i === 0) return "└"
+    if (i === w - 1) return "┘"
+    return "─"
   })
 
   return (
@@ -32,21 +35,21 @@ const Box = ({
       </pre>
       <pre className="flex">
         {top.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={i}>
+          <code className="flex-1 flex justify-center" key={`top-${i}`}>
             {t}
           </code>
         ))}
       </pre>
       <pre className="flex">
         {middle.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={i}>
+          <code className="flex-1 flex justify-center" key={`middle-${i}`}>
             {t}
           </code>
         ))}
       </pre>
       <pre className="flex">
-        {bottome.map((t, i) => (
-          <code className="flex-1 flex justify-center" key={i}>
+        {bottom.map((t, i) => (
+          <code className="flex-1 flex justify-center" key={`bottom-${i}`}>
             {t}
           </code>
         ))}
