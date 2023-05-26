@@ -22,7 +22,14 @@ module.exports = {
         "system-ui",
         "sans-serif",
       ],
-      mono: ["var(--font-comic-mono)", "Monaco", "consolas", "monospace"],
+      mono: [
+        "Chalkboard",
+        "Comic Sans MS",
+        "var(--font-comic-mono)",
+        "Monaco",
+        "consolas",
+        "monospace",
+      ],
     },
     container: {
       center: true,
