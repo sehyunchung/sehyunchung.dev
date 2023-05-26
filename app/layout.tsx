@@ -60,7 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Script
           id="g-script"
           strategy="beforeInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-029GDWD75D"
+          src="https://www.googletagmanager.com/gtag/js?id=G-SN5E99TMCJ"
         />
         <Script
           id="g-inline"
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-029GDWD75D');`,
+          gtag('config', 'G-SN5E99TMCJ');`,
           }}
         />
       </head>
