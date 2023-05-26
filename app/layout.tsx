@@ -48,11 +48,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-2xl mx-auto py-10 container px-4">
+          <div className="prose prose-neutral prose-md sm:prose-base dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
             <header>
               <div className="flex items-center justify-between">
                 <ModeToggle />
-                <nav className="h-12 ml-auto space-x-6 flex items-center">
+                <nav className="h-12 ml-auto space-x-6 flex items-center no-underline prose-a:no-underline">
                   <Link href="/">Home</Link>
                   <Link href="/til">TIL</Link>
                   <Link href="/posts">Posts</Link>
