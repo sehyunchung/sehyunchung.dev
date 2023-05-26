@@ -21,7 +21,7 @@ export function ModeToggle() {
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
     >
       <span className="sr-only">Toggle mode</span>
-      <ASCII.Box text={text} />
+      <ASCII.Box text={text} shadow />
     </button>
   )
 }
