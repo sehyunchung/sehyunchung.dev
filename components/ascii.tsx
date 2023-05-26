@@ -1,31 +1,52 @@
 const Box = ({
   text,
   width,
+  doubleStroke = false,
   ...props
-}: { text: string; width?: number } & React.ComponentProps<"span">) => {
+}: {
+  text: string
+  width?: number
+  doubleStroke?: boolean
+} & React.ComponentProps<"span">) => {
   const height = 3
   const w = width ? width : text.length + 2
 
-  const dimension = Array.from({ length: height }, () =>
-    Array.from({ length: w }, () => " ")
-  )
+  const boxChars = doubleStroke
+    ? {
+        topLeft: "╔",
+        topRight: "╗",
+        bottomLeft: "╚",
+        bottomRight: "╝",
+        horizontal: "═",
+        vertical: "║",
+        space: " ",
+      }
+    : {
+        topLeft: "┌",
+        topRight: "┐",
+        bottomLeft: "└",
+        bottomRight: "┘",
+        horizontal: "─",
+        vertical: "│",
+        space: " ",
+      }
 
-  const top = dimension[0].map((_, i) => {
-    if (i === 0) return "┌"
-    if (i === w - 1) return "┐"
-    return "─"
+  const top = Array.from({ length: w }, (_, i) => {
+    if (i === 0) return boxChars.topLeft
+    if (i === w - 1) return boxChars.topRight
+    return boxChars.horizontal
   })
 
-  const middle = dimension[1].map((_, i) => {
-    if (i === 0) return "│"
-    if (i === w - 1) return "│"
-    return " "
+  const middle = Array.from({ length: w }, (_, i) => {
+    if (i === 0) return boxChars.vertical
+    if (i === w - 1) return boxChars.vertical
+    return boxChars.space
   })
 
-  const bottom = dimension[2].map((_, i) => {
-    if (i === 0) return "└"
-    if (i === w - 1) return "┘"
-    return "─"
+  const bottom = Array.from({ length: w }, (_, i) => {
+    if (i === 0) return boxChars.bottomLeft
+    if (i === w - 1) return boxChars.bottomRight
+    return boxChars.horizontal
   })
 
   return (
