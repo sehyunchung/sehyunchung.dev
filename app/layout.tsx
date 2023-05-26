@@ -57,6 +57,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
         })(window, document, "clarity", "script", "h9xndue0yj");`,
           }}
         />
+        <Script
+          id="g-script"
+          strategy="beforeInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-029GDWD75D"
+        />
+        <Script
+          id="g-inline"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-029GDWD75D');`,
+          }}
+        />
       </head>
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
