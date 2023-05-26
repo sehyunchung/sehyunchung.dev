@@ -10,7 +10,6 @@ const Box = ({
   doubleStroke?: boolean
   shadow?: boolean
 } & React.ComponentProps<"span">) => {
-  const height = 3
   const w = width ? width : text.length + 2
 
   const boxChars = doubleStroke
@@ -51,16 +50,18 @@ const Box = ({
     return boxChars.horizontal
   })
 
-  const bottomShadow = Array.from({ length: w + text.length }, (_, i) => {
-    if (i === 0) return boxChars.space
-    return "░"
-  })
+  const shadowLength = w + text.length
+
+  const sideShadow = Array.from({ length: shadowLength }, (_, i) =>
+    i === w - 1 ? "░" : " "
+  )
+  const bottomShadow = Array.from({ length: shadowLength }, () => "░")
 
   return (
     <span className="block relative leading-0">
       <span
         role="none"
-        className="relative z-10 flex flex-col text-xs leading-tight"
+        className="relative z-10 flex flex-col leading-tight"
         {...props}
       >
         <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -88,39 +89,26 @@ const Box = ({
           ))}
         </span>
       </span>
-      <span className="absolute text-[7px] bottom-5 -right-1 z-0">
-        {shadow &&
-          bottomShadow.map((t, i, arr) =>
-            i === arr.length - 1 ? (
-              <span key={`shadow-2-${i}`}>{t}</span>
-            ) : (
-              <span key={`shadow-2-${i}`}> </span>
-            )
-          )}
-      </span>
-      <span className="absolute text-[7px] bottom-3 -right-1 z-0">
-        {shadow &&
-          bottomShadow.map((t, i, arr) =>
-            i === arr.length - 1 ? (
-              <span key={`shadow-2-${i}`}>{t}</span>
-            ) : (
-              <span key={`shadow-2-${i}`}> </span>
-            )
-          )}
-      </span>
-      <span className="absolute text-[7px] bottom-1 -right-1 z-0">
-        {shadow &&
-          bottomShadow.map((t, i, arr) =>
-            i === arr.length - 1 ? (
-              <span key={`shadow-2-${i}`}>{t}</span>
-            ) : (
-              <span key={`shadow-2-${i}`}> </span>
-            )
-          )}
-      </span>
-      <span className="absolute text-[7px] -bottom-[0.7em] -right-[0.5em] z-0">
-        {shadow &&
-          bottomShadow.map((t, i) => <span key={`shadow-${i}`}>{t}</span>)}
+      {/* shadow */}
+      <span className="flex flex-col items-end absolute text-[0.5rem] leading-tight -bottom-[0.14rem] -right-[0.1rem] z-0">
+        <span>
+          {shadow &&
+            sideShadow.map((t, i) => <span key={`shadow-0-${i}`}>{t}</span>)}
+        </span>
+        <span>
+          {shadow &&
+            sideShadow.map((t, i) => <span key={`shadow-1-${i}`}>{t}</span>)}
+        </span>
+        <span>
+          {shadow &&
+            sideShadow.map((t, i) => <span key={`shadow-2-${i}`}>{t}</span>)}
+        </span>
+        <span>
+          {shadow &&
+            bottomShadow.map((t, i) => (
+              <span key={`shadow-bottom-${i}`}>{t}</span>
+            ))}
+        </span>
       </span>
     </span>
   )
