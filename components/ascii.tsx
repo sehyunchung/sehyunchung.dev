@@ -29,11 +29,7 @@ const Box = ({
   })
 
   return (
-    <span
-      role="none"
-      className="relative flex flex-col text-xs leading-tight"
-      {...props}
-    >
+    <span role="none" className="relative flex flex-col text-xs" {...props}>
       <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {text}
       </span>
