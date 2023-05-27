@@ -2,7 +2,8 @@
   "functions": {
     "api/**/*.py": {
       "memory": 1024,
-      "excludeFiles": "public/**"
+      "excludeFiles": "public/**",
+      "includeFiles": "api/**"
     }
   }
 }
