@@ -1,9 +1,13 @@
 import Link from "next/link"
 
 import "./globals.css"
-import Script from "next/script"
-
 import { comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import {
+  ScriptGoogleDataLayerInline,
+  ScriptGoogleTagManager,
+  ScriptMSClarity,
+} from "@/components/external-scripts"
+import { GlobalHeader } from "@/components/global-header"
 import { LogoNav } from "@/components/logo-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -44,34 +48,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <head>
-        {/* eslint-disable */}
-        <Script
-          id="ms-clarity"
-          type="text/javascript"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "h9xndue0yj");`,
-          }}
-        />
-        <Script
-          id="g-script"
-          strategy="beforeInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-SN5E99TMCJ"
-        />
-        <Script
-          id="g-inline"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-SN5E99TMCJ');`,
-          }}
-        />
+        <ScriptMSClarity />
+        <ScriptGoogleTagManager />
+        <ScriptGoogleDataLayerInline />
       </head>
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
