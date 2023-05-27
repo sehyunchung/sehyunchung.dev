@@ -1,15 +1,12 @@
-import Link from "next/link"
-
 import "./globals.css"
 import { comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { Analytics } from "@/components/analytics"
 import {
   ScriptGoogleDataLayerInline,
   ScriptGoogleTagManager,
   ScriptMSClarity,
 } from "@/components/external-scripts"
 import { GlobalHeader } from "@/components/global-header"
-import { LogoNav } from "@/components/logo-nav"
-import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
@@ -60,6 +57,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <GlobalHeader />
             <main className="flex flex-col">{children}</main>
           </div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
