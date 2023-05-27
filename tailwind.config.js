@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
+        "var(--font-bk-mono)",
         "Chalkboard",
         "Comic Sans MS",
         "Comic Sans",
@@ -20,7 +21,7 @@ module.exports = {
         "system-ui",
         "sans-serif",
       ],
-      mono: ["var(--font-comic-mono)", "Monaco", "Consolas", "monospace"],
+      mono: ["var(--font-bk-mono)", "Monaco", "Consolas", "monospace"],
     },
     container: {
       center: true,
