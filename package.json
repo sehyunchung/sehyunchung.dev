@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
+    "next-dev": "next dev",
     "build": "next build",
     "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index --debug run -p 5328"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^0.10.1",
@@ -15,6 +17,7 @@
     "@vercel/og": "^0.5.4",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "concurrently": "^8.0.1",
     "contentlayer": "^0.3.2",
     "lucide-react": "^0.220.0",
     "next": "13.4.3",

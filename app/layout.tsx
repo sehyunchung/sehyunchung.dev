@@ -21,14 +21,14 @@ export const metadata = {
     description: "프론트엔드 괴발개발",
     siteName: "sehyunchung.dev",
     type: "website",
-    images: ["https://sehyunchung.dev/api/og"],
+    images: ["https://sehyunchung.dev/og"],
   },
   twitter: {
     card: "summary_large_image",
     title: "sehyunchung.dev",
     description: "A personal website",
     creator: "@sehyun_chung",
-    images: ["https://sehyunchung.dev/api/og"],
+    images: ["https://sehyunchung.dev/og"],
   },
   icons: ["https://sehunchung.dev/icon"],
 }
