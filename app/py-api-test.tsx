@@ -1,7 +1,7 @@
 import { getBaseUrl } from "@/lib/utils"
 
 const getData = async () =>
-  await fetch(`${getBaseUrl().toString()}api/python`, {
+  await fetch(`${getBaseUrl().toString()}api/py`, {
     next: {
       revalidate: 0,
     },
@@ -10,11 +10,9 @@ const getData = async () =>
       if (!res.ok) {
         throw Error(res.statusText)
       }
-      console.log({ res })
       return res.json()
     })
     .then((json) => {
-      console.log({ json })
       return json
     })
     .catch((err) => console.log({ err }))
