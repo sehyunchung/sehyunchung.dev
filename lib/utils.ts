@@ -21,3 +21,14 @@ export function getOgImgUrl(): URL {
 
   return new URL(baseUrl)
 }
+
+export function getBaseUrl(): URL {
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://sehyunchung.dev"
+
+  return new URL(baseUrl)
+}
