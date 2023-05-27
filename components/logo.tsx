@@ -1,4 +1,4 @@
-export function Logo(props: React.SVGProps<SVGSVGElement>) {
+export function MeltingFace(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       id="emoji"

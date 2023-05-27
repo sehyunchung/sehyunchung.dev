@@ -1,9 +1,17 @@
-import { Logo } from "@/components/logo"
+import { Suspense } from "react"
 
-export default function Home() {
+import { MeltingFace } from "@/components/logo"
+
+import { GetFromPyAPI } from "./py-api-test"
+
+export default async function Home() {
   return (
     <div className="flex-auto flex flex-col">
-      <Logo />
+      <Suspense fallback="...loading">
+        {/* @ts-expect-error */}
+        <GetFromPyAPI />
+      </Suspense>
+      <MeltingFace />
     </div>
   )
 }
