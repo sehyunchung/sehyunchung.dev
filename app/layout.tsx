@@ -1,5 +1,5 @@
 import "./globals.css"
-import { comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
 import { Analytics } from "@/components/analytics"
 import {
   ScriptGoogleDataLayerInline,
@@ -7,6 +7,8 @@ import {
   ScriptMSClarity,
 } from "@/components/external-scripts"
 import { GlobalHeader } from "@/components/global-header"
+import { LogoNav } from "@/components/logo-nav"
+import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
@@ -41,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="ko"
-      className={`${comicMono.variable} ${comicNeue.variable} ${gothicA1.variable}`}
+      className={`${berkeleyMono.variable} ${comicMono.variable} ${comicNeue.variable} ${gothicA1.variable}`}
       suppressHydrationWarning
     >
       <head>
