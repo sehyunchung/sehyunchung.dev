@@ -1,6 +1,21 @@
 import { Comic_Neue, Gothic_A1 } from "next/font/google"
 import localFont from "next/font/local"
 
+export const berkeleyMono = localFont({
+  variable: "--font-bk-mono",
+  src: [
+    {
+      path: "./BerkeleyMonoVariable-Regular.woff2",
+      style: "normal",
+    },
+    {
+      path: "./BerkeleyMonoVariable-Italic.woff2",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+})
+
 export const comicMono = localFont({
   variable: "--font-comic-mono",
   src: [
