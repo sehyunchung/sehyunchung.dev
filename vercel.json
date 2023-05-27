@@ -1,9 +1,0 @@
-{
-  "functions": {
-    "api/**/*.py": {
-      "memory": 1024,
-      "excludeFiles": "public/**",
-      "includeFiles": "api/**"
-    }
-  }
-}
