@@ -1,8 +1,8 @@
-from flask import Flask
+from fastapi import FastAPI
 
-app = Flask(__name__)
+app = FastAPI()
 
 
-@app.route("/api/flask")
+@app.get("/api/python")
 def hello_world():
-    return {"message": "Hello from Flask!"}
+    return {"message": "Hello World"}
