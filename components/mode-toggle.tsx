@@ -22,7 +22,9 @@ export function ModeToggle(props: React.ComponentProps<"button">) {
       {...props}
     >
       <span className="sr-only">Toggle theme</span>
-      <BoxDrawn.Box shadow>{text}</BoxDrawn.Box>
+      <BoxDrawn.Box className="text-xs leading-[1.2]" shadow>
+        {text}
+      </BoxDrawn.Box>
     </button>
   )
 }
