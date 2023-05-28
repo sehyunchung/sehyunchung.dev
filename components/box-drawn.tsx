@@ -47,11 +47,8 @@ const Box = ({
         empty: " ",
       }
 
-  const shadowClasses = cn(
-    "after:absolute after:block",
-    'after:content-["' + boxChars.shadow + '"]',
-    "after:-right-[.7em] after:-bottom-[1.2em]"
-  )
+  const shadowClasses =
+    "after:absolute after:flex after:-right-[.7em] after:-bottom-[1.2em] after:content-['░']"
 
   const top = Array.from({ length: calcedWidth }, (_, i) => {
     if (i === 0) return boxChars.topLeft
