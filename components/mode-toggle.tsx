@@ -4,9 +4,9 @@ import { useTheme } from "next-themes"
 
 import { useMounted } from "@/lib/client-hooks"
 
-import { ASCII } from "./ascii"
+import { BoxDrawn } from "./box-drawn"
 
-export function ModeToggle() {
+export function ModeToggle(props: React.ComponentProps<"button">) {
   const mounted = useMounted()
   const { setTheme, resolvedTheme } = useTheme()
 
@@ -19,9 +19,10 @@ export function ModeToggle() {
     <button
       type="button"
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+      {...props}
     >
-      <span className="sr-only">Toggle mode</span>
-      <ASCII.Box text={text} shadow />
+      <span className="sr-only">Toggle theme</span>
+      <BoxDrawn.Box shadow>{text}</BoxDrawn.Box>
     </button>
   )
 }

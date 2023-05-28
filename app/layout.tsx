@@ -7,8 +7,6 @@ import {
   ScriptMSClarity,
 } from "@/components/external-scripts"
 import { GlobalHeader } from "@/components/global-header"
-import { LogoNav } from "@/components/logo-nav"
-import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
