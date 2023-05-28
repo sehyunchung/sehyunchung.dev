@@ -99,21 +99,23 @@ const Box = ({
             </span>
           ))}
         </AriaHiddenSpan>
-        <AriaHiddenSpan className="flex">
-          {middle.map((row) =>
-            row.map((middleChar, i) => (
-              <span
-                className={`relative flex-1 flex justify-center ${
-                  shadow && i === calcedWidth - 1
-                    ? "after:absolute after:content-['░'] after:-right-3 after:-bottom-5"
-                    : ""
-                }`}
-                key={`middle-${i}`}
-              >
-                {middleChar}
-              </span>
-            ))
-          )}
+        <AriaHiddenSpan className="flex flex-col">
+          {middle.map((row, i) => (
+            <span className="flex-1 flex" key={`middle-row-${i}`}>
+              {row.map((middleChar, i) => (
+                <span
+                  className={`relative flex-1 flex justify-center ${
+                    shadow && i === calcedWidth - 1
+                      ? "after:absolute after:content-['░'] after:-right-3 after:-bottom-5"
+                      : ""
+                  }`}
+                  key={`middle-row-char-${i}`}
+                >
+                  {middleChar}
+                </span>
+              ))}
+            </span>
+          ))}
         </AriaHiddenSpan>
         <AriaHiddenSpan className="flex">
           {bottom.map((bottomChar, i) => (
