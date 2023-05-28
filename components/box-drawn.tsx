@@ -82,7 +82,7 @@ const Box = ({
   return (
     <PresentationSpan className="block relative leading-0">
       <span className="relative z-10 flex flex-col leading-tight" {...props}>
-        <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <span className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           {children}
         </span>
         <AriaHiddenSpan className="flex">
