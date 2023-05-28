@@ -1,21 +1,22 @@
+import { LinkIcon } from "lucide-react"
+
 import { BoxDrawn } from "@/components/box-drawn"
 
 export default async function ToysIndexPage() {
   return (
     <section className="pt-8">
-      <h1 className="text-2xl whitespace-pre-line text-center font-bold flex justify-center">
-        <BoxDrawn.Box height={5} width={30} shadow doubleStroke>
+      <h1 className="text-lg md:text-3xl whitespace-pre-line text-center font-bold flex justify-center">
+        <BoxDrawn.Box rows={5} cols={30} shadow doubleStroke>
           {`(mostly useless)\nToys I've been made:`}
         </BoxDrawn.Box>
       </h1>
-      <div className="p-8 text-center">
-        <table className="text-center">
+      <div className="p-6">
+        <table className="text-center text-base md:text-lg">
           <thead>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
+              <td>name</td>
+              <td>desc.</td>
+              <td>repo</td>
             </tr>
           </thead>
           <tbody>
@@ -29,6 +30,14 @@ export default async function ToysIndexPage() {
                   Bipi!
                 </a>
               </td>
+              <td>A simple BPM counter</td>
+              <td>
+                <a href="https://github.com/sehyunchung/bipi">
+                  <LinkIcon className="w-4" />
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>
                 <a
                   href="https://marketplace.visualstudio.com/items?itemName=SehyunChung.tsserver-auto-restarter"
@@ -39,6 +48,16 @@ export default async function ToysIndexPage() {
                 </a>
               </td>
               <td>
+                Restarts tsserver whenever you move to another ts,tsx file
+              </td>
+              <td>
+                <a href="https://github.com/sehyunchung/tsserver-auto-restarter">
+                  <LinkIcon className="w-4" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
                 <a
                   href="https://chrome.google.com/webstore/detail/twitter-de-elonizer/elfgpiecbnknhfpkcpcnghkkkdilobkg?hl=en&authuser=0"
                   target="_blank"
@@ -47,7 +66,17 @@ export default async function ToysIndexPage() {
                   twitter de-elonizer
                 </a>
               </td>
-              <td>box-drawn (soon)</td>
+              <td>Removes doge logo from Twitter.com</td>
+              <td>
+                <a href="https://github.com/sehyunchung/twitte-de-elonizer">
+                  <LinkIcon className="w-4" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>box-drawn</td>
+              <td>React Components utilizing Box Drawing Characters</td>
+              <td>(soon)</td>
             </tr>
           </tbody>
         </table>
