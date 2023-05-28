@@ -19,16 +19,17 @@ export function HeaderNav() {
   const path = usePathname()
 
   const setActiveLinkIndicator = (href: string) => {
-    return path === href
+    console.log({ path, href })
+    return path === href || (href !== "/" && path.startsWith(href))
       ? "underline decoration-wavy decoration-[#ffea2b]"
       : "no-underline"
   }
 
   return (
     <nav className="h-12 ml-auto grid grid-flow-col gap-x-3 md:gap-x-5 place-items-center prose-a:underline-offset-4">
-      {Object.entries(HEADER_NAV_LINKS).map(([text, href]) => (
+      {Object.entries(HEADER_NAV_LINKS).map(([name, href]) => (
         <Link className={setActiveLinkIndicator(href)} href={href} key={href}>
-          {text}
+          {name}
         </Link>
       ))}
       <Link href="/about" className="mr-1">
