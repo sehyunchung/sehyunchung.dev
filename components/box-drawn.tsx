@@ -1,27 +1,13 @@
-const PresentationSpan = ({
-  children,
-  ...rest
-}: React.ComponentProps<"span">) => <span {...rest}>{children}</span>
-
-const AriaHiddenSpan = ({
-  children,
-  ...rest
-}: React.ComponentProps<"span">) => (
-  <span role="presentation" aria-hidden {...rest}>
-    {children}
-  </span>
-)
-
 const Box = ({
-  height = 3,
-  width,
+  rows = 3,
+  cols,
   doubleStroke = false,
   shadow = false,
   children,
   ...props
 }: {
-  height?: number
-  width?: number
+  rows?: number
+  cols?: number
   doubleStroke?: boolean
   shadow?: boolean
 } & React.ComponentProps<"span">) => {
@@ -31,9 +17,9 @@ const Box = ({
 
   const text = children
 
-  const middleLength = height - 2
+  const middleLength = rows - 2
 
-  const calcedWidth = width ? width : text.length + 2
+  const calcedWidth = cols ? cols : text.length + 2
 
   const boxChars = doubleStroke
     ? {
@@ -58,6 +44,8 @@ const Box = ({
         shadow: "░",
         empty: " ",
       }
+
+  const shadowClasses = `after:absolute after:content-["${boxChars.shadow}"] after:-right-[.7em] after:-bottom-[1.2em]`
 
   const top = Array.from({ length: calcedWidth }, (_, i) => {
     if (i === 0) return boxChars.topLeft
@@ -91,9 +79,7 @@ const Box = ({
         {top.map((topChar, i) => (
           <span
             className={`relative flex-1 flex justify-center ${
-              shadow && i === calcedWidth - 1
-                ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
-                : ""
+              shadow && i === calcedWidth - 1 ? shadowClasses : ""
             }`}
             key={`top-${i}`}
           >
@@ -107,9 +93,7 @@ const Box = ({
             {row.map((middleChar, i) => (
               <span
                 className={`relative flex-1 flex justify-center ${
-                  shadow && i === calcedWidth - 1
-                    ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
-                    : ""
+                  shadow && i === calcedWidth - 1 ? shadowClasses : ""
                 }`}
                 key={`middle-row-char-${i}`}
               >
@@ -123,9 +107,7 @@ const Box = ({
         {bottom.map((bottomChar, i) => (
           <span
             className={`relative flex-1 flex justify-center ${
-              shadow
-                ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
-                : ""
+              shadow ? shadowClasses : ""
             }`}
             key={`bottom-${i}`}
           >
@@ -136,7 +118,24 @@ const Box = ({
     </PresentationSpan>
   )
 }
+Box.displayName = "Box"
 
 export const BoxDrawn = {
   Box,
 }
+
+const PresentationSpan = ({
+  children,
+  ...rest
+}: React.ComponentProps<"span">) => <span {...rest}>{children}</span>
+PresentationSpan.displayName = "PresentationSpan"
+
+const AriaHiddenSpan = ({
+  children,
+  ...rest
+}: React.ComponentProps<"span">) => (
+  <span role="presentation" aria-hidden {...rest}>
+    {children}
+  </span>
+)
+AriaHiddenSpan.displayName = "AriaHiddenSpan"
