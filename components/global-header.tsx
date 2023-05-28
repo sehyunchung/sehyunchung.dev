@@ -25,7 +25,7 @@ export function HeaderNav() {
   }
 
   return (
-    <nav className="h-12 ml-auto grid grid-flow-col gap-x-3 place-items-center prose-a:underline-offset-4">
+    <nav className="h-12 ml-auto grid grid-flow-col gap-x-3 md:gap-x-5 place-items-center prose-a:underline-offset-4">
       {Object.entries(HEADER_NAV_LINKS).map(([text, href]) => (
         <Link className={setActiveLinkIndicator(href)} href={href} key={href}>
           {text}
