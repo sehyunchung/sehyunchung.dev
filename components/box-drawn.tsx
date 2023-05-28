@@ -1,15 +1,29 @@
+const Presentation = ({ children, ...rest }: React.ComponentProps<"span">) => (
+  <span {...rest}>{children}</span>
+)
+const Hidden = ({ children, ...rest }: React.ComponentProps<"span">) => (
+  <span role="presentation" aria-hidden {...rest}>
+    {children}
+  </span>
+)
+
 const Box = ({
-  text,
   width,
   doubleStroke = false,
   shadow = false,
+  children,
   ...props
 }: {
-  text: string
   width?: number
   doubleStroke?: boolean
   shadow?: boolean
 } & React.ComponentProps<"span">) => {
+  if (typeof children !== "string") {
+    throw new Error("Box component only accepts string as children")
+  }
+
+  const text = children
+
   const w = width ? width : text.length + 2
 
   const boxChars = doubleStroke
@@ -58,39 +72,35 @@ const Box = ({
   const bottomShadow = Array.from({ length: shadowLength }, () => "░")
 
   return (
-    <span className="block relative leading-0">
-      <span
-        role="none"
-        className="relative z-10 flex flex-col leading-tight"
-        {...props}
-      >
+    <Presentation className="block relative leading-0">
+      <Hidden className="relative z-10 flex flex-col leading-tight" {...props}>
         <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {text}
+          {children}
         </span>
-        <span className="flex">
+        <Hidden className="flex">
           {top.map((t, i) => (
             <span className="flex-1 flex justify-center" key={`top-${i}`}>
               {t}
             </span>
           ))}
-        </span>
-        <span className="flex">
+        </Hidden>
+        <Hidden className="flex">
           {middle.map((t, i) => (
             <span className="flex-1 flex justify-center" key={`middle-${i}`}>
               {t}
             </span>
           ))}
-        </span>
-        <span className="flex">
+        </Hidden>
+        <Hidden className="flex">
           {bottom.map((t, i) => (
             <span className="flex-1 flex justify-center" key={`bottom-${i}`}>
               {t}
             </span>
           ))}
-        </span>
-      </span>
+        </Hidden>
+      </Hidden>
       {/* shadow */}
-      <span className="flex flex-col items-end absolute text-[0.5rem] leading-tight -bottom-[0.14rem] -right-[0.1rem] z-0">
+      <Hidden className="flex flex-col items-end absolute text-[0.5rem] leading-tight -bottom-[0.14rem] -right-[0.1rem] z-0">
         <span>
           {shadow &&
             sideShadow.map((t, i) => <span key={`shadow-0-${i}`}>{t}</span>)}
@@ -109,11 +119,11 @@ const Box = ({
               <span key={`shadow-bottom-${i}`}>{t}</span>
             ))}
         </span>
-      </span>
-    </span>
+      </Hidden>
+    </Presentation>
   )
 }
 
-export const ASCII = {
+export const BoxDrawn = {
   Box,
 }
