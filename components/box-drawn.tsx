@@ -80,58 +80,59 @@ const Box = ({
   })
 
   return (
-    <PresentationSpan className="block relative leading-0">
-      <span className="relative z-10 flex flex-col leading-tight" {...props}>
-        <span className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {children}
-        </span>
-        <AriaHiddenSpan className="flex">
-          {top.map((topChar, i) => (
-            <span
-              className={`relative flex-1 flex justify-center ${
-                shadow && i === calcedWidth - 1
-                  ? "after:absolute after:content-['░'] after:-right-3 after:-bottom-5"
-                  : ""
-              }`}
-              key={`top-${i}`}
-            >
-              {topChar}
-            </span>
-          ))}
-        </AriaHiddenSpan>
-        <AriaHiddenSpan className="flex flex-col">
-          {middle.map((row, i) => (
-            <span className="flex-1 flex" key={`middle-row-${i}`}>
-              {row.map((middleChar, i) => (
-                <span
-                  className={`relative flex-1 flex justify-center ${
-                    shadow && i === calcedWidth - 1
-                      ? "after:absolute after:content-['░'] after:-right-3 after:-bottom-5"
-                      : ""
-                  }`}
-                  key={`middle-row-char-${i}`}
-                >
-                  {middleChar}
-                </span>
-              ))}
-            </span>
-          ))}
-        </AriaHiddenSpan>
-        <AriaHiddenSpan className="flex">
-          {bottom.map((bottomChar, i) => (
-            <span
-              className={`relative flex-1 flex justify-center ${
-                shadow
-                  ? "after:absolute after:content-['░'] after:-bottom-5 after:-right-3"
-                  : ""
-              }`}
-              key={`bottom-${i}`}
-            >
-              {bottomChar}
-            </span>
-          ))}
-        </AriaHiddenSpan>
+    <PresentationSpan
+      className="relative z-10 flex flex-col leading-[1.2] tracking-tight"
+      {...props}
+    >
+      <span className="absolute flex justify-center items-center w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {children}
       </span>
+      <AriaHiddenSpan className="flex">
+        {top.map((topChar, i) => (
+          <span
+            className={`relative flex-1 flex justify-center ${
+              shadow && i === calcedWidth - 1
+                ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
+                : ""
+            }`}
+            key={`top-${i}`}
+          >
+            {topChar}
+          </span>
+        ))}
+      </AriaHiddenSpan>
+      <AriaHiddenSpan className="flex flex-col">
+        {middle.map((row, i) => (
+          <span className="flex-1 flex" key={`middle-row-${i}`}>
+            {row.map((middleChar, i) => (
+              <span
+                className={`relative flex-1 flex justify-center ${
+                  shadow && i === calcedWidth - 1
+                    ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
+                    : ""
+                }`}
+                key={`middle-row-char-${i}`}
+              >
+                {middleChar}
+              </span>
+            ))}
+          </span>
+        ))}
+      </AriaHiddenSpan>
+      <AriaHiddenSpan className="flex">
+        {bottom.map((bottomChar, i) => (
+          <span
+            className={`relative flex-1 flex justify-center ${
+              shadow
+                ? "after:absolute after:content-['░'] after:-right-[.7em] after:-bottom-[1.2em]"
+                : ""
+            }`}
+            key={`bottom-${i}`}
+          >
+            {bottomChar}
+          </span>
+        ))}
+      </AriaHiddenSpan>
     </PresentationSpan>
   )
 }
