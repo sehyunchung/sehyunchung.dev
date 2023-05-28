@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 const Box = ({
   rows = 3,
   cols,
@@ -45,7 +47,11 @@ const Box = ({
         empty: " ",
       }
 
-  const shadowClasses = `after:absolute after:content-["${boxChars.shadow}"] after:-right-[.7em] after:-bottom-[1.2em]`
+  const shadowClasses = cn(
+    "after:absolute after:block",
+    'after:content-["' + boxChars.shadow + '"]',
+    "after:-right-[.7em] after:-bottom-[1.2em]"
+  )
 
   const top = Array.from({ length: calcedWidth }, (_, i) => {
     if (i === 0) return boxChars.topLeft
@@ -78,9 +84,10 @@ const Box = ({
       <AriaHiddenSpan className="flex">
         {top.map((topChar, i) => (
           <span
-            className={`relative flex-1 flex justify-center ${
+            className={cn(
+              `relative flex-1 flex justify-center`,
               shadow && i === calcedWidth - 1 ? shadowClasses : ""
-            }`}
+            )}
             key={`top-${i}`}
           >
             {topChar}
@@ -92,9 +99,10 @@ const Box = ({
           <span className="flex-1 flex" key={`middle-row-${i}`}>
             {row.map((middleChar, i) => (
               <span
-                className={`relative flex-1 flex justify-center ${
+                className={cn(
+                  "relative flex-1 flex justify-center",
                   shadow && i === calcedWidth - 1 ? shadowClasses : ""
-                }`}
+                )}
                 key={`middle-row-char-${i}`}
               >
                 {middleChar}
@@ -106,9 +114,10 @@ const Box = ({
       <AriaHiddenSpan className="flex">
         {bottom.map((bottomChar, i) => (
           <span
-            className={`relative flex-1 flex justify-center ${
+            className={cn(
+              `relative flex-1 flex justify-center`,
               shadow ? shadowClasses : ""
-            }`}
+            )}
             key={`bottom-${i}`}
           >
             {bottomChar}
