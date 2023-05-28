@@ -5,14 +5,14 @@ import { getAllTILs } from "@/lib/github-api"
 const feed = new Feed({
   title: "sehyunchung.dev",
   description: "Til",
-  id: "https://sehyunchung.dev/feed/til",
-  link: "https://sehyunchung.dev/feed/til",
+  id: "https://sehyunchung.dev/til",
+  link: "https://sehyunchung.dev/til/feed",
   language: "ko",
   image: "https://sehyunchung.dev/og?title=Til",
   favicon: "https://sehyunchung.dev/favicon.ico",
   copyright: `All rights reserved ${new Date().getFullYear()}, Sehyun Chung`,
   feedLinks: {
-    atom: "https://sehyunchung.dev/feed/til",
+    atom: "https://sehyunchung.dev/til/feed",
   },
   author: {
     name: "Sehyun Chung",
@@ -36,7 +36,7 @@ export async function GET() {
           term: label.name,
         }
       }),
-      content: til.labels.nodes.map((l: any) => l.name).join(", "),
+      content: til.labels.nodes.map((label: any) => label.name).join(", "),
     })
   })
 

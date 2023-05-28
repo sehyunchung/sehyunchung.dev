@@ -5,13 +5,13 @@ const feed = new Feed({
   title: "sehyunchung.dev",
   description: "Posts",
   id: "https://sehyunchung.dev/posts",
-  link: "https://sehyunchung.dev/posts",
+  link: "https://sehyunchung.dev/posts/feed",
   language: "ko",
   image: "https://sehyunchung.dev/og?title=Posts",
   favicon: "https://sehyunchung.dev/favicon.ico",
   copyright: `All rights reserved ${new Date().getFullYear()}, Sehyun Chung`,
   feedLinks: {
-    atom: "https://sehyunchung.dev/feed/posts/",
+    atom: "https://sehyunchung.dev/posts/feed",
   },
   author: {
     name: "Sehyun Chung",
