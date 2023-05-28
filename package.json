@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run fastapi-dev\"",
-    "next-dev": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint",
-    "fastapi-dev": "pipenv install && python3 -m uvicorn api.index:app --reload"
+    "lint": "next lint"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^0.10.1",
