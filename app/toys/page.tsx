@@ -44,7 +44,7 @@ export default async function ToysIndexPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  twitte de-elonizer
+                  twitter de-elonizer
                 </a>
               </td>
               <td>box-drawn (soon)</td>
