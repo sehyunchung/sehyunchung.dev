@@ -49,7 +49,7 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6">
+    <article className="py-6" data-clarity-region="article">
       <h1>{page.title}</h1>
       <Mdx code={page.body.code} />
     </article>

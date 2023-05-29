@@ -22,6 +22,7 @@ export function TILItem({
     <div
       key={til.id}
       className="break-words border-b border-b-gray-200 pb-6"
+      data-clarity-region="article"
       {...props}
     >
       <Link className="no-underline" href={`/til/${til.id}`}>

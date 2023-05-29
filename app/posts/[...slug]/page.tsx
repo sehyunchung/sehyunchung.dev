@@ -75,7 +75,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6">
+    <article className="py-6" data-clarity-region="article">
       <div className="m-0 p-1 font-mono bg-transparent text-slate-700 dark:text-slate-200">
         {new Date(post.date).toLocaleDateString("ko")}
       </div>
