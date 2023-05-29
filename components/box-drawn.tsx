@@ -6,6 +6,7 @@ const Box = ({
   doubleStroke = false,
   shadow = false,
   rounded = false,
+  classic = false,
   children,
   ...props
 }: {
@@ -14,6 +15,7 @@ const Box = ({
   doubleStroke?: boolean
   shadow?: boolean
   rounded?: boolean
+  classic?: boolean
 } & React.ComponentProps<"span">) => {
   if (typeof children !== "string") {
     throw new Error("Box component only accepts string as children")
@@ -38,10 +40,10 @@ const Box = ({
         empty: " ",
       }
     : {
-        topLeft: rounded ? "╭" : "┌",
-        topRight: rounded ? "╮" : "┐",
-        bottomLeft: rounded ? "╰" : "└",
-        bottomRight: rounded ? "╯" : "┘",
+        topLeft: rounded ? "╭" : classic ? "+" : "┌",
+        topRight: rounded ? "╮" : classic ? "+" : "┐",
+        bottomLeft: rounded ? "╰" : classic ? "+" : "└",
+        bottomRight: rounded ? "╯" : classic ? "+" : "┘",
         horizontal: "─",
         vertical: "│",
         space: " ",
