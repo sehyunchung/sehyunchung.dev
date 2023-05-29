@@ -7,11 +7,13 @@ import { Tweet } from "react-tweet"
 import remarkGfm from "remark-gfm"
 
 import { AboutCard } from "./about-card"
+import { BoxDrawn } from "./box-drawn"
 
 const components = {
   Tweet,
   Image,
   AboutCard,
+  BoxDrawn,
 }
 
 interface MdxProps {
@@ -26,6 +28,7 @@ export function Mdx({ code }: MdxProps) {
 
 export async function MDXTIL({ source }: { source: string }) {
   const components: MDXRemoteProps["components"] = {
+    BoxDrawn: BoxDrawn.Box,
     Tweet,
     a: ({ href, ...props }) => {
       if (href?.startsWith("/")) {
