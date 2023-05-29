@@ -76,7 +76,10 @@ const Box = ({
 
   return (
     <PresentationSpan
-      className="relative z-10 flex flex-col leading-[1.2] tracking-tight"
+      style={{
+        maxWidth: `${colsLength}ch`,
+      }}
+      className="relative z-10 grid leading-[1.2] tracking-tight"
       {...props}
     >
       <span className="absolute flex justify-center items-center w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
