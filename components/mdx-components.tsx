@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import probe from "probe-image-size"
@@ -14,6 +15,7 @@ const components = {
   Image,
   AboutCard,
   BoxDrawn,
+  LinkIcon: ExternalLinkIcon,
 }
 
 interface MdxProps {
