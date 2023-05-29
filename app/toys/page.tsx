@@ -74,7 +74,7 @@ export default async function ToysIndexPage() {
               </td>
             </tr>
             <tr>
-              <td>box-drawn</td>
+              <td>box-drawn-ui</td>
               <td>React Components utilizing Box Drawing Characters</td>
               <td>(soon)</td>
             </tr>
