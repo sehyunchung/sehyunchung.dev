@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils"
-
 const Box = ({
   rows = 3,
   cols,
@@ -7,6 +5,7 @@ const Box = ({
   shadow = false,
   rounded = false,
   classic = false,
+  arrow = false,
   children,
   ...props
 }: {
@@ -16,6 +15,7 @@ const Box = ({
   shadow?: boolean
   rounded?: boolean
   classic?: boolean
+  arrow?: boolean
 } & React.ComponentProps<"span">) => {
   if (typeof children !== "string") {
     throw new Error("Box component only accepts string as children")
@@ -27,7 +27,21 @@ const Box = ({
 
   const colsLength = cols ? cols : text.length + 2
 
-  const boxChars = doubleStroke
+  const boxChars = arrow
+    ? {
+        topLeft: "↘",
+        topRight: "↙",
+        bottomLeft: "↗",
+        bottomRight: "↖",
+        topHorizontal: "↓",
+        bottomHorizontal: "↑",
+        verticalStart: "→",
+        verticalEnd: "←",
+        space: " ",
+        shadow: "░",
+        empty: " ",
+      }
+    : doubleStroke
     ? {
         topLeft: "╔",
         topRight: "╗",
@@ -51,83 +65,94 @@ const Box = ({
         empty: " ",
       }
 
-  const shadowClasses =
-    "after:absolute after:flex after:-right-[.7em] after:-bottom-[1.2em] after:content-['░']"
+  let str = ""
 
-  const top = Array.from({ length: colsLength }, (_, i) => {
-    if (i === 0) return boxChars.topLeft
-    if (i === colsLength - 1) return boxChars.topRight
-    return boxChars.horizontal
-  })
+  for (let i = 0; i < colsLength; i++) {
+    if (i === 0) {
+      str += boxChars.topLeft
+    } else if (i === colsLength - 1) {
+      str += boxChars.topRight
+    } else {
+      str += arrow ? boxChars.topHorizontal : boxChars.horizontal
+    }
+  }
 
-  const middle = Array.from({ length: middleRowsLength }, (_, i) => i).map(() =>
-    Array.from({ length: colsLength }, (_, i) => {
-      if (i === 0) return boxChars.vertical
-      if (i === colsLength - 1) return boxChars.vertical
-      return boxChars.space
-    })
-  )
+  if (shadow) {
+    str += " "
+  }
 
-  const bottom = Array.from({ length: colsLength }, (_, i) => {
-    if (i === 0) return boxChars.bottomLeft
-    if (i === colsLength - 1) return boxChars.bottomRight
-    return boxChars.horizontal
-  })
+  for (let i = 0; i < middleRowsLength; i++) {
+    str += "\n"
+    for (let j = 0; j < colsLength; j++) {
+      if (j === 0) {
+        str += arrow ? boxChars.verticalStart : boxChars.vertical
+      } else if (j === colsLength - 1) {
+        str += arrow ? boxChars.verticalEnd : boxChars.vertical
+        if (shadow) {
+          str += boxChars.shadow
+        }
+      } else {
+        str += boxChars.space
+      }
+    }
+  }
+
+  str += "\n"
+
+  for (let i = 0; i < colsLength; i++) {
+    if (i === 0) {
+      str += boxChars.bottomLeft
+    } else if (i === colsLength - 1) {
+      str += boxChars.bottomRight
+      if (shadow) {
+        str += boxChars.shadow
+      }
+    } else {
+      str += arrow ? boxChars.bottomHorizontal : boxChars.horizontal
+    }
+  }
+
+  if (shadow) {
+    str += "\n"
+    for (let i = 0; i < colsLength; i++) {
+      if (i === 0) {
+        str += boxChars.empty
+      } else {
+        str += boxChars.shadow
+      }
+    }
+    str += boxChars.shadow
+  }
 
   return (
     <PresentationSpan
       style={{
-        maxWidth: `${colsLength}ch`,
+        lineHeight: 1.1,
       }}
-      className="relative z-10 grid leading-[1.2] tracking-tight"
+      className="relative grid z-10"
       {...props}
     >
-      <span className="absolute flex justify-center items-center w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <AriaHiddenSpan
+        style={{
+          fontFamily:
+            'ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace',
+        }}
+        className="whitespace-pre"
+      >
+        {str}
+      </AriaHiddenSpan>
+      <span
+        style={{
+          top: "50%",
+          left: "50%",
+          transform: shadow
+            ? `translate(calc(-50% - ${100 / (colsLength + 1)}%), calc(-100%))`
+            : "translate(-50%, -50%)",
+        }}
+        className="absolute"
+      >
         {children}
       </span>
-      <AriaHiddenSpan className="flex">
-        {top.map((topChar, i) => (
-          <span
-            className={cn(
-              `relative flex-1 flex justify-center`,
-              shadow && i === colsLength - 1 ? shadowClasses : ""
-            )}
-            key={`top-${i}`}
-          >
-            {topChar}
-          </span>
-        ))}
-      </AriaHiddenSpan>
-      <AriaHiddenSpan className="flex flex-col">
-        {middle.map((row, i) => (
-          <span className="flex-1 flex" key={`middle-row-${i}`}>
-            {row.map((middleChar, i) => (
-              <span
-                className={cn(
-                  "relative flex-1 flex justify-center",
-                  shadow && i === colsLength - 1 ? shadowClasses : ""
-                )}
-                key={`middle-row-char-${i}`}
-              >
-                {middleChar}
-              </span>
-            ))}
-          </span>
-        ))}
-      </AriaHiddenSpan>
-      <AriaHiddenSpan className="flex">
-        {bottom.map((bottomChar, i) => (
-          <span
-            className={cn(
-              `relative flex-1 flex justify-center`,
-              shadow ? shadowClasses : ""
-            )}
-            key={`bottom-${i}`}
-          >
-            {bottomChar}
-          </span>
-        ))}
-      </AriaHiddenSpan>
     </PresentationSpan>
   )
 }

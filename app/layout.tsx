@@ -53,7 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="prose prose-neutral prose-lg dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
+          <div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
             <GlobalHeader />
             <main className="flex flex-col">{children}</main>
             <Footer />
