@@ -56,10 +56,30 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="prose prose-neutral prose-lg dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
             <GlobalHeader />
             <main className="flex flex-col">{children}</main>
+            <Footer />
           </div>
           <Analytics />
         </ThemeProvider>
       </body>
     </html>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className="bottom-0 flex items-center w-full h-24 border-t text-sm">
+      <div className="flex items-center mr-auto">
+        {new Date().getFullYear()} © Sehyun Chung
+      </div>
+      <div className="flex items-center justify-center">
+        <a
+          href="https://github.com/sehyunchung/sehyunchung.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source
+        </a>
+      </div>
+    </footer>
   )
 }
