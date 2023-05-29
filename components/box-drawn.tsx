@@ -19,9 +19,9 @@ const Box = ({
 
   const text = children
 
-  const middleLength = rows - 2
+  const middleRowsLength = rows - 2
 
-  const calcedWidth = cols ? cols : text.length + 2
+  const colsLength = cols ? cols : text.length + 2
 
   const boxChars = doubleStroke
     ? {
@@ -50,23 +50,23 @@ const Box = ({
   const shadowClasses =
     "after:absolute after:flex after:-right-[.7em] after:-bottom-[1.2em] after:content-['░']"
 
-  const top = Array.from({ length: calcedWidth }, (_, i) => {
+  const top = Array.from({ length: colsLength }, (_, i) => {
     if (i === 0) return boxChars.topLeft
-    if (i === calcedWidth - 1) return boxChars.topRight
+    if (i === colsLength - 1) return boxChars.topRight
     return boxChars.horizontal
   })
 
-  const middle = Array.from({ length: middleLength }, (_, i) => i).map(() =>
-    Array.from({ length: calcedWidth }, (_, i) => {
+  const middle = Array.from({ length: middleRowsLength }, (_, i) => i).map(() =>
+    Array.from({ length: colsLength }, (_, i) => {
       if (i === 0) return boxChars.vertical
-      if (i === calcedWidth - 1) return boxChars.vertical
+      if (i === colsLength - 1) return boxChars.vertical
       return boxChars.space
     })
   )
 
-  const bottom = Array.from({ length: calcedWidth }, (_, i) => {
+  const bottom = Array.from({ length: colsLength }, (_, i) => {
     if (i === 0) return boxChars.bottomLeft
-    if (i === calcedWidth - 1) return boxChars.bottomRight
+    if (i === colsLength - 1) return boxChars.bottomRight
     return boxChars.horizontal
   })
 
@@ -83,7 +83,7 @@ const Box = ({
           <span
             className={cn(
               `relative flex-1 flex justify-center`,
-              shadow && i === calcedWidth - 1 ? shadowClasses : ""
+              shadow && i === colsLength - 1 ? shadowClasses : ""
             )}
             key={`top-${i}`}
           >
@@ -98,7 +98,7 @@ const Box = ({
               <span
                 className={cn(
                   "relative flex-1 flex justify-center",
-                  shadow && i === calcedWidth - 1 ? shadowClasses : ""
+                  shadow && i === colsLength - 1 ? shadowClasses : ""
                 )}
                 key={`middle-row-char-${i}`}
               >
