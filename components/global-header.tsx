@@ -19,7 +19,6 @@ export function HeaderNav() {
   const path = usePathname()
 
   const setActiveLinkIndicator = (href: string) => {
-    console.log({ path, href })
     return path === href || (href !== "/" && path.startsWith(href))
       ? "underline decoration-wavy decoration-[#ffea2b]"
       : "no-underline"
@@ -32,8 +31,8 @@ export function HeaderNav() {
           {name}
         </Link>
       ))}
-      <Link href="/about" className="mr-1">
-        <LogoNav className={cn("h-12 m-0 p-0")} />
+      <Link href="/about" className="mr-1 h-12 w-12">
+        <LogoNav className={cn("h-12 w-12 m-0 p-0")} />
       </Link>
     </nav>
   )
