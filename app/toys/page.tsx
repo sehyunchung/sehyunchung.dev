@@ -6,7 +6,7 @@ export default async function ToysIndexPage() {
   return (
     <section className="pt-8">
       <h1 className="text-lg md:text-3xl whitespace-pre-line text-center font-bold flex justify-center">
-        <BoxDrawn.Box rows={5} cols={30} shadow doubleStroke>
+        <BoxDrawn.Box rows={5} cols={30} shadow classic>
           {`I've been made these\n(sometimes useful) Toys:`}
         </BoxDrawn.Box>
       </h1>
