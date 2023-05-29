@@ -31,7 +31,7 @@ export function HeaderNav() {
           {name}
         </Link>
       ))}
-      <Link href="/about" className="mr-1 h-12 w-12">
+      <Link aria-label="About" href="/about" className="mr-1 h-12 w-12">
         <LogoNav className={cn("h-12 w-12 m-0 p-0")} />
       </Link>
     </nav>
