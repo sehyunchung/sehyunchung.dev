@@ -1,5 +1,6 @@
 import "./globals.css"
 import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { getBaseUrl } from "@/lib/utils"
 import { Analytics } from "@/components/analytics"
 import {
   ScriptGoogleDataLayerInline,
@@ -10,6 +11,7 @@ import { GlobalHeader } from "@/components/global-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
+  metadataBase: getBaseUrl(),
   title: {
     template: "%s | sehyunchung.dev",
     default: "sehyunchung.dev",
