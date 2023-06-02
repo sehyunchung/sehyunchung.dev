@@ -57,7 +57,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
             <GlobalHeader />
-            <main className="flex flex-col">{children}</main>
+            <main className="flex flex-col min-h-[50vh]">{children}</main>
             <Footer />
           </div>
           <Analytics />
