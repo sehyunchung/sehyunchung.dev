@@ -9,7 +9,7 @@ export default function NotFound() {
           aria-label="404"
           aria-hidden
           role="presentation"
-          className="font-mono text-2xl whitespace-pre leading-none"
+          className="font-mono text-[3vw] whitespace-pre leading-none"
         >{`
  ___   ___      ________      ___   ___       
 |\\  \\ |\\  \\    |\\   __  \\    |\\  \\ |\\  \\    
