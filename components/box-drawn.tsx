@@ -18,7 +18,7 @@ const Box = ({
   cols?: number
   shadow?: boolean
 } & React.ComponentProps<"span">) => {
-  const text = getChildrenString(children)
+  const text = stringDigger(children)
   const colsWidth = cols ? cols : text.length + 2
   const boxStr = makeBoxString({ variant, cols, rows, text, shadow })
 
@@ -228,13 +228,20 @@ const makeBoxString = ({
   return boxStr
 }
 
-function getChildrenString(children: React.ReactNode): string {
+/**
+ * # `stringDigger`⛏️
+ *
+ * Extract the text from a ReactNode
+ * @param {React.ReactNode} children
+ * @returns {string} The text from children
+ */
+function stringDigger(children: React.ReactNode): string {
   if (Array.isArray(children)) {
-    return children.map(getChildrenString).join(" ")
+    return children.map(stringDigger).join(" ")
   }
 
   if (React.isValidElement(children) && children.props.children !== undefined) {
-    return getChildrenString(children.props.children)
+    return stringDigger(children.props.children)
   }
 
   if (typeof children === "string" || typeof children === "number") {
