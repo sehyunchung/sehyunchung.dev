@@ -43,9 +43,8 @@ const Box = ({
       </AriaHiddenSpan>
       <div
         style={{
-          transform: `translate(-${shadow ? 0.5 : 0}ch, -${
-            shadow ? 0.5 : 0
-          }em)`,
+          transform: `translate(-${shadow ? 0.5 : 0}ch, -${shadow ? 0.5 : 0
+            }em)`,
         }}
       >
         {children}
@@ -235,7 +234,7 @@ const makeBoxString = ({
  * @param {React.ReactNode} children
  * @returns {string} The text from children
  */
-function stringDigger(children: React.ReactNode): string {
+export function stringDigger(children: React.ReactNode): string {
   if (Array.isArray(children)) {
     return children.map(stringDigger).join(" ")
   }

@@ -10,6 +10,8 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     fontFamily: {
+      gothic: ["Helvetica", "Arial", "sans-serif"],
+      serif: ["Times New Roman, serif"],
       sans: [
         "Chalkboard",
         "Comic Sans MS",
