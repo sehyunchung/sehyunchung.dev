@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 
+import { ClassicBox } from "./classic-box"
 import { LogoNav } from "./logo-nav"
 import { ModeToggle } from "./mode-toggle"
 
@@ -27,8 +28,14 @@ export function HeaderNav() {
   return (
     <nav className="h-12 ml-auto grid grid-flow-col gap-x-3 md:gap-x-5 place-items-center prose-a:underline-offset-4">
       {Object.entries(HEADER_NAV_LINKS).map(([name, href]) => (
-        <Link className={setActiveLinkIndicator(href)} href={href} key={href}>
-          {name}
+        <Link
+          className={
+            name === "TIL" ? "no-underline" : setActiveLinkIndicator(href)
+          }
+          href={href}
+          key={href}
+        >
+          {name === "TIL" ? <ClassicBox>{name}</ClassicBox> : name}
         </Link>
       ))}
       <Link aria-label="About" href="/about" className="mr-1 h-12 w-12">
