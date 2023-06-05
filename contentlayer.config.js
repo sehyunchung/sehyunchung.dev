@@ -55,7 +55,7 @@ export const Til = defineDocumentType(() => {
         required: true,
       },
       content: {
-        type: "string",
+        type: "mdx",
         required: true,
       },
       createdAt: {
@@ -64,6 +64,7 @@ export const Til = defineDocumentType(() => {
       },
       labels: {
         type: "list",
+        required: true,
         of: {
           name: "label",
           type: "string",
