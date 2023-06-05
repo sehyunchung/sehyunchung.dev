@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU2ODE1NDk5NzM=",
+  "title": "checkout to prev branch",
+  "content": "```sh\r\ngit checkout @{-1}\r\n```\r\n\r\n더 짧게는\r\n```sh\r\ngit checkout -\r\n```",
+  "createdAt": "2020-08-19T05:09:01Z",
+  "labels": [
+    "git"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "I_kwDOB4HiUc5m9y_J",
+  "title": "ms clarity",
+  "content": "ms의 analytics 툴 clarity의 설치 스크립트는 이렇게 생겼다.\r\n\r\n```\r\n<script type=\"text/javascript\">\r\n    (function(c,l,a,r,i,t,y){\r\n        //    ^^^^^^^^^^^^^  귀엽...\r\n        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\r\n        // ...\r\n</script>\r\n```",
+  "createdAt": "2023-05-26T11:49:53Z",
+  "labels": [
+    "analytics",
+    "ms",
+    "cute"
+  ]
+}

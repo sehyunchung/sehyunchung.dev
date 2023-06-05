@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU2NjM0OTMxNTk=",
+  "title": "type argument default value",
+  "content": "예를 들어, 첫번째 arg는 보통 string이고 두번째 arg는 보통 number인데 아닐 수도 있고 두번째 arg가 있을 수도 없을 수도 있는 함수의 타입을 정의한다면 아래와 같이 선언할 수 있을 것이다.\r\n\r\n```ts\r\ntype ExampleFn<T, U> = (arg0: T, arg1?: U) => SomeReturnType;\r\n```\r\n\r\n근데 쓸 때 마다 아래와 같이 하기는 매우 귀찮은 일이다.\r\n\r\n```ts\r\nconst implmentedFn1: ExampleFn<string, number> = (val: string) => /* ... */\r\n```\r\n\r\n그래서 ts는 type argument에도 default value를 정해놓을 수 있는데, 함수 default value랑 동일한 형태로, 아래와 같이 하면 된다.\r\n\r\n```ts\r\ntype ExampleFn<T = string, U = number> = (arg0: T, arg1?: U) => SomeReturnType;\r\n```\r\n\r\n이제부턴 굳이 명시할 필요가 생기지 않으면 그냥 편하게 쓸 수 있다.\r\n\r\n```ts\r\nconst implmentedFn2: ExampleFn = (val: string) => /* ... */\r\n```\r\n\r\n그러고보니 아예 arg에 타입 어노테이션을 안해도 된다.\r\n\r\n```ts\r\nconst implmentedFn3: ExampleFn = (val) => /* ... */\r\n```",
+  "createdAt": "2020-07-22T05:49:35Z",
+  "labels": [
+    "typescript"
+  ]
+}

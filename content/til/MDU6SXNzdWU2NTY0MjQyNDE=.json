@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU2NTY0MjQyNDE=",
+  "title": "Warning: Cannot update a component (*) while rendering a different component (*).",
+  "content": "`setState`에서 다른 컴포넌트의 `setState`를 호출할 경우 뜨는 경고 메시지로, `16.13.0`에서 추가되었다. prop으로 넘어온 함수가 `setState`를 하는 경우에 발생한다.\r\n\r\n해당 케이스가 발생하면, 호출하는 컴포넌트에서 `useEffect`로 감싸라고 [공식 사이트에서 안내](https://reactjs.org/blog/2020/02/26/react-v16.13.0.html#warnings-for-some-updates-during-render)해주고 있다.",
+  "createdAt": "2020-07-14T08:20:24Z",
+  "labels": [
+    "react"
+  ]
+}

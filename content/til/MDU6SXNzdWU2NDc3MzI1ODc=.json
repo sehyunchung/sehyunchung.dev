@@ -1,0 +1,10 @@
+{
+  "id": "MDU6SXNzdWU2NDc3MzI1ODc=",
+  "title": "UIImagePickerControllerOriginalImage",
+  "content": "[FoodTracker](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1) 예제 중 [Work with View Controllers](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html#//apple_ref/doc/uid/TP40015214-CH6-SW1) 튜토리얼에 버그... 는 아니고 옛날 자료라서 지금 안돌아가는 게 있었다.\r\n\r\n요 [링크](https://forums.swift.org/t/apple-tutorial-bug/27235/4)를 찾아 아래와 같이 해결\r\n\r\n```diff\r\n    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {\r\n\r\n        // The info dictionary may contain multiple representations of the image. You want to use the original.\r\n-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {\r\n+        guard let selectedImage = info[.originalImage] as? UIImage else {\r\n            fatalError(\"Expected a dictionary containing as image, but was provided the following: \\(info)\")\r\n        }\r\n\r\n        // Set photoImageView to display the selected image.\r\n        photoImageView.image = selectedImage\r\n\r\n        // Dismiss the picker.\r\n        dismiss(animated: true, completion: nil)\r\n    }\r\n```",
+  "createdAt": "2020-06-29T23:23:12Z",
+  "labels": [
+    "swift",
+    "iOS"
+  ]
+}

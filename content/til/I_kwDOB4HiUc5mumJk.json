@@ -1,0 +1,13 @@
+{
+  "id": "I_kwDOB4HiUc5mumJk",
+  "title": "`generateStaticParams`를 사용하는 페이지에서 서버 액션을 호출하면 `405` 에러 (2023-05-24 현재)",
+  "content": "좋아요 버튼을 달려고 @vercel/kv 랑 요렇게 저렇게 해보고 있었는데 아래 에러가 무한히 발생했다.\r\n\r\n```\r\nWarning: Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.\r\n    at AppContainer (/Users/sehyunchung/personal/sehyunchung.dev/node_modules/.pnpm/next@13.4.3_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/server/render.js:337:29)\r\n    at AppContainerWithIsomorphicFiberStructure (/Users/sehyunchung/personal/sehyunchung.dev/node_modules/.pnpm/next@13.4.3_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/server/render.js:373:57)\r\n    at div\r\n    at Body (/Users/sehyunchung/personal/sehyunchung.dev/node_modules/.pnpm/next@13.4.3_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/server/render.js:673:21)\r\nWarning: Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.\r\n..\r\n```\r\n\r\n검색을 해봐도 뭐가 안나와서 `'use server'`를 파일에 넣었다 함수에 넣었다 이케저케 해봐도 안됐는데 어쩌다 브라우저 콘솔을 열어보니\r\n![Screenshot 2023-05-24 at 17 47 28](https://github.com/sehyunchung/til/assets/31644638/67ae0b40-aa43-454d-890f-f1b7b93cc0ca)\r\n\r\n네트워크 탭을 확인해보니\r\n![Screenshot 2023-05-24 at 17 47 54](https://github.com/sehyunchung/til/assets/31644638/6b5d0447-32b0-4e72-a764-77e025acdfd8)\r\n\r\n요걸로 검색해보니 아래 이슈가 나왔다.\r\n\r\n[[NEXT-1167] Server Actions 405 \"Method Not Allowed\" when using generateStaticParams #49408](https://github.com/vercel/next.js/issues/49408)\r\n\r\n생각해보면 말이 되는 것 같기도... 근데 안되면 안되는데?",
+  "createdAt": "2023-05-24T08:51:19Z",
+  "labels": [
+    "react",
+    "next.js",
+    "app router",
+    "server actions",
+    "sad"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU3MjExNzM3MzE=",
+  "title": "array optional chaining",
+  "content": "```ts\r\noptionalArray?.[index]\r\n```",
+  "createdAt": "2020-10-14T06:18:59Z",
+  "labels": [
+    "javascript"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU4NDMwNDg4MjE=",
+  "title": "change current directory in vim",
+  "content": "```bash\r\n:cd <DIRECTORY>\r\n```",
+  "createdAt": "2021-03-29T07:08:13Z",
+  "labels": [
+    "vim"
+  ]
+}

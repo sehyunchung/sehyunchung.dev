@@ -1,0 +1,10 @@
+{
+  "id": "I_kwDOB4HiUc5CLYRS",
+  "title": "nextjs `.env` on Amplify (👎👎👎👎👎)",
+  "content": "1. next-auth로 auth 를 이케저케한 프로젝트를 앰플리파이에 배포해봤음\r\n2. `signIn`시 서버에러 발생\r\n3. error message was like this:\r\n   ```[next-auth][error][CLIENT_FETCH_ERROR] \r\n   https://next-auth.js.org/errors#client_fetch_error Unexpected token < in JSON at position 0 {error: {…}, path: 'providers', message: \r\n   'Unexpected token < in JSON at position 0'}\r\n   ```\r\n4. 알아보니 amplify web ui에서 입력한 env var가 안먹는 것이었음\r\n5. amplify.yml에 아래와 같은 짓을 하는 수 밖에 없었음\r\n   ```\r\n   - echo \"NEXTAUTH_SECRET=$NEXTAUTH_SECRET\" >> .env\r\n   - echo \"NEXTAUTH_URL=$NEXTAUTH_URL\" >> .env\r\n   ```",
+  "createdAt": "2022-01-21T10:02:06Z",
+  "labels": [
+    "aws",
+    "amplify"
+  ]
+}

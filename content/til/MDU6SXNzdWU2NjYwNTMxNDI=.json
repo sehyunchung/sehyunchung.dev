@@ -1,0 +1,10 @@
+{
+  "id": "MDU6SXNzdWU2NjYwNTMxNDI=",
+  "title": "fix firefox color render",
+  "content": "## ?\r\nfirefox의 컬러가 뭔가 좀 더 채도가 높게 렌더링 되는 경향이 있다.\r\n\r\n1. chrome\r\n<img width=\"409\" alt=\"Screen Shot 2020-07-27 at 4 00 39 PM\" src=\"https://user-images.githubusercontent.com/31644638/88513132-b3122e00-d022-11ea-82a9-32e052274707.png\"/>\r\n\r\n2. safari\r\n<img width=\"416\" alt=\"Screen Shot 2020-07-27 at 4 01 59 PM\" src=\"https://user-images.githubusercontent.com/31644638/88513140-b9080f00-d022-11ea-9050-7ef52158c970.png\"/>\r\n\r\n3. firefox\r\n<img width=\"403\" alt=\"Screen Shot 2020-07-27 at 4 03 52 PM\" src=\"https://user-images.githubusercontent.com/31644638/88513195-c8875800-d022-11ea-984e-807dadd751af.png\"/>\r\n\r\n요걸 없애려면?\r\n\r\n## !\r\n1. 일단 firefox의 주소창에 `about:config`를 입력해 신비의 세계로 들어가서,\r\n1. 신비의 세계 검색창에 `color_management`를 쳐보면 아래와 같은 설정값들을 볼 수 있다. 이중에서,\r\n   <img width=\"640\" alt=\"Screen Shot 2020-07-27 at 4 16 53 PM\" src=\"https://user-images.githubusercontent.com/31644638/88514199-9c6cd680-d024-11ea-8fba-38403cc20134.png\"/>\r\n1. `gfx.color_management.mode`를 `1`로 바꾼다.\r\n1. `gfx.color_management.enablev4`를 `true`로 바꾼다.\r\n1. 쨘\r\n   <img width=\"640\" alt=\"Screen Shot 2020-07-27 at 4 19 46 PM\" src=\"https://user-images.githubusercontent.com/31644638/88514427-09806c00-d025-11ea-8491-0b2a39ce39d6.png\"/>\r\n\r\n이것들이 뭐냐?\r\n1. `gfx.color_management.mode`:\r\n   - `0`: Color management disabled.\r\n   - **`1`: Full color management**.\r\n   - `2`: Color management applied only to tagged images. \r\n1. `gfx.color_management.enablev4`:\r\n   - 찾는 중\r\n\r\n## Refs\r\n- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox",
+  "createdAt": "2020-07-27T07:25:04Z",
+  "labels": [
+    "firefox",
+    "color"
+  ]
+}

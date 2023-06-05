@@ -1,0 +1,11 @@
+{
+  "id": "MDU6SXNzdWU3MjExMzk2MzA=",
+  "title": "Formik's `setFieldValue` returns Promise",
+  "content": "but formik's official type def's wrong\r\n\r\n \r\n<img width=\"629\" alt=\"Screen Shot 2020-10-14 at 2 04 56 PM\" src=\"https://user-images.githubusercontent.com/31644638/95945827-468b1c00-0e26-11eb-8348-0d470c0a2b52.png\"/>\r\nwtf\r\n\r\n## Ref\r\nhttps://github.com/formium/formik/issues/2059#issuecomment-700681150",
+  "createdAt": "2020-10-14T05:05:37Z",
+  "labels": [
+    "typescript",
+    "react",
+    "formik"
+  ]
+}

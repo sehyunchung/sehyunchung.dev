@@ -1,0 +1,10 @@
+{
+  "id": "I_kwDOB4HiUc5GgMkB",
+  "title": "Delete all branches with names with 'x'",
+  "content": "```shell\r\n$ git branch | grep x | xargs git branch -D\r\n```\r\n",
+  "createdAt": "2022-03-28T04:03:24Z",
+  "labels": [
+    "git",
+    "shell"
+  ]
+}

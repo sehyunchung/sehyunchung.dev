@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU4MjU0MTkxMjI=",
+  "title": "Patch broken node_module with yarn2",
+  "content": "1. `yarn patch <module>`\r\n2. fix the code inside the generated folder and save it.\r\n3. `yarn patch-commit <generated_folder> > <patch_file_name>.diff`\r\n4. fix `package.json` with `\"module\": \"patch:<module>@<version>#<path_to_patch_file>/<patch_file_name>.diff\"`\r\n5. `yarn install`",
+  "createdAt": "2021-03-09T06:44:25Z",
+  "labels": [
+    "yarn2"
+  ]
+}

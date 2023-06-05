@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU2NDY2NjIwNTU=",
+  "title": "rebase를 하다가 이건 아니다 싶으면",
+  "content": "[`git rebase --abort`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---abort)를 하면 된다.",
+  "createdAt": "2020-06-27T11:17:18Z",
+  "labels": [
+    "git"
+  ]
+}

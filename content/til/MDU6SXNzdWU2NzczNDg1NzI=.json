@@ -1,0 +1,10 @@
+{
+  "id": "MDU6SXNzdWU2NzczNDg1NzI=",
+  "title": "Unexpected use of 'isNaN'. (eslintno-restricted-globals), Argument of type 'string' is not assignable to parameter of type 'number'. ts(2345)",
+  "content": "```ts\r\nlet val = '123'\r\n\r\nisNaN(val) // nah! Argument of type 'string' is not assignable to parameter of type 'number'. ts(2345)\r\nisNaN(123) // nah! Unexpected use of 'isNaN'. (eslintno-restricted-globals)\r\n```\r\n\r\nthen use\r\n\r\n```ts\r\nNumber.isNaN(val) // yay!\r\n```",
+  "createdAt": "2020-08-12T03:13:35Z",
+  "labels": [
+    "typescript",
+    "eslint"
+  ]
+}

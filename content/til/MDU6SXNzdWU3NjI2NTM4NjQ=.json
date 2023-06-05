@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU3NjI2NTM4NjQ=",
+  "title": "\"xcrun: error: active developer path (\"/Applications/Xcode.app/Contents/Developer\") does not exist\"",
+  "content": "```bash\r\nGHCi, version 8.4.3: http://www.haskell.org/ghc/  :? for help\r\nxcrun: error: active developer path (\"/Applications/Xcode.app/Contents/Developer\") does not exist\r\nUse `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools.\r\nSee `man xcode-select` for more details.\r\n`clang' failed in phase `gcc'. (Exit code: 1)\r\n```\r\n⏬ \r\n```bash\r\nsudo xcode-select -switch /Library/Developer/CommandLineTools\r\n```",
+  "createdAt": "2020-12-11T17:22:44Z",
+  "labels": [
+    "macos"
+  ]
+}

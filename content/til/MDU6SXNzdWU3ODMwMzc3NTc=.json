@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU3ODMwMzc3NTc=",
+  "title": "type predicate",
+  "content": "```ts\r\ninterface Article {\r\n   title: string;\r\n   body: string;\r\n}\r\n\r\nfunction isArticle(body: unknown): body is Article {\r\n  let b = body as Article;\r\n  return !!b && typeof b.body === 'string' && typeof b.title === 'string';\r\n}\r\n```",
+  "createdAt": "2021-01-11T03:28:18Z",
+  "labels": [
+    "typescript"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU3MjU0MTA3NTM=",
+  "title": "cherry-pick range of commits",
+  "content": "```sh\r\ngit cherry-pick <SHA>^..<SHA>\r\n```",
+  "createdAt": "2020-10-20T09:51:56Z",
+  "labels": [
+    "git"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "MDU6SXNzdWU2NDY2NjE3MzI=",
+  "title": "히스토리가 다른 git repo를 합치려면",
+  "content": "`merge`하면서 [`--allow-unrelated-histories`](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---allow-unrelated-histories)를 사용한다.",
+  "createdAt": "2020-06-27T11:15:09Z",
+  "labels": [
+    "git"
+  ]
+}
