@@ -1,6 +1,5 @@
+import { Footer } from "@/components/footer"
 import { GlobalHeader } from "@/components/global-header"
-
-import { Footer } from "../layout"
 
 export default function PagesLayout({
   children,
