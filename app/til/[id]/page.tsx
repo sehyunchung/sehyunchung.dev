@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
+import { Footer } from "@/app/layout"
 
 import { TILItem } from "../components"
 
@@ -64,5 +65,10 @@ export default async function TilItemPage({
 
   if (!til) return null
 
-  return <TILItem til={til} />
+  return (
+    <>
+      <TILItem til={til} />
+      <Footer />
+    </>
+  )
 }
