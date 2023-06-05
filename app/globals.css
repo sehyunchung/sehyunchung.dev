@@ -86,10 +86,12 @@ html pre[data-theme="dark"] {
 }
 html pre[data-theme="light"] {
   display: block;
+  background-color: #f6f8fa;
 }
 html.dark pre[data-theme="light"] {
   display: none;
 }
 html.dark pre[data-theme="dark"] {
   display: block;
+  background-color: rgb(34, 39, 46);
 }

@@ -69,7 +69,6 @@ export async function MDXTIL({ source }: { source: string }) {
               rehypePrettyCode,
               {
                 theme: { dark: "github-dark-dimmed", light: "github-light" },
-                keepBackground: true,
               },
             ],
           ],

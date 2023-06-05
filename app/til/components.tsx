@@ -33,7 +33,7 @@ export function TILItem({
           {til.title}
         </h2>
       </Link>
-      <div className="prose-img:my-0 prose-img:rounded-xl]">
+      <div className="prose-img:my-0 prose-img:rounded-xl prose-pre:rounded-md">
         {/* @ts-expect-error */}
         <MDXTIL source={til.body} />
       </div>
