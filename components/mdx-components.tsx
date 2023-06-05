@@ -7,6 +7,7 @@ import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
 import rehypePrettyCode from "rehype-pretty-code"
 import remarkGfm from "remark-gfm"
+import { BUNDLED_LANGUAGES, HighlighterOptions, getHighlighter } from "shiki"
 import githubDarkDimmed from "shiki/themes/github-dark-dimmed.json"
 import githubLight from "shiki/themes/github-light.json"
 
@@ -71,6 +72,12 @@ export async function MDXTIL({ source }: { source: string }) {
               rehypePrettyCode,
               {
                 theme: { dark: githubDarkDimmed, light: githubLight },
+                getHighlighter: (options: HighlighterOptions) => {
+                  return getHighlighter({
+                    ...options,
+                    langs: [...BUNDLED_LANGUAGES],
+                  })
+                },
               },
             ],
           ],
