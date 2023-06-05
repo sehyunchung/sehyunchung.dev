@@ -7,6 +7,8 @@ import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
 import rehypePrettyCode from "rehype-pretty-code"
 import remarkGfm from "remark-gfm"
+import githubDarkDimmed from "shiki/themes/github-dark-dimmed.json"
+import githubLight from "shiki/themes/github-light.json"
 
 import { BoxDrawn } from "./box-drawn"
 
@@ -68,7 +70,7 @@ export async function MDXTIL({ source }: { source: string }) {
             [
               rehypePrettyCode,
               {
-                theme: { dark: "github-dark-dimmed", light: "github-light" },
+                theme: { dark: githubDarkDimmed, light: githubLight },
               },
             ],
           ],
