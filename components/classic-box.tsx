@@ -20,11 +20,11 @@ export function ClassicBox({
         backgroundColor: color,
       }}
       className={cn(
-        "relative flex justify-between border-4 h-[2em] px-[1em] pl-[1.5em] items-center leading-none font-bold italic capitalize font-serif",
+        "relative flex justify-between border-[0.2em] h-[2em] px-[1em] pl-[1.5em] items-center leading-none font-bold italic capitalize font-serif",
         className
       )}
     >
-      <span className="absolute drop-shadow-md left-[0.2em] top-[2%] text-[150%] flex font-gothic not-italic text-[#ff0] font-black">
+      <span className="absolute drop-shadow-md left-[0.2em] top-[10%] text-[130%] flex font-gothic not-italic text-[#ff0] font-black">
         {initial}
       </span>
       <span className="flex">{children}</span>
