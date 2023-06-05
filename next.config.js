@@ -7,6 +7,11 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
     nextScriptWorkers: true,
+    serverComponentsExternalPackages: [
+      "github-light",
+      "github-dark-dimmed",
+      "shiki",
+    ],
   },
   images: {
     domains: ["user-images.githubusercontent.com", "github.com"],
