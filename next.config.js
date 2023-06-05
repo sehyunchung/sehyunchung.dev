@@ -4,7 +4,9 @@ const { withContentlayer } = require("next-contentlayer")
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {},
+  experimental: {
+    serverComponentsExternalPackages: ["shiki", "vscode-oniguruma"],
+  },
   images: {
     domains: ["user-images.githubusercontent.com", "github.com"],
     formats: ["image/avif", "image/webp"],
