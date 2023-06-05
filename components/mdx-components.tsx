@@ -33,7 +33,7 @@ export async function MDXTIL({ source }: { source: string }) {
   const components: MDXRemoteProps["components"] = {
     BoxDrawn: BoxDrawn.Box,
     Tweet,
-    a: ({ href, ...props }) => {
+    a: ({ href, ref, ...props }) => {
       if (href?.startsWith("/")) {
         return (
           <Link
