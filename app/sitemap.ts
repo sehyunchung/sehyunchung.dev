@@ -1,28 +1,28 @@
 import { MetadataRoute } from "next"
 
-import { getBaseUrl } from "@/lib/utils"
+const baseUrl = "https://sehyunchung.dev"
 
 // TODO: generate automatically
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: getBaseUrl().toString(),
+      url: baseUrl,
       lastModified: new Date(),
     },
     {
-      url: getBaseUrl().toString() + "/about",
+      url: baseUrl + "/til",
       lastModified: new Date(),
     },
     {
-      url: getBaseUrl().toString() + "/til",
+      url: baseUrl + "/toys",
       lastModified: new Date(),
     },
     {
-      url: getBaseUrl().toString() + "/toys",
+      url: baseUrl + "/posts",
       lastModified: new Date(),
     },
     {
-      url: getBaseUrl().toString() + "/posts",
+      url: baseUrl + "/about",
       lastModified: new Date(),
     },
   ]
