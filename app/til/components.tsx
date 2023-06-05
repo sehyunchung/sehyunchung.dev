@@ -56,17 +56,3 @@ export function TILItem({
     </div>
   )
 }
-
-export function TilList({ tils }: { tils: any }) {
-  return (
-    <>
-      {tils?.map((til: any) => (
-        <TILItem
-          key={til.id}
-          className="break-words border-b border-b-gray-200 pb-6"
-          til={til}
-        />
-      ))}
-    </>
-  )
-}

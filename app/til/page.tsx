@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import { getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TilList } from "./components"
+import { TILItem } from "./components"
 
 export async function generateMetadata(): Promise<Metadata> {
   let ogImg = getOgImgUrl()
@@ -28,10 +28,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function TILListPage() {
   const tils = await getAllTILs()
+
   return (
     <article className="w-[100%]">
       {/* @ts-ignore */}
-      <TilList tils={tils} />
+      {tils?.map((til: any) => (
+        <TILItem
+          key={til.id}
+          className="break-words border-b border-b-gray-200 pb-6"
+          til={til}
+        />
+      ))}
     </article>
   )
 }
