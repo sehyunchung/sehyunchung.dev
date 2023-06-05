@@ -7,13 +7,11 @@ import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
 import remarkGfm from "remark-gfm"
 
-import { AboutCard } from "./about-card"
 import { BoxDrawn } from "./box-drawn"
 
 const components = {
   Tweet,
   Image,
-  AboutCard,
   BoxDrawn,
   LinkIcon: ExternalLinkIcon,
 }
