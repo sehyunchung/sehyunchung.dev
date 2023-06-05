@@ -39,7 +39,7 @@ export function HeaderNav() {
         </Link>
       ))}
       <Link aria-label="About" href="/about" className="mr-1 h-12 w-12">
-        <LogoNav className={cn("h-12 w-12 m-0 p-0")} />
+        <LogoNav width="3rem" height="3rem" className={cn("m-0 p-0")} />
       </Link>
     </nav>
   )
