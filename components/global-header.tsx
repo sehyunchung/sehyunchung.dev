@@ -48,7 +48,7 @@ export function GlobalHeader() {
   return (
     <header>
       <div className="relative flex items-center justify-between">
-        <ModeToggle className="absolute" />
+        <ModeToggle className="absolute text-xl" />
         <HeaderNav />
       </div>
     </header>
