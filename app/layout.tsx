@@ -56,9 +56,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
-            <GlobalHeader />
-            <main className="flex flex-col min-h-[50vh]">{children}</main>
-            <Footer />
+            {children}
           </div>
           <Analytics />
         </ThemeProvider>
@@ -67,7 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   )
 }
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="bottom-0 flex items-center w-full h-24 border-t text-sm">
       <div className="flex items-center mr-auto">
