@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./content/**/*.{md,mdx}",
   ],
-  darkMode: ["class"],
+  darkMode: "class",
   theme: {
     fontFamily: {
       gothic: ["Helvetica", "Arial", "sans-serif"],

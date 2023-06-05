@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
+import rehypePrettyCode from "rehype-pretty-code"
 import remarkGfm from "remark-gfm"
 
 import { BoxDrawn } from "./box-drawn"
@@ -54,6 +55,7 @@ export async function MDXTIL({ source }: { source: string }) {
       )
     },
   }
+
   return (
     // @ts-expect-error
     <MDXRemote
@@ -62,6 +64,15 @@ export async function MDXTIL({ source }: { source: string }) {
       options={{
         mdxOptions: {
           remarkPlugins: [remarkGfm],
+          rehypePlugins: [
+            [
+              rehypePrettyCode,
+              {
+                theme: { dark: "github-dark-dimmed", light: "github-light" },
+                keepBackground: true,
+              },
+            ],
+          ],
         },
       }}
     />
