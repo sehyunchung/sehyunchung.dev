@@ -55,7 +55,6 @@ export async function getAllTILs(
               id
               createdAt
               body
-              bodyHTML
               title
               labels(last: 10) {
                 nodes {
