@@ -12,7 +12,7 @@ export function ModeToggle(props: React.ComponentProps<"button">) {
 
   let text: string = "?"
   if (mounted) {
-    text = resolvedTheme === "light" ? "light" : "dark"
+    text = resolvedTheme === "light" ? "☼" : "☽"
   }
 
   return (
@@ -22,7 +22,9 @@ export function ModeToggle(props: React.ComponentProps<"button">) {
       {...props}
     >
       <span className="sr-only">Toggle theme</span>
-      <BoxDrawn.Box variant="classic">{text}</BoxDrawn.Box>
+      <BoxDrawn.Box variant="classic" cols={4}>
+        {text}
+      </BoxDrawn.Box>
     </button>
   )
 }
