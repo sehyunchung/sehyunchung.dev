@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLinkIcon } from "lucide-react"
-import type { MDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
@@ -26,10 +25,10 @@ export function Mdx({ code }: MdxProps) {
 }
 
 export async function MdxTil({ code }: MdxProps) {
-  const components: MDXComponents = {
+  const components: any = {
     BoxDrawn: BoxDrawn.Box,
     Tweet,
-    a: ({ href, ref, ...props }) => {
+    a: ({ href, ref, ...props }: any) => {
       if (href?.startsWith("/")) {
         return (
           <Link
