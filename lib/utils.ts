@@ -12,23 +12,18 @@ export function cn(...inputs: ClassValue[]) {
  * @returns {URL} og:image url
  */
 export function getOgImgUrl(): URL {
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/og"
-      : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}/og`
-      : "https://sehyunchung.dev/og"
+  const url = getBaseUrl().toString() + "og"
 
-  return new URL(baseUrl)
+  return new URL(url)
 }
 
 export function getBaseUrl(): URL {
   const baseUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "https://sehyunchung.dev"
+      : process.env.VERCEL_ENV === "production"
+      ? "https://sehyunchung.dev"
+      : `https://${process.env.VERCEL_URL}`
 
   return new URL(baseUrl)
 }
