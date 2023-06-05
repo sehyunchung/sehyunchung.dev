@@ -6,6 +6,9 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     serverComponentsExternalPackages: ["shiki", "vscode-oniguruma"],
+    outputFileTracingIncludes: {
+      shiki: "node_modules/.pnpm/**/shiki/**/*.json",
+    },
   },
   images: {
     domains: ["user-images.githubusercontent.com", "github.com"],
