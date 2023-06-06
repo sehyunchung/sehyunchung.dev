@@ -1,10 +1,1 @@
-{
-  "id": "MDU6SXNzdWU2NzI1MTk0MzE=",
-  "title": "Get list of globally installed packages",
-  "content": "npm:\r\n```shell\r\nnpm list -g --depth 0\r\n```\r\nyarn:\r\n```shell\r\nyarn global list --depth 0\r\n```\r\n",
-  "createdAt": "2020-08-04T05:37:53Z",
-  "labels": [
-    "npm",
-    "yarn"
-  ]
-}
+{"id":"MDU6SXNzdWU2NzI1MTk0MzE=","title":"Get list of globally installed packages","content":"npm:\r\n```shell\r\nnpm list -g --depth 0\r\n```\r\nyarn:\r\n```shell\r\nyarn global list --depth 0\r\n```\r\n","createdAt":"2020-08-04T05:37:53Z","labels":["npm","yarn"]}

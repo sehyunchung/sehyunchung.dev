@@ -1,9 +1,1 @@
-{
-  "id": "I_kwDOB4HiUc5nqy13",
-  "title": "github issue는 discussion이 될 수도 있고 다른 repo로 갈 수도 있는 엄청난 존재이다",
-  "content": "![Screenshot 2023-06-03 at 17 06 19](https://github.com/sehyunchung/til/assets/31644638/75e9a725-49fa-48b6-96e3-73ddf75fe255)\r\n\r\n- 심지어 다른 repo로 갔다가 다시 돌아올수도 있다\r\n- 근데 discussion이 되어버리면 다시 issue로 돌아올 수는 없다\r\n  - 하지만 discussion이 되어버린 자신을 복제해 새 issue를 만들 순 있다\r\n\r\n- cms를 issues에서 discussions로 옮기는 것은 어떨까 하여 알아보다 알게 됨.",
-  "createdAt": "2023-06-03T08:10:06Z",
-  "labels": [
-    "github"
-  ]
-}
+{"id":"I_kwDOB4HiUc5nqy13","title":"github issue는 discussion이 될 수도 있고 다른 repo로 갈 수도 있는 엄청난 존재이다","content":"![Screenshot 2023-06-03 at 17 06 19](https://github.com/sehyunchung/til/assets/31644638/75e9a725-49fa-48b6-96e3-73ddf75fe255)\r\n\r\n- 심지어 다른 repo로 갔다가 다시 돌아올수도 있다\r\n- 근데 discussion이 되어버리면 다시 issue로 돌아올 수는 없다\r\n  - 하지만 discussion이 되어버린 자신을 복제해 새 issue를 만들 순 있다\r\n\r\n- cms를 issues에서 discussions로 옮기는 것은 어떨까 하여 알아보다 알게 됨.","createdAt":"2023-06-03T08:10:06Z","labels":["github"]}

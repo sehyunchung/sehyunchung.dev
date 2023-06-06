@@ -1,10 +1,1 @@
-{
-  "id": "MDU6SXNzdWU5MTI4MDY0MjE=",
-  "title": "stash a folder",
-  "content": "```bash\r\ngit stash push [-u] -- <folder>\r\n```",
-  "createdAt": "2021-06-06T12:06:33Z",
-  "labels": [
-    "git",
-    "tips and tricks"
-  ]
-}
+{"id":"MDU6SXNzdWU5MTI4MDY0MjE=","title":"stash a folder","content":"```bash\r\ngit stash push [-u] -- <folder>\r\n```","createdAt":"2021-06-06T12:06:33Z","labels":["git","tips and tricks"]}

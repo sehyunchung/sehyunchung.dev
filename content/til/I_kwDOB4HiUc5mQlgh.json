@@ -1,10 +1,1 @@
-{
-  "id": "I_kwDOB4HiUc5mQlgh",
-  "title": "How about putting 'use client' inside a function?",
-  "content": "<Tweet id=\"1659157793192943617\" />\r\n<Tweet id=\"1659179751985037312\" />\r\n<Tweet id=\"1659180628196089856\" />\r\n<Tweet id=\"1659180977241849857\" />\r\n<Tweet id=\"1659181386538835970\" />\r\n<Tweet id=\"1659181577727868928\" />",
-  "createdAt": "2023-05-18T13:16:01Z",
-  "labels": [
-    "react",
-    "RSC"
-  ]
-}
+{"id":"I_kwDOB4HiUc5mQlgh","title":"How about putting 'use client' inside a function?","content":"<Tweet id=\"1659157793192943617\" />\r\n<Tweet id=\"1659179751985037312\" />\r\n<Tweet id=\"1659180628196089856\" />\r\n<Tweet id=\"1659180977241849857\" />\r\n<Tweet id=\"1659181386538835970\" />\r\n<Tweet id=\"1659181577727868928\" />","createdAt":"2023-05-18T13:16:01Z","labels":["react","RSC"]}

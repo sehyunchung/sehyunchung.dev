@@ -1,9 +1,1 @@
-{
-  "id": "MDU6SXNzdWU2ODU2NDQ1NTY=",
-  "title": "css grid border collapse (sort of)",
-  "content": "parent:\r\n```css\r\ngrid-gap: 1px;\r\n```\r\n\r\nchild:\r\n```css\r\nbox-shadow: 0 0 0 1px <color>;\r\n```",
-  "createdAt": "2020-08-25T16:59:42Z",
-  "labels": [
-    "css"
-  ]
-}
+{"id":"MDU6SXNzdWU2ODU2NDQ1NTY=","title":"css grid border collapse (sort of)","content":"parent:\r\n```css\r\ngrid-gap: 1px;\r\n```\r\n\r\nchild:\r\n```css\r\nbox-shadow: 0 0 0 1px <color>;\r\n```","createdAt":"2020-08-25T16:59:42Z","labels":["css"]}

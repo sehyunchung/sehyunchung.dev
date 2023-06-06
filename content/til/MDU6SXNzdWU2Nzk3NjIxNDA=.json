@@ -1,9 +1,1 @@
-{
-  "id": "MDU6SXNzdWU2Nzk3NjIxNDA=",
-  "title": "chmod",
-  "content": "- `chmod +rwx <filename>` to add permissions.\r\n- `chmod -rwx <directoryname>` to remove permissions.\r\n- `chmod +x <filename>` to allow executable permissions.\r\n- `chmod -wx <filename>` to take out write and executable permissions.",
-  "createdAt": "2020-08-16T14:16:12Z",
-  "labels": [
-    "shell"
-  ]
-}
+{"id":"MDU6SXNzdWU2Nzk3NjIxNDA=","title":"chmod","content":"- `chmod +rwx <filename>` to add permissions.\r\n- `chmod -rwx <directoryname>` to remove permissions.\r\n- `chmod +x <filename>` to allow executable permissions.\r\n- `chmod -wx <filename>` to take out write and executable permissions.","createdAt":"2020-08-16T14:16:12Z","labels":["shell"]}

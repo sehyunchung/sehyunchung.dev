@@ -1,9 +1,1 @@
-{
-  "id": "MDU6SXNzdWU4ODMxNTAxMTc=",
-  "title": "yarn upgrade-interactive --latest",
-  "content": "```bash\r\nyarn upgrade-interactive --latest\r\n```",
-  "createdAt": "2021-05-10T01:46:27Z",
-  "labels": [
-    "yarn"
-  ]
-}
+{"id":"MDU6SXNzdWU4ODMxNTAxMTc=","title":"yarn upgrade-interactive --latest","content":"```bash\r\nyarn upgrade-interactive --latest\r\n```","createdAt":"2021-05-10T01:46:27Z","labels":["yarn"]}

@@ -26,7 +26,7 @@ export const getTils = async () => {
         createdAt: til.createdAt,
         labels: til.labels.nodes.map((label) => label.name),
       }
-      const tilJson = JSON.stringify(data, null, 2)
+      const tilJson = JSON.stringify(data)
       const tilPath = path.join(
         process.cwd(),
         "content",
@@ -44,4 +44,4 @@ export const getTils = async () => {
 
 getTils().then(() => console.log("tils retrieved\n"))
 
-export { }
+export {}

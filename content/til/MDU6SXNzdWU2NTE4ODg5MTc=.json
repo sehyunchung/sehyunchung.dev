@@ -1,9 +1,1 @@
-{
-  "id": "MDU6SXNzdWU2NTE4ODg5MTc=",
-  "title": "Delegation Pattern",
-  "content": "https://en.wikipedia.org/wiki/Delegation_pattern\r\n\r\n```kotlin\r\nclass Rectangle(val width: Int, val height: Int) {\r\n    fun area() = width * height\r\n}\r\n\r\nclass Window(val bounds: Rectangle) {\r\n    // Delegation\r\n    fun  area() = bounds.area()\r\n}\r\n```\r\n\r\n## Links\r\n- [Delegation pattern](https://en.wikipedia.org/wiki/Delegation_pattern)\r\n- [Delegation in Swift\r\n](https://www.swiftbysundell.com/articles/delegation-in-swift/)",
-  "createdAt": "2020-07-06T23:58:32Z",
-  "labels": [
-    "oop"
-  ]
-}
+{"id":"MDU6SXNzdWU2NTE4ODg5MTc=","title":"Delegation Pattern","content":"https://en.wikipedia.org/wiki/Delegation_pattern\r\n\r\n```kotlin\r\nclass Rectangle(val width: Int, val height: Int) {\r\n    fun area() = width * height\r\n}\r\n\r\nclass Window(val bounds: Rectangle) {\r\n    // Delegation\r\n    fun  area() = bounds.area()\r\n}\r\n```\r\n\r\n## Links\r\n- [Delegation pattern](https://en.wikipedia.org/wiki/Delegation_pattern)\r\n- [Delegation in Swift\r\n](https://www.swiftbysundell.com/articles/delegation-in-swift/)","createdAt":"2020-07-06T23:58:32Z","labels":["oop"]}

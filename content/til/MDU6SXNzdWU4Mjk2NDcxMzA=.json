@@ -1,10 +1,1 @@
-{
-  "id": "MDU6SXNzdWU4Mjk2NDcxMzA=",
-  "title": "`mix ecto.create` -> `(Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role \"postgres\" does not exist`",
-  "content": "```bash\r\ncreateuser -s postgres\r\n```",
-  "createdAt": "2021-03-12T00:43:13Z",
-  "labels": [
-    "phoenix",
-    "elixir"
-  ]
-}
+{"id":"MDU6SXNzdWU4Mjk2NDcxMzA=","title":"`mix ecto.create` -> `(Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role \"postgres\" does not exist`","content":"```bash\r\ncreateuser -s postgres\r\n```","createdAt":"2021-03-12T00:43:13Z","labels":["phoenix","elixir"]}

@@ -1,9 +1,1 @@
-{
-  "id": "MDU6SXNzdWU3MDYwMzI5NzY=",
-  "title": "list all remote branches",
-  "content": "```shell\r\ngit branch -a\r\n```",
-  "createdAt": "2020-09-22T02:25:52Z",
-  "labels": [
-    "git"
-  ]
-}
+{"id":"MDU6SXNzdWU3MDYwMzI5NzY=","title":"list all remote branches","content":"```shell\r\ngit branch -a\r\n```","createdAt":"2020-09-22T02:25:52Z","labels":["git"]}

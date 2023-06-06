@@ -1,10 +1,1 @@
-{
-  "id": "MDU6SXNzdWU2NjgyNTI1OTA=",
-  "title": "asdf nodejs",
-  "content": "1. asdf를 설치한다.\r\n   ```sh\r\n   brew install asdf\r\n   ```\r\n1. gpg를 설치한다.\r\n   ```sh\r\n   brew install gpg\r\n   ```\r\n1. asdf nodejs plugin을 설치한다.\r\n   ```sh\r\n   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git\r\n   ```\r\n1. nodejs release team의 gpg key를 추가한다.\r\n   ```sh\r\n   bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'\r\n   ```\r\n1. `nvm`등 사용중이던 vm이 있다면 호환성을 위해 `~/.asdfrc`에 아래를 추가한다.\r\n   ```sh\r\n   legacy_version_file = yes\r\n   ```\r\n1. 됫다.\r\n\r\n## how to uninstall node\r\nhttps://reactgo.com/uninstall-node-npm-from-macos/",
-  "createdAt": "2020-07-30T00:19:46Z",
-  "labels": [
-    "version manager",
-    "asdf"
-  ]
-}
+{"id":"MDU6SXNzdWU2NjgyNTI1OTA=","title":"asdf nodejs","content":"1. asdf를 설치한다.\r\n   ```sh\r\n   brew install asdf\r\n   ```\r\n1. gpg를 설치한다.\r\n   ```sh\r\n   brew install gpg\r\n   ```\r\n1. asdf nodejs plugin을 설치한다.\r\n   ```sh\r\n   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git\r\n   ```\r\n1. nodejs release team의 gpg key를 추가한다.\r\n   ```sh\r\n   bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'\r\n   ```\r\n1. `nvm`등 사용중이던 vm이 있다면 호환성을 위해 `~/.asdfrc`에 아래를 추가한다.\r\n   ```sh\r\n   legacy_version_file = yes\r\n   ```\r\n1. 됫다.\r\n\r\n## how to uninstall node\r\nhttps://reactgo.com/uninstall-node-npm-from-macos/","createdAt":"2020-07-30T00:19:46Z","labels":["version manager","asdf"]}
