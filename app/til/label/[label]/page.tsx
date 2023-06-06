@@ -1,4 +1,5 @@
 import { Metadata, ResolvingMetadata } from "next"
+import { allTils } from "@/.contentlayer/generated"
 
 import { getAllTILLabels, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
@@ -6,7 +7,7 @@ import { getOgImgUrl } from "@/lib/utils"
 import { TILItem } from "../../components"
 
 export async function generateStaticParams() {
-  return await getAllTILLabels()
+  return allTils.map((til) => til.labels).flat()
 }
 
 export async function generateMetadata(
@@ -41,14 +42,7 @@ export default async function TilTagPage({
 }) {
   const label = decodeURIComponent(params.label)
 
-  const tils = await getAllTILs({
-    labels: [label],
-    first: 100,
-    orderBy: {
-      field: "CREATED_AT",
-      direction: "DESC",
-    },
-  })
+  const tils = allTils.filter((til) => til.labels.includes(label))
 
   return (
     <>

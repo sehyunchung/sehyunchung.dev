@@ -2,11 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
-import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
-import rehypePrettyCode from "rehype-pretty-code"
-import remarkGfm from "remark-gfm"
 
 import { BoxDrawn } from "./box-drawn"
 
@@ -27,11 +24,11 @@ export function Mdx({ code }: MdxProps) {
   return <Component components={components} />
 }
 
-export async function MDXTIL({ source }: { source: string }) {
-  const components: MDXRemoteProps["components"] = {
+export async function MdxTil({ code }: MdxProps) {
+  const components: any = {
     BoxDrawn: BoxDrawn.Box,
     Tweet,
-    a: ({ href, ...props }) => {
+    a: ({ href, ref, ...props }: any) => {
       if (href?.startsWith("/")) {
         return (
           <Link
@@ -56,24 +53,7 @@ export async function MDXTIL({ source }: { source: string }) {
     },
   }
 
-  return (
-    // @ts-expect-error
-    <MDXRemote
-      source={source}
-      components={components}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [
-            [
-              rehypePrettyCode,
-              {
-                theme: { dark: "github-dark-dimmed", light: "github-light" },
-              },
-            ],
-          ],
-        },
-      }}
-    />
-  )
+  const Component = useMDXComponent(code)
+
+  return <Component components={components} />
 }

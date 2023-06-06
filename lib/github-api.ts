@@ -1,3 +1,19 @@
+import { ofetch } from "ofetch"
+
+export async function queryGitHubAPINode(query: string, variables?: any) {
+  return await ofetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      Authorization: `bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+    },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  }).then((json) => json.data)
+}
+
 export async function queryGitHubAPI(query: string, variables?: any) {
   return await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -17,13 +33,13 @@ export async function queryGitHubAPI(query: string, variables?: any) {
 
 type TilQueryArgs =
   | {
-      labels?: string[]
-      first?: number
-      orderBy?: {
-        field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
-        direction: "ASC" | "DESC"
-      }
+    labels?: string[]
+    first?: number
+    orderBy?: {
+      field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
+      direction: "ASC" | "DESC"
     }
+  }
   | undefined
 
 export async function getAllTILs(
@@ -38,8 +54,8 @@ export async function getAllTILs(
   const variables = {
     filterBy: labels
       ? {
-          labels,
-        }
+        labels,
+      }
       : undefined,
     first,
     orderBy,
@@ -55,7 +71,51 @@ export async function getAllTILs(
               id
               createdAt
               body
-              bodyHTML
+              title
+              labels(last: 10) {
+                nodes {
+                  id
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+        `,
+    variables
+  ).then((res) => res?.repository?.issues?.nodes)
+}
+
+export async function getAllTILsNode(
+  { labels, first, orderBy }: TilQueryArgs = {
+    first: 100,
+    orderBy: {
+      field: "CREATED_AT",
+      direction: "DESC",
+    },
+  }
+) {
+  const variables = {
+    filterBy: labels
+      ? {
+        labels,
+      }
+      : undefined,
+    first,
+    orderBy,
+  }
+
+  return await queryGitHubAPINode(
+    `
+      query GetTilList($filterBy: IssueFilters, $first: Int, $orderBy: IssueOrder) {
+        repository(name: "til", owner: "sehyunchung") {
+          id
+          issues(filterBy: $filterBy, first: $first, orderBy: $orderBy) {
+            nodes {
+              id
+              createdAt
+              body
               title
               labels(last: 10) {
                 nodes {

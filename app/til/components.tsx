@@ -1,22 +1,16 @@
 import { Suspense } from "react"
 import Link from "next/link"
+import { Til } from "@/.contentlayer/generated"
 
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
-import { MDXTIL } from "@/components/mdx-components"
+import { MdxTil } from "@/components/mdx-components"
 
 export function TILItem({
   til,
   ...props
 }: React.ComponentProps<"div"> & {
-  til: {
-    id: string
-    title: string
-    body: string
-    bodyHTML: string
-    createdAt: string
-    labels: { nodes: { name: string }[] }
-  }
+  til: Til
 }) {
   return (
     <div
@@ -35,10 +29,10 @@ export function TILItem({
       </Link>
       <div className="prose-img:my-0 prose-img:rounded-xl prose-pre:rounded-md">
         {/* @ts-expect-error */}
-        <MDXTIL source={til.body} />
+        <MdxTil code={til.content.code} />
       </div>
       <div className="mb-2 flex gap-2 pt-5">
-        {til.labels.nodes.map((label: any) => (
+        {til.labels.map((label) => (
           <Link
             className={cn(
               badgeVariants({
@@ -46,10 +40,10 @@ export function TILItem({
               }),
               "no-underline"
             )}
-            href={`/til/label/${label.name}`}
-            key={label.id}
+            href={`/til/label/${label}`}
+            key={label}
           >
-            {label.name}
+            {label}
           </Link>
         ))}
       </div>

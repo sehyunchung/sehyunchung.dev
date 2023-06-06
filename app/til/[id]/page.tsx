@@ -1,7 +1,9 @@
 import { Metadata } from "next"
+import { allTils } from "@/.contentlayer/generated"
 
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
+import { Footer } from "@/components/footer"
 
 import { TILItem } from "../components"
 
@@ -56,13 +58,17 @@ export default async function TilItemPage({
 }: {
   params: { id: string }
 }) {
-  let tils = await getAllTILs()
   let id = decodeURIComponent(params.id)
-  let til = tils.find((til: any) => {
+  let til = allTils.find((til) => {
     return til.id === id
   })
 
   if (!til) return null
 
-  return <TILItem til={til} />
+  return (
+    <>
+      <TILItem til={til} />
+      <Footer />
+    </>
+  )
 }

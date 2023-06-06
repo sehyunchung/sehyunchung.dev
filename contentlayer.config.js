@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import rehypePrettyCode from "rehype-pretty-code"
 import remarkGfm from "remark-gfm"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
@@ -12,6 +13,48 @@ const computedFields = {
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
 }
+
+export const Til = defineDocumentType(() => {
+  return {
+    name: "Til",
+    filePathPattern: `til/**/*.json`,
+    contentType: "data",
+    fields: {
+      id: {
+        type: "string",
+        required: true,
+      },
+      title: {
+        type: "string",
+        required: true,
+      },
+      content: {
+        type: "mdx",
+        required: true,
+      },
+      createdAt: {
+        type: "date",
+        required: true,
+      },
+      labels: {
+        type: "list",
+        required: true,
+        of: {
+          name: "label",
+          type: "string",
+        },
+      },
+    },
+    computedFields: {
+      slug: {
+        type: "string",
+        resolve: (doc) => {
+          return `${doc.id}`
+        },
+      },
+    },
+  }
+})
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
@@ -55,8 +98,19 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post, Page],
+  documentTypes: [Post, Page, Til],
   mdx: {
     remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: {
+            dark: "github-dark-dimmed",
+            light: "github-light",
+          },
+        },
+      ],
+    ],
   },
 })

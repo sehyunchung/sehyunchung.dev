@@ -1,6 +1,6 @@
 import { Metadata } from "next"
+import { allTils } from "@/.contentlayer/generated"
 
-import { getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
 import { TILItem } from "./components"
@@ -27,18 +27,21 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function TILListPage() {
-  const tils = await getAllTILs()
-
   return (
     <article className="w-[100%]">
       {/* @ts-ignore */}
-      {tils?.map((til: any) => (
-        <TILItem
-          key={til.id}
-          className="break-words border-b border-b-gray-200 pb-6"
-          til={til}
-        />
-      ))}
+      {allTils
+        .sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        )
+        .map((til) => (
+          <TILItem
+            key={til.id}
+            className="break-words border-b border-b-gray-200 pb-6"
+            til={til}
+          />
+        ))}
     </article>
   )
 }
