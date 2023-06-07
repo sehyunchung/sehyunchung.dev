@@ -7,7 +7,8 @@ import { getOgImgUrl } from "@/lib/utils"
 import { TILItem } from "../../components"
 
 export async function generateStaticParams() {
-  return allTils.map((til) => til.labels).flat()
+  const allLabels = await getAllTILLabels()
+  return allLabels
 }
 
 export async function generateMetadata(
