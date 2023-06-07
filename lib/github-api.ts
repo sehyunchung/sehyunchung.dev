@@ -152,7 +152,7 @@ export async function getAllTILLabels() {
         name: string
       }[]
     })
-    .then((labels) => labels?.map((label) => label.name))
+    .then((labels) => labels?.map((label) => encodeURIComponent(label.name)))
 }
 
 export async function getAllTILIds() {
