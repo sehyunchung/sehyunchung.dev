@@ -21,7 +21,7 @@ export function HeaderNav() {
   const path = usePathname()
 
   const isCurrentRoute = (href: string) => {
-    return path === href
+    return path.startsWith(href)
   }
 
   return (
