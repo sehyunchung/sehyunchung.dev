@@ -43,7 +43,13 @@ export default async function TilTagPage({
 }) {
   const label = decodeURIComponent(params.label)
 
-  const tils = allTils.filter((til) => til.labels.includes(label))
+  const tils = allTils
+    .filter((til) => til.labels.includes(label))
+    .sort((a, b) => {
+      const aDate = new Date(a.createdAt)
+      const bDate = new Date(b.createdAt)
+      return bDate.getTime() - aDate.getTime()
+    })
 
   return (
     <>
