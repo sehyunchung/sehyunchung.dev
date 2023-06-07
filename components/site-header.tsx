@@ -29,7 +29,7 @@ export function HeaderNav() {
       {HEADER_NAV_LINKS.map(({ href, label }) => (
         <Link href={href} className="no-underline capitalize" key={href}>
           {isCurrentRoute(href) ? (
-            <ClassicBox className="italic" initial>
+            <ClassicBox className="italic" dropCap>
               {label}
             </ClassicBox>
           ) : (
