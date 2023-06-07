@@ -16,11 +16,11 @@ export const metadata = {
     template: "%s | sehyunchung.dev",
     default: "sehyunchung.dev",
   },
-  description: "프론트엔드 괴발개발",
+  description: "개  프론트엔드  발",
   openGraph: {
     url: "https://sehyunchung.dev",
     title: "sehyunchung.dev",
-    description: "프론트엔드 괴발개발",
+    description: "개  프론트엔드  발",
     siteName: "sehyunchung.dev",
     type: "website",
     images: ["https://sehyunchung.dev/og"],
