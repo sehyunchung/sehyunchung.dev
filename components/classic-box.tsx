@@ -3,30 +3,32 @@ import { cn } from "@/lib/utils"
 import { stringDigger } from "./box-drawn"
 
 export function ClassicBox({
-  color = "#d2d2ff",
   children,
   className,
+  dropCap = true,
 }: React.ComponentProps<"div"> & {
   children: React.ReactNode
-  color?: React.CSSProperties["backgroundColor"]
+  dropCap?: boolean
+  italic?: boolean
 }) {
-  const initial = stringDigger(children)[0]
+  const firstLetter = stringDigger(children)[0]
 
   return (
     <div
       style={{
         borderStyle: "outset",
-        borderColor: color,
-        backgroundColor: color,
       }}
       className={cn(
-        "relative flex justify-between border-[0.2em] h-[2em] px-[1em] pl-[1.5em] items-center leading-none font-bold italic capitalize font-serif",
+        "relative text-black flex border-[#d2d2ff] bg-[#d2d2ff] justify-between border-[0.2em] h-[2em] px-[1em] items-center leading-none font-bold capitalize font-serif",
+        dropCap ? "pl-[1.5em]" : "",
         className
       )}
     >
-      <span className="absolute drop-shadow-md left-[0.2em] top-[10%] text-[130%] flex font-gothic not-italic text-[#ff0] font-black">
-        {initial}
-      </span>
+      {dropCap && (
+        <span className="absolute drop-shadow-md left-[0.2em] top-[10%] text-[130%] flex font-gothic not-italic text-[#ff0] font-black">
+          {firstLetter}
+        </span>
+      )}
       <span className="flex">{children}</span>
     </div>
   )

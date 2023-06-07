@@ -2,10 +2,7 @@
 
 import { useTheme } from "next-themes"
 
-import { useMounted } from "@/lib/client-hooks"
 import { cn } from "@/lib/utils"
-
-import { BoxDrawn } from "./box-drawn"
 
 export function ModeToggle(props: React.ComponentProps<"button">) {
   const { setTheme, resolvedTheme } = useTheme()
