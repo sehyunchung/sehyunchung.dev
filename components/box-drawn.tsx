@@ -4,6 +4,9 @@ import { cn } from "@/lib/utils"
 
 type BoxVariant = "single" | "arrow" | "double" | "rounded" | "classic"
 
+const fontStack =
+  'ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace'
+
 const Box = ({
   variant = "single",
   rows = 3,
@@ -23,7 +26,8 @@ const Box = ({
   const boxStr = makeBoxString({ variant, cols, rows, text, shadow })
 
   return (
-    <PresentationSpan
+    <span
+      role="figure"
       style={{
         lineHeight: 1.1,
         width: `${shadow ? colsWidth + 1 : colsWidth}ch`,
@@ -32,15 +36,15 @@ const Box = ({
       className={cn("relative grid place-items-center z-10", className)}
       {...props}
     >
-      <AriaHiddenSpan
+      <span
+        aria-hidden
         style={{
-          fontFamily:
-            'ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace',
+          fontFamily: fontStack,
         }}
         className="absolute whitespace-pre"
       >
         {boxStr}
-      </AriaHiddenSpan>
+      </span>
       <div
         style={{
           transform: `translate(-${shadow ? 0.5 : 0}ch, -${shadow ? 0.5 : 0
@@ -49,7 +53,7 @@ const Box = ({
       >
         {children}
       </div>
-    </PresentationSpan>
+    </span>
   )
 }
 Box.displayName = "Box"
@@ -57,26 +61,6 @@ Box.displayName = "Box"
 export const BoxDrawn = {
   Box,
 }
-
-const PresentationSpan = ({
-  children,
-  ...rest
-}: React.ComponentProps<"span">) => (
-  <span {...rest} role="presentation">
-    {children}
-  </span>
-)
-PresentationSpan.displayName = "PresentationSpan"
-
-const AriaHiddenSpan = ({
-  children,
-  ...rest
-}: React.ComponentProps<"span">) => (
-  <span role="presentation" aria-hidden {...rest}>
-    {children}
-  </span>
-)
-AriaHiddenSpan.displayName = "AriaHiddenSpan"
 
 const getBoxDrawingChars = (type: BoxVariant) => {
   switch (type) {
@@ -230,7 +214,7 @@ const makeBoxString = ({
 /**
  * # `stringDigger`⛏️
  *
- * Extract the text from a ReactNode
+ * Extract text from children
  * @param {React.ReactNode} children
  * @returns {string} The text from children
  */
