@@ -33,13 +33,13 @@ export async function queryGitHubAPI(query: string, variables?: any) {
 
 type TilQueryArgs =
   | {
-    labels?: string[]
-    first?: number
-    orderBy?: {
-      field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
-      direction: "ASC" | "DESC"
+      labels?: string[]
+      first?: number
+      orderBy?: {
+        field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
+        direction: "ASC" | "DESC"
+      }
     }
-  }
   | undefined
 
 export async function getAllTILs(
@@ -54,8 +54,8 @@ export async function getAllTILs(
   const variables = {
     filterBy: labels
       ? {
-        labels,
-      }
+          labels,
+        }
       : undefined,
     first,
     orderBy,
@@ -99,8 +99,8 @@ export async function getAllTILsNode(
   const variables = {
     filterBy: labels
       ? {
-        labels,
-      }
+          labels,
+        }
       : undefined,
     first,
     orderBy,

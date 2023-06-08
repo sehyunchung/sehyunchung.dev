@@ -7,7 +7,6 @@ import {
   ScriptGoogleTagManager,
   ScriptMSClarity,
 } from "@/components/external-scripts"
-import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
