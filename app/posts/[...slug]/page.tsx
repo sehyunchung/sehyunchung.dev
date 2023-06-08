@@ -3,12 +3,19 @@ import { notFound } from "next/navigation"
 import { allPosts } from "contentlayer/generated"
 
 import { getOgImgUrl } from "@/lib/utils"
+import { Giscus } from "@/components/giscus"
 import { Mdx } from "@/components/mdx-components"
 
 interface PostProps {
   params: {
     slug: string[]
   }
+}
+
+export async function generateStaticParams(): Promise<PostProps["params"][]> {
+  return allPosts.map((post) => ({
+    slug: post.slugAsParams.split("/"),
+  }))
 }
 
 async function getPostFromParams(params: PostProps["params"]) {
@@ -61,12 +68,6 @@ export async function generateMetadata({
   }
 }
 
-export async function generateStaticParams(): Promise<PostProps["params"][]> {
-  return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
-  }))
-}
-
 export default async function PostPage({ params }: PostProps) {
   const post = await getPostFromParams(params)
 
@@ -87,6 +88,7 @@ export default async function PostPage({ params }: PostProps) {
       )}
       <hr className="my-4" />
       <Mdx code={post.body.code} />
+      <Giscus className="border-t mt-10" />
     </article>
   )
 }

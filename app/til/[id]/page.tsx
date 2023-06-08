@@ -4,6 +4,7 @@ import { allTils } from "@/.contentlayer/generated"
 import { getAllTILIds, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 import { Footer } from "@/components/footer"
+import { Giscus } from "@/components/giscus"
 
 import { TILItem } from "../components"
 
@@ -68,6 +69,7 @@ export default async function TilItemPage({
   return (
     <>
       <TILItem til={til} />
+      <Giscus />
       <Footer />
     </>
   )
