@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm make-data && next dev",
-    "build": "pnpm make-data && next build",
-    "preview": "pnpm make-data && next build && next start",
+    "dev": "pnpm download-til && next dev",
+    "build": "pnpm download-til && next build",
+    "preview": "pnpm download-til && next build && next start",
     "start": "next start",
     "lint": "next lint",
-    "make-data": "ts-node ./lib/serialize.ts"
+    "download-til": "ts-node ./lib/download-til.ts"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^0.10.1",

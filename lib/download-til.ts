@@ -3,7 +3,11 @@ import * as path from "path"
 
 import { getAllTILsNode } from "./github-api"
 
-export const getTils = async () => {
+const yellow = "\x1b[33m%s\x1b[0m"
+const green = "\x1b[32m%s\x1b[0m"
+
+export const downloadTil = async () => {
+  console.log(yellow, "🫠: downloading til...")
   const tils = await getAllTILsNode()
 
   tils.forEach(
@@ -42,6 +46,8 @@ export const getTils = async () => {
   )
 }
 
-getTils().then(() => console.log("tils retrieved\n"))
+downloadTil().then(() =>
+  console.log(green, "🫠: til successfully downloaded!\n")
+)
 
-export {}
+export { }
