@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU2OTY2MTE3NDc=","title":"chrome 에서 command palette 사용하기","content":"```\r\nshift + cmd + /\r\n```\r\n이것은 사실 Help/Search 단축키이지만 vscode의 shift + cmd + p 와 같은 용도로 사용할 수 있다.","createdAt":"2020-09-09T08:51:38Z","labels":["chrome"]}
