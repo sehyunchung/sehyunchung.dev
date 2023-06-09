@@ -1,0 +1,1 @@
+{"id":"I_kwDOB4HiUc5mPNR8","title":"Split string into array","content":"```bash\r\nwords=\"hello hello how low?\"\r\n\r\narray=($words);\r\n\r\nfor word in \"${array[@]}\"; do\r\n  echo $word\r\ndone\r\n```\r\n\r\n```bash\r\nhello\r\nhello\r\nhow\r\nlow?\r\n```","createdAt":"2023-05-18T08:51:32Z","labels":["shell","tips and tricks"]}
