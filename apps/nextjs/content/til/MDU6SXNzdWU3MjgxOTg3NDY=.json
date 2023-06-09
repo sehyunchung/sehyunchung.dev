@@ -1,0 +1,1 @@
+{"id":"MDU6SXNzdWU3MjgxOTg3NDY=","title":"remove remote","content":"```sh\r\ngit remote rm <remote-name>\r\n```","createdAt":"2020-10-23T13:00:00Z","labels":["git"]}

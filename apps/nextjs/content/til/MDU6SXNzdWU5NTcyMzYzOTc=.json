@@ -1,0 +1,1 @@
+{"id":"MDU6SXNzdWU5NTcyMzYzOTc=","title":"if vs. when","content":"```clj\r\n(if expr \"True\" nil)\r\n```\r\n```clj\r\n(when expr \"True\")\r\n```\r\n위 둘은 같음.","createdAt":"2021-07-31T12:28:10Z","labels":["clojurescript"]}

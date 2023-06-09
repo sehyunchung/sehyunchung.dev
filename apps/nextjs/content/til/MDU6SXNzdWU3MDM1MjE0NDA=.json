@@ -1,0 +1,1 @@
+{"id":"MDU6SXNzdWU3MDM1MjE0NDA=","title":"node-sass: \"Incompatible units\"","content":"```scss\r\nmax(50% - 2px) // sass Error: Incompatible units '%' and 'px'\r\n```\r\n\r\n```scss\r\ncalc(max(50% - 2px)) // okay\r\n```","createdAt":"2020-09-17T11:56:44Z","labels":["node-sass"]}

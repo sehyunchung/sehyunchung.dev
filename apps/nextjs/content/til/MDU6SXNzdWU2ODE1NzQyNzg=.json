@@ -1,0 +1,1 @@
+{"id":"MDU6SXNzdWU2ODE1NzQyNzg=","title":"delete all branches except current","content":"```sh\r\ngit branch -D $(git branch)\r\n```","createdAt":"2020-08-19T06:07:56Z","labels":["git"]}
