@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU4MzU3NDI1OTA=","title":"kill localhost:PORT","content":"```shell\r\nlsof -iTCP:{PORT} -sTCP:LISTEN\r\n```\r\n```shell\r\nkill {PID}\r\n```","createdAt":"2021-03-19T09:18:59Z","labels":["terminal"]}

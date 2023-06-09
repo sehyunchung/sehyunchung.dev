@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU2NzE0ODUxMjE=","title":"symlinks","content":"path 의 alias 라고 생각하면 쉽다.\r\n\r\n```sh\r\nln -s /PATH/TO/ORIGINAL /PATH/TO/LINK\r\n```","createdAt":"2020-08-02T04:16:29Z","labels":["shell"]}

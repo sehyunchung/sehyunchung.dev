@@ -65,3 +65,6 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+
+# turborepo
+.turbo

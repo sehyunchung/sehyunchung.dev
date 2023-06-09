@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU4MzU2MDU0OTY=","title":"isReactElement","content":"```ts\r\nconst isReactElement = (element: ReactNode): element is ReactElement =>\r\n  element !== null && typeof element === 'object' && 'props' in element;\r\n```\r\n","createdAt":"2021-03-19T06:14:48Z","labels":["typescript","react"]}
