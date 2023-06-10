@@ -1,29 +1,29 @@
-import { MetadataRoute } from "next"
+import { MetadataRoute } from "next";
 
-const baseUrl = "https://sehyunchung.dev"
+const baseUrl = "https://sehyunchung.dev";
 
 // TODO: generate automatically
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-    },
-    {
-      url: baseUrl + "/til",
-      lastModified: new Date(),
-    },
-    {
-      url: baseUrl + "/toys",
-      lastModified: new Date(),
-    },
-    {
-      url: baseUrl + "/posts",
-      lastModified: new Date(),
-    },
-    {
-      url: baseUrl + "/about",
-      lastModified: new Date(),
-    },
-  ]
+	return [
+		{
+			url: baseUrl,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/til`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/toys`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/posts`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${baseUrl}/about`,
+			lastModified: new Date(),
+		},
+	];
 }

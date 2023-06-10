@@ -1,68 +1,68 @@
-import { ofetch } from "ofetch"
+import { ofetch } from "ofetch";
 
 export async function queryGitHubAPINode(query: string, variables?: any) {
-  return await ofetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      Authorization: `bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      query,
-      variables,
-    }),
-  }).then((json) => json.data)
+	return await ofetch("https://api.github.com/graphql", {
+		method: "POST",
+		headers: {
+			"content-type": "application/json",
+			Authorization: `bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+		},
+		body: JSON.stringify({
+			query,
+			variables,
+		}),
+	}).then((json) => json.data);
 }
 
 export async function queryGitHubAPI(query: string, variables?: any) {
-  return await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      Authorization: `bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      query,
-      variables,
-    }),
-    next: { revalidate: 60 },
-  })
-    .then((res) => res.json())
-    .then((json) => json.data)
+	return await fetch("https://api.github.com/graphql", {
+		method: "POST",
+		headers: {
+			"content-type": "application/json",
+			Authorization: `bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+		},
+		body: JSON.stringify({
+			query,
+			variables,
+		}),
+		next: { revalidate: 60 },
+	})
+		.then((res) => res.json())
+		.then((json) => json.data);
 }
 
 type TilQueryArgs =
-  | {
-      labels?: string[]
-      first?: number
-      orderBy?: {
-        field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
-        direction: "ASC" | "DESC"
-      }
-    }
-  | undefined
+	| {
+			labels?: string[];
+			first?: number;
+			orderBy?: {
+				field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS";
+				direction: "ASC" | "DESC";
+			};
+	  }
+	| undefined;
 
 export async function getAllTILs(
-  { labels, first, orderBy }: TilQueryArgs = {
-    first: 100,
-    orderBy: {
-      field: "CREATED_AT",
-      direction: "DESC",
-    },
-  }
+	{ labels, first, orderBy }: TilQueryArgs = {
+		first: 100,
+		orderBy: {
+			field: "CREATED_AT",
+			direction: "DESC",
+		},
+	},
 ) {
-  const variables = {
-    filterBy: labels
-      ? {
-          labels,
-        }
-      : undefined,
-    first,
-    orderBy,
-  }
+	const variables = {
+		filterBy: labels
+			? {
+					labels,
+			  }
+			: undefined,
+		first,
+		orderBy,
+	};
 
-  return await queryGitHubAPI(
-    `
+	return await queryGitHubAPI(
+		`
       query GetTilList($filterBy: IssueFilters, $first: Int, $orderBy: IssueOrder) {
         repository(name: "til", owner: "sehyunchung") {
           id
@@ -83,31 +83,31 @@ export async function getAllTILs(
         }
       }
         `,
-    variables
-  ).then((res) => res?.repository?.issues?.nodes)
+		variables,
+	).then((res) => res?.repository?.issues?.nodes);
 }
 
 export async function getAllTILsNode(
-  { labels, first, orderBy }: TilQueryArgs = {
-    first: 100,
-    orderBy: {
-      field: "CREATED_AT",
-      direction: "DESC",
-    },
-  }
+	{ labels, first, orderBy }: TilQueryArgs = {
+		first: 100,
+		orderBy: {
+			field: "CREATED_AT",
+			direction: "DESC",
+		},
+	},
 ) {
-  const variables = {
-    filterBy: labels
-      ? {
-          labels,
-        }
-      : undefined,
-    first,
-    orderBy,
-  }
+	const variables = {
+		filterBy: labels
+			? {
+					labels,
+			  }
+			: undefined,
+		first,
+		orderBy,
+	};
 
-  return await queryGitHubAPINode(
-    `
+	return await queryGitHubAPINode(
+		`
       query GetTilList($filterBy: IssueFilters, $first: Int, $orderBy: IssueOrder) {
         repository(name: "til", owner: "sehyunchung") {
           id
@@ -128,12 +128,12 @@ export async function getAllTILsNode(
         }
       }
         `,
-    variables
-  ).then((res) => res?.repository?.issues?.nodes)
+		variables,
+	).then((res) => res?.repository?.issues?.nodes);
 }
 
 export async function getAllTILLabels() {
-  return await queryGitHubAPI(`
+	return await queryGitHubAPI(`
       query TilLabels {
         repository(name: "til", owner: "sehyunchung") {
           id
@@ -146,17 +146,17 @@ export async function getAllTILLabels() {
         }
       }
       `)
-    .then((json) => {
-      return json?.repository?.labels?.nodes as {
-        id: string
-        name: string
-      }[]
-    })
-    .then((labels) => labels?.map((label) => encodeURIComponent(label.name)))
+		.then((json) => {
+			return json?.repository?.labels?.nodes as {
+				id: string;
+				name: string;
+			}[];
+		})
+		.then((labels) => labels?.map((label) => encodeURIComponent(label.name)));
 }
 
 export async function getAllTILIds() {
-  return await queryGitHubAPI(`
+	return await queryGitHubAPI(`
         query TilIds {
             repository(name: "til", owner: "sehyunchung") {
               issues(first: 100) {
@@ -169,6 +169,6 @@ export async function getAllTILIds() {
             }
           }
             `).then((data) =>
-    data.repository.issues.edges.map((edge: any) => edge.node.id)
-  )
+		data.repository.issues.edges.map((edge: any) => edge.node.id),
+	);
 }
