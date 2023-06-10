@@ -1,8 +1,8 @@
-import { ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+	return twMerge(clsx(inputs));
 }
 
 /**
@@ -12,23 +12,23 @@ export function cn(...inputs: ClassValue[]) {
  * @returns {URL} og:image url
  */
 export function getOgImgUrl(): URL {
-  const url = getBaseUrl().origin + "/og"
+	const url = `${getBaseUrl().origin}/og`;
 
-  return new URL(url)
+	return new URL(url);
 }
 
 export function getBaseUrl(): URL {
-  const baseUrl = () => {
-    if (process.env.VERCEL_ENV === "production") {
-      return `https://sehyunchung.dev`
-    }
+	const baseUrl = () => {
+		if (process.env.VERCEL_ENV === "production") {
+			return "https://sehyunchung.dev";
+		}
 
-    if (process.env.VERCEL_ENV === "preview") {
-      return `https://${process.env.VERCEL_URL}`
-    }
+		if (process.env.VERCEL_ENV === "preview") {
+			return `https://${process.env.VERCEL_URL}`;
+		}
 
-    return `http://localhost:3000`
-  }
+		return "http://localhost:3000";
+	};
 
-  return new URL(baseUrl())
+	return new URL(baseUrl());
 }
