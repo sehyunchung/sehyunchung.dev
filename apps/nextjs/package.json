@@ -37,7 +37,8 @@
     "rehype-pretty-code": "^0.9.6",
     "shiki": "^0.14.2",
     "tailwind-merge": "^1.12.0",
-    "tailwindcss-animate": "^1.0.5"
+    "tailwindcss-animate": "^1.0.5",
+    "ui": "workspace:*"
   },
   "devDependencies": {
     "@builder.io/partytown": "^0.8.0",

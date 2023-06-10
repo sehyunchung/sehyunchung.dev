@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils"
+import { stringDigger } from "ui/tools"
 
-import { stringDigger } from "./box-drawn"
+import { cn } from "@/lib/utils"
 
 export function ClassicBox({
   children,

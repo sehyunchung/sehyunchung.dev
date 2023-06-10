@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 
-import { BoxDrawn } from "./box-drawn"
 import { ClassicBox } from "./classic-box"
 import { LogoNav } from "./logo-nav"
 import { ModeToggle } from "./mode-toggle"

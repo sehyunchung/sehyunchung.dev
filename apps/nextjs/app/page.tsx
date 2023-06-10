@@ -1,6 +1,6 @@
 import Link from "next/link"
+import { BoxDrawn } from "ui"
 
-import { BoxDrawn } from "@/components/box-drawn"
 import { ClassicBox } from "@/components/classic-box"
 
 export default async function Home() {

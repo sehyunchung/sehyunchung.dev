@@ -4,8 +4,7 @@ import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
-
-import { BoxDrawn } from "./box-drawn"
+import { BoxDrawn } from "ui"
 
 const components = {
   Tweet,
