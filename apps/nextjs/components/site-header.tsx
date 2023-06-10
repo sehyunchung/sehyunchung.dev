@@ -11,8 +11,8 @@ import { ModeToggle } from "./mode-toggle"
 
 const HEADER_NAV_LINKS = [
   { href: "/til", label: "til" },
-  { href: "/toys", label: "toys" },
   { href: "/posts", label: "posts" },
+  { href: "/toys", label: "toys" },
   { href: "/about", label: "about" },
 ] as const
 
