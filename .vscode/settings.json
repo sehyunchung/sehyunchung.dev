@@ -1,8 +1,26 @@
 {
-  "typescript.tsdk": "node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
-  "python.formatting.provider": "none"
+	"typescript.tsdk": "node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"editor.defaultFormatter": "rome.rome",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"quickfix.rome": true,
+		"source.organizeImports.rome": true
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"prettier.enable": false
 }
