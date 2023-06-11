@@ -98,6 +98,7 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
 	contentDirPath: "./content",
+	contentDirExclude: ["archived"],
 	documentTypes: [Post, Page, Til],
 	mdx: {
 		remarkPlugins: [remarkGfm],
