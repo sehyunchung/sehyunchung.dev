@@ -11,5 +11,13 @@
 	},
 	"formatter": {
 		"enabled": true
+	},
+	"files": {
+		"ignore": ["node_modules", "**/content/**/*"]
+	},
+	"javascript": {
+		"formatter": {
+			"semicolons": "asNeeded"
+		}
 	}
 }
