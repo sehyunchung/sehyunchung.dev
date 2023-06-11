@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
-import Script from "next/script";
+import Script from "next/script"
 
 export const ScriptMSClarity = () => (
 	<Script
@@ -14,7 +14,7 @@ export const ScriptMSClarity = () => (
         })(window, document, "clarity", "script", "h9xndue0yj");`,
 		}}
 	/>
-);
+)
 
 export const ScriptGoogleTagManager = () => (
 	<Script
@@ -22,7 +22,7 @@ export const ScriptGoogleTagManager = () => (
 		strategy="beforeInteractive"
 		src="https://www.googletagmanager.com/gtag/js?id=G-SN5E99TMCJ"
 	/>
-);
+)
 
 export const ScriptGoogleDataLayerInline = () => (
 	<Script
@@ -35,4 +35,4 @@ export const ScriptGoogleDataLayerInline = () => (
           gtag('config', 'G-SN5E99TMCJ');`,
 		}}
 	/>
-);
+)

@@ -1,6 +1,6 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from "next"
 
-const baseUrl = "https://sehyunchung.dev";
+const baseUrl = "https://sehyunchung.dev"
 
 // TODO: generate automatically
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,5 +25,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: `${baseUrl}/about`,
 			lastModified: new Date(),
 		},
-	];
+	]
 }

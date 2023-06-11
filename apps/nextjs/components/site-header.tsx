@@ -1,27 +1,27 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-import { ClassicBox } from "./classic-box";
-import { LogoNav } from "./logo-nav";
-import { ModeToggle } from "./mode-toggle";
+import { ClassicBox } from "./classic-box"
+import { LogoNav } from "./logo-nav"
+import { ModeToggle } from "./mode-toggle"
 
 const HEADER_NAV_LINKS = [
 	{ href: "/til", label: "til" },
 	{ href: "/posts", label: "posts" },
 	{ href: "/toys", label: "toys" },
 	{ href: "/about", label: "about" },
-] as const;
+] as const
 
 export function HeaderNav() {
-	const path = usePathname();
+	const path = usePathname()
 
 	const isCurrentRoute = (href: string) => {
-		return path.startsWith(href);
-	};
+		return path.startsWith(href)
+	}
 
 	return (
 		<nav className="h-12 ml-auto grid grid-flow-col gap-x-3 md:gap-x-5 place-items-center prose-a:underline-offset-4">
@@ -38,7 +38,7 @@ export function HeaderNav() {
 			))}
 			<ModeToggle />
 		</nav>
-	);
+	)
 }
 
 export function SiteHeader() {
@@ -51,5 +51,5 @@ export function SiteHeader() {
 				<HeaderNav />
 			</div>
 		</header>
-	);
+	)
 }

@@ -1,25 +1,25 @@
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "@vercel/og"
 
-export const runtime = "edge";
+export const runtime = "edge"
 
 const chalkboardR = fetch(
 	new URL("./Chalkboard-Regular.woff", import.meta.url),
-).then((res) => res.arrayBuffer());
+).then((res) => res.arrayBuffer())
 
 const chalkboardB = fetch(
 	new URL("./Chalkboard-Bold.woff", import.meta.url),
-).then((res) => res.arrayBuffer());
+).then((res) => res.arrayBuffer())
 
 export async function GET(request: Request) {
-	const url = new URL(request.url);
-	const searchParams = url.searchParams;
-	const title = searchParams.has("title") ? searchParams.get("title") : "";
+	const url = new URL(request.url)
+	const searchParams = url.searchParams
+	const title = searchParams.has("title") ? searchParams.get("title") : ""
 	const description = searchParams.has("description")
 		? searchParams.get("description")
-		: "";
+		: ""
 
-	const chalkboardRegular = await chalkboardR;
-	const chalkboardBold = await chalkboardB;
+	const chalkboardRegular = await chalkboardR
+	const chalkboardBold = await chalkboardB
 
 	return new ImageResponse(
 		<div
@@ -82,7 +82,7 @@ export async function GET(request: Request) {
 										<span key={i}>{char}</span>
 									) : i < 108 ? (
 										"..."
-									) : null;
+									) : null
 								})}
 						</div>
 					) : null}
@@ -108,7 +108,7 @@ export async function GET(request: Request) {
 				},
 			],
 		},
-	);
+	)
 }
 
 const MeltedFaceSvg = (props: React.ComponentProps<"svg">) => {
@@ -154,5 +154,5 @@ const MeltedFaceSvg = (props: React.ComponentProps<"svg">) => {
 				strokeLinecap="round"
 			/>
 		</svg>
-	);
-};
+	)
+}

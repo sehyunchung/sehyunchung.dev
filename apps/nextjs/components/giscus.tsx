@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import GiscusReact from "@giscus/react";
-import { useTheme } from "next-themes";
+import * as React from "react"
+import GiscusReact from "@giscus/react"
+import { useTheme } from "next-themes"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export function Giscus({ className }: { className?: string }) {
-	const { resolvedTheme } = useTheme();
+	const { resolvedTheme } = useTheme()
 
 	const theme =
 		resolvedTheme === "system"
 			? "preferred_color_scheme"
 			: resolvedTheme === "dark"
 			? "dark_dimmed"
-			: "light";
+			: "light"
 
 	return (
 		<div className={cn("pt-8", className)}>
@@ -33,5 +33,5 @@ export function Giscus({ className }: { className?: string }) {
 				lang="en"
 			/>
 		</div>
-	);
+	)
 }

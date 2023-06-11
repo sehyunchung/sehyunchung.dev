@@ -1,17 +1,17 @@
-import { stringDigger } from "ui/tools";
+import { stringDigger } from "ui/tools"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export function ClassicBox({
 	children,
 	className,
 	dropCap = true,
 }: React.ComponentProps<"div"> & {
-	children: React.ReactNode;
-	dropCap?: boolean;
-	italic?: boolean;
+	children: React.ReactNode
+	dropCap?: boolean
+	italic?: boolean
 }) {
-	const firstLetter = stringDigger(children)[0];
+	const firstLetter = stringDigger(children)[0]
 
 	return (
 		<div
@@ -31,5 +31,5 @@ export function ClassicBox({
 			)}
 			<span className="flex">{children}</span>
 		</div>
-	);
+	)
 }

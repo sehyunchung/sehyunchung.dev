@@ -1,12 +1,12 @@
-import type { Route } from "next";
-import Link from "next/link";
-import { allPosts } from "@/.contentlayer/generated";
+import type { Route } from "next"
+import Link from "next/link"
+import { allPosts } from "@/.contentlayer/generated"
 
-import { getOgImgUrl } from "@/lib/utils";
+import { getOgImgUrl } from "@/lib/utils"
 
 export async function generateMetadata() {
-	const ogImg = getOgImgUrl();
-	ogImg.searchParams.set("title", "Posts");
+	const ogImg = getOgImgUrl()
+	ogImg.searchParams.set("title", "Posts")
 
 	return {
 		title: "Posts",
@@ -19,7 +19,7 @@ export async function generateMetadata() {
 			title: "Posts",
 			images: [ogImg],
 		},
-	};
+	}
 }
 
 export default async function PostsPage() {
@@ -43,5 +43,5 @@ export default async function PostsPage() {
 					</article>
 				))}
 		</div>
-	);
+	)
 }

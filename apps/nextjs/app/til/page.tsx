@@ -1,13 +1,13 @@
-import { Metadata } from "next";
-import { allTils } from "@/.contentlayer/generated";
+import { Metadata } from "next"
+import { allTils } from "@/.contentlayer/generated"
 
-import { getOgImgUrl } from "@/lib/utils";
+import { getOgImgUrl } from "@/lib/utils"
 
-import { TILItem } from "./components";
+import { TILItem } from "./components"
 
 export async function generateMetadata(): Promise<Metadata> {
-	const ogImg = getOgImgUrl();
-	ogImg.searchParams.set("title", "TIL");
+	const ogImg = getOgImgUrl()
+	ogImg.searchParams.set("title", "TIL")
 
 	return {
 		title: "TIL",
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			description: "Today I Learned",
 			card: "summary_large_image",
 		},
-	};
+	}
 }
 
 export default async function TILListPage() {
@@ -43,5 +43,5 @@ export default async function TILListPage() {
 					/>
 				))}
 		</article>
-	);
+	)
 }

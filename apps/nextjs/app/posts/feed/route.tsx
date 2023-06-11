@@ -1,5 +1,5 @@
-import { allPosts as posts } from "@/.contentlayer/generated";
-import { Feed } from "feed";
+import { allPosts as posts } from "@/.contentlayer/generated"
+import { Feed } from "feed"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",
@@ -18,7 +18,7 @@ const feed = new Feed({
 		email: "hi@sehyunchung.dev",
 		link: "https://sehyunchung.dev",
 	},
-});
+})
 
 posts.forEach((post) => {
 	feed.addItem({
@@ -27,13 +27,13 @@ posts.forEach((post) => {
 		link: `https://sehyunchung.dev/posts/${post.slug}`,
 		date: new Date(post.date),
 		description: post.description,
-	});
-});
+	})
+})
 
 export async function GET() {
 	return new Response(feed.atom1(), {
 		headers: {
 			"Content-Type": "application/atom+xml; charset=utf-8",
 		},
-	});
+	})
 }

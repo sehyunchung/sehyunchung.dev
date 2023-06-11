@@ -41,5 +41,5 @@ export function MeltingFace(props: React.SVGProps<SVGSVGElement>) {
 				/>
 			</g>
 		</svg>
-	);
+	)
 }
