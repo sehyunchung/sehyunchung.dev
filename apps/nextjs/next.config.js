@@ -1,4 +1,4 @@
-const { withContentlayer } = require("next-contentlayer");
+const { withContentlayer } = require("next-contentlayer")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,6 +9,6 @@ const nextConfig = {
 		formats: ["image/avif", "image/webp"],
 	},
 	transpilePackages: ["ui"],
-};
+}
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withContentlayer(nextConfig)
