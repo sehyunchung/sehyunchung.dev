@@ -12,6 +12,15 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
+	async redirects() {
+		return [
+			{
+				source: "/til",
+				destination: "/til/page/1",
+				permanent: true,
+			},
+		]
+	},
 }
 
 module.exports = withContentlayer(nextConfig)
