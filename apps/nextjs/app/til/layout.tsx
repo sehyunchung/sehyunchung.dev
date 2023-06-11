@@ -1,7 +1,7 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { SiteHeader } from "@/components/site-header";
-import { TilPageAlert } from "@/components/til-alert";
+import { SiteHeader } from "@/components/site-header"
+import { TilPageAlert } from "@/components/til-alert"
 
 export default function TILLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -17,5 +17,5 @@ export default function TILLayout({ children }: { children: React.ReactNode }) {
 				{children}
 			</div>
 		</>
-	);
+	)
 }

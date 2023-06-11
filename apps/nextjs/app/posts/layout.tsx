@@ -1,10 +1,10 @@
-import { Footer } from "@/components/footer";
-import { SiteHeader } from "@/components/site-header";
+import { Footer } from "@/components/footer"
+import { SiteHeader } from "@/components/site-header"
 
 export default function PagesLayout({
 	children,
 }: {
-	children: React.ReactNode;
+	children: React.ReactNode
 }) {
 	return (
 		<>
@@ -12,5 +12,5 @@ export default function PagesLayout({
 			<main className="flex flex-col min-h-[50vh]">{children}</main>
 			<Footer />
 		</>
-	);
+	)
 }

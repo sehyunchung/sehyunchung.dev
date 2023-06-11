@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { useTheme } from "next-themes";
+import { useTheme } from "next-themes"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export function ModeToggle(props: React.ComponentProps<"button">) {
-	const { setTheme, resolvedTheme } = useTheme();
+	const { setTheme, resolvedTheme } = useTheme()
 
 	return (
 		<button
@@ -18,5 +18,5 @@ export function ModeToggle(props: React.ComponentProps<"button">) {
 			<span className="dark:inline hidden">☽</span>
 			<span className="inline dark:hidden">☼</span>
 		</button>
-	);
+	)
 }

@@ -1,13 +1,13 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/server"
 
-export const runtime = "edge";
+export const runtime = "edge"
 
 export const size = {
 	width: 50,
 	height: 50,
-};
+}
 
-export const contentType = "image/png";
+export const contentType = "image/png"
 
 export default function Icon() {
 	return new ImageResponse(
@@ -65,5 +65,5 @@ export default function Icon() {
 		{
 			...size,
 		},
-	);
+	)
 }

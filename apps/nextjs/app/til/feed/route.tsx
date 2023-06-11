@@ -1,6 +1,6 @@
-import { Feed } from "feed";
+import { Feed } from "feed"
 
-import { getAllTILs } from "@/lib/github-api";
+import { getAllTILs } from "@/lib/github-api"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",
@@ -19,10 +19,10 @@ const feed = new Feed({
 		email: "hi@sehyunchung.dev",
 		link: "https://sehyunchung.dev",
 	},
-});
+})
 
 export async function GET() {
-	const tils = await getAllTILs();
+	const tils = await getAllTILs()
 
 	tils.forEach((til: any) => {
 		feed.addItem({
@@ -34,15 +34,15 @@ export async function GET() {
 				return {
 					name: label.name,
 					term: label.name,
-				};
+				}
 			}),
 			content: til.labels.nodes.map((label: any) => label.name).join(", "),
-		});
-	});
+		})
+	})
 
 	return new Response(feed.atom1(), {
 		headers: {
 			"Content-Type": "application/atom+xml; charset=utf-8",
 		},
-	});
+	})
 }

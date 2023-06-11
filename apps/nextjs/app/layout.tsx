@@ -1,13 +1,13 @@
-import "./globals.css";
-import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts";
-import { getBaseUrl } from "@/lib/utils";
-import { Analytics } from "@/components/analytics";
+import "./globals.css"
+import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { getBaseUrl } from "@/lib/utils"
+import { Analytics } from "@/components/analytics"
 import {
 	ScriptGoogleDataLayerInline,
 	ScriptGoogleTagManager,
 	ScriptMSClarity,
-} from "@/components/external-scripts";
-import { ThemeProvider } from "@/components/theme-provider";
+} from "@/components/external-scripts"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
 	metadataBase: getBaseUrl(),
@@ -32,10 +32,10 @@ export const metadata = {
 		images: ["https://sehyunchung.dev/og"],
 	},
 	icons: ["https://sehunchung.dev/icon"],
-};
+}
 
 interface RootLayoutProps {
-	children: React.ReactNode;
+	children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -63,5 +63,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				</ThemeProvider>
 			</body>
 		</html>
-	);
+	)
 }

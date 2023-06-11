@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 /**
  * # `stringDigger`⛏️
@@ -9,16 +9,16 @@ import * as React from "react";
  */
 export function stringDigger(children: React.ReactNode): string {
 	if (Array.isArray(children)) {
-		return children.map(stringDigger).join(" ");
+		return children.map(stringDigger).join(" ")
 	}
 
 	if (React.isValidElement(children) && children.props.children !== undefined) {
-		return stringDigger(children.props.children);
+		return stringDigger(children.props.children)
 	}
 
 	if (typeof children === "string" || typeof children === "number") {
-		return children.toString();
+		return children.toString()
 	}
 
-	return "";
+	return ""
 }

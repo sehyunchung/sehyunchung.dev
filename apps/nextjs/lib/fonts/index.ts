@@ -1,5 +1,5 @@
-import { Comic_Neue, Gothic_A1 } from "next/font/google";
-import localFont from "next/font/local";
+import { Comic_Neue, Gothic_A1 } from "next/font/google"
+import localFont from "next/font/local"
 
 export const berkeleyMono = localFont({
 	variable: "--font-bk-mono",
@@ -14,7 +14,7 @@ export const berkeleyMono = localFont({
 		},
 	],
 	display: "swap",
-});
+})
 
 export const comicMono = localFont({
 	variable: "--font-comic-mono",
@@ -31,16 +31,16 @@ export const comicMono = localFont({
 		},
 	],
 	display: "swap",
-});
+})
 
 export const comicNeue = Comic_Neue({
 	weight: ["700"],
 	subsets: ["latin"],
 	variable: "--font-comic-neue",
-});
+})
 
 export const gothicA1 = Gothic_A1({
 	weight: ["400", "700"],
 	subsets: ["latin"],
 	variable: "--font-gothic-a1",
-});
+})

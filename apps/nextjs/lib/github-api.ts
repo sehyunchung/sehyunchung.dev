@@ -1,4 +1,4 @@
-import { ofetch } from "ofetch";
+import { ofetch } from "ofetch"
 
 export async function queryGitHubAPINode(query: string, variables?: any) {
 	return await ofetch("https://api.github.com/graphql", {
@@ -11,7 +11,7 @@ export async function queryGitHubAPINode(query: string, variables?: any) {
 			query,
 			variables,
 		}),
-	}).then((json) => json.data);
+	}).then((json) => json.data)
 }
 
 export async function queryGitHubAPI(query: string, variables?: any) {
@@ -28,19 +28,19 @@ export async function queryGitHubAPI(query: string, variables?: any) {
 		next: { revalidate: 60 },
 	})
 		.then((res) => res.json())
-		.then((json) => json.data);
+		.then((json) => json.data)
 }
 
 type TilQueryArgs =
 	| {
-			labels?: string[];
-			first?: number;
+			labels?: string[]
+			first?: number
 			orderBy?: {
-				field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS";
-				direction: "ASC" | "DESC";
-			};
+				field: "CREATED_AT" | "UPDATED_AT" | "COMMENTS"
+				direction: "ASC" | "DESC"
+			}
 	  }
-	| undefined;
+	| undefined
 
 export async function getAllTILs(
 	{ labels, first, orderBy }: TilQueryArgs = {
@@ -59,7 +59,7 @@ export async function getAllTILs(
 			: undefined,
 		first,
 		orderBy,
-	};
+	}
 
 	return await queryGitHubAPI(
 		`
@@ -84,7 +84,7 @@ export async function getAllTILs(
       }
         `,
 		variables,
-	).then((res) => res?.repository?.issues?.nodes);
+	).then((res) => res?.repository?.issues?.nodes)
 }
 
 export async function getAllTILsNode(
@@ -104,7 +104,7 @@ export async function getAllTILsNode(
 			: undefined,
 		first,
 		orderBy,
-	};
+	}
 
 	return await queryGitHubAPINode(
 		`
@@ -129,7 +129,7 @@ export async function getAllTILsNode(
       }
         `,
 		variables,
-	).then((res) => res?.repository?.issues?.nodes);
+	).then((res) => res?.repository?.issues?.nodes)
 }
 
 export async function getAllTILLabels() {
@@ -148,11 +148,11 @@ export async function getAllTILLabels() {
       `)
 		.then((json) => {
 			return json?.repository?.labels?.nodes as {
-				id: string;
-				name: string;
-			}[];
+				id: string
+				name: string
+			}[]
 		})
-		.then((labels) => labels?.map((label) => encodeURIComponent(label.name)));
+		.then((labels) => labels?.map((label) => encodeURIComponent(label.name)))
 }
 
 export async function getAllTILIds() {
@@ -170,5 +170,5 @@ export async function getAllTILIds() {
           }
             `).then((data) =>
 		data.repository.issues.edges.map((edge: any) => edge.node.id),
-	);
+	)
 }

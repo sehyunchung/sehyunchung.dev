@@ -1,16 +1,16 @@
-import { Suspense } from "react";
-import Link from "next/link";
-import { Til } from "@/.contentlayer/generated";
+import { Suspense } from "react"
+import Link from "next/link"
+import { Til } from "@/.contentlayer/generated"
 
-import { cn } from "@/lib/utils";
-import { badgeVariants } from "@/components/ui/badge";
-import { MdxTil } from "@/components/mdx-components";
+import { cn } from "@/lib/utils"
+import { badgeVariants } from "@/components/ui/badge"
+import { MdxTil } from "@/components/mdx-components"
 
 export function TILItem({
 	til,
 	...props
 }: React.ComponentProps<"div"> & {
-	til: Til;
+	til: Til
 }) {
 	return (
 		<div
@@ -48,5 +48,5 @@ export function TILItem({
 				))}
 			</div>
 		</div>
-	);
+	)
 }

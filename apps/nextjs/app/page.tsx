@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { BoxDrawn } from "ui";
+import Link from "next/link"
+import { BoxDrawn } from "ui"
 
-import { ClassicBox } from "@/components/classic-box";
+import { ClassicBox } from "@/components/classic-box"
 
 export default async function Home() {
 	return (
@@ -25,5 +25,5 @@ export default async function Home() {
 				</Link>
 			</BoxDrawn.Box>
 		</div>
-	);
+	)
 }

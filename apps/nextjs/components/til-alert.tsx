@@ -1,6 +1,6 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle } from "lucide-react"
 
-import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert"
 
 export function TilPageAlert() {
 	return (
@@ -11,5 +11,5 @@ export function TilPageAlert() {
 				outdated 혹은 deprecated 혹은 틀린 내용이 있을 수 있습니다.
 			</AlertDescription>
 		</Alert>
-	);
+	)
 }
