@@ -9,6 +9,9 @@ const nextConfig = {
 		formats: ["image/avif", "image/webp"],
 	},
 	transpilePackages: ["ui"],
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 }
 
 module.exports = withContentlayer(nextConfig)

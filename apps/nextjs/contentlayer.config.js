@@ -1,6 +1,6 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
-import rehypePrettyCode from "rehype-pretty-code";
-import remarkGfm from "remark-gfm";
+import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import rehypePrettyCode from "rehype-pretty-code"
+import remarkGfm from "remark-gfm"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -12,7 +12,7 @@ const computedFields = {
 		type: "string",
 		resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
 	},
-};
+}
 
 export const Til = defineDocumentType(() => {
 	return {
@@ -49,12 +49,12 @@ export const Til = defineDocumentType(() => {
 			slug: {
 				type: "string",
 				resolve: (doc) => {
-					return `${doc.id}`;
+					return `${doc.id}`
 				},
 			},
 		},
-	};
-});
+	}
+})
 
 export const Page = defineDocumentType(() => ({
 	name: "Page",
@@ -67,7 +67,7 @@ export const Page = defineDocumentType(() => ({
 		},
 	},
 	computedFields,
-}));
+}))
 
 export const Post = defineDocumentType(() => ({
 	name: "Post",
@@ -94,7 +94,7 @@ export const Post = defineDocumentType(() => ({
 		},
 	},
 	computedFields,
-}));
+}))
 
 export default makeSource({
 	contentDirPath: "./content",
@@ -113,4 +113,4 @@ export default makeSource({
 			],
 		],
 	},
-});
+})
