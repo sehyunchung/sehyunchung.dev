@@ -52,20 +52,24 @@ export function ShortStrength({ className }: { className?: string }) {
 	)
 }
 
-export function WorkExperienceShortItem({ className }: { className?: string }) {
+export function WorkExperienceShortItem({
+	className,
+	headline,
+	period,
+	description,
+}: {
+	className?: string
+	headline: string
+	period: string
+	description: string
+}) {
 	return (
 		<section className={cn("flex flex-col w-[60ch]")}>
-			<h1 className="flex m-0 p-0 text-lg">
-				프론트엔드 개발자 | (주) 모노랩스
-			</h1>
+			<h1 className="flex m-0 p-0 text-lg">{headline}</h1>
 			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 font-medium">
-				2020. 12 ~ 현재
+				{period}
 			</h2>
-			<p className="flex text-base mt-3">
-				초기에 합류하여 서비스 및 어드민 등 프론트엔드 개발이 필요한 모든 부분의
-				개발을 진행했고, FE팀 내에선 기술 리서치 및 적용, 문서화, 미팅 방식,
-				회고 등 팀 내 문화를 만드는 데 주도적인 역할을 했습니다.
-			</p>
+			<p className="flex text-base mt-3">{description}</p>
 		</section>
 	)
 }
