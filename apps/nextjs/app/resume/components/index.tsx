@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 
 export function Name({ className }: { className?: string }) {
-	return <h1 className={cn("m-0 p-0", className)}>정세현</h1>
+	return <h1 className={cn("m-0 p-0 text-bold", className)}>정세현</h1>
 }
 
 export function Contact({ className }: { className?: string }) {
@@ -17,12 +17,17 @@ export function Contact({ className }: { className?: string }) {
 	)
 }
 
-export function ShortStrength({ className }: { className?: string }) {
+export function StrengthSummary({ className }: { className?: string }) {
 	return (
-		<ul className={cn("border w-[40ch] p-8 pl-10", className)}>
+		<ul
+			className={cn(
+				"flex flex-col gap-3 border m-0 w-[40ch] p-8 pl-10",
+				className,
+			)}
+		>
 			<li>
 				프로덕트와 유저 사이의 틈을 줄이는 일이라는 점에서 UI 개발에 매력을
-				느끼고, 문제를 파악하고 해결하는 과정 자체에서 즐거움을 얻습니다.
+				느끼고, 문제를 파악하고 해결하는 과정에서 즐거움을 얻습니다.
 			</li>
 			<li>
 				코드도 나와 동료, 제품 사이의 인터페이스이기 때문에, 의사소통 및
@@ -64,12 +69,12 @@ export function WorkExperienceShortItem({
 	description: string
 }) {
 	return (
-		<section className={cn("flex flex-col w-[60ch]")}>
+		<section className={cn("flex flex-col")}>
 			<h1 className="flex m-0 p-0 text-lg">{headline}</h1>
 			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 font-medium">
 				{period}
 			</h2>
-			<p className="flex text-base mt-3">{description}</p>
+			<p className="flex text-base m-0 mt-3">{description}</p>
 		</section>
 	)
 }
@@ -79,19 +84,49 @@ export function ProjectItem({
 	headline,
 	period,
 	description,
+	techStack,
+	challenge,
+	achievements,
+	findings,
 }: {
 	className?: string
 	headline: string
 	period: string
-	description: string | JSX.Element
+	description?: string | JSX.Element
+	challenge?: string | JSX.Element
+	achievements?: string | JSX.Element
+	findings?: string | JSX.Element
+	techStack?: string
 }) {
 	return (
-		<section className={cn("", className)}>
-			<h1 className="flex m-0 p-0 text-lg">{headline}</h1>
-			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 font-medium">
+		<section className={cn("max-w-[60ch]", className)}>
+			<h1 className="flex m-0 p-0 text-base font-bold text-gray-700">
+				{headline}
+			</h1>
+			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 mb-3 font-medium">
 				{period}
 			</h2>
-			<p className="flex text-base mt-3">{description}</p>
+			<div className="flex flex-col gap-4">
+				<p className="m-0 flex text-sm whitespace-pre-line">{description}</p>
+				<div>
+					<h5 className="m-0 text-xs text-gray-400 capitalize">Challenge</h5>
+					<p className="m-0 flex text-sm">{challenge}</p>
+				</div>
+				<div>
+					<h5 className="m-0 text-xs text-gray-400 capitalize">achievements</h5>
+					<p className="m-0 flex text-sm">{achievements}</p>
+				</div>
+				{/*
+				<div>
+					<h5 className="m-0 text-xs text-gray-400 capitalize">findings</h5>
+				<p className="m-0 flex text-sm">{findings}</p>
+				</div>
+				*/}
+				<div>
+					<h5 className="m-0 text-xs text-gray-400 capitalize">tech stack</h5>
+					<p className="m-0 flex text-sm">{techStack}</p>
+				</div>
+			</div>
 		</section>
 	)
 }
