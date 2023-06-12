@@ -73,3 +73,25 @@ export function WorkExperienceShortItem({
 		</section>
 	)
 }
+
+export function ProjectItem({
+	className,
+	headline,
+	period,
+	description,
+}: {
+	className?: string
+	headline: string
+	period: string
+	description: string | JSX.Element
+}) {
+	return (
+		<section className={cn("", className)}>
+			<h1 className="flex m-0 p-0 text-lg">{headline}</h1>
+			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 font-medium">
+				{period}
+			</h2>
+			<p className="flex text-base mt-3">{description}</p>
+		</section>
+	)
+}
