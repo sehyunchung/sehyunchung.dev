@@ -24,9 +24,10 @@ const PROJECTS = {
 			period: "2018. 7 ~ 2020. 10",
 			description:
 				"광고팀과 고객사가 광고 집행을 위해 사용하는 백오피스 웹서비스로, 기존에 서버 개발자들이 풀스택으로 개발중이던 프로젝트를 프론트엔드 팀이 생기며 이어받아 개발하게 되었습니다.",
-			challenge: "",
+			challenge:
+				"스타일링이 외주 퍼블리셔에 의해 작업되어있었고, Vuetify가 사용되고 있었으나 디자인 요구사항은 꽤 자세한 편이어서 충돌을 뚫고 커스텀 스타일을 적용하는 것이 까다로웠습니다.",
 			achievements:
-				"스타일링이 외주 퍼블리셔에 의해 작업되어있었고, 그 와중에 Vuetify가 사용되고 있었으나 디자인 요구사항은 꽤 자세한 편이어서 충돌을 뚫고 스타일을 적용하는 것이 꽤 까다로웠습니다. 커리어 극초반이라 모든 게 어설펐지만 생각지 못한 UI 상태의 경우의 수를 경험하면서 UI 개발에 매력을 더 느끼게 되기도 했습니다. 후반부엔 특정 부분에 유닛 테스트 등을 추가해 코드의 안정성을 높이는 시도도 해보았습니다.",
+				"스타일링 관련한 난관을 자주 겪었으나 어떻게든 해결이 되긴 된다는 걸 알게 됐고, headless 컴포넌트등 재활용의 중요성과 그를 위해 필요한 요건들에 대해 어렴풋이 알게 된 경험이었던 것 같습니다. 그 외에도 커리어 극초반이라 모든 게 어설펐지만 생각지 못한 UI 상태의 경우의 수를 경험하면서 UI 개발에 매력을 더 느끼게 되기도 했습니다. 후반엔 특정 부분에 유닛 테스트 등을 추가하거나 동료들과 타입스크립트 도입을 추진하는 등,  코드의 안정성을 위한 노력을 하기도 했습니다.",
 			findings: "",
 			techStack: "Nuxt.js, Vue, Vuex, Vuetify",
 		},
@@ -91,7 +92,7 @@ export default function ResumePage() {
 					<Name />
 					<Contact />
 				</div>
-				<StrengthSummary className="col-start-8 col-end-13 row-start-2 w-full h-min text-sm px-12" />
+				<StrengthSummary className="col-start-8 col-end-13 row-start-2 w-full h-min text-sm px-12 mt-24" />
 				<div className="row-start-2 col-start-1 col-span-7 h-min pr-6">
 					<h2 className="m-0 mb-6">Work Experiences</h2>
 					<WorkExperienceShortItem
