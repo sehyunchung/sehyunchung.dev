@@ -4,7 +4,7 @@ import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
-import { BoxDrawn } from "ui"
+import { Box as BoxDrawn } from "ui"
 
 const components = {
 	Tweet,
@@ -25,7 +25,7 @@ export function Mdx({ code }: MdxProps) {
 
 export async function MdxTil({ code }: MdxProps) {
 	const components: any = {
-		BoxDrawn: BoxDrawn.Box,
+		BoxDrawn: BoxDrawn,
 		Tweet,
 		a: ({ href, ref, ...props }: any) => {
 			if (href?.startsWith("/")) {

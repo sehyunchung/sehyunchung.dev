@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BoxDrawn } from "ui"
+import { Box } from "ui"
 
 import { ClassicBox } from "@/components/classic-box"
 
@@ -9,21 +9,21 @@ export default async function Home() {
 			<Link href="/til" className="no-underline">
 				<ClassicBox dropCap>til</ClassicBox>
 			</Link>
-			<BoxDrawn.Box variant="classic" shadow cols={8} rows={4}>
+			<Box variant="classic" shadow cols={8} rows={4}>
 				<Link href="/toys" className="no-underline">
 					<span>toys</span>
 				</Link>
-			</BoxDrawn.Box>
-			<BoxDrawn.Box variant="rounded" shadow rows={8}>
+			</Box>
+			<Box variant="rounded" shadow rows={8}>
 				<Link href="/posts" className="no-underline">
 					posts
 				</Link>
-			</BoxDrawn.Box>
-			<BoxDrawn.Box variant="double" rows={5} cols={11} shadow>
+			</Box>
+			<Box variant="double" rows={5} cols={11} shadow>
 				<Link href="/about" className="no-underline">
 					about
 				</Link>
-			</BoxDrawn.Box>
+			</Box>
 		</div>
 	)
 }
