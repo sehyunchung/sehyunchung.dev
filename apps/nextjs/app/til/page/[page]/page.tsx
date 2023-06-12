@@ -61,10 +61,10 @@ export default function TilPaginatedPage({
 						key={page}
 						className={cn("flex justify-center items-center no-underline", {
 							underline: page === currentPage,
-							italic: page === currentPage,
+							"font-bold": page === currentPage,
 						})}
 					>
-						{page === 1 ? "T" : page === 10 ? "l" : "i"}
+						{page}
 					</Link>
 				))}
 			</div>
