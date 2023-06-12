@@ -91,7 +91,7 @@ export function ProjectItem({
 }: {
 	className?: string
 	headline: string
-	period: string
+	period?: string
 	description?: string | JSX.Element
 	challenge?: string | JSX.Element
 	achievements?: string | JSX.Element
@@ -103,29 +103,41 @@ export function ProjectItem({
 			<h1 className="flex m-0 p-0 text-base font-bold text-gray-700">
 				{headline}
 			</h1>
-			<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 mb-3 font-medium">
-				{period}
-			</h2>
+			{period && (
+				<h2 className="flex m-0 p-0 text-sm text-gray-400 mt-1 mb-3 font-medium">
+					{period}
+				</h2>
+			)}
 			<div className="flex flex-col gap-4">
-				<p className="m-0 flex text-sm whitespace-pre-line">{description}</p>
-				<div>
-					<h5 className="m-0 text-xs text-gray-400 capitalize">Challenge</h5>
-					<p className="m-0 flex text-sm">{challenge}</p>
-				</div>
-				<div>
-					<h5 className="m-0 text-xs text-gray-400 capitalize">achievements</h5>
-					<p className="m-0 flex text-sm">{achievements}</p>
-				</div>
-				{/*
-				<div>
-					<h5 className="m-0 text-xs text-gray-400 capitalize">findings</h5>
-				<p className="m-0 flex text-sm">{findings}</p>
-				</div>
-				*/}
-				<div>
-					<h5 className="m-0 text-xs text-gray-400 capitalize">tech stack</h5>
-					<p className="m-0 flex text-sm">{techStack}</p>
-				</div>
+				{description && (
+					<p className="m-0 flex text-sm whitespace-pre-line">{description}</p>
+				)}
+				{challenge && (
+					<div>
+						<h5 className="m-0 text-xs text-gray-400 capitalize">Challenge</h5>
+						<p className="m-0 flex text-sm">{challenge}</p>
+					</div>
+				)}
+				{achievements && (
+					<div>
+						<h5 className="m-0 text-xs text-gray-400 capitalize">
+							achievements
+						</h5>
+						<p className="m-0 flex text-sm">{achievements}</p>
+					</div>
+				)}
+				{findings && (
+					<div>
+						<h5 className="m-0 text-xs text-gray-400 capitalize">findings</h5>
+						<p className="m-0 flex text-sm">{findings}</p>
+					</div>
+				)}
+				{techStack && (
+					<div>
+						<h5 className="m-0 text-xs text-gray-400 capitalize">tech stack</h5>
+						<p className="m-0 flex text-sm">{techStack}</p>
+					</div>
+				)}
 			</div>
 		</section>
 	)
