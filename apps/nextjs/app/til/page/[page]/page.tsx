@@ -54,19 +54,19 @@ export default function TilPaginatedPage({
 						/>
 					))}
 			</article>
-			<div className="flex justify-center items-center mt-8 gap-10">
-				<Link
-					className={cn(currentPage === 1 ? "hidden" : "")}
-					href={`/til/page/${prevPage}`}
-				>
-					<ArrowLeftIcon className="w-10 h-10" />
-				</Link>
-				<Link
-					className={cn(currentPage === totalPages ? "hidden" : "")}
-					href={`/til/page/${nextPage}`}
-				>
-					<ArrowRightIcon className="w-10 h-10" />
-				</Link>
+			<div className="flex justify-center items-center mt-8 gap-4">
+				{Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+					<Link
+						href={`/til/page/${page}`}
+						key={page}
+						className={cn("flex justify-center items-center no-underline", {
+							underline: page === currentPage,
+							italic: page === currentPage,
+						})}
+					>
+						{page === 1 ? "T" : page === 10 ? "l" : "i"}
+					</Link>
+				))}
 			</div>
 		</>
 	)
