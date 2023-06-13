@@ -11,8 +11,12 @@ export function Contact({ className }: { className?: string }) {
 		>
 			<li className="select-none">010-9892-3705</li>
 			<li>hi@sehyunchung.dev</li>
-			<li>github.com/sehyunchung</li>
-			<li>sehyunchung.dev</li>
+			<li>
+				<a href="https://github.com/sehyunchung">github.com/sehyunchung</a>
+			</li>
+			<li>
+				<a href="https://sehyunchung.dev">sehyunchung.dev</a>
+			</li>
 		</ul>
 	)
 }
@@ -34,7 +38,7 @@ export function StrengthSummary({ className }: { className?: string }) {
 				사용성에 중점을 두고 작성하기 위해 끊임없이 노력합니다.
 			</li>
 			<li>
-				영상, 음악, 디자인 등 다양한 직업/경험적 배경을 갖고 있으며, 직군간의
+				영상, 음악, 디자인 등 다양한 직업/경험적 배경을 갖고 있으며, 직군 간의
 				경계가 뚜렷하지 않음을 알고, 협업 가능성에 제한을 두지 않습니다.
 			</li>
 			<li>
@@ -47,7 +51,7 @@ export function StrengthSummary({ className }: { className?: string }) {
 			</li>
 			<li>
 				영어 문서 및 동영상 자료들을 적극적으로 활용하며, 최신의 흐름과 기반
-				지식 모두에 관심을 가지고 있습니다.
+				지식 모두에 관심을 두고 있습니다.
 			</li>
 			<li>
 				React/TypeScript/Next.js/SSR/SSG 등의 키워드로 대표되는 모던 프론트엔드
