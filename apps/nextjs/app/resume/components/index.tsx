@@ -4,23 +4,6 @@ export function Name({ className }: { className?: string }) {
 	return <h1 className={cn("m-0 p-0 text-bold", className)}>정세현</h1>
 }
 
-export function Contact({ className }: { className?: string }) {
-	return (
-		<ul
-			className={cn("flex flex-col items-end not-prose list-none", className)}
-		>
-			<li className="select-none">010-9892-3705</li>
-			<li>hi@sehyunchung.dev</li>
-			<li>
-				<a href="https://github.com/sehyunchung">github.com/sehyunchung</a>
-			</li>
-			<li>
-				<a href="https://sehyunchung.dev">sehyunchung.dev</a>
-			</li>
-		</ul>
-	)
-}
-
 export function Skills({
 	className,
 	items,

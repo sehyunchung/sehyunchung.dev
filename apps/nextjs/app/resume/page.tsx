@@ -1,4 +1,5 @@
-import { Contact, Experience, Name, ProjectItem, Skills } from "./components"
+import { Experience, Name, ProjectItem, Skills } from "./components"
+import { Contact } from "./components/contact"
 import {
 	BIRDVIEW_PROJECTS,
 	ETC_EXPERIENCES,
