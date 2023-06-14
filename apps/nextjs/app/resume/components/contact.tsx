@@ -5,15 +5,21 @@ import { cn } from "@/lib/utils"
 
 export function Contact({ className }: { className?: string }) {
 	const [contact, setContact] = React.useState({
-		phone: "...",
-		email: "...",
+		phone: "",
+		email: "",
 	})
 
-	React.useEffect(() => {
-		setContact({
+	const handlePhoneClick = React.useCallback(() => {
+		setContact((p) => ({
+			...p,
 			phone: "010-9892-3705",
+		}))
+	}, [])
+	const handleMailClick = React.useCallback(() => {
+		setContact((p) => ({
+			...p,
 			email: "hi@sehyunchung.dev",
-		})
+		}))
 	}, [])
 
 	return (
@@ -25,8 +31,24 @@ export function Contact({ className }: { className?: string }) {
 			)}
 		>
 			<>
-				<li className="select-none">{contact.phone}</li>
-				<li>{contact.email}</li>
+				<li
+					tabIndex={0}
+					onClick={handlePhoneClick}
+					onKeyDown={handlePhoneClick}
+				>
+					{contact.phone ? (
+						<a href="tel:010-9892-3705">{contact.phone}</a>
+					) : (
+						"..."
+					)}
+				</li>
+				<li tabIndex={0} onClick={handleMailClick} onKeyDown={handleMailClick}>
+					{contact.email ? (
+						<a href="mailto:hi@sehyunchung.dev">{contact.email}</a>
+					) : (
+						"..."
+					)}
+				</li>
 				<li>
 					<a href="https://github.com/sehyunchung">github.com/sehyunchung</a>
 				</li>
