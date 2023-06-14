@@ -36,16 +36,18 @@ export function Skills({
 	)
 }
 
-export function WorkExperienceShortItem({
+export function Experience({
 	className,
 	company,
 	period,
 	summary,
+	findings,
 }: {
 	className?: string
 	company: string
 	period: string
 	summary: string
+	findings: string[]
 }) {
 	return (
 		<section className={cn("flex flex-col")}>
@@ -56,6 +58,13 @@ export function WorkExperienceShortItem({
 				</span>
 			</h1>
 			<p className="flex text-base m-0 mt-3">{summary}</p>
+			<ul className="prose">
+				{findings.map((experience) => (
+					<li key={experience} className="flex text-sm m-0 mt-3">
+						{experience}
+					</li>
+				))}
+			</ul>
 		</section>
 	)
 }

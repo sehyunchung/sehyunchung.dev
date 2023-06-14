@@ -1,10 +1,4 @@
-import {
-	Contact,
-	Name,
-	ProjectItem,
-	Skills,
-	WorkExperienceShortItem,
-} from "./components"
+import { Contact, Experience, Name, ProjectItem, Skills } from "./components"
 import {
 	BIRDVIEW_PROJECTS,
 	HARD_SKILLS,
@@ -35,18 +29,19 @@ export default function ResumePage() {
 					<h3 className="mt-20 mb-6">Soft Skills</h3>
 					<Skills items={SOFT_SKILLS} />
 				</div>
-				<div className="row-start-8 col-start-1 col-span-7 h-min pr-6">
+				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6">
 					<h2 className="m-0 my-8">Work Experiences</h2>
-					<WorkExperienceShortItem {...WORK_EXPERIENCE[0]} />
-					<h3 className="text-base m-0 p-0 my-6">주요 프로젝트</h3>
+					<Experience {...WORK_EXPERIENCE[0]} />
+					<Experience {...WORK_EXPERIENCE[1]} />
+				</div>
+				<hr className="col-span-full m-0 my-8" />
+				<div className="col-span-full m-0 my-8">
+					<h3 className="m-0 p-0 my-6">주요 프로젝트</h3>
 					<div className="flex flex-col gap-10">
 						{MONO_PROJECTS.map((project) => (
 							<ProjectItem key={project.title} {...project} />
 						))}
 					</div>
-					<hr className="m-0 my-8" />
-					<WorkExperienceShortItem {...WORK_EXPERIENCE[1]} />
-					<h3 className="m-0 p-0 my-6">주요 프로젝트</h3>
 					<div className="flex flex-col gap-10">
 						{BIRDVIEW_PROJECTS.map((project) => (
 							<ProjectItem key={project.title} {...project} />
