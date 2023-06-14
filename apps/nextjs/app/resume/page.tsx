@@ -10,7 +10,7 @@ import {
 
 export default function ResumePage() {
 	return (
-		<div className="absolute grid place-items-center p-12 left-0 top-0 w-screen h-screen">
+		<div className="absolute grid place-items-center p-12 left-0 top-0 w-screen h-screen select-none">
 			<article
 				style={{
 					fontFamily: "Gothic A1, sans-serif",
