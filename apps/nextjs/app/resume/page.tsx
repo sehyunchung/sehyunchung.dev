@@ -15,7 +15,8 @@ export default function ResumePage() {
 					fontFamily: "Gothic A1, sans-serif",
 					display: "grid",
 					gridTemplateColumns: "repeat(12, 1fr)",
-					gridAutoRows: "min-content",
+					gridAutoFlow: "dense",
+					// gridAutoRows: "min-content",
 				}}
 				className="relative mx-auto w-[calc(100ch_+_110px)] max-h-[141ch] aspect-[1000/1414]"
 			>
@@ -29,26 +30,42 @@ export default function ResumePage() {
 					<h3 className="mt-20 mb-6">Soft Skills</h3>
 					<Skills items={SOFT_SKILLS} />
 				</div>
-				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6">
-					<h2 className="m-0 my-8">Work Experiences</h2>
+				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6 pb-10 mt-0">
+					<h2 className="m-0 my-8 mb-4 text-2xl">Work Experiences</h2>
 					<Experience {...WORK_EXPERIENCE[0]} />
+					<hr className="m-0 w-1/2 mx-auto my-6" />
 					<Experience {...WORK_EXPERIENCE[1]} />
 				</div>
-				<hr className="col-span-full m-0 my-8" />
-				<div className="col-span-full m-0 my-8">
-					<h3 className="m-0 p-0 my-6">주요 프로젝트</h3>
-					<div className="flex flex-col gap-10">
-						{MONO_PROJECTS.map((project) => (
-							<ProjectItem key={project.title} {...project} />
-						))}
-					</div>
-					<div className="flex flex-col gap-10">
-						{BIRDVIEW_PROJECTS.map((project) => (
-							<ProjectItem key={project.title} {...project} />
-						))}
+				<hr className="col-span-full w-1/2 m-0 my-6 mx-auto" />
+				<div className="col-span-full m-0 my-8 h-screen">
+					<h3 className="m-0 p-0 my-3 font-extrabold">주요 프로젝트</h3>
+					<div
+						className="w-full h-full"
+						style={{
+							columnCount: 2,
+							columnFill: "auto",
+							columnGap: "3rem",
+						}}
+					>
+						<h4 className="font-black text-gray-400 mb-4">모노랩스</h4>
+						<div className="flex flex-col gap-10 mb-10">
+							{MONO_PROJECTS.map((project) => (
+								<ProjectItem
+									className="mb-5"
+									key={project.title}
+									{...project}
+								/>
+							))}
+						</div>
+						{/* <hr /> */}
+						<h4 className="font-black text-gray-400 m-0 mb-4">버드뷰</h4>
+						<div className="flex flex-col gap-10">
+							{BIRDVIEW_PROJECTS.map((project) => (
+								<ProjectItem key={project.title} {...project} />
+							))}
+						</div>
 					</div>
 				</div>
-				<hr className="col-span-full" />
 			</article>
 		</div>
 	)
