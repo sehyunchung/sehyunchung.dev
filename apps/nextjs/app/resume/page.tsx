@@ -1,6 +1,7 @@
 import { Contact, Experience, Name, ProjectItem, Skills } from "./components"
 import {
 	BIRDVIEW_PROJECTS,
+	ETC_EXPERIENCES,
 	HARD_SKILLS,
 	MONO_PROJECTS,
 	SOFT_SKILLS,
@@ -22,13 +23,21 @@ export default function ResumePage() {
 			>
 				<div className="col-start-1 col-end-13 row-start-1 row-end-2 flex justify-between items-center h-min">
 					<Name />
+					{/* <p className="text-sm max-w-[60ch] leading-6">
+						영상/음악 등 다양한 배경을 바탕으로 여러 직군들과 원활하게 소통하는
+						프론트엔드 엔지니어입니다. 지속적으로 학습하고 긍정적인 팀 환경을
+						만들며, 유저와 프로덕트 사이의 틈을 메우는 인상적인 UI를 만들고
+						싶습니다.
+					</p> */}
 					<Contact />
 				</div>
 				<div className="col-start-8 border col-end-13 row-start-2 place-self-stretch w-full h-min text-sm p-8 pt-12 pb-20 mt-20">
 					<h3 className="mb-6">Hard Skills</h3>
 					<Skills items={HARD_SKILLS} />
-					<h3 className="mt-20 mb-6">Soft Skills</h3>
+					<h3 className="mt-10 mb-6">Soft Skills</h3>
 					<Skills items={SOFT_SKILLS} />
+					<h3 className="mt-10 mb-6">개발 외 경험</h3>
+					<Skills items={ETC_EXPERIENCES} />
 				</div>
 				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6 pb-10 mt-0">
 					<h2 className="m-0 my-8 mb-4 text-2xl">Work Experiences</h2>
