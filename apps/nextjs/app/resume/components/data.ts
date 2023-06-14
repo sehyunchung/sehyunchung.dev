@@ -113,12 +113,6 @@ export const BIRDVIEW_PROJECTS = [
 			"스타일링이 외주 퍼블리셔에 의해 작업 되어있었고, Vuetify가 사용되고 있었으나 디자인 요구사항은 꽤 자세한 편이어서 충돌을 뚫고 커스텀 스타일을 적용하기가 까다로웠습니다.",
 		techStack: "Nuxt.js, Vue, Vuex, Vuetify",
 	},
-	{
-		title: "그 외 다양한 백오피스 개발 및 유지보수 경험",
-		summary: "",
-		whatIDid: "",
-		techStack: "",
-	},
 ]
 
 export const PERSONAL_EXPERIENCES = [

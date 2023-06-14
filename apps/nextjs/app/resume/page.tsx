@@ -46,8 +46,7 @@ export default function ResumePage() {
 					<Experience {...WORK_EXPERIENCE[1]} />
 				</div>
 				<hr className="col-span-full w-1/2 m-0 my-6 mx-auto" />
-				<div className="col-span-full m-0 my-8 h-screen">
-					<h3 className="m-0 p-0 my-3 font-extrabold">주요 프로젝트</h3>
+				<div className="col-span-full m-0 my-8 h-full max-h-[1411px]">
 					<div
 						className="w-full h-full"
 						style={{
@@ -56,6 +55,14 @@ export default function ResumePage() {
 							columnGap: "3rem",
 						}}
 					>
+						<h3
+							style={{
+								columnSpan: "all",
+							}}
+							className="m-0 p-0 mt-0 mb-8 font-extrabold"
+						>
+							주요 프로젝트
+						</h3>
 						<h4 className="font-black text-gray-400 mb-4">모노랩스</h4>
 						<div className="flex flex-col gap-10 mb-10">
 							{MONO_PROJECTS.map((project) => (
@@ -66,12 +73,15 @@ export default function ResumePage() {
 								/>
 							))}
 						</div>
-						{/* <hr /> */}
+						<hr />
 						<h4 className="font-black text-gray-400 m-0 mb-4">버드뷰</h4>
 						<div className="flex flex-col gap-10">
 							{BIRDVIEW_PROJECTS.map((project) => (
 								<ProjectItem key={project.title} {...project} />
 							))}
+							<h6 className="m-0 font-semibold text-sm text-gray-400">
+								+기타 다양한 백오피스 및 레거시 프로젝트 개발/유지보수 경험
+							</h6>
 						</div>
 					</div>
 				</div>

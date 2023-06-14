@@ -115,13 +115,13 @@ export function ProjectItem({
 			</h1>
 			<div className="flex flex-col gap-4">
 				{summary && (
-					<p className="m-0 flex text-sm whitespace-pre-line text-gray-500">
+					<p className="m-0 mb-1 flex text-sm whitespace-pre-line text-gray-500">
 						{summary}
 					</p>
 				)}
 				{challenge && (
 					<div>
-						<h5 className="m-0 text-xs text-gray-400 capitalize">
+						<h5 className="m-0 font-semibold text-xs text-gray-400 capitalize">
 							어려웠던 점
 						</h5>
 						<p className="m-0 flex text-sm">{challenge}</p>
@@ -129,7 +129,7 @@ export function ProjectItem({
 				)}
 				{whatIDid && (
 					<div>
-						<h5 className="m-0 text-xs text-gray-400 capitalize">
+						<h5 className="m-0 font-semibold text-xs text-gray-400 capitalize">
 							해결 및 성취
 						</h5>
 						<p className="m-0 flex text-sm font-medium">{whatIDid}</p>
