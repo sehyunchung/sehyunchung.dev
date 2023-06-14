@@ -41,13 +41,15 @@ export function Experience({
 	company,
 	period,
 	summary,
-	findings,
+	achievements,
+	shortcomings,
 }: {
 	className?: string
 	company: string
 	period: string
 	summary: string
-	findings: string[]
+	achievements: string[]
+	shortcomings: string[]
 }) {
 	return (
 		<section className={cn("flex flex-col")}>
@@ -57,10 +59,23 @@ export function Experience({
 					{period}
 				</span>
 			</h1>
-			<p className="flex text-base m-0 mt-3">{summary}</p>
-			<ul className="prose">
-				{findings.map((experience) => (
-					<li key={experience} className="flex text-sm m-0 mt-3">
+			<p className="flex text-base">{summary}</p>
+			<h2 className="text-sm font-semibold m-0 mt-6 mb-2 text-gray-500">
+				얻은 것
+			</h2>
+			<ul className="prose flex flex-col gap-1 list-disc mb-0 font-medium">
+				{achievements.map((experience) => (
+					<li key={experience} className="text-sm m-0">
+						{experience}
+					</li>
+				))}
+			</ul>
+			<h2 className="text-sm font-semibold m-0 mt-8 mb-2 text-gray-500">
+				아쉬운 점
+			</h2>
+			<ul className="prose flex flex-col gap-1 list-disc mb-0 font-medium">
+				{shortcomings.map((experience) => (
+					<li key={experience} className="text-sm m-0">
 						{experience}
 					</li>
 				))}
@@ -106,15 +121,17 @@ export function ProjectItem({
 				)}
 				{challenge && (
 					<div>
-						{/* <h5 className="m-0 text-xs text-gray-400 capitalize">Challenge</h5> */}
+						<h5 className="m-0 text-xs text-gray-400 capitalize">
+							어려웠던 점
+						</h5>
 						<p className="m-0 flex text-sm">{challenge}</p>
 					</div>
 				)}
 				{whatIDid && (
 					<div>
-						{/* <h5 className="m-0 text-xs text-gray-400 capitalize">
-							achievements
-						</h5> */}
+						<h5 className="m-0 text-xs text-gray-400 capitalize">
+							해결 및 성취
+						</h5>
 						<p className="m-0 flex text-sm font-medium">{whatIDid}</p>
 					</div>
 				)}
