@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
 import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import Image from "next/image"
+import Link from "next/link"
 import probe from "probe-image-size"
 import { Tweet } from "react-tweet"
 import { Box as BoxDrawn } from "ui"
@@ -11,6 +11,7 @@ const components = {
 	Image,
 	BoxDrawn,
 	LinkIcon: ExternalLinkIcon,
+	Link,
 }
 
 interface MdxProps {
