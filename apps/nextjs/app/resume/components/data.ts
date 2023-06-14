@@ -22,7 +22,7 @@ export const ETC_EXPERIENCES = [
 export const WORK_EXPERIENCE = [
 	{
 		company: "(주) 모노랩스",
-		period: "2020. 12 ~ 현재",
+		period: "2020. 12 ~ 2023. 6",
 		summary:
 			"서비스 및 백오피스 등 프론트엔드 개발이 필요한 모든 부분의 개발에 참여했습니다. 기술 리서치 및 적용, 문서화, 미팅 방식 개발, 회고 프로세스 도입, 신입 개발자 온보딩 프로그램 개발 등 팀 경험 개선 및 조직 문화를 만드는 데 기여하였습니다.",
 		achievements: [
