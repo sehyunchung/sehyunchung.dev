@@ -12,25 +12,18 @@ import {
 
 export default function ResumePage() {
 	return (
-		<div className="absolute grid place-items-center p-12 left-0 top-0 w-screen h-screen select-none">
+		<div className="absolute grid place-items-center p-12 left-0 top-0 w-screen h-screen">
 			<article
 				style={{
 					fontFamily: "Gothic A1, sans-serif",
 					display: "grid",
 					gridTemplateColumns: "repeat(12, 1fr)",
 					gridAutoFlow: "dense",
-					// gridAutoRows: "min-content",
 				}}
 				className="relative mx-auto w-[calc(100ch_+_110px)] max-h-[141ch] aspect-[1000/1414]"
 			>
 				<div className="col-start-1 col-end-13 row-start-1 row-end-2 flex justify-between items-center h-min">
 					<Name />
-					{/* <p className="text-sm max-w-[60ch] leading-6">
-						영상/음악 등 다양한 배경을 바탕으로 여러 직군들과 원활하게 소통하는
-						프론트엔드 엔지니어입니다. 지속적으로 학습하고 긍정적인 팀 환경을
-						만들며, 유저와 프로덕트 사이의 틈을 메우는 인상적인 UI를 만들고
-						싶습니다.
-					</p> */}
 					<Contact />
 				</div>
 				<div className="col-start-8 border col-end-13 row-start-2 place-self-stretch w-full h-min text-sm p-8 pt-12 pb-20 mt-20">
