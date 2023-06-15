@@ -5,6 +5,7 @@ import {
 	ETC_EXPERIENCES,
 	HARD_SKILLS,
 	MONO_PROJECTS,
+	PERSONAL_EXPERIENCES,
 	SOFT_SKILLS,
 	WORK_EXPERIENCE,
 } from "./components/data"
@@ -83,6 +84,15 @@ export default function ResumePage() {
 							<h6 className="m-0 font-semibold text-sm text-gray-400">
 								+기타 다양한 백오피스 및 레거시 프로젝트 개발/유지보수 경험
 							</h6>
+						</div>
+						<hr />
+						<h4 className="font-black text-gray-400 m-0 mb-4">
+							기타/개인 작업
+						</h4>
+						<div className="flex flex-col gap-10">
+							{PERSONAL_EXPERIENCES.map((project) => (
+								<ProjectItem key={project.title} {...project} />
+							))}
 						</div>
 					</div>
 				</div>

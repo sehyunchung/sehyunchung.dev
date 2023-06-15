@@ -116,7 +116,14 @@ export const BIRDVIEW_PROJECTS = [
 
 export const PERSONAL_EXPERIENCES = [
 	{
-		title: "",
+		title: "seoul-metal.com",
+		period: "2020. 9 ~ 2020. 10",
+		summary: "배우자가 운영하는 cafe24기반 쇼핑몰",
+		whatIDid:
+			"로컬에 ftp storage를 클론한 다음 Webpack 기반으로 watcher를 두어 변경은 src 폴더 내부에서 TypeScript, PostCSS로만 하고, 해당 파일 변경시 로컬의 타겟 파일에 빌드하면서 vscode의 sftp 관련 익스텐션을 이용해 ftp에도 업로드 하는 빌드 시스템을 만들어 git으로 버전 관리가 가능하도록 했습니다.",
+		challenge:
+			"백엔드 코드를 액세스 할 수 없고, ftp 업로드만 사용가능해 github 기반의 배포도 불가능하고, 테스트 배포도 직접적으론 불가능하고, TypeScript, PostCSS 등 모던 툴링도 직접적으로 사용할 수 없는 총체적으로 쉽지 않은 상황.",
+		techStack: "TypeScript, PostCSS, Webpack",
 	},
 ]
 
