@@ -1,3 +1,5 @@
+export const SUMMARY = [""]
+
 export const HARD_SKILLS = [
 	"React/Next.js/SSR/SSG/TypeScript등의 키워드를 중심으로 한 모던 프론트엔드 스택/패러다임에 익숙합니다.",
 	"코드의 UI적 측면을 중요하게 생각하고 읽고 사용하기 쉽고 변경에 유연한 코드를 작성하기 위해 힘씁니다.",
