@@ -35,6 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .contentlayer
+content/**/*.json
 
 # worktree
 /.worktree
