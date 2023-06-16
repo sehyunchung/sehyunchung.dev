@@ -9,6 +9,7 @@ import {
 	SOFT_SKILLS,
 	WORK_EXPERIENCE,
 } from "./components/data"
+import { Stories } from "./components/stories"
 
 export default function ResumePage() {
 	return (
@@ -88,6 +89,9 @@ export default function ResumePage() {
 							))}
 						</div>
 					</div>
+				</div>
+				<div className="col-span-12">
+					<Stories />
 				</div>
 			</article>
 		</div>
