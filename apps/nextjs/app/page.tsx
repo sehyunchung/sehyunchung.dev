@@ -9,7 +9,7 @@ export default async function Home() {
 	return (
 		<div className="fixed capitalize md:text-3xl lg:text-4xl xl:text-5xl -translate-x-[50%] w-[85vw] max-w-5xl -translate-y-[55%] top-[50%] left-[50%] grid grid-cols-2 grid-rows-2 place-items-center text-xl">
 			<Image
-				className="absolute z-10"
+				className="absolute z-20"
 				src={welcome}
 				alt="welcome"
 				width={500}
