@@ -10,7 +10,8 @@
 				"VERCEL_ENV",
 				"VERCEL_URL",
 				"GITHUB_ID",
-				"GITHUB_SECRET"
+				"GITHUB_SECRET",
+				"OPENAI_API_KEY"
 			]
 		},
 		"lint": {},
