@@ -1,23 +1,35 @@
 "use client"
 
-import * as React from "react"
+import { useChat } from "ai/react"
 
-import { useCompletion } from "ai/react"
-
-export default function SloganGenerator() {
-	const { completion, input, handleInputChange, handleSubmit } = useCompletion()
+export default function Chat() {
+	const { messages, input, handleInputChange, handleSubmit } = useChat()
 
 	return (
 		<div className="mx-auto w-full max-w-md py-24 flex flex-col stretch">
-			<form onSubmit={handleSubmit}>
-				<input
-					className="fixed w-full max-w-md bottom-0 border border-gray-300 rounded mb-8 shadow-xl p-2"
-					value={input}
-					placeholder="Describe your business..."
-					onChange={handleInputChange}
-				/>
+			{messages.map((m) => (
+				<div key={m.id} className="border-b last-of-type:border-b-0 py-4">
+					{m.role === "user" ? "Me: " : "Chat: "}
+					{m.content}
+				</div>
+			))}
+
+			<form
+				className="fixed bottom-0 w-full max-w-md flex items-center gap-4 mb-8"
+				onSubmit={handleSubmit}
+			>
+				<label className="flex-1 flex">
+					<input
+						className="flex-1 border border-gray-300 rounded p-2"
+						value={input}
+						onChange={handleInputChange}
+						placeholder="Send a message"
+					/>
+				</label>
+				<button className="p-2 border rounded" type="submit">
+					Send
+				</button>
 			</form>
-			<div className="whitespace-pre-wrap my-6">{completion}</div>
 		</div>
 	)
 }
