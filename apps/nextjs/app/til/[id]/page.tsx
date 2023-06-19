@@ -70,7 +70,6 @@ export default async function TilItemPage({
 		<>
 			<TILItem til={til} />
 			<Giscus />
-			<Footer />
 		</>
 	)
 }
