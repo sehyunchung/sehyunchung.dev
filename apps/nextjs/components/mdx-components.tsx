@@ -1,4 +1,5 @@
 import { ExternalLinkIcon } from "lucide-react"
+import type { NestedMDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import Image from "next/image"
 import Link from "next/link"
@@ -25,10 +26,10 @@ export function Mdx({ code }: MdxProps) {
 }
 
 export async function MdxTil({ code }: MdxProps) {
-	const components: any = {
+	const components = {
 		BoxDrawn: BoxDrawn,
 		Tweet,
-		a: ({ href, ref, ...props }: any) => {
+		a: ({ href, ref, ...props }) => {
 			if (href?.startsWith("/")) {
 				return (
 					<Link
@@ -51,9 +52,10 @@ export async function MdxTil({ code }: MdxProps) {
 				<Image src={src ?? ""} alt={alt ?? ""} width={width} height={height} />
 			)
 		},
-	}
+	} satisfies NestedMDXComponents
 
 	const Component = useMDXComponent(code)
 
+	// @ts-expect-error
 	return <Component components={components} />
 }
