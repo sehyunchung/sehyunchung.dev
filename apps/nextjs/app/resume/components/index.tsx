@@ -32,7 +32,7 @@ export function Experience({
 	period: string
 	summary: string
 	achievements: string[]
-	shortcomings: string[]
+	shortcomings?: string[]
 }) {
 	return (
 		<section className={cn("flex flex-col")}>
@@ -53,16 +53,20 @@ export function Experience({
 					</li>
 				))}
 			</ul>
-			<h2 className="text-sm font-semibold m-0 mt-8 mb-2 text-gray-500">
-				아쉬운 점
-			</h2>
-			<ul className="prose flex flex-col gap-1 list-disc mb-0 font-medium">
-				{shortcomings.map((experience) => (
-					<li key={experience} className="text-sm m-0">
-						{experience}
-					</li>
-				))}
-			</ul>
+			{shortcomings ? (
+				<>
+					<h2 className="text-sm font-semibold m-0 mt-8 mb-2 text-gray-500">
+						아쉬운 점
+					</h2>
+					<ul className="prose flex flex-col gap-1 list-disc mb-0 font-medium">
+						{shortcomings.map((experience) => (
+							<li key={experience} className="text-sm m-0">
+								{experience}
+							</li>
+						))}
+					</ul>
+				</>
+			) : null}
 		</section>
 	)
 }
