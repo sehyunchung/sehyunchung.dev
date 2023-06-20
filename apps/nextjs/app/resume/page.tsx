@@ -13,7 +13,7 @@ import { Stories } from "./components/stories"
 
 export default function ResumePage() {
 	return (
-		<div className="absolute grid place-items-center p-12 left-0 top-0 w-screen h-screen">
+		<div className="absolute left-0 top-0 p-12 w-screen h-screen">
 			<article
 				style={{
 					fontFamily: "Gothic A1, sans-serif",
@@ -21,7 +21,7 @@ export default function ResumePage() {
 					gridTemplateColumns: "repeat(12, 1fr)",
 					gridAutoFlow: "dense",
 				}}
-				className="relative mx-auto w-[calc(100ch_+_110px)] max-h-[141ch] aspect-[1000/1414]"
+				className="relative mx-auto w-[calc(100ch_+_110px)] max-h-[141ch] aspect-[1000/1414] pb-20"
 			>
 				<div className="col-start-1 col-end-13 row-start-1 row-end-2 flex justify-between items-center h-min">
 					<Name />
@@ -35,13 +35,13 @@ export default function ResumePage() {
 					<h3 className="mt-10 mb-6">개발 외 경험</h3>
 					<Skills items={ETC_EXPERIENCES} />
 				</div>
-				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6 pb-10 mt-0">
+				<div className="row-start-8 col-start-1 col-span-7 flex flex-col gap-8 h-min pr-6 pb-10 mt-16">
 					<h2 className="m-0 my-8 mb-4 text-2xl">Work Experiences</h2>
 					<Experience {...WORK_EXPERIENCE[0]} />
 					<hr className="m-0 w-1/2 mx-auto my-6" />
 					<Experience {...WORK_EXPERIENCE[1]} />
 				</div>
-				<hr className="col-span-full w-1/2 m-0 my-6 mx-auto my-12" />
+				<hr className="col-span-full w-1/2 m-0 mx-auto my-12 mt-20" />
 				<div className="col-span-full m-0 my-8 h-full max-h-[1411px]">
 					<div
 						className="w-full h-full"
