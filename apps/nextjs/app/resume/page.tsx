@@ -41,7 +41,7 @@ export default function ResumePage() {
 					<hr className="m-0 w-1/2 mx-auto my-6" />
 					<Experience {...WORK_EXPERIENCE[1]} />
 				</div>
-				<hr className="col-span-full w-1/2 m-0 my-6 mx-auto" />
+				<hr className="col-span-full w-1/2 m-0 my-6 mx-auto my-12" />
 				<div className="col-span-full m-0 my-8 h-full max-h-[1411px]">
 					<div
 						className="w-full h-full"

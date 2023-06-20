@@ -13,7 +13,7 @@ export function Stories() {
 				type="button"
 				onClick={() => setShowStories((p) => !p)}
 			>
-				몇 가지 개선 사례들을 꼽아보았습니다. (클릭)
+				몇 가지 개선 사례들을 꼽아보았습니다.
 			</button>
 			{showStory ? (
 				<section>
