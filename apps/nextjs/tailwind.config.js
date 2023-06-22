@@ -100,6 +100,26 @@ module.exports = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						"code::before": {
+							content: "none",
+						},
+						"code::after": {
+							content: "none",
+						},
+						code: {
+							paddingInline: theme("spacing.1"),
+							paddingBlockStart: theme("spacing.1"),
+							borderRadius: theme("borderRadius.sm"),
+							borderColor: theme("colors.border"),
+							borderWidth: "1px",
+							backgroundColor: theme("colors.secondary.DEFAULT"),
+						},
+					},
+				},
+			}),
 		},
 	},
 	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
