@@ -1,20 +1,19 @@
-import { Metadata, ResolvingMetadata } from "next"
 import { allTils } from "@/.contentlayer/generated"
+import { Metadata } from "next"
 
-import { getAllTILLabels, getAllTILs } from "@/lib/github-api"
 import { getOgImgUrl } from "@/lib/utils"
 
 import { TILItem } from "../../components"
 
 export async function generateStaticParams() {
-	const allLabels = await getAllTILLabels()
+	const allLabels = Array.from(new Set(allTils.flatMap((til) => til.labels)))
 	return allLabels
 }
 
-export async function generateMetadata(
-	{ params }: any,
-	parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+	// rome-ignore lint/suspicious/noExplicitAny: we can't type search params
+}: { params: Record<string, any> }): Promise<Metadata> {
 	const label = decodeURIComponent(params.label)
 	const ogImg = getOgImgUrl()
 	ogImg.searchParams.set("title", "TIL")
@@ -54,7 +53,7 @@ export default async function TilTagPage({
 	return (
 		<>
 			<h2 className="font-mono text-3xl mb-0">#{label}</h2>
-			{tils?.map((til: any) => (
+			{tils?.map((til) => (
 				<TILItem
 					key={til.id}
 					className="break-words border-b border-b-gray-200 pb-6"

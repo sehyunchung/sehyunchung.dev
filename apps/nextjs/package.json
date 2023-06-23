@@ -3,12 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "pnpm download-til && next dev",
-		"build": "pnpm download-til && next build",
-		"preview": "pnpm download-til && next build && next start",
+		"dev": "next dev",
+		"build": "next build",
+		"preview": "next build && next start",
 		"start": "next start",
-		"lint": "rome check ./**/*.ts*",
-		"download-til": "ts-node ./lib/download-til.ts"
+		"lint": "rome check ./**/*.ts*"
 	},
 	"dependencies": {
 		"@cloudflare/next-on-pages": "^0.10.1",
@@ -35,6 +34,7 @@
 		"react-tweet": "^2.0.1",
 		"rehype-highlight": "^6.0.0",
 		"rehype-pretty-code": "^0.9.6",
+		"sharp": "^0.32.1",
 		"shiki": "^0.14.2",
 		"tailwind-merge": "^1.12.0",
 		"tailwindcss-animate": "^1.0.5",

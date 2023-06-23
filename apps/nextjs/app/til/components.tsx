@@ -1,10 +1,9 @@
-import { Suspense } from "react"
-import Link from "next/link"
 import { Til } from "@/.contentlayer/generated"
+import Link from "next/link"
 
-import { cn } from "@/lib/utils"
+import { Mdx } from "@/components/mdx-components"
 import { badgeVariants } from "@/components/ui/badge"
-import { MdxTil } from "@/components/mdx-components"
+import { cn } from "@/lib/utils"
 
 export function TILItem({
 	til,
@@ -28,8 +27,7 @@ export function TILItem({
 				</h2>
 			</Link>
 			<div className="prose-img:my-0 prose-img:rounded-xl prose-pre:rounded-md">
-				{/* @ts-expect-error */}
-				<MdxTil code={til.content.code} />
+				<Mdx code={til.body.code} />
 			</div>
 			<div className="mb-2 flex gap-2 pt-5">
 				{til.labels.map((label) => (

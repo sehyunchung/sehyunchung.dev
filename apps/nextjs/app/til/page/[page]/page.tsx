@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 import { allTils } from "@/.contentlayer/generated/"
 
 import { cn } from "@/lib/utils"
@@ -24,7 +23,7 @@ function chunkArray<T>(array: T[], chunk: number): T[][] {
 }
 
 export async function generateStaticParams() {
-	return chunkArray(allTils, 10).map((chunk, index) => index + 1)
+	return chunkArray(allTils, 10).map((_, index) => index + 1)
 }
 
 export default function TilPaginatedPage({
@@ -35,8 +34,6 @@ export default function TilPaginatedPage({
 	const currentPageTils = getPaginatedTils(page)
 	const totalPages = Math.ceil(allTils.length / 10)
 	const currentPage = Number(page)
-	const prevPage = currentPage > 1 ? currentPage - 1 : 1
-	const nextPage = currentPage < 10 ? currentPage + 1 : 10
 
 	return (
 		<>

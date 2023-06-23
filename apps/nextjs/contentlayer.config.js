@@ -17,8 +17,8 @@ const computedFields = {
 export const Til = defineDocumentType(() => {
 	return {
 		name: "Til",
-		filePathPattern: "til/**/*.json",
-		contentType: "data",
+		filePathPattern: "til/**/*.mdx",
+		contentType: "mdx",
 		fields: {
 			id: {
 				type: "string",
@@ -26,10 +26,6 @@ export const Til = defineDocumentType(() => {
 			},
 			title: {
 				type: "string",
-				required: true,
-			},
-			content: {
-				type: "mdx",
 				required: true,
 			},
 			createdAt: {
@@ -42,14 +38,6 @@ export const Til = defineDocumentType(() => {
 				of: {
 					name: "label",
 					type: "string",
-				},
-			},
-		},
-		computedFields: {
-			slug: {
-				type: "string",
-				resolve: (doc) => {
-					return `${doc.id}`
 				},
 			},
 		},

@@ -1,15 +1,13 @@
-import { Metadata } from "next"
 import { allTils } from "@/.contentlayer/generated"
+import { Metadata } from "next"
 
-import { getAllTILIds, getAllTILs } from "@/lib/github-api"
-import { getOgImgUrl } from "@/lib/utils"
-import { Footer } from "@/components/footer"
 import { Giscus } from "@/components/giscus"
+import { getOgImgUrl } from "@/lib/utils"
 
 import { TILItem } from "../components"
 
 export async function generateStaticParams() {
-	const ids = getAllTILIds()
+	const ids = allTils.map((til) => til.id)
 	return ids
 }
 
@@ -18,11 +16,9 @@ export async function generateMetadata({
 }: {
 	params: { id: string }
 }): Promise<Metadata> {
-	const tils = await getAllTILs()
-
 	const id = decodeURIComponent(params.id)
 
-	const til = tils.find((til: any) => {
+	const til = allTils.find((til) => {
 		const tilId = til.id.replace(/=/g, "")
 		return tilId === id
 	})

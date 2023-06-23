@@ -1,6 +1,6 @@
 import { Feed } from "feed"
 
-import { getAllTILs } from "@/lib/github-api"
+import { allTils } from "@/.contentlayer/generated/index.mjs"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",
@@ -22,21 +22,19 @@ const feed = new Feed({
 })
 
 export async function GET() {
-	const tils = await getAllTILs()
-
-	tils.forEach((til: any) => {
+	allTils.forEach((til) => {
 		feed.addItem({
 			title: til.title,
 			id: `https://sehyunchung.dev/til/${til.id}`,
 			link: `https://sehyunchung.dev/til/${til.id}`,
 			date: new Date(til.createdAt),
-			category: til.labels.nodes.map((label: any) => {
+			category: til.labels.map((label) => {
 				return {
-					name: label.name,
-					term: label.name,
+					name: label,
+					term: label,
 				}
 			}),
-			content: til.labels.nodes.map((label: any) => label.name).join(", "),
+			content: til.labels.map((label) => label).join(", "),
 		})
 	})
 
