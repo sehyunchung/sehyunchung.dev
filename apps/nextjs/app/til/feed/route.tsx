@@ -1,6 +1,6 @@
 import { Feed } from "feed"
 
-import { allTils } from "@/.contentlayer/generated/index.mjs"
+import { allTils } from "@/.contentlayer/generated"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",
