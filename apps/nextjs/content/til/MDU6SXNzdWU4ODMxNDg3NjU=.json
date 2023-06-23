@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU4ODMxNDg3NjU=","title":"show diff of a stash","content":"```bash\r\ngit stash show -p <stash>\r\n```","createdAt":"2021-05-10T01:45:18Z","labels":["git","tips and tricks"]}

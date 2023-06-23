@@ -1,0 +1,32 @@
+---
+id: I_kwDOB4HiUc5ndxym
+title: "`aria-current`"
+createdAt: 2023-06-01T09:19:24Z
+labels:
+  - html
+  - WAI-ARIA
+---
+
+현재 페이지/단계/위치/시간/등등을 나타낼 수 있는 어트리뷰트이고 대략 이런 느낌이다.
+
+```html
+<ul>
+<!-- ... -->
+  <li aria-current="page">
+    <a href="">link</a>
+  </li>
+<!-- ... -->
+</ul>
+```
+
+다양한 걸 다룰 수 있음:
+
+- `page`: Represents the current page within a set of pages such as the link to the current document in a breadcrumb.
+- `step`: Represents the current step within a process such as the current step in an enumerated multi step checkout flow .
+- `location`: Represents the current location within an environment or context such as the image that is visually highlighted as the current component of a flow chart.
+- `date`: Represents the current date within a collection of dates such as the current date within a calendar.
+- `time`: Represents the current time within a set of times such as the current time within a timetable.
+- `true`: Represents the current item within a set.
+- `false` (default): Does not represent the current item within a set.
+
+[mdn](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current)

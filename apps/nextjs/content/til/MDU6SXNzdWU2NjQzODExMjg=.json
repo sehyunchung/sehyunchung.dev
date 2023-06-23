@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU2NjQzODExMjg=","title":"PR에 PR 날리기","content":"```sh\r\ngh pr create -R <USER_NAME>/<REPO_NAME> --base <ORIG_PR_BRANCH_NAME>\r\n```","createdAt":"2020-07-23T10:55:47Z","labels":["github cli","git"]}

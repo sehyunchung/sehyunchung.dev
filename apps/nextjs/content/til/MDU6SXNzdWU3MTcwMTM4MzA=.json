@@ -1,1 +1,0 @@
-{"id":"MDU6SXNzdWU3MTcwMTM4MzA=","title":"conditional spread","content":"```js\r\nconst cond = false;\r\nconst arr = [\r\n  ...(cond ? ['a'] : []),\r\n  'b',\r\n];\r\n    // ['b']\r\n```\r\nhttps://2ality.com/2017/04/conditional-literal-entries.html","createdAt":"2020-10-08T04:38:08Z","labels":["javascript"]}

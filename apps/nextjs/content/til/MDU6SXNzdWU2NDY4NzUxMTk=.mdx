@@ -1,0 +1,23 @@
+---
+id: MDU6SXNzdWU2NDY4NzUxMTk=
+title: vscode가 포맷팅 하면서 자꾸 jsx에 빈칸을 넣으면
+createdAt: 2020-06-28T08:55:30Z
+labels:
+  - vscode
+---
+
+## 원인
+`.jsx` 파일의 `File Association`이 `Babel JavaScript`로 되어있어서 생기는 문제.
+
+## 해결 1
+화면 하단의 language mode 영역을 클릭 -> `JavaScript React`로 바꾸면 해결
+
+![Screen Shot 2020-06-28 at 17 52 41](https://user-images.githubusercontent.com/31644638/85943040-675b5e80-b968-11ea-8822-f54f82801d01.png)
+
+## 해결 2
+물론 `settings.json`에서 바꿀수도 있다.
+```json
+"files.associations": {
+  "*.jsx": "javascriptreact"
+}
+```

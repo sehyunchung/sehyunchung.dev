@@ -1,0 +1,57 @@
+---
+id: I_kwDOB4HiUc5n1jBW
+title: "`URL` object"
+createdAt: 2023-06-05T16:02:48Z
+labels:
+  - javascript
+---
+
+```js
+const url = new URL('https://sehyunchung.dev')
+
+url.toString() // 'https://sehyunchung.dev/' <- trailing slash 생기는 것에 유의
+
+url.pathname = 'post/1'
+
+url.toString() // 'https://sehyunchung.dev/post/1' <- trailing slash 없음
+
+url.searchParams.set('key', 'value')
+
+url.toString() // 'https://sehyunchung.dev/post/1?key=value'
+```
+
+```js
+// console.log(url)
+{
+  hash: ""
+  host: "sehyunchung.dev"
+  hostname: "sehyunchung.dev"
+  href: "https://sehyunchung.dev/post/1?key=value"
+  origin: "https://sehyunchung.dev"
+  password: ""
+  pathname: "/post/1"
+  port: ""
+  protocol: "https:"
+  search: "?key=value"
+  searchParams: URLSearchParams {size: 1}
+  username: ""
+}
+```
+---
+```js
+url.pathname = ''
+
+url.toString() // "https://sehyunchung.dev/"
+
+url.pathname = 1
+
+url.toString() // "https://sehyunchung.dev/1"
+
+url.pathname = null
+
+url.toString() // "https://sehyunchung.dev/null" ?!
+
+url.pathname = undefined
+
+url.toString() // "https://sehyunchung.dev/undefined" ?!
+```

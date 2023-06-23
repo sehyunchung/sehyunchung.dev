@@ -1,0 +1,25 @@
+---
+id: MDU6SXNzdWU2NTE4NDIwMDI=
+title: sourceViewController -> source
+createdAt: 2020-07-06T21:53:49Z
+labels:
+  - swift
+---
+
+[Implement Navigation](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementNavigation.html#//apple_ref/doc/uid/TP40015214-CH16-SW1)을 진행하다가 아래 워닝을 만났다.
+
+![Screen Shot 2020-07-07 at 6 32 27](https://user-images.githubusercontent.com/31644638/86648953-47890200-c01c-11ea-8f7a-7b3b6efe5062.png)
+
+
+```diff
+    //MARK: Actions
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+-        if let sourceViewContoller = sender.sourceViewController as? MealViewController, let meal = sourceViewContoller.meal {
++        if let sourceViewContoller = sender.source as? MealViewController, let meal = sourceViewContoller.meal {
+            // Add new meal.
+            let newIndexPath = IndexPath(row: meals.count, section: 0)
+            meals.append(meal)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+```

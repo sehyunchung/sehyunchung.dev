@@ -1,0 +1,36 @@
+---
+id: I_kwDOB4HiUc5pPttU
+title: tailwind 👍
+createdAt: 2023-06-20T16:13:00Z
+labels:
+  - css
+  - tailwind
+  - panda css
+---
+
+[panda-css](https://panda-css.com/)를 시험삼아 함 써보던 중에 쓰면서는 인식하지 못하고 있던 tailwind의 장점을 알게 됐다.
+
+tailwind로 작성되어 있던 코드를 바꿔봤는데:
+![FzEqR1KaEAAxoFf](https://github.com/sehyunchung/til/assets/31644638/18ec2447-46af-444d-9f8c-07ff6dd89d73)
+오른쪽의 형태가 되는 순간 어 이건 좀... 싶어지면서 아래의 두가지를 비로소 인식하게 되었다.
+
+1. `styled-components`/`emotion` 처럼 `css` syntax를 쓰던지 `stitches` 처럼 js object syntax를 쓰던지 상관없이 스타일링 관련 코드는 무조건 **세로 방향**/**2차원**으로 코드 면적이 늘어나게 된다는 점.
+2. `key: value`의 형태 때문에 반복하게 되는 타이핑량 + 시각적 스트레스가 있다는 점.
+
+그러나 tailwind는:
+
+1. 코드가 **가로**/**1차원**으로만 늘어나고,
+2. `value`만 줄줄이 넣는 식.
+
+이라 1,2로 알게 모르게 느끼고 있던 스트레스가 해결되고 있었다는 걸 알게 되었고 결론은 tailwind가 선택지에 있으면 나는 tailwind를 쓸 것 같다는 뭐 그런 얘기.
+
+---
+
+추가:
+
+1. 이게 코드량/면적의 문제도 있지만 스타일링 관련 코드가 다른 코드랑 '생긴게' 아예 달라진다는 점.
+2. 스타일링 관련 코드가 `className="..."`에 '격리' 된다는 점.
+
+을 또 들 수 있을 것 같다.
+
+위에 나열한 요소들이 중요하게 느껴지는 건 아무래도 시각적으로 인지 부하가 줄어들기 때문인 것 같고.

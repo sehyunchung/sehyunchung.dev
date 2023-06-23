@@ -1,0 +1,30 @@
+---
+id: MDU6SXNzdWU2NjkzNDYyNDU=
+title: Declaring Global Variables in TypeScript
+createdAt: 2020-07-31T02:26:36Z
+labels:
+  - typescript
+---
+
+daum 주소검색등 `window`에 뭔가 끼워넣는 외부 기능 사용시, `window.someApi`등으로 호출하게 될 때가 있는데, TS에서 당연히 `Property 'someApi' does not exist on type 'Window & typeof globalThis'.` 라고 뭐라고 한다. 요걸 해결하기 위해 보통은:
+
+```ts
+(window as any).someApi
+```
+혹은
+```ts
+(<any>window).someApi
+```
+를 쓰라고 하는데 아래가 더 나은 것 같다.
+
+```ts
+declare global {
+  interface Window {
+    someApi: any; // 혹시 타입 정의를 제공해준다면 somApiType
+  }
+}
+```
+요게 되는 것은 interface는 [merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces)이 되기 때문.
+
+## Ref.
+https://mariusschulz.com/blog/declaring-global-variables-in-typescript

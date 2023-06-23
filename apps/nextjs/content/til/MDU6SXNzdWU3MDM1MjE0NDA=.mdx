@@ -1,0 +1,15 @@
+---
+id: MDU6SXNzdWU3MDM1MjE0NDA=
+title: 'node-sass: "Incompatible units"'
+createdAt: 2020-09-17T11:56:44Z
+labels:
+  - node-sass
+---
+
+```scss
+max(50% - 2px) // sass Error: Incompatible units '%' and 'px'
+```
+
+```scss
+calc(max(50% - 2px)) // okay
+```

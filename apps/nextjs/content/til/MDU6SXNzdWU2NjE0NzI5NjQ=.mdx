@@ -1,0 +1,20 @@
+---
+id: MDU6SXNzdWU2NjE0NzI5NjQ=
+title: google fonts에서 특정 캐릭터만 불러오기
+createdAt: 2020-07-20T07:19:53Z
+labels:
+  - css
+  - google fonts
+---
+
+google fonts를 url로 불러오는 방식으로 사용시 `unicode-range`를 사용할 수 없다.
+query string 옵션으로 `subset` 혹은 `text`를 줄 수 있다.
+
+### `subset`
+`subset`은 언어 기준으로, 영문에만 특정 폰트를 적용하고 싶을 경우 사용한다. Roboto를 영문과 숫자에만 쓰고 싶다면?
+`https://fonts.googleapis.com/css2?family=Roboto&subset=latin` 이라고 하면 된다.
+
+### `text`
+`text`가 좀 더 재밌는데, 개별 캐릭터를 옵션으로 추가할 수 있다. 예를 들어 Roboto를 0과 1에만 쓰고 싶다면?
+
+`https://fonts.googleapis.com/css2?family=Roboto&text=01` 으로 요청하면 된다.

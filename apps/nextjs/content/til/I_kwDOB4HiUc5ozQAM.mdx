@@ -1,0 +1,48 @@
+---
+id: I_kwDOB4HiUc5ozQAM
+title: "`for (; amount--; )`"
+createdAt: 2023-06-15T08:00:05Z
+labels:
+  - javascript
+---
+
+[react-scrollbars-custom](https://github.com/xobotyi/react-scrollbars-custom)의 [예제](https://codesandbox.io/s/rsc-live-example-i1zlx?module=/src/RSCExample.jsx&file=/src/RSCExample.jsx:9374-9557)를 보다가 충격적인 걸 봐갖고
+
+```jsx
+export function renderAmountOfParagraphs(amount = 5, paragraphsProps) {
+  const result = [];
+
+  for (; amount--; ) { // ??
+    result.push(
+      <p {...paragraphsProps} className="ExampleCard-Paragraph" key={`paragraph_${amount}`}>
+        {getRandomParagraphText()}
+      </p>
+    );
+  }
+
+  return result;
+}
+```
+?
+
+```js
+  for (; amount--; ) {
+```
+??
+🤯
+
+[mdn의 for 관련 문서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for#syntax)를 보니
+
+> [All three expressions in the head of the for loop are optional. For example, it is not required to use the initialization block to initialize variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for#optional_for_expressions)
+
+🤯🤯
+
+이 외에도 충격적인 게 더 있었는데:
+
+[Using `for` without a body](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for#using_for_without_a_body)
+
+🤯🤯🤯
+
+[Using `for` with two iterating variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for#using_for_with_two_iterating_variables)
+
+🤯🤯🤯🤯
