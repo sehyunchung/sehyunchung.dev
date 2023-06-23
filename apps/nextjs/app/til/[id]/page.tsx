@@ -1,4 +1,4 @@
-import { allTils } from "@/.contentlayer/generated"
+import { Til, allTils } from "@/.contentlayer/generated"
 import { Metadata } from "next"
 
 import { Giscus } from "@/components/giscus"
@@ -7,20 +7,27 @@ import { getOgImgUrl } from "@/lib/utils"
 import { TILItem } from "../components"
 
 export async function generateStaticParams() {
-	const ids = allTils.map((til) => til.id)
-	return ids
+	const params = allTils.map((til) => ({
+		id: til.id,
+		slugAsParams: til.slugAsParams,
+	}))
+	return params
 }
 
 export async function generateMetadata({
 	params,
 }: {
-	params: { id: string }
+	params: { id?: string; slugAsParams?: string }
 }): Promise<Metadata> {
-	const id = decodeURIComponent(params.id)
+	const identifier = params?.id || params.slugAsParams
+	if (!identifier) return {}
 
 	const til = allTils.find((til) => {
-		const tilId = til.id.replace(/=/g, "")
-		return tilId === id
+		if (til.id) {
+			const tilId = til?.id?.replace(/=/g, "")
+			return tilId === identifier
+		}
+		return til.slugAsParams === identifier
 	})
 
 	if (!til) {
@@ -53,11 +60,14 @@ export async function generateMetadata({
 export default async function TilItemPage({
 	params,
 }: {
-	params: { id: string }
+	params: { id?: string; slugAsParams?: string }
 }) {
-	const id = decodeURIComponent(params.id)
+	const identifier = params?.id || params.slugAsParams || ""
 	const til = allTils.find((til) => {
-		return til.id === id
+		if (til.id) {
+			return til.id === identifier
+		}
+		return til.slugAsParams === identifier
 	})
 
 	if (!til) return null

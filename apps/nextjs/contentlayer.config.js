@@ -22,7 +22,7 @@ export const Til = defineDocumentType(() => {
 		fields: {
 			id: {
 				type: "string",
-				required: true,
+				required: false,
 			},
 			title: {
 				type: "string",
@@ -41,6 +41,7 @@ export const Til = defineDocumentType(() => {
 				},
 			},
 		},
+		computedFields,
 	}
 })
 

@@ -25,8 +25,8 @@ export async function GET() {
 	allTils.forEach((til) => {
 		feed.addItem({
 			title: til.title,
-			id: `https://sehyunchung.dev/til/${til.id}`,
-			link: `https://sehyunchung.dev/til/${til.id}`,
+			id: `https://sehyunchung.dev/til/${til?.id || til.slug}`,
+			link: `https://sehyunchung.dev/til/${til?.id || til.slug}`,
 			date: new Date(til.createdAt),
 			category: til.labels.map((label) => {
 				return {

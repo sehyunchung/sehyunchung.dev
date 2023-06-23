@@ -18,7 +18,10 @@ export function TILItem({
 			data-clarity-region="article"
 			{...props}
 		>
-			<Link className="no-underline" href={`/til/${til.id}`}>
+			<Link
+				className="no-underline"
+				href={`/til/${til.id || til.slugAsParams}`}
+			>
 				<h2 id={til.id} className="text-md font-mono">
 					<div className="pb-4 text-sm font-normal">
 						{new Date(til.createdAt)?.toLocaleDateString("ko")}

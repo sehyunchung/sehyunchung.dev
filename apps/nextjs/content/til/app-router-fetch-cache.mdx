@@ -1,0 +1,43 @@
+---
+title: "app router에서 `fetch`를 쓰지 않을 경우 cache 동작"
+createdAt: 2023-06-24
+labels:
+  - next.js
+  - app router
+---
+
+## tl;dr
+되긴 됨
+
+## Detail
+fetch를 쓰지 않을 경우 [Default Caching Behavior](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#default-caching-behavior)를 따르거나 [Segment Cache Configuration](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#segment-cache-configuration)를 따르게 됨.
+
+### Default Caching Behavior
+
+> If the segment is static (default), the output of the request will be cached and revalidated (if configured) alongside the rest of the segment. If the segment is dynamic, the output of the request will not be cached and will be re-fetched on every request when the segment is rendered.
+
+### Segment Cache Config
+
+> As a temporary solution, until the caching behavior of third-party queries can be configured, you can use [segment configuration](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate) to customize the cache behavior of the entire segment.
+
+like:
+```ts 
+// app/page.tsx
+
+import prisma from './lib/prisma'
+ 
+export const revalidate = 3600 // revalidate every hour
+ 
+async function getPosts() {
+  const posts = await prisma.post.findMany()
+  return posts
+}
+ 
+export default async function Page() {
+  const posts = await getPosts()
+  // ...
+}
+```
+
+## Ref
+[Data Fetching without `fetch()`](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#data-fetching-without-fetch)
