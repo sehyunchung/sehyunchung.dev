@@ -2,7 +2,6 @@ import Link from "next/link"
 
 import { Footer } from "@/components/footer"
 import { SiteHeader } from "@/components/site-header"
-import { TilPageAlert } from "@/components/til-alert"
 
 export default function NoteLayout({
 	children,
@@ -16,7 +15,6 @@ export default function NoteLayout({
 						notes
 					</Link>
 				</h1>
-				<TilPageAlert />
 				{children}
 			</div>
 			<Footer className="mt-16" />
