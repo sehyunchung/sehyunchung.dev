@@ -1,12 +1,12 @@
-import { allTils } from "@/.contentlayer/generated"
+import { allNotes } from "@/.contentlayer/generated"
 import { Metadata } from "next"
 
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TILItem } from "../../components"
+import { NoteItem } from "../../components"
 
 export async function generateStaticParams() {
-	const allLabels = Array.from(new Set(allTils.flatMap((til) => til.labels)))
+	const allLabels = Array.from(new Set(allNotes.flatMap((note) => note.labels)))
 	return allLabels
 }
 
@@ -16,34 +16,34 @@ export async function generateMetadata({
 }: { params: Record<string, any> }): Promise<Metadata> {
 	const label = decodeURIComponent(params.label)
 	const ogImg = getOgImgUrl()
-	ogImg.searchParams.set("title", "TIL")
+	ogImg.searchParams.set("title", "note")
 
 	return {
 		title: `#${label}`,
-		description: `Today I Learned - ${label}`,
+		description: `Notes - ${label}`,
 		openGraph: {
 			images: [ogImg],
-			title: "TIL",
-			description: "Today I Learned",
+			title: "Note",
+			description: "A short note",
 		},
 		twitter: {
 			images: [ogImg],
-			title: "TIL",
-			description: "Today I Learned",
+			title: "Note",
+			description: "A short note",
 			card: "summary_large_image",
 		},
 	}
 }
 
-export default async function TilTagPage({
+export default async function NoteLabelPage({
 	params,
 }: {
 	params: { label: string }
 }) {
 	const label = decodeURIComponent(params.label)
 
-	const tils = allTils
-		.filter((til) => til.labels.includes(label))
+	const notes = allNotes
+		.filter((note) => note.labels.includes(label))
 		.sort((a, b) => {
 			const aDate = new Date(a.createdAt)
 			const bDate = new Date(b.createdAt)
@@ -53,11 +53,11 @@ export default async function TilTagPage({
 	return (
 		<>
 			<h2 className="font-mono text-3xl mb-0">#{label}</h2>
-			{tils?.map((til) => (
-				<TILItem
-					key={til.id}
+			{notes?.map((note) => (
+				<NoteItem
+					key={note.id}
 					className="break-words border-b border-b-gray-200 pb-6"
-					til={til}
+					note={note}
 				/>
 			))}
 		</>

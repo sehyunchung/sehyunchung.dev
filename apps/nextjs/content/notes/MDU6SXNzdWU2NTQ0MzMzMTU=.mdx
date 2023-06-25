@@ -1,0 +1,15 @@
+---
+id: MDU6SXNzdWU2NTQ0MzMzMTU=
+title: React.note vs useMemo
+createdAt: 2020-07-10T00:48:42Z
+labels:
+  - react
+---
+
+## `React.memo`
+- Higher order component.
+- prop change만을 체크함. 감싼 컴포넌트 안에 `useState`, `useContext`등이 있다면, 역시 해당 state 변경에 따라 rerender됨.
+
+## `useMemo`
+- Hook.
+- deps array에 포함된 deps가 변경되지 않으면 memoized value를 반환하는 함수.

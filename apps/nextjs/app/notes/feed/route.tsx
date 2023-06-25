@@ -1,18 +1,18 @@
 import { Feed } from "feed"
 
-import { allTils } from "@/.contentlayer/generated"
+import { allNotes } from "@/.contentlayer/generated"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",
-	description: "Til",
-	id: "https://sehyunchung.dev/til",
-	link: "https://sehyunchung.dev/til/feed",
+	description: "Notes",
+	id: "https://sehyunchung.dev/notes",
+	link: "https://sehyunchung.dev/notes/feed",
 	language: "ko",
-	image: "https://sehyunchung.dev/og?title=Til",
+	image: "https://sehyunchung.dev/og?title=notes",
 	favicon: "https://sehyunchung.dev/favicon.ico",
 	copyright: `All rights reserved ${new Date().getFullYear()}, Sehyun Chung`,
 	feedLinks: {
-		atom: "https://sehyunchung.dev/til/feed",
+		atom: "https://sehyunchung.dev/notes/feed",
 	},
 	author: {
 		name: "Sehyun Chung",
@@ -22,19 +22,19 @@ const feed = new Feed({
 })
 
 export async function GET() {
-	allTils.forEach((til) => {
+	allNotes.forEach((note) => {
 		feed.addItem({
-			title: til.title,
-			id: `https://sehyunchung.dev/til/${til?.id || til.slug}`,
-			link: `https://sehyunchung.dev/til/${til?.id || til.slug}`,
-			date: new Date(til.createdAt),
-			category: til.labels.map((label) => {
+			title: note.title,
+			id: `https://sehyunchung.dev/notes/${note?.id || note.slug}`,
+			link: `https://sehyunchung.dev/notes/${note?.id || note.slug}`,
+			date: new Date(note.createdAt),
+			category: note.labels.map((label) => {
 				return {
 					name: label,
 					term: label,
 				}
 			}),
-			content: til.labels.map((label) => label).join(", "),
+			content: note.labels.map((label) => label).join(", "),
 		})
 	})
 

@@ -21,9 +21,9 @@ export default async function Home() {
 				width={500}
 				height={500}
 			/>
-			<Link href="/til" className="no-underline bg-white drop-shadow-xl">
+			<Link href="/notes" className="no-underline bg-white drop-shadow-xl">
 				<ClassicBox className="drop-shadow" dropCap>
-					til
+					notes
 				</ClassicBox>
 			</Link>
 			<Box

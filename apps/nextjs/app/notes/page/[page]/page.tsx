@@ -1,11 +1,11 @@
+import { allNotes } from "@/.contentlayer/generated/"
 import Link from "next/link"
-import { allTils } from "@/.contentlayer/generated/"
 
 import { cn } from "@/lib/utils"
 
-import { TILItem } from "../../components"
+import { NoteItem } from "../../components"
 
-const sortedTils = allTils.sort(
+const sortedTils = allNotes.sort(
 	(a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
 )
 
@@ -23,7 +23,7 @@ function chunkArray<T>(array: T[], chunk: number): T[][] {
 }
 
 export async function generateStaticParams() {
-	return chunkArray(allTils, 10).map((_, index) => index + 1)
+	return chunkArray(allNotes, 10).map((_, index) => index + 1)
 }
 
 export default function TilPaginatedPage({
@@ -32,7 +32,7 @@ export default function TilPaginatedPage({
 	params: { page: string }
 }) {
 	const currentPageTils = getPaginatedTils(page)
-	const totalPages = Math.ceil(allTils.length / 10)
+	const totalPages = Math.ceil(allNotes.length / 10)
 	const currentPage = Number(page)
 
 	return (
@@ -43,18 +43,18 @@ export default function TilPaginatedPage({
 						(a, b) =>
 							new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
 					)
-					.map((til) => (
-						<TILItem
-							key={til.id}
+					.map((note) => (
+						<NoteItem
+							key={note.id}
 							className="break-words border-b border-b-gray-200 pb-6"
-							til={til}
+							note={note}
 						/>
 					))}
 			</article>
 			<div className="flex justify-center items-center mt-8 gap-4">
 				{Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
 					<Link
-						href={`/til/page/${page}`}
+						href={`/notes/page/${page}`}
 						key={page}
 						className={cn("flex justify-center items-center no-underline", {
 							underline: page === currentPage,

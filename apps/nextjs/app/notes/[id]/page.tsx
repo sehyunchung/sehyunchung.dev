@@ -1,15 +1,15 @@
-import { Til, allTils } from "@/.contentlayer/generated"
+import { allNotes } from "@/.contentlayer/generated"
 import { Metadata } from "next"
 
 import { Giscus } from "@/components/giscus"
 import { getOgImgUrl } from "@/lib/utils"
 
-import { TILItem } from "../components"
+import { NoteItem } from "../components"
 
 export async function generateStaticParams() {
-	const params = allTils.map((til) => ({
-		id: til.id,
-		slugAsParams: til.slugAsParams,
+	const params = allNotes.map((note) => ({
+		id: note.id,
+		slugAsParams: note.slugAsParams,
 	}))
 	return params
 }
@@ -22,35 +22,35 @@ export async function generateMetadata({
 	const identifier = params?.id || params.slugAsParams
 	if (!identifier) return {}
 
-	const til = allTils.find((til) => {
-		if (til.id) {
-			const tilId = til?.id?.replace(/=/g, "")
+	const note = allNotes.find((note) => {
+		if (note.id) {
+			const tilId = note?.id?.replace(/=/g, "")
 			return tilId === identifier
 		}
-		return til.slugAsParams === identifier
+		return note.slugAsParams === identifier
 	})
 
-	if (!til) {
+	if (!note) {
 		return {}
 	}
 
-	const title = til?.title
+	const title = note?.title
 
 	const ogImg = getOgImgUrl()
-	ogImg.searchParams.set("title", "TIL")
+	ogImg.searchParams.set("title", "Note")
 	ogImg.searchParams.set("description", title)
 
 	return {
-		title: "TIL",
+		title: "Note",
 		description: title,
 		openGraph: {
 			images: [ogImg],
-			title: "TIL",
+			title: "Note",
 			description: title,
 		},
 		twitter: {
 			images: [ogImg],
-			title: "TIL",
+			title: "Note",
 			description: title,
 			card: "summary_large_image",
 		},
@@ -63,18 +63,18 @@ export default async function TilItemPage({
 	params: { id?: string; slugAsParams?: string }
 }) {
 	const identifier = params?.id || params.slugAsParams || ""
-	const til = allTils.find((til) => {
-		if (til.id) {
-			return til.id === identifier
+	const note = allNotes.find((note) => {
+		if (note.id) {
+			return note.id === identifier
 		}
-		return til.slugAsParams === identifier
+		return note.slugAsParams === identifier
 	})
 
-	if (!til) return null
+	if (!note) return null
 
 	return (
 		<>
-			<TILItem til={til} />
+			<NoteItem note={note} />
 			<Giscus />
 		</>
 	)

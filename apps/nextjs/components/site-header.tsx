@@ -10,7 +10,7 @@ import { LogoNav } from "./logo-nav"
 import { ModeToggle } from "./mode-toggle"
 
 const HEADER_NAV_LINKS = [
-	{ href: "/til", label: "til" },
+	{ href: "/notes", label: "Notes" },
 	{ href: "/posts", label: "posts" },
 	{ href: "/toys", label: "toys" },
 	{ href: "/about", label: "about" },

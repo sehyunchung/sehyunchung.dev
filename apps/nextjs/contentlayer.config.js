@@ -14,10 +14,10 @@ const computedFields = {
 	},
 }
 
-export const Til = defineDocumentType(() => {
+export const Note = defineDocumentType(() => {
 	return {
-		name: "Til",
-		filePathPattern: "til/**/*.mdx",
+		name: "Note",
+		filePathPattern: "notes/**/*.mdx",
 		contentType: "mdx",
 		fields: {
 			id: {
@@ -88,7 +88,7 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
 	contentDirPath: "./content",
 	contentDirExclude: ["archived"],
-	documentTypes: [Post, Page, Til],
+	documentTypes: [Post, Page, Note],
 	mdx: {
 		remarkPlugins: [remarkGfm],
 		rehypePlugins: [
