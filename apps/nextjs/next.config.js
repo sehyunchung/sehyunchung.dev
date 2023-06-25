@@ -19,6 +19,11 @@ const nextConfig = {
 				destination: "/notes/page/1",
 				permanent: true,
 			},
+			{
+				source: "/til/:path*",
+				destination: "/notes/:path*",
+				permanent: false,
+			},
 		]
 	},
 }
