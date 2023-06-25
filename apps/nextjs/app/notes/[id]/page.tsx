@@ -41,8 +41,7 @@ export async function generateMetadata({
 	ogImg.searchParams.set("description", title)
 
 	return {
-		title: "Note",
-		description: title,
+		title,
 		openGraph: {
 			images: [ogImg],
 			title: "Note",
@@ -50,7 +49,7 @@ export async function generateMetadata({
 		},
 		twitter: {
 			images: [ogImg],
-			title: "Note",
+			title,
 			description: title,
 			card: "summary_large_image",
 		},

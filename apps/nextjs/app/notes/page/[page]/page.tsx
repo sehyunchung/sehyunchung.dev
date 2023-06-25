@@ -4,6 +4,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 import { NoteItem } from "../../components"
+import { Metadata } from "next"
 
 const sortedTils = allNotes.sort(
 	(a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
@@ -24,6 +25,11 @@ function chunkArray<T>(array: T[], chunk: number): T[][] {
 
 export async function generateStaticParams() {
 	return chunkArray(allNotes, 10).map((_, index) => index + 1)
+}
+
+export const metadata = {
+	title: "Notes",
+	description: "Some short notes",
 }
 
 export default function TilPaginatedPage({
