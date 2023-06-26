@@ -6,8 +6,21 @@ labels:
   - app router
   - redirects
 ---
+til이 딱히 til이 아닌 것 같고 github을 cms로 쓰는 것도 좀 번거로운 감이 있어서 걍 `.mdx` 파일을 작성하는 걸로 하고 route 이름도 `notes`로 바꾸었는데, 바꾸고 보니 이전 링크를 preserve 해야 되겠다 싶어서 알아보았다. 브로큰 링크를 만들지 않아보겠다! 가 얼마 전에 목표가 되었기 때문에.
 
-til이 딱히 til이 아닌 것 같고 github을 cms로 쓰는 것도 좀 번거로운 감이 있어서 걍 `.mdx` 파일을 작성하는 걸로 하고 route 이름도 `notes`로 바꾸었는데, 바꾸고 보니 이전 링크를 preserve 해야 되겠다 싶어서 알아보았다.
+
+## 하려는 것
+
+1. (아마도 없을 것 같긴 하지만) 이전 링크를 어딘가 저장해 둔 누군가가 있을 수도 있다.
+2. 그 저장된 링크는 `/til/:id` 일 것
+3. 바뀐 링크는 `/notes/:id` 이지만,
+4. 2.의 링크로도 액세스가 가능해야 함
+
+그러니까 `redirects` 설정을 하면 되는 것인데,
+
+## `next.config.js`
+
+아래와 같이 하면 된다.
 
 ```ts next.config.js
 /** @type {import('next').NextConfig} */
@@ -15,11 +28,7 @@ const nextConfig = {
 	// ...
 	async redirects() {
 		return [
-			{
-				source: "/notes",
-				destination: "/notes/page/1",
-				permanent: true,
-			},
+			// ...
 			{
 				source: "/til/:path*",
 				destination: "/notes/:path*",
