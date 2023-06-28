@@ -1,13 +1,14 @@
 import "./globals.css"
-import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
-import { getBaseUrl } from "@/lib/utils"
 import { Analytics } from "@/components/analytics"
 import {
 	ScriptGoogleDataLayerInline,
 	ScriptGoogleTagManager,
 	ScriptMSClarity,
 } from "@/components/external-scripts"
+import { NextAuthProvider } from "@/components/next-auth-provider"
 import { ThemeProvider } from "@/components/theme-provider"
+import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { getBaseUrl } from "@/lib/utils"
 
 export const metadata = {
 	metadataBase: getBaseUrl(),
@@ -55,12 +56,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					"antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep"
 				}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
-						{children}
-					</div>
-					<Analytics />
-				</ThemeProvider>
+				<NextAuthProvider>
+					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+						<div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
+							{children}
+						</div>
+						<Analytics />
+					</ThemeProvider>
+				</NextAuthProvider>
 			</body>
 		</html>
 	)

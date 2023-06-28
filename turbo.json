@@ -5,7 +5,13 @@
 		"build": {
 			"dependsOn": ["^build"],
 			"outputs": [".next/**", "!.next/cache/**"],
-			"env": ["GITHUB_ACCESS_TOKEN", "VERCEL_ENV", "VERCEL_URL"]
+			"env": [
+				"GITHUB_ACCESS_TOKEN",
+				"VERCEL_ENV",
+				"VERCEL_URL",
+				"GITHUB_ID",
+				"GITHUB_SECRET"
+			]
 		},
 		"lint": {},
 		"dev": {
