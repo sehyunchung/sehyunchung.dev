@@ -7,7 +7,8 @@
 		"build": "next build",
 		"preview": "next build && next start",
 		"start": "next start",
-		"lint": "rome check ./**/*.ts*"
+		"lint": "rome check ./**/*.ts*",
+		"test": "vitest"
 	},
 	"dependencies": {
 		"@cloudflare/next-on-pages": "^0.10.1",
@@ -44,17 +45,21 @@
 		"@builder.io/partytown": "^0.8.0",
 		"@ianvs/prettier-plugin-sort-imports": "^3.7.2",
 		"@tailwindcss/typography": "^0.5.9",
+		"@testing-library/react": "^14.0.0",
 		"@types/mdx": "^2.0.5",
 		"@types/node": "20.2.3",
 		"@types/probe-image-size": "^7.2.0",
 		"@types/react": "18.2.6",
 		"@types/react-dom": "18.2.4",
+		"@vitejs/plugin-react": "^4.0.1",
 		"autoprefixer": "10.4.14",
+		"jsdom": "^22.1.0",
 		"prettier": "^2.8.8",
 		"prettier-plugin-tailwindcss": "^0.3.0",
 		"remark-gfm": "^3.0.1",
 		"tailwindcss": "3.3.2",
 		"ts-node": "^10.9.1",
-		"typescript": "5.0.4"
+		"typescript": "5.0.4",
+		"vitest": "^0.32.2"
 	}
 }
