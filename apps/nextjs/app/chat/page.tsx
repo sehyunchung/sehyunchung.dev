@@ -3,17 +3,23 @@
 import * as React from "react"
 
 import { useChat } from "ai/react"
+import { useSession } from "next-auth/react"
 
 export default function Chat() {
+	const session = useSession({
+		required: true,
+	})
+
 	const { messages, input, handleInputChange, handleSubmit } = useChat()
 
 	return (
 		<div className="mx-auto w-full max-w-md py-24 flex flex-col stretch">
 			{messages.map((m) => (
-				<div key={m.id} className="border-b last-of-type:border-b-0 py-4 whitespace-pre-line">
-					<div>
-						{m.role === "user" ? "Me: " : "Chat: "}
-					</div>
+				<div
+					key={m.id}
+					className="border-b last-of-type:border-b-0 py-4 whitespace-pre-line"
+				>
+					<div>{m.role === "user" ? "Me: " : "Chat: "}</div>
 					{m.content}
 				</div>
 			))}
