@@ -8,6 +8,14 @@ const handler = NextAuth({
 			clientSecret: process.env.GITHUB_SECRET as string,
 		}),
 	],
+	callbacks: {
+		async signIn({ user }) {
+			if (user.id !== process.env.MY_GITHUB_ID) {
+				return false
+			}
+			return true
+		},
+	},
 })
 
 export { handler as GET, handler as POST }

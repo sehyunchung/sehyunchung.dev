@@ -9,6 +9,7 @@
 				"GITHUB_ACCESS_TOKEN",
 				"VERCEL_ENV",
 				"VERCEL_URL",
+				"MY_GITHUB_ID",
 				"GITHUB_ID",
 				"GITHUB_SECRET",
 				"OPENAI_API_KEY"
