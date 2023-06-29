@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@cloudflare/next-on-pages": "^0.10.1",
 		"@giscus/react": "^2.2.8",
+		"@radix-ui/react-collapsible": "^1.0.3",
 		"@vercel/analytics": "^1.0.1",
 		"@vercel/og": "^0.5.4",
 		"ai": "^2.1.3",
