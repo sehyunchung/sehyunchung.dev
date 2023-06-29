@@ -3,13 +3,8 @@
 import * as React from "react"
 
 import { useChat } from "ai/react"
-import { useSession } from "next-auth/react"
 
 export default function Chat() {
-	const session = useSession({
-		required: true,
-	})
-
 	const { messages, input, handleInputChange, handleSubmit } = useChat()
 
 	return (
