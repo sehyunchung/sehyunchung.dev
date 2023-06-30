@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Box } from "ui"
 
-import sky from "./sky.jpg"
+import system7Bg from "./system7_bg.png"
 import welcome from "./welcome.webp"
 import { ClassicBox } from "@/components/classic-box"
 import Image from "next/image"
@@ -10,7 +10,7 @@ export default async function Home() {
 	return (
 		<div
 			style={{
-				backgroundImage: `url(${sky.src})`,
+				backgroundImage: `url(${system7Bg.src})`,
 			}}
 			className="fixed font-[cursive] capitalize md:text-3xl lg:text-4xl xl:text-5xl -translate-x-[50%] w-[85vw] max-w-5xl -translate-y-[55%] top-[50%] left-[50%] grid grid-cols-2 grid-rows-2 place-items-center text-xl"
 		>
