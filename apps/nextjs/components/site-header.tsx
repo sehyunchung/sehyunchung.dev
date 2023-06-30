@@ -47,7 +47,7 @@ export function HeaderNav({ className }: { className?: string }) {
 
 export function SiteHeader() {
 	return (
-		<header className="fixed md:relative w-full max-w-screen left-0 bottom-0 flex justify-stretch bg-white dark:bg-black">
+		<header className="fixed border-t md:border-0 md:relative w-full max-w-screen left-0 bottom-0 flex justify-stretch bg-white dark:bg-black">
 			<div className="relative flex-auto flex justify-between items-center">
 				<div className="pl-1">
 					<Link aria-label="home" href="/" className="h-12 w-12">
