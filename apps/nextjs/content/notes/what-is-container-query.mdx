@@ -1,0 +1,37 @@
+---
+title: "CSS container queries"
+createdAt: 2023-06-30
+labels:
+  - css
+  - responsive
+---
+
+## tl;dr
+
+![container queries illustrated](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries/container-query.svg)
+
+## How to
+
+1. container query로 "볼" element에 `container-type`으로 "containment context"를 지정한다.
+1. `container-type`은 아래와 같은 옵션들이 있다.
+   - `size`: 'containment context로 지정된 element의 "inline", "block" layout 정보를 다 쓰겠다.'
+   - `inline-size`: '"inline" layout 정보만 쓰겠다.'
+   - `normal`: 'layout 정보는 안쓰겠다.'
+1. `container-name`으로 naming도 할 수 있다. (`grid-area`랑 비슷한 머시기라고 생각하자.)
+1. 위 둘을 줄여서 `container: {name} / {type}` 로 쓸 수 있다.
+1. `@container {name} ({condition}) { ... }`로 스타일을 정의한다.
+1. container queries용 unit도 따로 있다.
+   - `cqw`: containment context element width의 1%
+   - `cqh`: height의 1%
+   - `cqi`: inline size의 1%
+   - `cqb`: block size의 1%
+   - `cqmin`: cqi와 cqb 중 작은 값
+   - `cqmax`: 큰 값
+
+## "width랑 inline size랑 같은 거 아니에요?"
+
+writing mode가 vertical일 경우를 생각해보세요.
+
+## Refs
+
+- [CSS container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries)
