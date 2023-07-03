@@ -6,6 +6,7 @@ import welcome from "./welcome.webp"
 import { ClassicBox } from "@/components/classic-box"
 import Image from "next/image"
 
+// why my build pending...?
 export default async function Home() {
 	return (
 		<div
