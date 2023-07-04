@@ -41,7 +41,18 @@ export const Note = defineDocumentType(() => {
 				},
 			},
 		},
-		computedFields,
+		computedFields: {
+			...computedFields,
+			id: {
+				type: "string",
+				resolve: (doc) => {
+					if (!doc.id) {
+						return
+					}
+					return encodeURIComponent(doc.id)
+				},
+			},
+		},
 	}
 })
 
