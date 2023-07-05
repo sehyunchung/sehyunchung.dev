@@ -12,11 +12,11 @@ export function NoteItem({
 	note: Note
 }) {
 	return (
-		<div
+		<article
 			key={note.id}
 			className="break-words border-b border-b-gray-200 pb-6"
-			data-clarity-region="article"
 			{...props}
+			data-clarity-region="article"
 		>
 			<Link
 				className="no-underline"
@@ -48,6 +48,6 @@ export function NoteItem({
 					</Link>
 				))}
 			</div>
-		</div>
+		</article>
 	)
 }
