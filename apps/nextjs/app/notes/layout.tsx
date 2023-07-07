@@ -7,9 +7,11 @@ import { badgeVariants } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
 function NotesLabels() {
-	const labels = Array.from(new Set(allNotes.flatMap((note) => note.labels)))
+	const labels = Array.from(
+		new Set(allNotes.flatMap((note) => note.labels)),
+	).sort((x, y) => x.toLowerCase().localeCompare(y.toLowerCase()))
 	return (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap justify-center gap-2">
 			{labels.map((label) => (
 				<Link
 					className={cn(
