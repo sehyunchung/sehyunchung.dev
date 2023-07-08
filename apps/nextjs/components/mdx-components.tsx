@@ -1,9 +1,14 @@
 import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { Tweet } from "react-tweet"
 import { Box as BoxDrawn } from "ui"
+
+const Mermaid = dynamic(() => import("./mermaid"), {
+	ssr: false,
+})
 
 const components = {
 	Tweet,
@@ -11,6 +16,7 @@ const components = {
 	BoxDrawn,
 	LinkIcon: ExternalLinkIcon,
 	Link,
+	Mermaid,
 }
 
 interface MdxProps {
