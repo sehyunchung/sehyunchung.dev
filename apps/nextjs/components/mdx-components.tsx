@@ -1,3 +1,4 @@
+import { MindConsciousnessSpectrum } from "./mind-consiousness-spectrum"
 import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import dynamic from "next/dynamic"
@@ -17,6 +18,7 @@ const components = {
 	LinkIcon: ExternalLinkIcon,
 	Link,
 	Mermaid,
+	MindConsciousnessSpectrum,
 }
 
 interface MdxProps {
@@ -26,5 +28,6 @@ interface MdxProps {
 export function Mdx({ code }: MdxProps) {
 	const Component = useMDXComponent(code)
 
+	// @ts-expect-error
 	return <Component components={components} />
 }
