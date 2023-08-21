@@ -51,7 +51,7 @@ export const WORK_EXPERIENCE = [
 
 export const MONO_PROJECTS = [
 	{
-		title: "IAM 웹사이트",
+		title: "IAM 웹사이트(iam-iam.com)",
 		period: "2020.12 ~ 현재",
 		summary:
 			"영양제 구입을 위한 상담 설문, 영양제 쇼핑 기능, 브랜딩용 블로그, 회원 가입 및 계정 관리 기능 등을 갖고 있는 복합적인 웹서비스",
