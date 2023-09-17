@@ -48,8 +48,9 @@ export const Box = ({
 			</span>
 			<div
 				style={{
-					transform: `translate(-${shadow ? 0.5 : 0}ch, -${shadow ? 0.5 : 0
-						}em)`,
+					transform: `translate(-${shadow ? 0.5 : 0}ch, -${
+						shadow ? 0.5 : 0
+					}em)`,
 				}}
 			>
 				{children}
