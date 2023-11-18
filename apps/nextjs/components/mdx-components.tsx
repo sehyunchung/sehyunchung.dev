@@ -27,7 +27,5 @@ interface MdxProps {
 
 export function Mdx({ code }: MdxProps) {
 	const Component = useMDXComponent(code)
-
-	// @ts-expect-error
 	return <Component components={components} />
 }
