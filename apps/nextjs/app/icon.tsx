@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server"
+import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
 
@@ -60,6 +60,7 @@ export default function Icon() {
 					strokeMiterlimit="10"
 					strokeLinecap="round"
 				/>
+				<title>Melting Face Emoji</title>
 			</svg>
 		</div>,
 		{
