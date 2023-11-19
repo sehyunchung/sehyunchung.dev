@@ -6,6 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Tweet } from "react-tweet"
 import { Box as BoxDrawn } from "ui"
+import { TooltipProvider } from "./ui/tooltip"
+import { TranslateTooltip } from "./translate-tooltip"
 
 const Mermaid = dynamic(() => import("./mermaid"), {
 	ssr: false,
@@ -19,6 +21,8 @@ const components = {
 	Link,
 	Mermaid,
 	MindConsciousnessSpectrum,
+	Translate: TranslateTooltip,
+	TooltipProvider,
 }
 
 interface MdxProps {
