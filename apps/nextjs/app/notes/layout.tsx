@@ -6,12 +6,12 @@ import { SiteHeader } from "@/components/site-header"
 import { badgeVariants } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
-function NotesLabels() {
+function NotesLabels({ className }: { className?: string }) {
 	const labels = Array.from(
 		new Set(allNotes.flatMap((note) => note.labels)),
 	).sort((x, y) => x.toLowerCase().localeCompare(y.toLowerCase()))
 	return (
-		<div className="flex flex-wrap justify-center gap-2">
+		<div className={cn("flex flex-wrap justify-center gap-2", className)}>
 			{labels.map((label) => (
 				<Link
 					className={cn(
@@ -42,8 +42,10 @@ export default function NoteLayout({
 						notes
 					</Link>
 				</h1>
-				<NotesLabels />
 				{children}
+				<div className="h-14" />
+				<h2>Tags</h2>
+				<NotesLabels />
 			</div>
 			<Footer className="mt-16" />
 		</>
