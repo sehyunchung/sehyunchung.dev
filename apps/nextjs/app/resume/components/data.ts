@@ -23,6 +23,12 @@ export const ETC_EXPERIENCES = [
 
 export const WORK_EXPERIENCE = [
 	{
+		company: "티지소사이어티",
+		period: "2023. 10 ~",
+		summary: "프로덕트 엔지니어 (추후 업데이트)",
+		achievements: [],
+	},
+	{
 		company: "(주) 모노랩스",
 		period: "2020. 12 ~ 2023. 6",
 		summary:

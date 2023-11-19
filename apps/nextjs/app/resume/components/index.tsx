@@ -43,9 +43,11 @@ export function Experience({
 				</span>
 			</h1>
 			<p className="flex text-base">{summary}</p>
-			<h2 className="text-sm font-semibold m-0 mt-6 mb-2 text-gray-500">
-				얻은 것
-			</h2>
+			{achievements.length ? (
+				<h2 className="text-sm font-semibold m-0 mt-6 mb-2 text-gray-500">
+					얻은 것
+				</h2>
+			) : null}
 			<ul className="prose flex flex-col gap-1 list-disc mb-0 font-medium">
 				{achievements.map((experience) => (
 					<li key={experience} className="text-sm m-0">
