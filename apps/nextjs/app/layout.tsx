@@ -58,7 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			>
 				<NextAuthProvider>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-						<div className="prose prose-neutral dark:prose-invert max-w-2xl mx-auto py-10 container px-4">
+						<div className="border-x prose prose-neutral dark:prose-invert max-w-xl mx-auto p-10">
 							{children}
 						</div>
 						<Analytics />
