@@ -24,6 +24,11 @@ const nextConfig = {
 				destination: "/notes/:path*",
 				permanent: false,
 			},
+			{
+				source: "/",
+				destination: "/notes/page/1",
+				permanent: true,
+			},
 		]
 	},
 }
