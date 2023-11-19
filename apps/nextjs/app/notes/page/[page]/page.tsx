@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export const metadata = {
 	title: "Notes",
 	description: "Some short notes",
-}
+} satisfies Metadata
 
 export default function TilPaginatedPage({
 	params: { page },
