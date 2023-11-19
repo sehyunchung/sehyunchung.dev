@@ -10,7 +10,8 @@ export function TranslateTooltip({
 				<span>{translated}</span>
 			</TooltipTrigger>
 			<TooltipContent className="break-keep max-w-[60ch] text-base">
-				<span className="">{original}</span>
+				<span className="text-xs text-muted-foreground">원문: </span>"
+				<span className="">{original}</span>"
 			</TooltipContent>
 		</Tooltip>
 	)
