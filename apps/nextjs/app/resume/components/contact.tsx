@@ -31,18 +31,14 @@ export function Contact({ className }: { className?: string }) {
 			)}
 		>
 			<>
-				<li
-					tabIndex={0}
-					onClick={handlePhoneClick}
-					onKeyDown={handlePhoneClick}
-				>
+				<li onClick={handlePhoneClick} onKeyDown={handlePhoneClick}>
 					{contact.phone ? (
 						<a href="tel:010-9892-3705">{contact.phone}</a>
 					) : (
 						"..."
 					)}
 				</li>
-				<li tabIndex={0} onClick={handleMailClick} onKeyDown={handleMailClick}>
+				<li onClick={handleMailClick} onKeyDown={handleMailClick}>
 					{contact.email ? (
 						<a href="mailto:hi@sehyunchung.dev">{contact.email}</a>
 					) : (
