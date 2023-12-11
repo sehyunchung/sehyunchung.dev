@@ -1,5 +1,6 @@
 import "./globals.css"
 import { Analytics } from "@/components/analytics"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import {
 	ScriptGoogleDataLayerInline,
 	ScriptGoogleTagManager,
@@ -61,9 +62,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
 						<div className="border-x prose prose-neutral dark:prose-invert max-w-xl mx-auto p-10">
 							{children}
 						</div>
-						<Analytics />
 					</ThemeProvider>
 				</NextAuthProvider>
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)

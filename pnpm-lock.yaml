@@ -60,6 +60,9 @@ importers:
       '@vercel/og':
         specifier: ^0.5.20
         version: 0.5.20
+      '@vercel/speed-insights':
+        specifier: ^1.0.1
+        version: 1.0.1
       ai:
         specifier: ^2.2.24
         version: 2.2.24(react@18.3.0-canary-bbb9cb116-20231117)(solid-js@1.8.5)(svelte@4.2.5)(vue@3.3.8)
@@ -4386,6 +4389,11 @@ packages:
 
   /@vercel/ruby@1.3.75:
     resolution: {integrity: sha512-sUmzJnd9O1N7StFEpKG9JvHJvHmJjgfrmhgQsQLEQ7OOQJkO9DYoLomlrIDW9qNdu7dNOeyj7gQY5B8y8RMntw==}
+    dev: false
+
+  /@vercel/speed-insights@1.0.1:
+    resolution: {integrity: sha512-cm8KTTsDgS1AbWsgIEZuMoyPUjclzeqJihyLp0tnA21B/x9iTE8hu2S5zM+/DBzihuHxWL1dx9pCWk22ctMFWQ==}
+    requiresBuild: true
     dev: false
 
   /@vercel/static-build@1.3.25:
