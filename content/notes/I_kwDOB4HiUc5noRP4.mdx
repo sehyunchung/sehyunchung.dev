@@ -1,0 +1,65 @@
+---
+id: I_kwDOB4HiUc5noRP4
+title: 🫠 Hydration Mismatch 🫠 (1)
+createdAt: 2023-06-02T18:12:49Z
+labels:
+  - react
+  - tips and tricks
+  - next.js
+  - ssr
+---
+
+이런 저런 이유로 클라이언트 상태를 `localStorage` 등에 persist 하고 있을 경우 server/client mismatch가 발생할 수 밖에 없는데 그래서 서버에서 프리렌더가 안되게 하려면 아래와 같은 난리 법석이 필요.
+
+1. `useState` + `useEffect`
+   ```tsx
+   function Comp() {
+     const storeState = useStoreState()
+           ^^^^^^^^^^ 1) 요걸 그냥 쓰면 💣 인 경우,
+
+     const [state, setState] = React.useState()
+     React.useEffect(()=>{
+       setState(storeState)
+     },[])               // 2) 이런 난리 법석 후에
+
+     return <div>{state}</div> // 3) 이러면 통과
+   ```
+3. `useMounted` + `return null`
+   ```tsx
+   // 0) 일단 이런 난리 법석을 만들어두고
+   const useMounted = () => {
+     const [m, sM] = React.useState(false)
+     //     ^^^^^ 귀찮아서 대충 씀
+     React.useEffect(()=>{
+       sM(true)
+     }, [])
+     return m
+   }
+   ```
+   ```tsx
+   function Comp() {
+     const storeState = useStoreState()
+           ^^^^^^^^^^ 1) 요걸 그냥 쓰면 💣 인 경우,
+
+     const mounted = useMounted()
+     if (!mounted) return null  // 2) 이러고 나서
+
+     return <div>{storeState}</div> // 3) 이러면 통과
+   ```
+5. [`next/dynamic` + `{ ssr: false }`](https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#skipping-ssr) ☜ 이게 기분이 제일 덜 나쁜듯
+   ```tsx
+   const Comp = dynamic(() => import('path/to/comp'), { ssr: false }); // 젤 간단?
+   ```
+   하지만 캐치가 하나 있는데, `Comp` 는 무조건 `export default` 여야 함.
+   ```tsx
+   const Comp = dynamic(() => import('path/to/comp').then(mod => mod.Comp), { ssr: false })
+                                                       // ^^^^^^^^^^^^^^^ 이러면 💣
+   ```
+   대신 `loading`으로 서스펜스 간지를 낼 수 있음(...)
+   ```tsx
+   const Comp = dynamic(() => import('path/to/comp'), { ssr: false, loading: () => <Sekeleton /> }); // 이 가능
+   ```
+   물론 next 한정이지만요...
+
+---
+이거 다 별루고... 로 시작하는 글을 한참 쓰고 있었는데 브라우저 꺼져서 날아감...

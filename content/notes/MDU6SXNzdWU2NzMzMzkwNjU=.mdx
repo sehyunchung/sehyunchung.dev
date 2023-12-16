@@ -1,0 +1,14 @@
+---
+id: MDU6SXNzdWU2NzMzMzkwNjU=
+title: :active on mobile safari
+createdAt: 2020-08-05T07:59:46Z
+labels:
+  - css
+  - safari
+---
+
+1. `webkit-tap-highlight-color` 쓰기 -> 근데 `:active` 랑 동작이 다름
+
+1. body에 `<body ontouchstart="">` 넣기
+
+1. 필요한 컴포넌트에 `onTouchStart={() => false}` 넣기

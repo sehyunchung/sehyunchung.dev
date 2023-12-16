@@ -1,0 +1,64 @@
+---
+title: "Callback Ref"
+createdAt: 2023-06-26
+labels:
+  - react
+  - callback ref
+  - ref
+---
+
+## callback refs?
+
+`ref`는 보통 `useRef` hook과 함께 쓰지만 `ref` 에 함수를 넘길 수도 있는데, 요런 패턴을 callback refs 라고 하고, 대부분 DOM node를 액세스 하는 경우에 쓰인다.
+
+## How?
+
+놀랍게도 `ref`엔 함수를 넘길 수 있는데, 요 경우 아래와 같이 node를 arg로 받게 된다.
+
+```ts
+const ref = (node) => {
+  // access the dom node
+}
+```
+
+사실 `useRef`가 넘기는 `ref` 도 걍 아래와 같다.
+
+```tsx
+<div
+  ref={(node) => {
+    ref.current = node;
+  }}
+/>
+```
+
+## But why?
+
+기존의 `ref` 는 보통 effect 내부에서 마운트가 된 이후에 액세스하게 된다. 근데 해당 dom node에 조건부 렌더가 걸려있다면 동작하지 않는 케이스가 생길 수 있고, node가 다이나믹하게 변경될 수 있는 케이스에 대응이 어렵다거나 등등.
+
+## When?
+
+아래와 같은 걸 할 수 있다.
+
+```tsx
+const ref = (node) => {
+  node?.focus()
+}
+
+// ...
+
+return <input ref={ref} type="text" />
+```
+
+## `useCallback`
+
+근데 위와 같이 하면 매 렌더시마다 포커스가 될 것이므로, 거의 대부분의 경우 `useCallback`이랑 쓰게 될 것이다.
+
+```tsx
+const ref = useCallback(() => {
+  node?.focus()
+}, [])
+```
+
+## Further Readings
+
+- https://tkdodo.eu/blog/avoiding-use-effect-with-callback-refs

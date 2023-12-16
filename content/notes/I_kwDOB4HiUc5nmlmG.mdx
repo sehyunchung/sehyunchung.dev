@@ -1,0 +1,77 @@
+---
+id: I_kwDOB4HiUc5nmlmG
+title: "`blurDataUrl` 만들기"
+createdAt: 2023-06-02T13:05:14Z
+labels:
+  - next.js
+  - image optimization
+  - sharp
+---
+
+갯츠비는 알아서 해주지만 넥스트는 해줘야 되기 때문에...
+
+```ts
+import { decode, encode } from "blurhash"
+import sharp from "sharp"
+
+const loadImageData = async (src: string) => {
+  const response = await fetch(src)
+  if (!response.ok)
+    throw new Error(
+      `Failed to load image: ${response.status} ${response.statusText}`
+    )
+
+  const imageBuffer = await response.arrayBuffer()
+
+  const { data, info } = await sharp(imageBuffer)
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true })
+
+  return {
+    data: new Uint8ClampedArray(data),
+    width: info.width,
+    height: info.height,
+  }
+}
+
+export const encodeImageToBlurhash = async (imageUrl: string) => {
+  const { data, width, height } = await loadImageData(imageUrl)
+  return encode(data, width, height, 4, 4)
+}
+
+export const blurhashToBase64 = async (
+  blurhash: string,
+  width: number,
+  height: number
+) => {
+  const pixels = decode(blurhash, width, height)
+  const webp = sharp(Buffer.from(pixels), {
+    raw: { width, height, channels: 4 },
+  }).webp()
+  const dataString = (await webp.toBuffer()).toString("base64")
+
+  return `data:image/png;base64,${dataString}`
+}
+
+export const generateBlurDataUrl = async (
+  imageUrl: string
+): Promise<string | undefined> => {
+  try {
+    const blurhash = await encodeImageToBlurhash(imageUrl)
+    return await blurhashToBase64(blurhash, 4, 4)
+  } catch (error) {
+    console.error(error)
+    return undefined
+  }
+}
+
+```
+
+여러가지 더 있다.
+
+- [blurhash](https://github.com/woltapp/blurhash)
+- [thumbhash](https://evanw.github.io/thumbhash/)
+- [lqip-modern](https://github.com/transitive-bullshit/lqip-modern)
+- [@unpic-placeholder](https://github.com/ascorbic/unpic-placeholder)
+- 등등

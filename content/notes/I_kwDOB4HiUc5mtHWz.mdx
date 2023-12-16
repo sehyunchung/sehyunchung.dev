@@ -1,0 +1,96 @@
+---
+id: I_kwDOB4HiUc5mtHWz
+title: "`@vercel/og` Cheatsheet (?)"
+createdAt: 2023-05-24T03:05:23Z
+labels:
+  - react
+  - tips and tricks
+  - vercel
+  - opengraph
+  - next.js
+---
+
+1. [@vercel/og](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation)
+2. Edge Runtime 환경 기반으로 동작함.
+3. 이미지 렌더에 [satori](https://github.com/vercel/satori)를 사용하는데,
+   - react element를 `svg`로 변환하는 라이브러리이고,
+   - React Native의 Flexbox layout engine을 사용하므로, [css의 모든 기능을 사용할 순 없다](https://github.com/vercel/satori#css).
+      - e.g. `z-index`, `calc()` 등 사용 불가능.
+4. app router 사용시 `app/og/route.tsx` 혹은 `app/og.tsx` 등등으로 파일을 만들면 됨.
+   - `.ts`도 사용할 수 있으나 고러면 `jsx`를 사용할 수 없겟쥬
+5. 커스텀 폰트를 사용할 수 있으나 `next/font` 외에 별도로 로컬에서 폰트 파일을 가져와야 함. (리모트는 아직 안해봄)
+   - `.ttf`, `.woff` 사용 가능 (`.woff2`는 안됨)
+6. 대략의 api는 아래와 같음.
+   ```ts
+   new ImageResponse(
+     element: ReactElement,
+     options: {
+       width?: number = 1200
+       height?: number = 630
+       emoji?: 'twemoji' | 'blobmoji' | 'noto' | 'openmoji' = 'twemoji', // emoji render에 어떤 lib을 사용할 것인지
+       fonts?: {
+         name: string,
+         data: ArrayBuffer, // 폰트 파일 데이터. fetch(URL).then(res => res.imageBuffer())로 가져오면 된다.
+         weight: number,
+         style: 'normal' | 'italic'
+       }[]
+       debug?: boolean = false // true 일 경우 각 element의 border, line-height 등이 표시됨. 
+ 
+       status?: number = 200
+       statusText?: string
+       headers?: Record<string, string>
+     },
+   )
+   ```
+7. 대략의 사용례는 아래와 같음.
+    ```tsx
+    // app/og/route.tsx
+    import { ImageResponse } from 'next/server'; // app router 사용시 @verce/og가 포함되어 있음
+ 
+    export const runtime = 'edge';
+  
+    const font = fetch(new URL('../path/to/font/Font.woff', import.meta.url)).then(
+      (res) => res.arrayBuffer(),
+    );
+  
+    export async function GET(request: Request) {
+      const fontData = await font;
+
+      // query param으로 이런 저런 텍스트를 동적으로 넣을 수 있음.
+      const url = new URL(request.url)
+      const searchParams = url.searchParams
+      const title = searchParams.has("title") ? searchParams.get("title") : null
+  
+      return new ImageResponse(
+        (
+          <div
+            style={{
+            backgroundColor: 'white',
+            height: '100%',
+            width: '100%',
+            fontSize: 100,
+            fontFamily: '"Font"',
+            paddingTop: '100px',
+            paddingLeft: '50px',
+          }}
+         >
+           {title ? title : 'Hello World!'}
+         </div>
+       ),
+       {
+         width: 1200,
+         height: 630,
+         fonts: [
+           {
+             name: 'Font',
+             data: fontData,
+             style: 'normal',
+           },
+         ],
+       },
+     );
+   }
+   ```
+8. tailwind 사용이 가능한데 아직 `experimental`이 붙어있고 `className` 말고 `tw`를 사용하도록 되어있음.
+9. Hobby plan일 경우 [단일 function당 1MB 제한이 있어 한글 커스텀 폰트를 추가하긴 쉽지 않았음](https://www.sehyunchung.dev/til/I_kwDOB4HiUc5mg7RV).
+10. sehyunchung.dev에 적용해본 결과 -> https://sehyunchung.dev/og?title=암온더넧렙을&description=절대적룰을지켜

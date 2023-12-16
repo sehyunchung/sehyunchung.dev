@@ -1,0 +1,22 @@
+---
+id: MDU6SXNzdWU2NjkzNDM0MjA=
+title: merging interfaces
+createdAt: 2020-07-31T02:19:43Z
+labels:
+  - typescript
+---
+
+```ts
+interface Box {
+    height: number;
+    width: number;
+}
+
+interface Box {
+    scale: number;
+}
+
+let box: Box = {height: 5, width: 6, scale: 10};
+```
+
+https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces

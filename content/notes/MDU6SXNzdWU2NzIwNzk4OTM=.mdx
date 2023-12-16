@@ -1,0 +1,14 @@
+---
+id: MDU6SXNzdWU2NzIwNzk4OTM=
+title: '"Type aliases can only be used in TypeScript files.ts(8008)" in .js files'
+createdAt: 2020-08-03T13:33:45Z
+labels:
+  - vscode
+  - flow
+---
+
+vscode가 flow type 정의에 `.ts`가 아닌데 타입 머시기가 있다고 깝치는 에러. `settings.json`에 아래를 추가한다.
+
+```json
+  "javascript.validate.enable": false
+```

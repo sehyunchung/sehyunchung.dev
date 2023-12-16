@@ -1,0 +1,16 @@
+---
+id: I_kwDOB4HiUc5nFGVK
+title: "TailwindCSS: You can not pass arbitrary values as variables"
+createdAt: 2023-05-28T10:49:11Z
+labels:
+  - tailwind
+  - sad
+---
+
+```ts
+const A = `after:content-['░']`
+
+const B = `after:content-['${variable}']`
+```
+
+`A` works, but `B` doesn't.

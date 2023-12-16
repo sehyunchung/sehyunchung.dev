@@ -1,0 +1,60 @@
+---
+id: I_kwDOB4HiUc5orUl8
+title: "`column-count`"
+createdAt: 2023-06-14T06:53:51Z
+labels:
+  - css
+---
+
+이력서를 리액트 컴포넌트로 작성하다가 2단 처리를 어떻게 해야 되나 싶어서 알아보니 `column-count` 라는 프로퍼티가 있었고,
+
+```css
+column-count: 2;
+```
+
+하면 되는 것이었다...
+
+```css
+column-count: <number>;
+```
+기본적으로 위와 같이 쓰면 되고, 이런 저런 관련 프로퍼티가 있는데,
+
+## `column-width`
+```css
+column-count: auto;
+column-width: 8rem;
+```
+content 분량에 따라 `8rem` `width`에 맞춰 자동으로  채워진다.
+
+## `column-fill`
+
+```css
+column-fill: auto;
+column-fill: balance;
+```
+
+- `auto`: 일반적으로 기대되는 분량에 따라 채워지는 동작
+- `balance`: `column-count`에 지정된 대로 content를 나누어 각 column에 배치
+
+## `column-gap`
+
+ㅇㅇ 그것임
+
+## `column-rule`
+
+규칙인가? 싶지만 그게 아니고 각 컬럼 사이에 라인을 그어준다.
+
+```css
+column-rule: dotted;
+column-rule: solid 8px;
+column-rule: solid blue;
+column-rule: thick inset blue;
+```
+이런 느낌.
+
+## `column-span`
+
+특정 요소가 cols 사이를 가로지르게 만들 수 있다. 아래는 mdn의 예시.
+
+![image](https://github.com/sehyunchung/til/assets/31644638/7f3c8d69-1554-4556-a4f1-053d97d1785c)
+

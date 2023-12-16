@@ -1,0 +1,14 @@
+---
+id: MDU6SXNzdWU4MzU3NDI1OTA=
+title: kill localhost:PORT
+createdAt: 2021-03-19T09:18:59Z
+labels:
+  - terminal
+---
+
+```shell
+lsof -iTCP:{PORT} -sTCP:LISTEN
+```
+```shell
+kill {PID}
+```

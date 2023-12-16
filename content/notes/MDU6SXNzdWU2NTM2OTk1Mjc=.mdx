@@ -1,0 +1,27 @@
+---
+id: MDU6SXNzdWU2NTM2OTk1Mjc=
+title: flex
+createdAt: 2020-07-09T01:44:18Z
+labels:
+  - css
+  - flexbox
+---
+
+## `flex`
+`flex-grow`, `flex-shrink`, + `flex-basis`의 shorthand이다.
+
+## syntax
+- **One-value syntax:**
+   the value must be one of:
+   - a `<number>`: In this case it is interpreted as `flex: <number> 1 0;` the `<flex-shrink>` value is assumed to be `1` and the `<flex-basis>` value is assumed to be `0`.
+   - one of the keywords: `none`, `auto`, or `initial`.
+- **Two-value syntax:**
+   the first value must be a `<number>` and it is interpreted as `<flex-grow>`. The second value must be one of:
+   - a `<number>`: then it is interpreted as `<flex-shrink>`.
+   - a valid value for width: then it is interpreted as `<flex-basis>`.
+- **Three-value syntax:**
+   the values must be in the following order:
+   - a `<number>` for `<flex-grow>`.
+   - a `<number>` for `<flex-shrink>`.
+   - a valid value for width for `<flex-basis>`.
+
