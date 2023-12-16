@@ -7,6 +7,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $index from "./routes/index.tsx";
 import * as $note_slug_ from "./routes/note/[slug].tsx";
+import * as $note_index from "./routes/note/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -17,6 +18,7 @@ const manifest = {
     "./routes/api/joke.ts": $api_joke,
     "./routes/index.tsx": $index,
     "./routes/note/[slug].tsx": $note_slug_,
+    "./routes/note/index.tsx": $note_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,

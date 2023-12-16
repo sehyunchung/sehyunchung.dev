@@ -1,9 +1,12 @@
+import { CSS, render } from "https://deno.land/x/gfm/mod.ts";
+import { Head } from "$fresh/runtime.ts";
+
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
 import { join } from "$std/path/mod.ts";
 
 import { Handlers, PageProps } from "$fresh/server.ts";
 
-interface Note {
+export interface Note {
   title: string;
   createdAt: Date;
   labels: string[];
@@ -11,7 +14,7 @@ interface Note {
   content: string;
 }
 
-async function getNote(slug: string): Promise<Note | null> {
+export async function getNote(slug: string): Promise<Note | null> {
   const text = await Deno.readTextFile(
     join("./content/notes", `${slug}.mdx`),
   );
@@ -27,7 +30,7 @@ async function getNote(slug: string): Promise<Note | null> {
   };
 }
 
-async function getAllNote(): Promise<Note[]> {
+export async function getAllNote(): Promise<Note[]> {
   const files = Deno.readDir("./content/notes");
   const promises = [];
   for await (const file of files) {
@@ -42,44 +45,25 @@ async function getAllNote(): Promise<Note[]> {
   return posts;
 }
 
-export const handler: Handlers<Note[]> = {
+export const handler: Handlers<Note> = {
   async GET(_req, ctx) {
-    const notes = await getAllNote();
-    return ctx.render(notes);
+    const post = await getNote(ctx.params.slug);
+    if (post === null) return ctx.renderNotFound();
+    return ctx.render(post);
   },
 };
 
-function PostCard(props: { post: Note }) {
-  const { post } = props;
+export default function PostPage(props: PageProps<Note>) {
+  const post = props.data;
   return (
-    <div class="py-8 border(t gray-200)">
-      <a class="sm:col-span-2" href={`/${post.slug}`}>
-        <h3 class="text(3xl gray-900) font-bold">
-          {post.title}
-        </h3>
-        <time class="text-gray-500">
-          {new Date(post.createdAt).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-        </time>
-        <div class="mt-4 text-gray-900">
-          {post.content}
-        </div>
-      </a>
-    </div>
-  );
-}
-
-export default function BlogIndexPage(props: PageProps<Note[]>) {
-  const posts = props.data;
-  return (
-    <main class="max-w-screen-md px-4 pt-16 mx-auto">
-      <h1 class="text-5xl font-bold">Blog</h1>
-      <div class="mt-8">
-        {posts.map((post) => <PostCard post={post} />)}
-      </div>
-    </main>
+    <>
+      <Head>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      </Head>
+      <div
+        class="mt-8 markdown-body"
+        dangerouslySetInnerHTML={{ __html: render(post.content) }}
+      />
+    </>
   );
 }
