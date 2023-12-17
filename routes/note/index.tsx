@@ -1,3 +1,4 @@
+import { CSS, render } from "https://deno.land/x/gfm@0.2.5/mod.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getAllNote, Note } from "./[slug].tsx";
 
@@ -23,9 +24,7 @@ function PostCard(props: { post: Note }) {
             day: "numeric",
           })}
         </time>
-        <div>
-          {post.content}
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: render(post.content) }} />
       </a>
     </div>
   );
@@ -35,8 +34,8 @@ export default function BlogIndexPage(props: PageProps<Note[]>) {
   const posts = props.data;
   return (
     <main>
-      <h1>Blog</h1>
-      <div>
+      <h1>Notes</h1>
+      <div className="break-words border-b border-b-gray-200 pb-6">
         {posts.map((post) => <PostCard post={post} />)}
       </div>
     </main>

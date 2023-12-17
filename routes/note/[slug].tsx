@@ -1,4 +1,4 @@
-import { CSS, render } from "https://deno.land/x/gfm/mod.ts";
+import { CSS, render } from "https://deno.land/x/gfm@0.2.5/mod.ts";
 import { Head } from "$fresh/runtime.ts";
 
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
@@ -61,6 +61,7 @@ export default function PostPage(props: PageProps<Note>) {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
       <div>
+        <h1>{post.title}</h1>
         <div
           dangerouslySetInnerHTML={{ __html: render(post.content) }}
         />
