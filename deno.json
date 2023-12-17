@@ -29,6 +29,7 @@
     "tailwindcss": "npm:tailwindcss@3.3.5",
     "tailwindcss/": "npm:/tailwindcss@3.3.5/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.3.5/plugin.js",
+    "@tailwindcss/typography": "npm:@tailwindcss/typography@0.5.10",
     "$std/": "https://deno.land/std@0.208.0/"
   },
   "compilerOptions": {
