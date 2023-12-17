@@ -60,10 +60,11 @@ export default function PostPage(props: PageProps<Note>) {
       <Head>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
-      <div
-        class="mt-8 markdown-body"
-        dangerouslySetInnerHTML={{ __html: render(post.content) }}
-      />
+      <div>
+        <div
+          dangerouslySetInnerHTML={{ __html: render(post.content) }}
+        />
+      </div>
     </>
   );
 }

@@ -11,19 +11,19 @@ export const handler: Handlers<Note[]> = {
 function PostCard(props: { post: Note }) {
   const { post } = props;
   return (
-    <div class="py-8 border(t gray-200)">
-      <a class="sm:col-span-2" href={`/note/${post.slug}`}>
-        <h3 class="text(3xl gray-900) font-bold">
+    <div>
+      <a className="no-underline" href={`/note/${post.slug}`}>
+        <h3>
           {post.title}
         </h3>
-        <time class="text-gray-500">
+        <time>
           {new Date(post.createdAt).toLocaleDateString("en-us", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </time>
-        <div class="mt-4 text-gray-900">
+        <div>
           {post.content}
         </div>
       </a>
@@ -34,9 +34,9 @@ function PostCard(props: { post: Note }) {
 export default function BlogIndexPage(props: PageProps<Note[]>) {
   const posts = props.data;
   return (
-    <main class="max-w-screen-md px-4 pt-16 mx-auto">
-      <h1 class="text-5xl font-bold">Blog</h1>
-      <div class="mt-8">
+    <main>
+      <h1>Blog</h1>
+      <div>
         {posts.map((post) => <PostCard post={post} />)}
       </div>
     </main>
