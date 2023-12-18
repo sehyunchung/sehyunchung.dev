@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gfm {
+   h1, h2, h3, h4 {
+      font-weight: bold;
+      position: relative;
+      .anchor {
+         display: none;
+         svg {
+            position: absolute;
+            transform: translate(calc(-100% - 6px), 50%);
+         }
+      }
+   }
+}

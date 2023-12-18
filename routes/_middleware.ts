@@ -8,7 +8,7 @@ export async function handler(
   if (url.pathname === "/") {
     return new Response("/", {
       status: 307,
-      headers: { Location: "/note" },
+      headers: { Location: "/notes" },
     });
   }
   return await ctx.next();

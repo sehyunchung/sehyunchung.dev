@@ -8,9 +8,9 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $index from "./routes/index.tsx";
-import * as $note_slug_ from "./routes/note/[slug].tsx";
-import * as $note_layout from "./routes/note/_layout.tsx";
-import * as $note_index from "./routes/note/index.tsx";
+import * as $notes_slug_ from "./routes/notes/[slug].tsx";
+import * as $notes_layout from "./routes/notes/_layout.tsx";
+import * as $notes_index from "./routes/notes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -22,9 +22,9 @@ const manifest = {
     "./routes/_middleware.ts": $_middleware,
     "./routes/api/joke.ts": $api_joke,
     "./routes/index.tsx": $index,
-    "./routes/note/[slug].tsx": $note_slug_,
-    "./routes/note/_layout.tsx": $note_layout,
-    "./routes/note/index.tsx": $note_index,
+    "./routes/notes/[slug].tsx": $notes_slug_,
+    "./routes/notes/_layout.tsx": $notes_layout,
+    "./routes/notes/index.tsx": $notes_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,

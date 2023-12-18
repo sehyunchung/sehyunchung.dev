@@ -5,6 +5,7 @@ import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts"
 import { join } from "$std/path/mod.ts";
 
 import { Handlers, PageProps } from "$fresh/server.ts";
+import he120 from "https://esm.sh/he@1.2.0";
 
 export interface Note {
   title: string;
@@ -55,17 +56,14 @@ export const handler: Handlers<Note> = {
 
 export default function PostPage(props: PageProps<Note>) {
   const post = props.data;
+  const __html = render(post.content);
   return (
     <>
-      <Head>
-        <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      </Head>
-      <div>
-        <h1>{post.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: render(post.content) }}
-        />
-      </div>
+      <h1 className="font-bold">{post.title}</h1>
+      <div
+        class="gfm"
+        dangerouslySetInnerHTML={{ __html }}
+      />
     </>
   );
 }

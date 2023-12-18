@@ -7,7 +7,14 @@ export default function NoteRouteLayout({ Component }: PageProps) {
       <Head>
         <title>Notes</title>
       </Head>
-      <Component />
+      <section>
+        <a class="no-underline" href="/notes">
+          <h1 class="font-bold">
+            Notes
+          </h1>
+        </a>
+        <Component />
+      </section>
     </>
   );
 }
