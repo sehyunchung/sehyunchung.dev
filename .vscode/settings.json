@@ -4,8 +4,8 @@
 	"editor.defaultFormatter": "biomejs.biome",
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
-		"quickfix.rome": true,
-		"source.organizeImports.rome": true
+		"quickfix.rome": "explicit",
+		"source.organizeImports.rome": "explicit"
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome"

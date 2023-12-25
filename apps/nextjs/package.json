@@ -8,13 +8,17 @@
 		"preview": "next build && next start",
 		"start": "next start",
 		"lint": "biome check ./**/*.ts*",
-		"test": "vitest"
+		"test": "vitest",
+		"res:build": "rescript",
+		"res:dev": "rescript build -w"
 	},
 	"dependencies": {
 		"@cloudflare/next-on-pages": "^0.10.2",
 		"@giscus/react": "^2.3.0",
 		"@radix-ui/react-collapsible": "^1.0.3",
 		"@radix-ui/react-tooltip": "^1.0.7",
+		"@rescript/core": "^0.6.0",
+		"@rescript/react": "0.12.0-alpha.3",
 		"@vercel/analytics": "^1.1.1",
 		"@vercel/og": "^0.5.20",
 		"@vercel/speed-insights": "^1.0.1",
@@ -44,6 +48,7 @@
 		"react-tweet": "^2.0.2",
 		"rehype-highlight": "^6.0.0",
 		"rehype-pretty-code": "^0.9.11",
+		"rescript": "11.0.0-rc.8",
 		"sharp": "^0.32.6",
 		"shiki": "^0.14.5",
 		"tailwind-merge": "^1.14.0",

@@ -69,3 +69,6 @@ htmlcov/
 
 # turborepo
 .turbo
+
+# rescript
+lib/bs/
