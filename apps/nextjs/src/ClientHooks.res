@@ -14,7 +14,7 @@ let useMounted = () => {
 }
 
 type client<'a> = 'a
-type server<'a> = Some('a) | None
+type server<'a> = option<'a>
 
 @genType
 let useSyncedState = (client, server) => {
