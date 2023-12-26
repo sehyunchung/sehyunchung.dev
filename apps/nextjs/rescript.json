@@ -12,7 +12,7 @@
 			"in-source": true
 		}
 	],
-	"suffix": ".res.mjs",
+	"suffix": ".res.js",
 	"bs-dependencies": ["@rescript/core", "@rescript/react"],
 	"bsc-flags": ["-open RescriptCore"],
 	"jsx": { "version": 4, "mode": "classic" },
