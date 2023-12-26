@@ -4,6 +4,7 @@ module.exports = {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
+		"./src/**/*.res.js",
 		"./content/**/*.{md,mdx}",
 	],
 	darkMode: "class",

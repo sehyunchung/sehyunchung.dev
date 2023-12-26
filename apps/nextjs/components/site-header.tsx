@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 import { ClassicBox } from "./classic-box"
 import { LogoNav } from "./logo-nav"
-import { ModeToggle } from "./mode-toggle"
+import { make as ModeToggle } from "@/src/ModeToggle.res.js"
 
 const HEADER_NAV_LINKS = [
 	{ href: "/notes", label: "Notes" },

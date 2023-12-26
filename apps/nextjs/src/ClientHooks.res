@@ -1,5 +1,4 @@
-%%raw(`
-"use client"`)
+@@directive("'use client';")
 
 @genType
 let useMounted = () => {
