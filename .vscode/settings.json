@@ -22,5 +22,8 @@
 	"[json]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"prettier.enable": false
+	"prettier.enable": false,
+	"[rescript]": {
+		"editor.defaultFormatter": "chenglou92.rescript-vscode"
+	}
 }
