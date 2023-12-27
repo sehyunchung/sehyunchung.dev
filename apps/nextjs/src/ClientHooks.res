@@ -27,7 +27,7 @@ let useSyncedState = (client, server) => {
   React.useEffect(() => {
     setState(_ => client)
     None
-  }, client)
+  }, [client])
 
   state
 }

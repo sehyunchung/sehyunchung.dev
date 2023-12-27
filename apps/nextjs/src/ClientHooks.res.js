@@ -27,7 +27,7 @@ function useSyncedState(client, server) {
           setState(function (param) {
                 return client;
               });
-        }), client);
+        }), [client]);
   return match[0];
 }
 
