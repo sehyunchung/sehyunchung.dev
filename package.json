@@ -5,8 +5,7 @@
 		"build": "turbo run build",
 		"dev": "dotenv -- turbo run dev",
 		"lint": "turbo run lint",
-		"format": "biome format --write \"**/*.{ts,tsx,md}\"",
-		"nn": "pnpm --filter www.next"
+		"format": "biome format --write \"**/*.{ts,tsx,md}\""
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.2.2",
