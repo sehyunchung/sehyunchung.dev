@@ -13,7 +13,7 @@ export function NoteItem({
 }) {
 	return (
 		<article
-			key={note.id}
+			key={note._id}
 			className="break-words border-b border-b-gray-200 pb-6"
 			{...props}
 			data-clarity-region="article"
