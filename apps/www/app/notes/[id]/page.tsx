@@ -74,7 +74,7 @@ export default async function TilItemPage({
 	return (
 		<>
 			<NoteItem note={note} />
-			<Giscus />
+			{/* <Giscus /> */}
 		</>
 	)
 }
