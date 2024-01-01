@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html
 			lang="ko"
-			className={`${berkeleyMono.variable} ${comicMono.variable} ${comicNeue.variable} ${gothicA1.variable}`}
+			className={`${berkeleyMono.variable} ${gothicA1.variable}`}
 			suppressHydrationWarning
 		>
 			<head>
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			</head>
 			<body
 				className={
-					"antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep"
+					"antialiased font-mono min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep"
 				}
 			>
 				<NextAuthProvider>
