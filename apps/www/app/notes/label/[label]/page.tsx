@@ -52,11 +52,11 @@ export default async function NoteLabelPage({
 
 	return (
 		<>
-			<h2 className="font-mono text-3xl mb-0">#{label}</h2>
+			<h1 className="font-mono text-3xl">#{label}</h1>
 			{notes?.map((note) => (
 				<NoteItem
 					key={note.id}
-					className="break-words border-b border-b-gray-200 pb-6"
+					className="break-words border-b border-b-gray-200 py-6"
 					note={note}
 				/>
 			))}
