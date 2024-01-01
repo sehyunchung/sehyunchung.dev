@@ -20,10 +20,10 @@ export function NoteItem({
 		>
 			<Link
 				className="no-underline "
-				href={`/notes/${note.id || note.slugAsParams}`}
+				href={`/notes/${note?.id || note.slugAsParams}`}
 			>
 				<h1
-					id={note.id}
+					id={note._id}
 					className="font-semibold flex items-center justify-between"
 				>
 					{note.title}

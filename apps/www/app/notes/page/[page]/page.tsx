@@ -51,7 +51,7 @@ export default function TilPaginatedPage({
 					)
 					.map((note) => (
 						<NoteItem
-							key={note.id}
+							key={note._id}
 							className="break-words border-b border-b-gray-200 py-6"
 							note={note}
 						/>

@@ -8,7 +8,7 @@ import { NoteItem } from "../components"
 
 export async function generateStaticParams() {
 	const params = allNotes.map((note) => ({
-		id: note.id,
+		id: note._id,
 		slugAsParams: note.slugAsParams,
 	}))
 	return params
@@ -23,7 +23,7 @@ export async function generateMetadata({
 	if (!identifier) return {}
 
 	const note = allNotes.find((note) => {
-		if (note.id) {
+		if (note?.id) {
 			const tilId = note?.id?.replace(/=/g, "")
 			return tilId === identifier
 		}
@@ -63,7 +63,7 @@ export default async function TilItemPage({
 }) {
 	const identifier = params?.id || params.slugAsParams || ""
 	const note = allNotes.find((note) => {
-		if (note.id) {
+		if (note?.id) {
 			return note.id === identifier
 		}
 		return note.slugAsParams === identifier
