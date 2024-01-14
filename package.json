@@ -5,7 +5,8 @@
 		"build": "turbo run build",
 		"dev": "dotenv -- turbo run dev",
 		"lint": "turbo run lint",
-		"format": "biome format --write \"**/*.{ts,tsx,md}\""
+		"format": "biome format --write \"**/*.{ts,tsx,md}\"",
+		"dev:www": "bun run --cwd apps/www dev"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.2.2",
@@ -15,7 +16,11 @@
 		"dotenv-cli": "^7.3.0",
 		"turbo": "^1.10.16"
 	},
-	"packageManager": "pnpm@8.6.1",
+	"packageManager": "bun@1.0.20",
+	"workspaces": [
+	  "apps/*",
+	  "packages/*"
+	],
 	"dependencies": {
 		"next": "^14.0.3",
 		"react": "18.3.0-canary-bbb9cb116-20231117",
