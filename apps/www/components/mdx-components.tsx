@@ -8,6 +8,7 @@ import { Tweet } from "react-tweet"
 import { Box as BoxDrawn } from "ui"
 import { TooltipProvider } from "./ui/tooltip"
 import { TranslateTooltip } from "./translate-tooltip"
+import type { MDXComponents } from "mdx/types"
 
 const Mermaid = dynamic(() => import("./mermaid"), {
 	ssr: false,
@@ -23,7 +24,7 @@ const components = {
 	MindConsciousnessSpectrum,
 	Translate: TranslateTooltip,
 	TooltipProvider,
-}
+} satisfies MDXComponents
 
 interface MdxProps {
 	code: string

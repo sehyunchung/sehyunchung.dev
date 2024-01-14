@@ -8,7 +8,7 @@ import {
 } from "@/components/external-scripts"
 import { NextAuthProvider } from "@/components/next-auth-provider"
 import { ThemeProvider } from "@/components/theme-provider"
-import { berkeleyMono, comicMono, comicNeue, gothicA1 } from "@/lib/fonts"
+import { berkeleyMono, gothicA1 } from "@/lib/fonts"
 import { getBaseUrl } from "@/lib/utils"
 
 export const metadata = {
@@ -17,11 +17,11 @@ export const metadata = {
 		template: "%s | sehyunchung.dev",
 		default: "sehyunchung.dev",
 	},
-	description: "개  프론트엔드  발",
+	description: "프로덕트 개발",
 	openGraph: {
 		url: "https://sehyunchung.dev",
 		title: "sehyunchung.dev",
-		description: "개  프론트엔드  발",
+		description: "프로덕트 개발",
 		siteName: "sehyunchung.dev",
 		type: "website",
 		images: ["https://sehyunchung.dev/og"],
