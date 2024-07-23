@@ -1,4 +1,5 @@
 import { type PageProps } from "$fresh/server.ts";
+
 export default function App({ Component }: PageProps) {
   return (
     <html>
@@ -9,11 +10,11 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body
-        className={"antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep"}
+        className={"antialiased min-h-screen flex items-center flex-col bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 break-keep"}
       >
-        <div className="border-x prose prose-neutral dark:prose-invert max-w-xl mx-auto p-10">
+        <main className="border-x prose flex-1 prose-neutral dark:prose-invert w-full max-w-xl p-10">
           <Component />
-        </div>
+        </main>
       </body>
     </html>
   );
