@@ -1,11 +1,9 @@
-import { CSS, render } from "https://deno.land/x/gfm@0.2.5/mod.ts";
-import { Head } from "$fresh/runtime.ts";
+import { render } from "https://deno.land/x/gfm@0.2.5/mod.ts";
 
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
 import { join } from "$std/path/mod.ts";
 
 import { Handlers, PageProps } from "$fresh/server.ts";
-import he120 from "https://esm.sh/he@1.2.0";
 
 export interface Note {
   title: string;
