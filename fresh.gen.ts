@@ -10,7 +10,7 @@ import * as $index from "./routes/index.tsx";
 import * as $notes_slug_ from "./routes/notes/[slug].tsx";
 import * as $notes_layout from "./routes/notes/_layout.tsx";
 import * as $notes_index from "./routes/notes/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
+
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -24,9 +24,7 @@ const manifest = {
     "./routes/notes/_layout.tsx": $notes_layout,
     "./routes/notes/index.tsx": $notes_index,
   },
-  islands: {
-    "./islands/Counter.tsx": $Counter,
-  },
+  islands: {},
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
