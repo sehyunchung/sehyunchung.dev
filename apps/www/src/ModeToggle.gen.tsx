@@ -3,8 +3,9 @@
 /* eslint-disable */
 /* tslint:disable */
 
-import * as ModeToggleBS from './ModeToggle.res';
+import * as ModeToggleBS from "./ModeToggle.res"
 
-export type props<className> = { readonly className: className };
+export type props<className> = { readonly className: className }
 
-export const make: React.ComponentType<{ readonly className: string }> = ModeToggleBS.make as any;
+export const make: React.ComponentType<{ readonly className: string }> =
+	ModeToggleBS.make as any
