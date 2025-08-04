@@ -5,7 +5,8 @@
 		"build": "turbo run build",
 		"dev": "dotenv -- turbo run dev",
 		"lint": "turbo run lint",
-		"format": "biome format --write \"**/*.{ts,tsx,md}\""
+		"format": "biome format --write \"**/*.{ts,tsx,md}\"",
+		"typecheck": "turbo run typecheck"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.2.2",
