@@ -1,37 +1,5 @@
 import { defineCollection, defineConfig } from '@content-collections/core'
-import { compileMDX } from '@content-collections/mdx'
-import remarkGfm from 'remark-gfm'
-import rehypePrettyCode from 'rehype-pretty-code'
 import { z } from 'zod'
-
-async function compileMDXWithFallback(context: any, document: any) {
-  try {
-    const mdx = await compileMDX(context, document, {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [
-        [
-          rehypePrettyCode as any,
-          {
-            theme: {
-              dark: 'github-dark-dimmed',
-              light: 'github-light',
-            },
-          },
-        ],
-      ],
-    })
-    return mdx
-  } catch (error) {
-    console.error(`Error processing MDX for ${document._meta.path}:`, error)
-    // Return a simple fallback
-    return {
-      body: {
-        code: `export default function MDXContent() { return <div>Error loading content</div> }`,
-        raw: document.content || ''
-      }
-    }
-  }
-}
 
 const posts = defineCollection({
   name: 'posts',
@@ -43,16 +11,13 @@ const posts = defineCollection({
     date: z.string(),
     tags: z.array(z.string()),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDXWithFallback(context, document)
-    
-    return {
-      ...document,
-      ...mdx,
-      slug: document._meta.path.replace(/\.mdx$/, ''),
-      slugAsParams: document._meta.path.replace(/\.mdx$/, ''),
-    }
-  },
+  transform: (document) => ({
+    ...document,
+    body: { code: 'function MDXContent() { return React.createElement("div", {}, "Content temporarily unavailable"); } export default MDXContent;' },
+    slug: document._meta.path.replace(/\.mdx$/, ''),
+    slugAsParams: document._meta.path.replace(/\.mdx$/, ''),
+    _id: document._meta.path.replace(/\.mdx$/, ''),
+  }),
 })
 
 const pages = defineCollection({
@@ -62,16 +27,12 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDXWithFallback(context, document)
-    
-    return {
-      ...document,
-      ...mdx,
-      slug: document._meta.path.replace(/\.mdx$/, ''),
-      slugAsParams: document._meta.path.replace(/\.mdx$/, ''),
-    }
-  },
+  transform: (document) => ({
+    ...document,
+    body: { code: 'function MDXContent() { return React.createElement("div", {}, "Content temporarily unavailable"); } export default MDXContent;' },
+    slug: document._meta.path.replace(/\.mdx$/, ''),
+    slugAsParams: document._meta.path.replace(/\.mdx$/, ''),
+  }),
 })
 
 const notes = defineCollection({
@@ -84,23 +45,17 @@ const notes = defineCollection({
     createdAt: z.string(),
     labels: z.array(z.string()),
   }),
-  transform: async (document, context) => {
-    const mdx = await compileMDXWithFallback(context, document)
-    
-    // Maintain compatibility with existing id encoding logic
+  transform: (document) => {
     const id = document.id ? encodeURIComponent(document.id) : undefined
-    
     return {
       ...document,
-      ...mdx,
+      body: { code: 'function MDXContent() { return React.createElement("div", {}, "Content temporarily unavailable"); } export default MDXContent;' },
       id,
       slug: document._meta.path.replace(/\.mdx$/, ''),
       slugAsParams: document._meta.path.replace(/\.mdx$/, ''),
-      // Add _raw for compatibility
       _raw: {
         flattenedPath: `notes/${document._meta.path.replace(/\.mdx$/, '')}`,
       },
-      // Add _id for compatibility
       _id: document._meta.path.replace(/\.mdx$/, ''),
     }
   },
