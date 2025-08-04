@@ -37,10 +37,16 @@ export const comicNeue = Comic_Neue({
 	weight: ["700"],
 	subsets: ["latin"],
 	variable: "--font-comic-neue",
+	display: "swap",
+	preload: false,
+	fallback: ["cursive", "sans-serif"],
 })
 
 export const gothicA1 = Gothic_A1({
 	weight: ["400", "700"],
 	subsets: ["latin"],
 	variable: "--font-gothic-a1",
+	display: "swap",
+	preload: false,
+	fallback: ["sans-serif"],
 })
