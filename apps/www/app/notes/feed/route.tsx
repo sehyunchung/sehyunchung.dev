@@ -28,13 +28,13 @@ export async function GET() {
 			id: `https://sehyunchung.dev/notes/${note?.id || note.slug}`,
 			link: `https://sehyunchung.dev/notes/${note?.id || note.slug}`,
 			date: new Date(note.createdAt),
-			category: note.labels.map((label) => {
+			category: note.labels.map((label: string) => {
 				return {
 					name: label,
 					term: label,
 				}
 			}),
-			content: note.labels.map((label) => label).join(", "),
+			content: note.labels.map((label: string) => label).join(", "),
 		})
 	})
 
