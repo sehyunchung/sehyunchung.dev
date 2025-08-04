@@ -1,4 +1,4 @@
-import { allNotes } from "@/.contentlayer/generated/"
+import { allNotes } from "content-collections"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"

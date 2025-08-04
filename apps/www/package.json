@@ -15,6 +15,9 @@
 	},
 	"dependencies": {
 		"@cloudflare/next-on-pages": "^1.13.13",
+		"@content-collections/core": "^0.10.0",
+		"@content-collections/mdx": "^0.2.2",
+		"@content-collections/next": "^0.2.6",
 		"@giscus/react": "^2.4.0",
 		"@radix-ui/react-collapsible": "^1.0.3",
 		"@radix-ui/react-tooltip": "^1.0.7",
@@ -28,7 +31,6 @@
 		"class-variance-authority": "^0.6.1",
 		"clsx": "^1.2.1",
 		"concurrently": "^8.2.2",
-		"contentlayer": "^0.3.4",
 		"feed": "^4.2.2",
 		"langchain": "^0.0.95",
 		"lucide-react": "^0.220.0",
@@ -36,7 +38,6 @@
 		"mermaid": "^10.6.1",
 		"next": "14.2.30",
 		"next-auth": "^4.24.11",
-		"next-contentlayer": "^0.3.4",
 		"next-mdx-remote": "^4.4.1",
 		"next-themes": "^0.2.1",
 		"ofetch": "^1.3.3",
@@ -55,7 +56,8 @@
 		"shiki": "^0.14.5",
 		"tailwind-merge": "^1.14.0",
 		"tailwindcss-animate": "^1.0.7",
-		"ui": "workspace:*"
+		"ui": "workspace:*",
+		"zod": "^4.0.14"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.8.1",

@@ -1,6 +1,6 @@
 import type { Route } from "next"
 import Link from "next/link"
-import { allPosts } from "@/.contentlayer/generated"
+import { allPosts } from "content-collections"
 
 import { getOgImgUrl } from "@/lib/utils"
 

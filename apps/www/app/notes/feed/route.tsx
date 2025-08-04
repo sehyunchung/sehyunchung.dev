@@ -1,6 +1,6 @@
 import { Feed } from "feed"
 
-import { allNotes } from "@/.contentlayer/generated"
+import { allNotes } from "content-collections"
 
 const feed = new Feed({
 	title: "sehyunchung.dev",

@@ -1,4 +1,4 @@
-import { allPosts as posts } from "@/.contentlayer/generated"
+import { allPosts as posts } from "content-collections"
 import { Feed } from "feed"
 
 const feed = new Feed({

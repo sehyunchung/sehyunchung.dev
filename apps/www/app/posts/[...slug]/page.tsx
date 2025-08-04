@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { allPosts } from "contentlayer/generated"
+import { allPosts } from "content-collections"
 
 import { getOgImgUrl } from "@/lib/utils"
 import { Giscus } from "@/components/giscus"

@@ -1,4 +1,4 @@
-import { Note } from "@/.contentlayer/generated"
+import { Note } from "content-collections"
 import Link from "next/link"
 
 import { Mdx } from "@/components/mdx-components"
@@ -36,7 +36,7 @@ export function NoteItem({
 				<Mdx code={note.body.code} />
 			</div>
 			<div className="mb-2 flex gap-2 pt-5">
-				{note.labels.map((label) => (
+				{note.labels.map((label: string) => (
 					<Link
 						className={cn(
 							badgeVariants({

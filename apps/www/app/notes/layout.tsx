@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { allNotes } from "@/.contentlayer/generated"
+import { allNotes } from "content-collections"
 import { Footer } from "@/components/footer"
 import { SiteHeader } from "@/components/site-header"
 import { badgeVariants } from "@/components/ui/badge"

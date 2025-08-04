@@ -1,4 +1,4 @@
-import { allNotes } from "@/.contentlayer/generated"
+import { allNotes } from "content-collections"
 import { Metadata } from "next"
 
 import { getOgImgUrl } from "@/lib/utils"
