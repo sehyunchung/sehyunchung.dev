@@ -1,18 +1,14 @@
 import { MindConsciousnessSpectrum } from "./mind-consiousness-spectrum"
 import { ExternalLinkIcon } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
-import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { Tweet } from "react-tweet"
 import { Box as BoxDrawn } from "ui"
-import { TooltipProvider } from "./ui/tooltip"
 import { TranslateTooltip } from "./translate-tooltip"
 import type { MDXComponents } from "mdx/types"
-
-const Mermaid = dynamic(() => import("./mermaid"), {
-	ssr: false,
-})
+// @ts-ignore - Mermaid component has type issues
+import Mermaid from "./mermaid"
 
 const components = {
 	Tweet,
@@ -20,10 +16,9 @@ const components = {
 	BoxDrawn,
 	LinkIcon: ExternalLinkIcon,
 	Link,
-	Mermaid,
+	// Mermaid, // TODO: Fix type issues with Mermaid component
 	MindConsciousnessSpectrum,
 	Translate: TranslateTooltip,
-	TooltipProvider,
 } satisfies MDXComponents
 
 interface MdxProps {
